@@ -4,9 +4,9 @@ msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-12-28 10:16+0100\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,27 +39,24 @@ msgid "New sticky note"
 msgstr "Nuovo post-it"
 
 #: data/jorts.desktop.in:23
-#, fuzzy
 msgid "Show Preferences"
-msgstr "Preferenze"
+msgstr "Mostra preferenze"
 
 #: data/jorts.metainfo.xml.in:8
 msgid "Write on colourful little squares"
 msgstr "Scrivere su quadratini colorati"
 
 #: data/jorts.metainfo.xml.in:10
-#, fuzzy
 msgid "Neither jeans nor shorts, just like jorts!"
-msgstr "Né jeans né pantaloncini, proprio come i jorts"
+msgstr "Né jeans né pantaloncini, solo jorts!"
 
 #: data/jorts.metainfo.xml.in:11
 msgid "Features include:"
 msgstr "le caratteristiche includono:"
 
 #: data/jorts.metainfo.xml.in:13
-#, fuzzy
 msgid "Colourful: Ten pretty themes. Any new note gets a random one"
-msgstr "Colori: dieci bei temi. "
+msgstr "Colorato: Dieci temi carini. Ogni nuova nota ne riceve una casuale"
 
 #: data/jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
@@ -80,27 +77,24 @@ msgid "Private: Try the scribble mode!"
 msgstr "Privato: Prova la modalità scarabocchio!"
 
 #: data/jorts.metainfo.xml.in:19
-#, fuzzy
 msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce. The community "
 "liked it so much, we thought it would be great to revive it!"
 msgstr ""
-"questa è una forchetta di una vecchia versione di \"Notejot\" di Lainsce e "
-"non esisterebbe senza il suo lavoro. "
+"Questo è un fork di una vecchia versione di \"Notejot\" di lainsce. Alla community "
+"è piaciuto così tanto che abbiamo pensato che sarebbe stato fantastico rilanciarlo!"
 
 #: data/jorts.metainfo.xml.in:27
 msgid "Lainsce + Stella"
 msgstr "Lainsce + Stella"
 
 #: data/jorts.metainfo.xml.in:44
-#, fuzzy
 msgid "Sticky note"
-msgstr "note appiccicose"
+msgstr "Nota adesiva"
 
 #: data/jorts.metainfo.xml.in:45
-#, fuzzy
 msgid "Stickies"
-msgstr "note appiccicose"
+msgstr "Post-it"
 
 #: data/jorts.metainfo.xml.in:46
 msgid "Colourful"
@@ -139,11 +133,12 @@ msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "una nota adesiva con il tema \"Blueberry \""
 
 #: data/jorts.metainfo.xml.in:75
-#, fuzzy
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
-msgstr "streaming? "
+msgstr ""
+"Streaming? Hai paura che qualcuno ti guardi da sopra la spalla? Prova la modalità "
+"scarabocchio!"
 
 #: data/jorts.metainfo.xml.in:79
 msgid "Look! Ascii art in a sticky note!"
@@ -158,37 +153,36 @@ msgid "The preferences dialog in dark mode"
 msgstr "La finestra di dialogo delle preferenze in modalità scura"
 
 #: data/jorts.metainfo.xml.in:95
-#, fuzzy
 msgid "🚀 4.0.0 Jorts of Hyperspace!"
-msgstr "2.2.0 The Jorts of Light"
+msgstr "🚀 4.0.0 Jorts of Hyperspace!"
 
 #: data/jorts.metainfo.xml.in:97
 msgid "Version 4 to align with Gtk version"
-msgstr ""
+msgstr "Versione 4 per allinearsi alla versione Gtk"
 
 #: data/jorts.metainfo.xml.in:98
 msgid "Added button to toggle lists, and ability to customize them"
-msgstr ""
+msgstr "Aggiunto pulsante per alternare gli elenchi e possibilità di personalizzarli"
 
 #: data/jorts.metainfo.xml.in:99
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
-msgstr ""
+msgstr "Ctrl+Scorrimento per ingrandire, rimpicciolire"
 
 #: data/jorts.metainfo.xml.in:100
 msgid "More zoom options"
-msgstr ""
+msgstr "Altre opzioni di zoom"
 
 #: data/jorts.metainfo.xml.in:101
 msgid "Keyboard shortcuts work from popover now"
-msgstr ""
+msgstr "Ora le scorciatoie da tastiera funzionano dal popover"
 
 #: data/jorts.metainfo.xml.in:102
 msgid "A couple visual bugfixes as well!"
-msgstr ""
+msgstr "Anche un paio di correzioni di bug visivi!"
 
 #: data/jorts.metainfo.xml.in:103
 msgid "Various under the hood performance improvements"
-msgstr ""
+msgstr "Vari miglioramenti delle prestazioni sotto il cofano"
 
 #: data/jorts.metainfo.xml.in:105 data/jorts.metainfo.xml.in:140
 #: data/jorts.metainfo.xml.in:180
@@ -196,26 +190,24 @@ msgid "😎 Guests stars:"
 msgstr "😎 Stelle degli ospiti:"
 
 #: data/jorts.metainfo.xml.in:107
-#, fuzzy
 msgid "Updated JA translation thanks to @ryonakano!"
-msgstr "traduzioni migliorate"
+msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
 
 #: data/jorts.metainfo.xml.in:108
 msgid "You, the user, for liking this lil app!"
-msgstr ""
+msgstr "Grazie a te, utente, per aver apprezzato questa piccola app!"
 
 #: data/jorts.metainfo.xml.in:120
 msgid "Added windows build. It doesnt need admin rights. Mostly works."
-msgstr ""
+msgstr "Aggiunta build per Windows. Non richiede diritti di amministratore. Funziona per lo più."
 
 #: data/jorts.metainfo.xml.in:125
 msgid "No fun allowed: revert back to default style"
-msgstr ""
+msgstr "Divertimento vietato: torna allo stile predefinito"
 
 #: data/jorts.metainfo.xml.in:130
-#, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
-msgstr "2.2.0 The Jorts of Light"
+msgstr "🕷️ 3.4.0 Scary Jorts of Boo"
 
 #: data/jorts.metainfo.xml.in:132
 msgid "Some UI elements show up after being shown, for a sleek vibe"
@@ -228,22 +220,20 @@ msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L per mettere a fuoco il titolo della nota"
 
 #: data/jorts.metainfo.xml.in:134
-#, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
-msgstr "Ctrl+M per aprire subito le impostazioni delle note"
+msgstr "Ctrl+G (per ingranaggio) o Ctrl+O (per Apri) per aprire ora le impostazioni delle note"
 
 #: data/jorts.metainfo.xml.in:135
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Numero per cambiare rapidamente tema"
 
 #: data/jorts.metainfo.xml.in:136
-#, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
 "for ascii doodles"
 msgstr ""
-"Nuova impostazione della nota: Monospace. Potrebbe essere per "
-"l'accessibilità o per gli scarabocchi ascii."
+"Nuova impostazione per le note: Monospazio (Ctrl+M). Potrebbe essere per l'accessibilità, potrebbe essere "
+"per i caratteri ASCII"
 
 #: data/jorts.metainfo.xml.in:137
 msgid ""
@@ -298,9 +288,8 @@ msgid "Some more title placeholders"
 msgstr "Altri segnaposti per il titolo"
 
 #: data/jorts.metainfo.xml.in:161
-#, fuzzy
 msgid "Under the hood is a bit cleaner now"
-msgstr "sotto il cofano cambia qua e là per il codice più pulito"
+msgstr "Sotto il cofano ora c'è un po di pulizia"
 
 #: data/jorts.metainfo.xml.in:167
 msgid ""
@@ -312,9 +301,8 @@ msgstr ""
 "appariscente."
 
 #: data/jorts.metainfo.xml.in:172
-#, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
-msgstr "2.2.0 The Jorts of Light"
+msgstr "🌈 3.2.0 Jorts of Resilience and Love"
 
 #: data/jorts.metainfo.xml.in:174
 msgid "Add a cool little animation when enabling/disabling actionbar"
@@ -323,11 +311,8 @@ msgstr ""
 "d'azione"
 
 #: data/jorts.metainfo.xml.in:175
-#, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
-msgstr ""
-"Corretta la sfocatura nella visualizzazione ad alta scala a causa di Flathub "
-"BS"
+msgstr "Risolto il problema della sfocatura nella visualizzazione ad alta scala"
 
 #: data/jorts.metainfo.xml.in:176
 msgid "Added high-resolution screenshots"
@@ -346,14 +331,12 @@ msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Un po' di pulizia per FR e DE, già che ci sono"
 
 #: data/jorts.metainfo.xml.in:182
-#, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
-msgstr "Edizione Pride: Una bella icona temporanea di @wpkelso"
+msgstr "Una bella icona temporanea di @wpkelso"
 
 #: data/jorts.metainfo.xml.in:183
-#, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
-msgstr "traduzioni migliorate"
+msgstr "Traduzioni EL aggiornate grazie a @OrionasKakomoiroglou!"
 
 #~ msgid "Change colours, zoom in and out, and there is even an emoji button!"
 #~ msgstr ""
