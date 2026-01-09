@@ -1,5 +1,5 @@
 # Name our project
-project('io.github.ellie_commons.jorts', ['vala', 'c'],
+project('io.github.elly_codes.jorts', ['vala', 'c'],
     version: '4.0.1'
 )
 

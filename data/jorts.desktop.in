@@ -4,8 +4,8 @@ Version=1.5
 Name=Jorts
 GenericName=Sticky notes
 Comment=Write down notes, reminders, random thoughts and other short-term informations
-Icon=io.github.ellie_commons.jorts
-Exec=io.github.ellie_commons.jorts
+Icon=io.github.elly_codes.jorts
+Exec=io.github.elly_codes.jorts
 Terminal=false
 Actions=NewNote;Preferences;
 Categories=Office;GTK;
@@ -16,9 +16,9 @@ SingleMainWindow=false
 [Desktop Action NewNote]
 Name=New sticky note
 Icon=list-add
-Exec=io.github.ellie_commons.jorts --new-note
+Exec=io.github.elly_codes.jorts --new-note
 
 [Desktop Action Preferences]
 Name=Show Preferences
 Icon=open-menu
-Exec=io.github.ellie_commons.jorts --preferences
+Exec=io.github.elly_codes.jorts --preferences

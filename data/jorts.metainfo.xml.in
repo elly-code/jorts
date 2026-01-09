@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.github.ellie_commons.jorts</id>
+    <id>io.github.elly_codes.jorts</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     
@@ -19,22 +19,22 @@
         <p>This is a fork of an old version of "Notejot" by lainsce. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
     <provides>
-        <binary>io.github.ellie_commons.jorts</binary>
+        <binary>io.github.elly_codes.jorts</binary>
     </provides>
-    <launchable type="desktop-id">io.github.ellie_commons.jorts.desktop</launchable>
+    <launchable type="desktop-id">io.github.elly_codes.jorts.desktop</launchable>
 
-    <developer id="io.github.ellie-commons">
+    <developer id="io.github.elly-codes">
         <name>Lainsce + Stella</name>
     </developer>
-    <project_group>ellie-commons</project_group>
-    <url type="homepage">https://github.com/ellie-commons/jorts</url>
-    <url type="bugtracker">https://github.com/ellie-commons/jorts/issues</url>
-    <url type="help">https://github.com/ellie-commons/jorts/wiki</url>
-    <url type="translate">https://github.com/ellie-commons/jorts/blob/main/po/README.md</url>
+    <project_group>elly-codes</project_group>
+    <url type="homepage">https://github.com/elly-codes/jorts</url>
+    <url type="bugtracker">https://github.com/elly-codes/jorts/issues</url>
+    <url type="help">https://github.com/elly-codes/jorts/wiki</url>
+    <url type="translate">https://github.com/elly-codes/jorts/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">io.github.elly_codes.jorts</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -69,23 +69,23 @@
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/default.png</image>
+            <image>https://raw.githubusercontent.com/elly-codes/Jorts/main/data/screenshots/default.png</image>
         </screenshot>
         <screenshot>
             <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/scribbly.png</image>
+            <image>https://raw.githubusercontent.com/elly-codes/Jorts/main/data/screenshots/scribbly.png</image>
         </screenshot>
         <screenshot>
             <caption>Look! Ascii art in a sticky note!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/ascii.png</image>
+            <image>https://raw.githubusercontent.com/elly-codes/Jorts/main/data/screenshots/ascii.png</image>
         </screenshot>
         <screenshot environment="pantheon">
             <caption>The preferences dialog in light mode</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-light.png</image>
+            <image>https://raw.githubusercontent.com/elly-codes/Jorts/main/data/screenshots/preferences-light.png</image>
         </screenshot>
         <screenshot environment="pantheon:dark">
             <caption>The preferences dialog in dark mode</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
+            <image>https://raw.githubusercontent.com/elly-codes/Jorts/main/data/screenshots/preferences-dark.png</image>
         </screenshot>
     </screenshots>
 
@@ -102,7 +102,7 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/ellie-commons/jorts/issues/63">Added list feature</issue>
+                <issue url="https://github.com/elly-codes/jorts/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="4.0.0" date="2025-11-22">
@@ -134,10 +134,10 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/78">Added Ctrl+scroll</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/63">Added list feature</issue>
+                <issue url="https://github.com/elly-codes/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
+                <issue url="https://github.com/elly-codes/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
+                <issue url="https://github.com/elly-codes/jorts/issues/78">Added Ctrl+scroll</issue>
+                <issue url="https://github.com/elly-codes/jorts/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">

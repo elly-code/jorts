@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/io/github/ellie_commons/jorts">
+  <gresource prefix="/io.github.elly_codes.jorts">
     <file compressed="true" alias="Application.css">Application.css</file>
     <file compressed="true" alias="Themes.css">Themes.css</file>
   </gresource>
