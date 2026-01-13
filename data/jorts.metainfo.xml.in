@@ -90,7 +90,7 @@
     </screenshots>
 
     <releases>
-    <release version="4.0.1" date="2025-11-22">
+        <release version="4.0.1" date="2025-11-22">
             <description>
                 <p>Fixup release</p>
                 <ul>
@@ -99,22 +99,13 @@
                 <p>😎 Guests stars:</p>
                 <ul>
                     <li>Updated sv-SE translation thanks to @yeager!</li>
+                    <li>Added vietnamese translation thanks to @hthienloc!</li>
                 </ul>
             </description>
             <issues>
                 <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
             </issues>
         </release>
-        <release version="4.0.0" date="2025-11-22">
-            <description>
-                <p></p>
-                <ul>
-                    <li></li>
-                </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>Added vietnamese translation thanks to @hthienloc!</li>
-                </ul>
         <release version="4.0.0" date="2025-11-22">
             <description>
                 <p>🚀 4.0.0 Jorts of Hyperspace!</p>
