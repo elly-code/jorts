@@ -54,8 +54,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/elly-code/jorts.git
-        tag: 3.4.0
-        commit: 0724c4797dd909c884c2beb86083e7c1fb599827
+        tag: 4.0.1
+        commit: 550b376f3367efba316523bf22497ccb8a397113
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
