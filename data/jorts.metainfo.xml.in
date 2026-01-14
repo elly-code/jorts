@@ -37,6 +37,7 @@
     <url type="help">https://github.com/elly-code/jorts/wiki</url>
     <url type="translate">https://github.com/elly-code/jorts/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
+    <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
     <translation type="gettext" source_locale="en_GB">io.github.elly_code.jorts</translation>
