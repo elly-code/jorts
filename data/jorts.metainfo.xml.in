@@ -20,11 +20,6 @@
     </description>
     <launchable type="desktop-id">io.github.ellie_commons.jorts.desktop</launchable>
 
-    <provides>
-        <id>io.github.ellie_commons.jorts</id>
-        <binary>io.github.ellie_commons.jorts</binary>
-    </provides>
-
     <developer id="io.github.elly-code">
         <name>Lainsce + Stella</name>
     </developer>

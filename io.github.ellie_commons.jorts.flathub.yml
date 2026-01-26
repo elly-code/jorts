@@ -53,9 +53,9 @@ modules:
       - -Dvariant=['default']
     sources:
       - type: git
-        url: https://github.com/ellie-commons/jorts.git
-        tag: 4.0.1
-        commit: 550b376f3367efba316523bf22497ccb8a397113
+        url: https://github.com/elly-code/jorts.git
+        tag: 4.0.1-5
+        commit: 0f616bae90c1998c2bb84f0a21390f842d7f4978
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
