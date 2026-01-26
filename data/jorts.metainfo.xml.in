@@ -32,12 +32,12 @@
         <name>Lainsce + Stella</name>
     </developer>
     <project_group>ellie-commons</project_group>
-    <url type="homepage">https://github.com/ellie-commons/jorts</url>
-    <url type="bugtracker">https://github.com/ellie-commons/jorts/issues</url>
-    <url type="help">https://github.com/ellie-commons/jorts/wiki</url>
-    <url type="translate">https://github.com/ellie-commons/jorts/blob/main/po/README.md</url>
+    <url type="homepage">https://github.com/elly-code/jorts</url>
+    <url type="bugtracker">https://github.com/elly-code/jorts/issues</url>
+    <url type="help">https://github.com/elly-code/jorts/wiki</url>
+    <url type="translate">https://github.com/elly-code/jorts/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
-    <url type="vcs-browser">https://github.com/ellie-commons/jorts</url>
+    <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
     <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
