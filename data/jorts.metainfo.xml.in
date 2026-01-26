@@ -24,14 +24,11 @@
         <id>io.github.ellie_commons.jorts</id>
         <binary>io.github.ellie_commons.jorts</binary>
     </provides>
-    <replaces>
-        <id>io.github.ellie_commons.jorts</id>
-    </replaces>
 
-    <developer id="io.github.ellie-commons">
+    <developer id="io.github.elly-code">
         <name>Lainsce + Stella</name>
     </developer>
-    <project_group>ellie-commons</project_group>
+    <project_group>elly-code</project_group>
     <url type="homepage">https://github.com/elly-code/jorts</url>
     <url type="bugtracker">https://github.com/elly-code/jorts/issues</url>
     <url type="help">https://github.com/elly-code/jorts/wiki</url>
