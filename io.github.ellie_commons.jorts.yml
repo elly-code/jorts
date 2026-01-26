@@ -1,8 +1,8 @@
-id: io.github.elly_code.jorts
+id: io.github.ellie_commons.jorts
 runtime: io.elementary.Platform
 runtime-version: '8.2'
 sdk: io.elementary.Sdk
-command: io.github.elly_code.jorts
+command: io.github.ellie_commons.jorts
 
 finish-args:
   - '--share=ipc'
