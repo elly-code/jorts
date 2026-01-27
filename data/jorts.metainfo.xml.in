@@ -67,23 +67,23 @@
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/default.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/default.png</image>
         </screenshot>
         <screenshot>
             <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/scribbly.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/scribbly.png</image>
         </screenshot>
         <screenshot>
             <caption>Look! Ascii art in a sticky note!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/ascii.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/ascii.png</image>
         </screenshot>
         <screenshot environment="pantheon">
             <caption>The preferences dialog in light mode</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-light.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/preferences-light.png</image>
         </screenshot>
         <screenshot environment="pantheon:dark">
             <caption>The preferences dialog in dark mode</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/preferences-dark.png</image>
         </screenshot>
     </screenshots>
 
