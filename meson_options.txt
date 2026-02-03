@@ -4,3 +4,8 @@ option('variant',
     value : ['default'],
     description : 'The name of the seasonal icon and style to use. Only the first value is chosen.'
 )
+option('flathub',
+    type : 'boolean',
+    value : false,
+    description : 'Slight modifications for Flathub'
+)

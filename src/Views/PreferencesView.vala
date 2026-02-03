@@ -12,6 +12,7 @@
 
     construct {
         orientation = VERTICAL;
+        spacing = 0;
         margin_top = 10;
         margin_bottom = 10;
         margin_start = 10;
@@ -24,6 +25,11 @@
             overlay.add_overlay (toast);
 
             // the box with all the settings
+#if FLATHUB
+            var settings_spacing = 5;
+#else
+            var settings_spacing = 15;
+#endif
             var settingsbox = new Gtk.Box (VERTICAL, 15) {
                 margin_top = 5,
                 margin_start = 5,
