@@ -1,11 +1,11 @@
-id: io.github.ellie_commons.jorts
+id: io.github.elly_code.jorts
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
-command: io.github.ellie_commons.jorts
+command: io.github.elly_code.jorts
 
 finish-args:
   - '--share=ipc'

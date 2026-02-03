@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.github.ellie_commons.jorts</id>
+    <id>io.github.elly_code.jorts</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     
@@ -18,7 +18,15 @@
         </ul>
         <p>This is a fork of an old version of "Notejot" by lainsce. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
-    <launchable type="desktop-id">io.github.ellie_commons.jorts.desktop</launchable>
+    <launchable type="desktop-id">io.github.elly_code.jorts.desktop</launchable>
+
+    <provides>
+        <id>io.github.ellie_commons.jorts</id>
+        <binary>io.github.ellie_commons.jorts</binary>
+    </provides>
+    <replaces>
+        <id>io.github.ellie_commons.jorts</id>
+    </replaces>
 
     <developer id="io.github.elly-code">
         <name>Lainsce + Stella</name>
@@ -32,7 +40,7 @@
     <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">io.github.elly_code.jorts</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -51,7 +59,7 @@
         <keyword>elementary OS</keyword>
     </keywords>
     <suggests>
-        <id>io.github.ellie_commons.reminduck</id>
+        <id>io.github.elly_code.reminduck</id>
         <id>com.github.elfenware.badger</id>
         <id>io.github.xchan14.larawan</id>
     </suggests>
@@ -92,7 +100,7 @@
             <description>
                 <p>Organization change</p>
                 <ul>
-                    <li>From ellie-commons to ellie-commons</li>
+                    <li>From elly-code to elly-code</li>
                 </ul>
                 <p>😎 Guests stars:</p>
                 <ul>
@@ -101,7 +109,7 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/ellie-commons/jorts/issues/63">Added list feature</issue>
+                <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="4.0.0" date="2025-11-22">
@@ -123,10 +131,10 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/78">Added Ctrl+scroll</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/63">Added list feature</issue>
+                <issue url="https://github.com/elly-code/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
+                <issue url="https://github.com/elly-code/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
+                <issue url="https://github.com/elly-code/jorts/issues/78">Added Ctrl+scroll</issue>
+                <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">
