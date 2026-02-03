@@ -100,7 +100,11 @@
             <description>
                 <p>Organization change</p>
                 <ul>
+<<<<<<< HEAD
                     <li>From ellie-commons to elly-code</li>
+=======
+                    <li>From ellie-commons to ellie-commons</li>
+>>>>>>> 2e99b4d (use ellie-commons on this branch)
                 </ul>
                 <p>😎 Guests stars:</p>
                 <ul>
