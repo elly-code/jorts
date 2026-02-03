@@ -5,7 +5,7 @@
   <h3>Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
 
   <a href="https://elementary.io">
-    <img src="https://elly-code.github.io/community-badge.svg" alt="Made for elementary OS">
+    <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
   </a>
   
 <span align="center"> <img class="center" src="https://github.com/elly-code/jorts/blob/main/data/screenshots/spread.png" alt="Several colourful sticky notes in a spread. Most are covered in scribbles. One in forefront is blue and has the text 'Lovely little colourful squares for all of your notes! 🥰'"></span>
