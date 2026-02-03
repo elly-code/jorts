@@ -14,6 +14,8 @@ windows_build = build_machine.system() == 'windows'
 # Set flags for icon variants, and target in the case of windows builds
 
 vala_flags = []
+
+# Cool icon variants
 variant = get_option('variant')[0]
 
 if variant == 'pride'
@@ -26,8 +28,15 @@ else
     vala_flags = ['--define', 'DEFAULT']
 endif
 
+# Windows needs icons, special arguments, and skip libportal
 if windows_build
     vala_flags += ['--define', 'WINDOWS']
+endif
+
+# Hot fixes for flathub builds
+flathub = get_option('flathub')
+if flathub
+    vala_flags += ['--define', 'FLATHUB']
 endif
 
 add_project_arguments(vala_flags, language: 'vala')
@@ -77,10 +86,10 @@ endif
 
 #================================
 # Add subfolders for Meson to look
+
 subdir('data')
 subdir('po')
 subdir('src')
-
 
 gnome.post_install(
   glib_compile_schemas: true,
