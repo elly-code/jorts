@@ -6,8 +6,8 @@ Name Jorts
 VIAddVersionKey /LANG=0 "ProductName" "Jorts"
 VIAddVersionKey /LANG=0 "FileVersion" "4.0.0"
 VIAddVersionKey /LANG=0 "ProductVersion" "4.0.0"
-VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/elly-code/jorts"
-VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 elly-code"
+VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/ellie-commons/jorts"
+VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 ellie-commons"
 VIProductVersion "4.0.0.0"
 
 Outfile "Jorts-Installer.exe"
@@ -18,7 +18,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "Jorts Installer"
-BrandingText "Jorts 4.0.0, elly-code 2025"
+BrandingText "Jorts 4.0.0, ellie-commons 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to Jorts setup"
@@ -28,8 +28,8 @@ BrandingText "Jorts 4.0.0, elly-code 2025"
 !define MUI_UNICON "icons\uninstall.ico"
 
 !define MUI_FINISHPAGE_LINK "Source code and wiki"
-!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/elly-code/jorts"
-!define MUI_FINISHPAGE_RUN "$INSTDIR\bin\io.github.elly_code.jorts.exe"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/ellie-commons/jorts"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\bin\io.github.ellie_commons.jorts.exe"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -109,13 +109,13 @@ Section "Install"
     SetOutPath "$INSTDIR"
 
     ; Start menu
-    CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\io.github.elly_code.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+    CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
     
     ; Autostart
-    CreateShortCut "$SMPROGRAMS\Startup\Jorts.lnk" "$INSTDIR\bin\io.github.elly_code.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+    CreateShortCut "$SMPROGRAMS\Startup\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
     
     ; Preferences
-    CreateShortCut "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk" "$INSTDIR\bin\io.github.elly_code.jorts.exe" "--preferences" "$INSTDIR\icons\settings-mini.ico" 0
+    CreateShortCut "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "--preferences" "$INSTDIR\icons\settings-mini.ico" 0
     
     WriteRegStr HKCU "Software\Jorts" "" $INSTDIR
     WriteUninstaller "$INSTDIR\Uninstall.exe"
@@ -125,8 +125,8 @@ Section "Install"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "DisplayIcon" "$INSTDIR\icons\icon.ico"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "InstallLocation" "$INSTDIR\"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "UninstallString" "$INSTDIR\Uninstall.exe"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "Publisher" "elly-code"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "URLInfoAbout" "https://github.com/elly-code/jorts"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "Publisher" "ellie-commons"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "URLInfoAbout" "https://github.com/ellie-commons/jorts"
     WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 

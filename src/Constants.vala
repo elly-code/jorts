@@ -11,7 +11,7 @@
 namespace Jorts.Constants {
 
     /*************************************************/
-    const string RDNN                    = "io.github.elly_code.jorts";
+    const string RDNN                    = "io.github.ellie_commons.jorts";
     const string DONATE_LINK             = "https://ko-fi.com/teamcons";
 
     // signature theme
