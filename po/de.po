@@ -25,7 +25,7 @@ msgstr "Haftnotiz löschen"
 
 #: src/Widgets/ActionBar.vala:55
 msgid "Toggle list"
-msgstr ""
+msgstr "Listen umschalten"
 
 #: src/Widgets/ActionBar.vala:69
 msgid "Insert emoji"
@@ -365,7 +365,7 @@ msgstr "Anfrage an das System gesendet"
 
 #: src/Views/PreferencesView.vala:51
 msgid "List item prefix"
-msgstr "ListenPrefix"
+msgstr "Listenpräfix"
 
 #: src/Views/PreferencesView.vala:53
 msgid "If left empty, the list button will be hidden"
@@ -376,7 +376,6 @@ msgid "Scribble mode"
 msgstr "Scribble-Modus"
 
 #: src/Views/PreferencesView.vala:77
-#, fuzzy
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "Text von hintergrundNotizen ausblenden (Strg+H)"
 
@@ -441,6 +440,5 @@ msgid "Create a new note"
 msgstr ""
 
 #: src/Application.vala:246
-#, fuzzy
 msgid "Show preferences"
-msgstr "Einstellungen schließen"
+msgstr "Präferenzen anzeigen"
