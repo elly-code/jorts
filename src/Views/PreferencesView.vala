@@ -30,7 +30,7 @@
 #else
             var settings_spacing = 15;
 #endif
-            var settingsbox = new Gtk.Box (VERTICAL, 15) {
+            var settingsbox = new Gtk.Box (VERTICAL, settings_spacing) {
                 margin_top = 5,
                 margin_start = 5,
                 margin_end = 5,
