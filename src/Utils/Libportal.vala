@@ -9,7 +9,7 @@ namespace Jorts.Utils {
     public void autostart_remove () {
         Xdp.Portal portal = new Xdp.Portal ();
         GenericArray<weak string> cmd = new GenericArray<weak string> ();
-        cmd.add ("io.github.elly_code.jorts");
+        cmd.add ("io.github.ellie_commons.jorts");
 
         portal.request_background.begin (
             null,
@@ -22,7 +22,7 @@ namespace Jorts.Utils {
     public void autostart_set () {
         Xdp.Portal portal = new Xdp.Portal ();
         GenericArray<weak string> cmd = new GenericArray<weak string> ();
-        cmd.add ("io.github.elly_code.jorts");
+        cmd.add ("io.github.ellie_commons.jorts");
 
         portal.request_background.begin (
             null,

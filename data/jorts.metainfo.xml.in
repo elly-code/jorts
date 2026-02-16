@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.github.elly_code.jorts</id>
+    <id>io.github.ellie_commons.jorts</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     
@@ -18,20 +18,20 @@
         </ul>
         <p>This is a fork of an old version of "Notejot" by lainsce. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
-    <launchable type="desktop-id">io.github.elly_code.jorts.desktop</launchable>
+    <launchable type="desktop-id">io.github.ellie_commons.jorts.desktop</launchable>
 
     <provides>
-        <id>io.github.ellie_commons.jorts</id>
-        <binary>io.github.ellie_commons.jorts</binary>
+        <id>io.github.elly_code.jorts</id>
+        <binary>io.github.elly_code.jorts</binary>
     </provides>
     <replaces>
-        <id>io.github.ellie_commons.jorts</id>
+        <id>io.github.elly_code.jorts</id>
     </replaces>
 
-    <developer id="io.github.elly-code">
+    <developer id="io.github.ellie-commons">
         <name>Lainsce + Stella + Charlie</name>
     </developer>
-    <project_group>elly-code</project_group>
+    <project_group>ellie-commons</project_group>
     <url type="homepage">https://github.com/elly-code/jorts</url>
     <url type="bugtracker">https://github.com/elly-code/jorts/issues</url>
     <url type="help">https://github.com/elly-code/jorts/wiki</url>
@@ -40,7 +40,7 @@
     <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.elly_code.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -59,7 +59,7 @@
         <keyword>elementary OS</keyword>
     </keywords>
     <suggests>
-        <id>io.github.elly_code.reminduck</id>
+        <id>io.github.ellie_commons.reminduck</id>
         <id>com.github.elfenware.badger</id>
         <id>io.github.xchan14.larawan</id>
     </suggests>

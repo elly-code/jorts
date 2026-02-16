@@ -1,8 +1,11 @@
-id: io.github.elly_code.jorts
-runtime: io.elementary.Platform
-runtime-version: '8.2'
-sdk: io.elementary.Sdk
-command: io.github.elly_code.jorts
+id: io.github.ellie_commons.jorts
+# elementary SDK is not available on Flathub, so use the elementary BaseApp instead
+base: io.elementary.BaseApp
+base-version: 'circe-25.08'
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+command: io.github.ellie_commons.jorts
 
 finish-args:
   - '--share=ipc'
@@ -23,7 +26,6 @@ cleanup:
 
 modules:
   # Needed for the Scribbly mode
-  # It should be present by default on elementary OS, but better not assume it is the case
   - name: RedactedScript
     buildsystem: simple
     build-commands:
@@ -50,5 +52,9 @@ modules:
     config-opts:
       - -Dvariant=['default']
     sources:
-      - type: dir
-        path: .
+      - type: git
+        url: https://github.com/elly-code/jorts.git
+        commit: b0a8091a6a466b59356b02978df7fd77689ff1e6
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
