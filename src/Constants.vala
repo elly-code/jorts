@@ -24,11 +24,14 @@ namespace Jorts.Constants {
     // in ms
     const int DEBOUNCE                   = 900;
 
+    // CSS
+    const string STYLE_THEMEDBUTTON      = Constants.STYLE_THEMEDBUTTON;
+
     // We need to say stop at some point
     const int ZOOM_MAX                   = 300;
     const int DEFAULT_ZOOM               = 100;
     const int ZOOM_MIN                   = 20;
-    const bool DEFAULT_MONO                 = false;
+    const bool DEFAULT_MONO              = false;
 
     // For new stickies
     const int DEFAULT_WIDTH              = 290;
@@ -44,6 +47,12 @@ namespace Jorts.Constants {
     const int DEFAULT_PREF_WIDTH         = 490;
     const int DEFAULT_PREF_HEIGHT        = 270;
 #endif
+
+
+    // Autocomplete save me
+    const string KEY_SCRIBBLY           = "scribbly-mode-active";
+    const string KEY_HIDEBAR            = "hide-bar";
+    const string KEY_LIST               = "list-item-start";
 
     // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {

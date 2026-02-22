@@ -63,8 +63,7 @@
                 lists_box.append (list_label);
                 lists_box.append (list_entry);
 
-                Application.gsettings.bind (
-                    "list-item-start",
+                Application.gsettings.bind (Constants.KEY_LIST,
                     list_entry, "text",
                     SettingsBindFlags.DEFAULT);
 
@@ -81,7 +80,7 @@
                 var scribbly_box = new Jorts.SettingsSwitch (
                     _("Scribble mode"),
                     _("Scribble text of unfocused notes (Ctrl+H)"),
-                    "scribbly-mode-active");
+                    Constants.KEY_SCRIBBLY);
 
                 settingsbox.append (scribbly_box);
 
@@ -94,7 +93,7 @@
                     ///TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
                     _("Hide bottom bar"),
                     _("Keyboard shortcuts will still function (Ctrl+T)"),
-                    "hide-bar");
+                    Constants.KEY_HIDEBAR);
 
                 settingsbox.append (hidebar_box);
 

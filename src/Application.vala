@@ -266,7 +266,6 @@ Please wait while the app remembers all the things...
             return 0;
         }
 
-        hold ();
         activate ();
         return 0;
     }
