@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
- *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
 /**
@@ -12,13 +12,11 @@ namespace Jorts.Constants {
 
     /*************************************************/
     const string RDNN                    = "io.github.elly_code.jorts";
-    const string DONATE_LINK             = "https://ko-fi.com/teamcons";
+    const string DONATE_LINK             = "https://ko-fi.com/teamcons/tip";
 
     // signature theme
 #if HALLOWEEN
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.ORANGE;
-#elif CLASSIC
-    const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BANANA;
 #else
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BLUEBERRY;
 #endif
