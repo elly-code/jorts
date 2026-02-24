@@ -28,7 +28,7 @@ public class Jorts.Popover : Gtk.Popover {
     public int zoom { set {font_size_box.zoom = value;}}
 
     public signal void theme_changed (Jorts.Themes selected);
-    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
+    public signal void zoom_changed (Jorts.ZoomType zoomkind);
     public signal void monospace_changed (bool if_monospace);
 
     static construct

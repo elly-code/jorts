@@ -9,13 +9,13 @@
 /**
 * Used in a signal to tell windows in which way to change zoom
 */
- public enum Jorts.Zoomkind {
+ public enum Jorts.ZoomType {
     ZOOM_OUT,
     DEFAULT_ZOOM,
     ZOOM_IN,
     NONE;
 
-    public static Zoomkind from_delta (double delta) {
+    public static ZoomType from_delta (double delta) {
 
         if (delta == 0) {return NONE;}
 

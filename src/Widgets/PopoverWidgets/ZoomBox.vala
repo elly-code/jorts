@@ -8,7 +8,7 @@
  /**
 * Horizontal box with a +, label, and -, representing zoom controls
 * Gives off zoom_changed signal to tell the user has clicked one of three
-* The signal transmits a Jorts.Zoomkind Enum
+* The signal transmits a Jorts.ZoomType Enum
 */
 public class Jorts.ZoomBox : Gtk.Box {
 
@@ -26,7 +26,7 @@ public class Jorts.ZoomBox : Gtk.Box {
         }
     }
 
-    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
+    public signal void zoom_changed (Jorts.ZoomType zoomkind);
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
@@ -69,14 +69,14 @@ public class Jorts.ZoomBox : Gtk.Box {
     }
 
     private void zoom_out () {
-        zoom_changed (Zoomkind.ZOOM_OUT);
+        zoom_changed (ZoomType.ZOOM_OUT);
     }
 
     private void zoom_default () {
-        zoom_changed (Zoomkind.DEFAULT_ZOOM);
+        zoom_changed (ZoomType.DEFAULT_ZOOM);
     }
 
     private void zoom_in () {
-        zoom_changed (Zoomkind.ZOOM_IN);
+        zoom_changed (ZoomType.ZOOM_IN);
     }
 }

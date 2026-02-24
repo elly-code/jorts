@@ -1,5 +1,5 @@
 sources = files (
-    'Objects' / 'Zoomkind.vala',
+    'Objects' / 'ZoomType.vala',
     'Objects' / 'Zoom.vala',
     'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
