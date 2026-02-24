@@ -4,6 +4,7 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
+//vala-lint=skip-file
 
 /**
 * I just dump all my constants here
