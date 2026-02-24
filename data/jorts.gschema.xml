@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema path="/io/github/elly_code/jorts/" id="io.github.elly_code.jorts">
+  <schema path="/io/github/ellie_commons/jorts/" id="io.github.ellie_commons.jorts">
 		<key name="scribbly-mode-active" type="b">
 			<default>false</default>
 			<summary>Change font to an illegible one</summary>

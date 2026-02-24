@@ -54,7 +54,7 @@ body:
       options:
         - I installed from Flathub (all Linuxes)
         - I installed from Appcenter (elementary OS)
-        - I built it from sources (with Meson+Ninja)
+        - I built it from sources (with Meson+Ninja, or from AUR)
     validations:
       required: true
 

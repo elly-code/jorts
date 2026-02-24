@@ -1,5 +1,5 @@
 # Name our project
-project('io.github.elly_code.jorts', ['vala', 'c'],
+project('io.github.ellie_commons.jorts', ['vala', 'c'],
     version: '4.0.1'
 )
 
@@ -39,7 +39,7 @@ if flathub
     vala_flags += ['--define', 'FLATHUB']
 endif
 
-add_project_arguments(vala_flags, language: 'vala')
+
 
 #================================
 # Import the stylesheet
@@ -64,12 +64,25 @@ gresource = gnome.compile_resources(
 #================================
 # dependencies
 
+
+
+gtk422 = dependency('gtk4', version: '>= 4.22', required: false)
+
+if gtk422.found()
+	gtk_dep = gtk422
+	vala_flags = ['--define', 'HAS_GTK422']
+
+else
+    gtk_dep = dependency('gtk4')
+endif
+
+add_project_arguments(vala_flags, language: 'vala')
 dependencies = [
         dependency('granite-7'),
         dependency('gobject-2.0'),
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),
-        dependency('gtk4'),
+        gtk_dep,
     ]
 
 # We need to compile an icon into the exe to avoid "missing icon" icon at every turn
