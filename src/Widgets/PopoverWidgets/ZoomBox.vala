@@ -26,7 +26,7 @@ public class Jorts.ZoomBox : Gtk.Box {
         }
     }
 
-    public signal void zoom_changed (Jorts.ZoomType zoomkind);
+    public signal void zoom_changed (Jorts.ZoomType zoomtype);
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;

@@ -30,9 +30,9 @@ public class Jorts.ZoomController : Object {
     /**
     * Handler. Wraps a zoom enum into the correct function-
     */
-    public void zoom_changed (Jorts.ZoomType zoomkind) {
+    public void zoom_changed (Jorts.ZoomType zoomtype) {
         debug ("Zoom changed!");
-        switch (zoomkind) {
+        switch (zoomtype) {
             case ZoomType.ZOOM_IN:              zoom_in (); return;          // vala-lint=double-spaces
             case ZoomType.DEFAULT_ZOOM:         zoom_default (); return;     // vala-lint=double-spaces
             case ZoomType.ZOOM_OUT:             zoom_out (); return;         // vala-lint=double-spaces
