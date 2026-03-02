@@ -72,7 +72,7 @@ public class Jorts.Application : Gtk.Application {
 
     public Application () {
         Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                application_id: Jorts.Constants.RDNN);
+                application_id: APP_ID);
     }
 
     /*************************************************/
@@ -155,7 +155,7 @@ Please wait while the app remembers all the things...
 
     /*************************************************/        
     static construct {
-        gsettings = new GLib.Settings (Jorts.Constants.RDNN);
+        gsettings = new GLib.Settings (APP_ID);
     }
 
     /*************************************************/

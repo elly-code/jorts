@@ -1,20 +1,36 @@
 # Name our project
-project('io.github.elly_code.jorts', ['vala', 'c'],
+project(
+    'io.github.elly_code.jorts',
+    'vala', 'c',
     version: '4.0.1'
 )
+
+app_name = 'Jorts'
+app_id = meson.project_name()
+app_version = meson.project_version()
+
+vala_flags = []
+if get_option('development')
+  app_id +=  '.devel'
+  name_prefix = '(devel) '
+  vcs_tag = run_command('git', 'rev-parse', '--short', 'HEAD').stdout().strip()
+  version_suffix = '-@0@'.format (vcs_tag)
+  vala_flags += ['--define', 'DEVEL']
+
+else
+  name_prefix = ''
+  version_suffix = ''
+endif
+
 
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_id), language:'c')
 windows_build = build_machine.system() == 'windows'
 
 
 #================================
-# Set flags for icon variants, and target in the case of windows builds
-
-vala_flags = []
-
 # Cool icon variants
 variant = get_option('variant')[0]
 
@@ -47,7 +63,10 @@ endif
 ## Set de config data
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_data.set_quoted('GETTEXT_PACKAGE', app_id)
+config_data.set_quoted('APP_NAME', app_name)
+config_data.set_quoted('APP_ID', app_id)
+config_data.set_quoted('APP_VERSION', app_version)
 config_file = configure_file(
     input: 'src/Config.vala.in',
     output: '@BASENAME@',

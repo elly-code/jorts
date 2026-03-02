@@ -24,6 +24,9 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
         application = app;
 
+#if DEVEL
+        add_css_class ("devel");
+#endif
 
         /********************************************/
         /*              HEADERBAR BS                */

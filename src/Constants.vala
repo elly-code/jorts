@@ -12,7 +12,6 @@
 namespace Jorts.Constants {
 
     /*************************************************/
-    const string RDNN                    = "io.github.elly_code.jorts";
     const string DONATE_LINK             = "https://ko-fi.com/teamcons/tip";
 
     // signature theme
@@ -26,7 +25,7 @@ namespace Jorts.Constants {
     const int DEBOUNCE                   = 900;
 
     // CSS
-    const string STYLE_THEMEDBUTTON      = Constants.STYLE_THEMEDBUTTON;
+    const string STYLE_THEMEDBUTTON      = "themedbutton";
 
     // We need to say stop at some point
     const int ZOOM_MAX                   = 300;

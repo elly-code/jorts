@@ -62,6 +62,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
         application = app;
 
+#if DEVEL
+        add_css_class ("devel");
+#endif
+
+
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);

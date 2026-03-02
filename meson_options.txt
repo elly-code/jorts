@@ -9,3 +9,4 @@ option('flathub',
     value : false,
     description : 'Slight modifications for Flathub'
 )
+option('development', type: 'boolean', value: false, description: 'If this is a development build')
