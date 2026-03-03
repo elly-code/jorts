@@ -62,11 +62,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
         application = app;
 
-#if DEVEL
-        add_css_class ("devel");
-#endif
-
-
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
@@ -85,6 +80,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         add_css_class ("rounded");
         title = "" + _(" - Jorts");
+
+
+
 
 
         /*****************************************/
@@ -108,6 +106,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /****************************************/
 
         load_data (data);
+
+#if DEVEL
+        add_css_class ("devel");
+#endif
+
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -137,11 +140,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             bind_hidebar ();
         }
 
-#if HAS_GTK422
-    // Check what we can save
-    save_state.connect (on_save_state);
-    restore_state.connect (on_restore_state);
-#endif
+
     }
 
 
@@ -171,6 +170,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     */
     private void on_editable_changed () {
         title = view.editablelabel.text + _(" - Jorts");
+#if DEVEL
+        title += _(" (Development)");
+#endif
         changed ();
     }
 
@@ -225,24 +227,4 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private void action_zoom_out () {zoom_controller.zoom_out ();}
     private void action_zoom_default () {zoom_controller.zoom_default ();}
     private void action_zoom_in () {zoom_controller.zoom_in ();}
-
-#if HAS_GTK422
-    private bool on_save_state (VariantDict state) {
-        state.insert_value ("title", new GLib.Variant ("s", data.title));
-        state.insert_value ("content", new GLib.Variant ("s", data.content));
-        state.insert_value ("color", new GLib.Variant ("s", data.theme.to_string ()));
-        state.insert_value ("mono", new GLib.Variant ("s", data.monospace.to_string ()));
-        state.insert_value ("zoom", new GLib.Variant ("s", data.zoom.to_string ()));
-        return false;
-    }
-
-    // Check what we can save
-    private bool on_restore_state (VariantDict state) {
-
-        var title_v =state.lookup_value ("title", GLib.VariantType.STRING);
-        print ("\n" + title_v.get_string ());
-
-        return true;
-    }
-#endif
 }

@@ -165,11 +165,6 @@ Please wait while the app remembers all the things...
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
-        
-#if HAS_GTK422
-        support_save = true;
-        autosave_interval = 0;
-#endif
 
         //add_main_option_entries (CMD_OPTION_ENTRIES);
         manager = new Jorts.NoteManager (this);

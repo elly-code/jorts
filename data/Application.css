@@ -168,6 +168,6 @@ window.animated actionbar image {
 /* Devel builds get these. Libadwaita has that too, but we do not use it. */
 window.devel {
 	border-style: solid;
-	border-width: 3px;
+	border-width: 2px;
 	border-color: @warning_color;
 }

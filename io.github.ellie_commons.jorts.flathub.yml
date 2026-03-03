@@ -1,17 +1,11 @@
-#
-# This is danger
-#
-id: io.github.elly_code.jorts.devel
+id: io.github.ellie_commons.jorts
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50beta'
 sdk: org.gnome.Sdk
-command: io.github.elly_code.jorts.devel
-
-tags: ['devel']
-desktop-file-name-suffix: ' (Development)'
+command: io.github.ellie_commons.jorts
 
 finish-args:
   - '--share=ipc'
@@ -59,7 +53,8 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dvariant=['default']
-      - -Ddevelopment=true
+      - -Dflathub=true
+      - -Dlegacy-rdnn=true
     sources:
       - type: dir
         path: .

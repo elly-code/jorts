@@ -2,11 +2,25 @@
 project(
     'io.github.elly_code.jorts',
     'vala', 'c',
-    version: '4.0.1'
+    version: '4.0.2'
 )
 
 app_name = 'Jorts'
-app_id = meson.project_name()
+
+
+correct_app_id = 'io.github.elly_code.jorts'
+legacy_app_id = 'io.github.ellie_commons.jorts'
+
+if get_option('legacy-rdnn')
+    app_id = legacy_app_id
+    alternate_app_id = correct_app_id
+
+else
+    app_id = correct_app_id
+    alternate_app_id = legacy_app_id
+
+endif
+
 app_version = meson.project_version()
 
 vala_flags = []
@@ -83,25 +97,13 @@ gresource = gnome.compile_resources(
 #================================
 # dependencies
 
-
-
-gtk422 = dependency('gtk4', version: '>= 4.22', required: false)
-
-if gtk422.found()
-	gtk_dep = gtk422
-	vala_flags = ['--define', 'HAS_GTK422']
-
-else
-    gtk_dep = dependency('gtk4')
-endif
-
 add_project_arguments(vala_flags, language: 'vala')
 dependencies = [
         dependency('granite-7'),
         dependency('gobject-2.0'),
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),
-        gtk_dep,
+        dependency('gtk4')
     ]
 
 # We need to compile an icon into the exe to avoid "missing icon" icon at every turn

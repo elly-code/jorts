@@ -136,9 +136,6 @@ public class Jorts.NoteManager : Object {
         };
 
         storage.save (array);  
-#if HAS_GTK422
-        application.save ();
-#endif
     }
 
     /*************************************************/

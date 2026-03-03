@@ -21,11 +21,11 @@
     </description>
 
     <provides>
-        <id>io.github.ellie_commons.jorts</id>
-        <binary>io.github.ellie_commons.jorts</binary>
+        <id>@ALTERNATE_APP_ID@</id>
+        <binary>@ALTERNATE_APP_ID@</binary>
     </provides>
     <replaces>
-        <id>io.github.ellie_commons.jorts</id>
+        <id>@ALTERNATE_APP_ID@</id>
     </replaces>
 
     <developer id="io.github.elly-code">
@@ -40,7 +40,7 @@
     <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.elly_code.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">@APP_ID@</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>

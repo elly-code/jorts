@@ -10,3 +10,4 @@ option('flathub',
     description : 'Slight modifications for Flathub'
 )
 option('development', type: 'boolean', value: false, description: 'If this is a development build')
+option('legacy-rdnn', type: 'boolean', value: false, description: 'If this uses the legacy RDNN')
