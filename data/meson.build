@@ -55,7 +55,7 @@ if not windows_build
     # Install the dev icon in development builds
     else
         install_data(
-            'icons' / 'default' / 'dev.svg',
+            'icons' / 'dev.svg',
             install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps',
             rename: app_id + '.svg'
         )
