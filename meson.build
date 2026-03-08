@@ -42,6 +42,7 @@ i18n = import('i18n')
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_id), language:'c')
 windows_build = build_machine.system() == 'windows'
+macos_build = build_machine.system() == 'darwin'
 
 
 #================================
@@ -61,6 +62,8 @@ endif
 # Windows needs icons, special arguments, and skip libportal
 if windows_build
     vala_flags += ['--define', 'WINDOWS']
+elif macos_build
+    vala_flags += ['--define', 'MACOS']
 endif
 
 # Hot fixes for flathub builds
