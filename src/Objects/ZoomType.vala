@@ -1,21 +1,21 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
- *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
  /*************************************************/
 /**
 * Used in a signal to tell windows in which way to change zoom
 */
- public enum Jorts.Zoomkind {
+ public enum Jorts.ZoomType {
     ZOOM_OUT,
     DEFAULT_ZOOM,
     ZOOM_IN,
     NONE;
 
-    public static Zoomkind from_delta (double delta) {
+    public static ZoomType from_delta (double delta) {
 
         if (delta == 0) {return NONE;}
 

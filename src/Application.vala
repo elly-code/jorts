@@ -72,7 +72,7 @@ public class Jorts.Application : Gtk.Application {
 
     public Application () {
         Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                application_id: Jorts.Constants.RDNN);
+                application_id: APP_ID);
     }
 
     /*************************************************/
@@ -155,7 +155,7 @@ Please wait while the app remembers all the things...
 
     /*************************************************/        
     static construct {
-        gsettings = new GLib.Settings (Jorts.Constants.RDNN);
+        gsettings = new GLib.Settings (APP_ID);
     }
 
     /*************************************************/
@@ -165,7 +165,7 @@ Please wait while the app remembers all the things...
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
-        
+
         //add_main_option_entries (CMD_OPTION_ENTRIES);
         manager = new Jorts.NoteManager (this);
     }
@@ -266,7 +266,6 @@ Please wait while the app remembers all the things...
             return 0;
         }
 
-        hold ();
         activate ();
         return 0;
     }

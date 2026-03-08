@@ -1,5 +1,5 @@
 sources = files (
-    'Objects' / 'Zoomkind.vala',
+    'Objects' / 'ZoomType.vala',
     'Objects' / 'Zoom.vala',
     'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
@@ -44,7 +44,7 @@ endif
 # win_subsystem doesnt seem to bother standard builds
 
 executable(
-    meson.project_name(),
+    app_id,
     gresource,
     config_file,
     sources,

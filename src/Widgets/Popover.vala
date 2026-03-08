@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
- *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
 /**
@@ -28,7 +28,7 @@ public class Jorts.Popover : Gtk.Popover {
     public int zoom { set {font_size_box.zoom = value;}}
 
     public signal void theme_changed (Jorts.Themes selected);
-    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
+    public signal void zoom_changed (Jorts.ZoomType zoomtype);
     public signal void monospace_changed (bool if_monospace);
 
     static construct
@@ -71,7 +71,7 @@ public class Jorts.Popover : Gtk.Popover {
         // Propagate settings changes to the higher level
         color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
         monospace_box.monospace_changed.connect (on_monospace_changed);
-        font_size_box.zoom_changed.connect ((zoomkind) => {zoom_changed (zoomkind);});
+        font_size_box.zoom_changed.connect ((zoomtype) => {zoom_changed (zoomtype);});
 
         // Allow scrolling shenanigans from popover
         var keypress_controller = new Gtk.EventControllerKey ();

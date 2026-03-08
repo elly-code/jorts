@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.github.elly_code.jorts</id>
+    <id>@APP_ID@</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
+    <launchable type="desktop-id">@APP_ID@.desktop</launchable>
     
-    <name translate="no">Jorts</name>
+    <name translate="no">@APP_NAME@</name>
     <summary>Write on colourful little squares</summary>
     <description>
         <p>Neither jeans nor shorts, just like jorts!</p>
@@ -18,14 +19,13 @@
         </ul>
         <p>This is a fork of an old version of "Notejot" by lainsce. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
-    <launchable type="desktop-id">io.github.elly_code.jorts.desktop</launchable>
 
     <provides>
-        <id>io.github.ellie_commons.jorts</id>
-        <binary>io.github.ellie_commons.jorts</binary>
+        <id>@ALTERNATE_APP_ID@</id>
+        <binary>@ALTERNATE_APP_ID@</binary>
     </provides>
     <replaces>
-        <id>io.github.ellie_commons.jorts</id>
+        <id>@ALTERNATE_APP_ID@</id>
     </replaces>
 
     <developer id="io.github.elly-code">
@@ -40,7 +40,7 @@
     <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.elly_code.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">@APP_ID@</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -68,9 +68,6 @@
       <control>pointing</control>
       <control>touch</control>
     </recommends>
-    <custom>
-        <value key="x-appcenter-suggested-price">1</value>
-    </custom>
 
     <screenshots>
         <screenshot type="default">

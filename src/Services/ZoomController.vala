@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
- *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
 /*************************************************/
@@ -30,12 +30,12 @@ public class Jorts.ZoomController : Object {
     /**
     * Handler. Wraps a zoom enum into the correct function-
     */
-    public void zoom_changed (Jorts.Zoomkind zoomkind) {
+    public void zoom_changed (Jorts.ZoomType zoomtype) {
         debug ("Zoom changed!");
-        switch (zoomkind) {
-            case Zoomkind.ZOOM_IN:              zoom_in (); return;          // vala-lint=double-spaces
-            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); return;     // vala-lint=double-spaces
-            case Zoomkind.ZOOM_OUT:             zoom_out (); return;         // vala-lint=double-spaces
+        switch (zoomtype) {
+            case ZoomType.ZOOM_IN:              zoom_in (); return;          // vala-lint=double-spaces
+            case ZoomType.DEFAULT_ZOOM:         zoom_default (); return;     // vala-lint=double-spaces
+            case ZoomType.ZOOM_OUT:             zoom_out (); return;         // vala-lint=double-spaces
             default:                            return;                      // vala-lint=double-spaces
         }
     }
@@ -116,7 +116,7 @@ public class Jorts.ZoomController : Object {
             return Gdk.EVENT_PROPAGATE;
         }
 
-        zoom_changed (Zoomkind.from_delta (dy));
+        zoom_changed (ZoomType.from_delta (dy));
         debug ("Go! Zoooommmmm");
 
         return Gdk.EVENT_PROPAGATE;

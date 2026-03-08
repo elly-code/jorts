@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
- *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
 
@@ -13,8 +13,7 @@
 * Can be packaged into a noteData file for convenient storage
 * Reports to the NoteManager for saving
 */
-public class Jorts.StickyNoteWindow : Gtk.Window {
-
+public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Jorts.NoteView view;
     public Popover popover;
     public TextView textview;
@@ -83,6 +82,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         title = "" + _(" - Jorts");
 
 
+
+
+
         /*****************************************/
         /*              HEADERBAR                */
         /*****************************************/
@@ -104,6 +106,11 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         /****************************************/
 
         load_data (data);
+
+#if DEVEL
+        add_css_class ("devel");
+#endif
+
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -132,6 +139,8 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         } else {
             bind_hidebar ();
         }
+
+
     }
 
 
@@ -161,6 +170,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     */
     private void on_editable_changed () {
         title = view.editablelabel.text + _(" - Jorts");
+#if DEVEL
+        title += _(" (Development)");
+#endif
         changed ();
     }
 
