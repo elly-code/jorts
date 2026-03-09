@@ -35,6 +35,8 @@ sources = files (
 
 if windows_build
     sources += ico_src
+elif macos_build
+    # noop
 else
     sources += files('Utils' / 'Libportal.vala')
 endif
