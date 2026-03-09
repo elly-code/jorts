@@ -80,8 +80,10 @@ public class Jorts.Application : Gtk.Application {
         debug ("Jorts Startup…");
         base.startup ();
         Gtk.init ();
-        Granite.init ();
 
+#if !MACOS
+        Granite.init ();
+#endif
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.action_quit", {"<Control>Q"});
         set_accels_for_action ("app.action_new", {"<Control>N"});
@@ -105,11 +107,14 @@ public class Jorts.Application : Gtk.Application {
 
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
+#if !MACOS
         var granite_settings = Granite.Settings.get_default ();
+#endif
         gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_icon_theme_name = "elementary";
         gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.to_string ().ascii_down ();
 
+#if !MACOS
         // Also follow dark if system is dark lIke mY sOul.
         gtk_settings.gtk_application_prefer_dark_theme = (
 	            granite_settings.prefers_color_scheme == DARK
@@ -120,7 +125,7 @@ public class Jorts.Application : Gtk.Application {
                     granite_settings.prefers_color_scheme == DARK
                 );
         });
-
+#endif
         print ("""
 🎉✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
 Your Notes are all belong to us!

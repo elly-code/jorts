@@ -101,7 +101,7 @@
                 /****************************************************/
                 /*               Autostart Request                  */
                 /****************************************************/
-#if !WINDOWS
+#if !WINDOWS && !MACOS
                 var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5) {
                     halign = Gtk.Align.FILL
                 };
