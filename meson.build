@@ -114,7 +114,8 @@ dependencies = [
 if windows_build
     dependencies += dependency('gio-windows-2.0')
     ico_src = import('windows').compile_resources('windows/icons/ico.rc')
-
+elif macos_build
+    dependencies += dependency('gio-unix-2.0')
 else
     dependencies += dependency('gio-unix-2.0')
     dependencies += dependency('libportal')
@@ -131,5 +132,5 @@ subdir('src')
 gnome.post_install(
   glib_compile_schemas: true,
   gtk_update_icon_cache: true,
-  update_desktop_database: true
+  update_desktop_database: not macos_build
   )
