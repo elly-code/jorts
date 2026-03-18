@@ -29,10 +29,10 @@ public class Jorts.TextView : Granite.HyperTextView {
 
     construct {
         buffer = new Gtk.TextBuffer (null);
-        bottom_margin = 10;
-        left_margin = 10;
-        right_margin = 10;
-        top_margin = 5;
+        bottom_margin   = Constants.SPACING_DOUBLE;
+        left_margin     = Constants.SPACING_DOUBLE;
+        right_margin    = Constants.SPACING_DOUBLE;
+        top_margin      = Constants.SPACING_STANDARD;
 
         hexpand = true;
         vexpand = true;
@@ -42,8 +42,8 @@ public class Jorts.TextView : Granite.HyperTextView {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("textview", actions);
 
-        list_item_start = Application.gsettings.get_string ("list-item-start");
-        Application.gsettings.changed["list-item-start"].connect (on_prefix_changed);
+        list_item_start = Application.gsettings.get_string (Constants.KEY_LIST);
+        Application.gsettings.changed[Constants.KEY_LIST].connect (on_prefix_changed);
 
         keyboard = new Gtk.EventControllerKey ();
         add_controller (keyboard);

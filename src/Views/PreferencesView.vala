@@ -13,10 +13,10 @@
     construct {
         orientation = VERTICAL;
         spacing = 0;
-        margin_top = 10;
-        margin_bottom = 10;
-        margin_start = 10;
-        margin_end = 10;
+        margin_top = Constants.SPACING_DOUBLE;
+        margin_bottom = Constants.SPACING_DOUBLE;
+        margin_start = Constants.SPACING_DOUBLE;
+        margin_end = Constants.SPACING_DOUBLE;
 
         var overlay = new Gtk.Overlay ();
         append (overlay);
@@ -26,14 +26,14 @@
 
             // the box with all the settings
 #if FLATHUB
-            var settings_spacing = 5;
+            var settings_spacing = Constants.SPACING_STANDARD;
 #else
-            var settings_spacing = 15;
+            var settings_spacing = Constants.SPACING_STANDARD + Constants.SPACING_DOUBLE;
 #endif
             var settingsbox = new Gtk.Box (VERTICAL, settings_spacing) {
-                margin_top = 5,
-                margin_start = 5,
-                margin_end = 5,
+                margin_top = Constants.SPACING_STANDARD,
+                margin_start = Constants.SPACING_STANDARD,
+                margin_end = Constants.SPACING_STANDARD,
                 hexpand = true,
                 vexpand = true,
                 valign = Gtk.Align.START
@@ -146,8 +146,8 @@
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.CenterBox () {
-                margin_start = 5,
-                margin_end = 5,
+                margin_start = Constants.SPACING_STANDARD,
+                margin_end = Constants.SPACING_STANDARD,
                 valign = Gtk.Align.END,
                 hexpand = true,
                 vexpand = false

@@ -37,17 +37,9 @@ namespace Jorts.Constants {
     const int DEFAULT_WIDTH              = 290;
     const int DEFAULT_HEIGHT             = 320;
 
-    // New preference window
-    // We dont show autostart on windows, avoid awkward blank space
-    // Autostart contributes to width too to accommodate buttons
-#if WINDOWS
-    const int DEFAULT_PREF_WIDTH         = 480;
-    const int DEFAULT_PREF_HEIGHT        = 250;
-#else
-    const int DEFAULT_PREF_WIDTH         = 490;
-    const int DEFAULT_PREF_HEIGHT        = 270;
-#endif
 
+    const int SPACING_STANDARD           = 5;
+    const int SPACING_DOUBLE           = 10;
 
     // Autocomplete save me
     const string KEY_SCRIBBLY           = "scribbly-mode-active";

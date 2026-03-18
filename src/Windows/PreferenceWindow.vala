@@ -18,6 +18,19 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 */
 public class Jorts.PreferenceWindow : Gtk.Window {
 
+
+    // New preference window
+    // We dont show autostart on windows, avoid awkward blank space
+    // Autostart contributes to width too to accommodate buttons
+#if WINDOWS
+    const int DEFAULT_PREF_WIDTH         = 480;
+    const int DEFAULT_PREF_HEIGHT        = 250;
+#else
+    const int DEFAULT_PREF_WIDTH         = 490;
+    const int DEFAULT_PREF_HEIGHT        = 270;
+#endif
+
+
     public PreferenceWindow (Jorts.Application app) {
         debug ("[PREFWINDOW] Creating preference window");
         Intl.setlocale ();
@@ -44,8 +57,8 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         set_titlebar (headerbar);
-        set_size_request (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
-        set_default_size (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
+        set_size_request (DEFAULT_PREF_WIDTH, DEFAULT_PREF_HEIGHT);
+        set_default_size (DEFAULT_PREF_WIDTH, DEFAULT_PREF_HEIGHT);
         resizable = false;
 
         var prefview = new Jorts.PreferencesView ();
