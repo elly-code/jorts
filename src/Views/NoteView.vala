@@ -46,7 +46,6 @@
     public const string ACTION_SHOW_EMOJI = "action_show_emoji";
     public const string ACTION_SHOW_MENU = "action_show_menu";
     public const string ACTION_TOGGLE_MONO = "action_toggle_mono";
-    public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
@@ -55,7 +54,6 @@
         { ACTION_SHOW_EMOJI, action_show_emoji},
         { ACTION_SHOW_MENU, action_show_menu},
         { ACTION_TOGGLE_MONO, action_toggle_mono},
-        { ACTION_TOGGLE_LIST, action_toggle_list},
     };
 
     construct {
@@ -68,7 +66,6 @@
         app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_EMOJI, {"<Control>period"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_MENU, {"<Control>G", "<Control>O"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_MONO, {"<Control>m"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_LIST, {"<Shift>F12"});
 
 
 
@@ -137,6 +134,5 @@
     private void action_focus_title () {editablelabel.editing = true;}
     private void action_show_emoji () {emoji_button.activate ();}
     private void action_show_menu () {menu_button.activate ();}
-    private void action_toggle_list () {textview.toggle_list ();}
     private void action_toggle_mono () {monospace = !monospace;}
 }

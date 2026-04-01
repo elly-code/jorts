@@ -44,20 +44,22 @@
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>w"},
                 _("Delete sticky note")
-            )
+            ),
+            has_frame = false
         };
         delete_item.add_css_class (STYLE_THEMEDBUTTON);
 
         /* **** RIGHT **** */
         list_button = new Gtk.Button () {
-            action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_LIST,
+            action_name = TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST,
             icon_name = "view-list-symbolic",
             width_request = ICON_SIZE,
             height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Shift>F12"},
                 _("Toggle list")
-            )
+            ),
+            has_frame = false
         };
         list_button.add_css_class (STYLE_THEMEDBUTTON);
 
@@ -70,7 +72,8 @@
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>period"},
                 _("Insert emoji")
-            )
+            ),
+            has_frame = false
         };
         emoji_button.add_css_class (STYLE_THEMEDBUTTON);
 
@@ -84,6 +87,7 @@
                 {"<Control>g", "<Control>o"},
                 _("Preferences for this sticky note")
             ),
+            has_frame = false,
             direction = Gtk.ArrowType.UP
         };
         menu_button.add_css_class (STYLE_THEMEDBUTTON);
@@ -111,7 +115,6 @@
         // Hide the list button if user has specified no list item symbol
         on_prefix_changed ();
         Application.gsettings.changed[KEY_LIST].connect (on_prefix_changed);
-
     }
 
     /**
@@ -135,6 +138,9 @@
         );
     }
 
+    /**
+    * If user leaves list prefix blank, then they dont need the button.
+    */
     private void on_prefix_changed () {
         list_button.visible = (Application.gsettings.get_string (KEY_LIST) != "");
     }

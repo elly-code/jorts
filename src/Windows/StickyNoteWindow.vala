@@ -81,6 +81,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view = new NoteView ();
         textview = view.textview;
         insert_action_group ("noteview", view.actions);
+        insert_action_group ("textview", textview.actions);
 
         // Have shortcuts keep working with the popover open.
         popover = view.popover;
