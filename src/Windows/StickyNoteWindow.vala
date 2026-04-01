@@ -66,6 +66,16 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_OUT, {"<Control>minus", "<Control>KP_Subtract"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_DEFAULT, {"<Control>equal", "<Control>0", "<Control>KP_0"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_IN, {"<Control>plus", "<Control>KP_Add"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_MONO, {"<Control>m"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_FOCUS_TITLE, {"<Control>L"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_EMOJI, {"<Control>period"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_LIST, {"<Shift>F12"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_MENU, {"<Control>G", "<Control>O"});
+
         color_controller = new Jorts.ColorController (this);
         zoom_controller = new Jorts.ZoomController (this);
         scribbly_controller = new Jorts.ScribblyController (this);
@@ -80,9 +90,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         add_css_class ("rounded");
         title = "" + _(" - Jorts");
-
-
-
 
 
         /*****************************************/
@@ -126,7 +133,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
-        popover.zoom_changed.connect (zoom_controller.zoom_changed);
+
         popover.theme_changed.connect (color_controller.on_color_changed);
 
         // Use the color theme of this sticky note when focused
