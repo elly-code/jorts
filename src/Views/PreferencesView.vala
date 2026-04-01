@@ -5,41 +5,39 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
- public class Jorts.PreferencesView : Gtk.Box {
+ public class Jorts.PreferencesView : Granite.Bin {
     //public Gtk.Button reset_button;
     private Granite.Toast toast;
     public Gtk.Button close_button;
 
     construct {
-        orientation = VERTICAL;
-        spacing = SPACING_DOUBLE;
-        margin_top = SPACING_DOUBLE;
-        margin_bottom = SPACING_DOUBLE;
-        margin_start = SPACING_DOUBLE;
-        margin_end = SPACING_DOUBLE;
-
         var overlay = new Gtk.Overlay ();
-        append (overlay);
+        child = overlay;
 
-            toast = new Granite.Toast (_("Request to system sent"));
-            overlay.add_overlay (toast);
+        toast = new Granite.Toast (_("Request to system sent"));
+        overlay.add_overlay (toast);
 
-            // the box with all the settings
-            var settingsbox = new Gtk.Box (VERTICAL, SPACING_DOUBLE) {
-                margin_top = SPACING_STANDARD,
-                margin_start = SPACING_STANDARD,
-                margin_end = SPACING_STANDARD,
-                hexpand = true,
-                vexpand = true,
-                valign = Gtk.Align.START
-            };
+        var prefview = new Gtk.Box (Gtk.Orientation.VERTICAL, SPACING_TRIPLE) {
+            margin_start = SPACING_TRIPLE,
+            margin_end = SPACING_TRIPLE,
+            margin_top = SPACING_DOUBLE,
+            margin_bottom = SPACING_DOUBLE,
+            hexpand = true,
+            vexpand = true
+        };
+        overlay.child = prefview;
+
+        // the box with all the settings
+        var settingsbox = new Gtk.Box (VERTICAL, SPACING_DOUBLE) {
+            hexpand = true,
+            vexpand = true,
+            valign = Gtk.Align.START
+        };
 
 
                 /***************************************/
                 /*               lists                 */
                 /***************************************/
-
-                var lists_box = new Gtk.Box (HORIZONTAL, 5);
 
                 var list_entry = new Gtk.Entry () {
                     halign = Gtk.Align.END,
@@ -49,19 +47,23 @@
                     max_width_chars = 6
                 };
 
+                list_entry.secondary_icon_name = "view-refresh-symbolic";
+                list_entry.secondary_icon_tooltip_text = _("Reset to default");
+                list_entry.icon_press.connect (on_reset_prefix);
+
                 var list_label = new Granite.HeaderLabel (_("List item prefix")) {
                     mnemonic_widget = list_entry,
                     secondary_text = _("If left empty, the list button will be hidden"),
                     hexpand = true
                 };
 
+                var lists_box = new Gtk.Box (HORIZONTAL, SPACING_STANDARD);
                 lists_box.append (list_label);
                 lists_box.append (list_entry);
 
                 Application.gsettings.bind (KEY_LIST,
                     list_entry, "text",
                     SettingsBindFlags.DEFAULT);
-
 
                 settingsbox.append (lists_box);
 
@@ -97,7 +99,7 @@
                 /*               Autostart Request                  */
                 /****************************************************/
 #if !WINDOWS
-                var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5) {
+                var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, SPACING_STANDARD) {
                     halign = Gtk.Align.FILL
                 };
 
@@ -126,7 +128,7 @@
                 both_buttons.append (set_autostart);
                 both_buttons.append (remove_autostart);
 
-                var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
+                var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, SPACING_STANDARD);
 
                 var autostart_label = new Granite.HeaderLabel (_("Automatically start Jorts")) {
                     mnemonic_widget = both_buttons,
@@ -141,8 +143,6 @@
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.CenterBox () {
-                margin_start = SPACING_STANDARD,
-                margin_end = SPACING_STANDARD,
                 valign = Gtk.Align.END,
                 hexpand = true,
                 vexpand = false
@@ -166,7 +166,11 @@
 
             actionbar.end_widget = close_button;
 
-            append (settingsbox);
-            append (actionbar);
+            prefview.append (settingsbox);
+            prefview.append (actionbar);
+    }
+
+    private void on_reset_prefix (Gtk.EntryIconPosition icon_pos) {
+        Application.gsettings.reset (KEY_LIST);
     }
 }
