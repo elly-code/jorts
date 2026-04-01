@@ -56,7 +56,7 @@
             )
         };
         list_button.add_css_class (STYLE_THEMEDBUTTON);
-        list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_LIST;
+        list_button.action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_LIST;
 
         emojichooser_popover = new Gtk.EmojiChooser ();
 

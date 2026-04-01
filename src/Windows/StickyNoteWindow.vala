@@ -33,28 +33,18 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private Gtk.EventControllerScroll scroll_controller;
 
     public const string ACTION_PREFIX = "win.";
-    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
-    public const string ACTION_SHOW_MENU = "action_show_menu";
-    public const string ACTION_FOCUS_TITLE = "action_focus_title";
+    public const string ACTION_DELETE = "action_delete";
     public const string ACTION_ZOOM_OUT = "action_zoom_out";
     public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
     public const string ACTION_ZOOM_IN = "action_zoom_in";
-    public const string ACTION_TOGGLE_MONO = "action_toggle_mono";
-    public const string ACTION_DELETE = "action_delete";
-    public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_DELETE, action_delete},
-        { ACTION_SHOW_EMOJI, action_show_emoji},
-        { ACTION_SHOW_MENU, action_show_menu},
-        { ACTION_FOCUS_TITLE, action_focus_title},
         { ACTION_ZOOM_OUT, action_zoom_out},
         { ACTION_ZOOM_DEFAULT, action_zoom_default},
         { ACTION_ZOOM_IN, action_zoom_in},
-        { ACTION_TOGGLE_MONO, action_toggle_mono},
-        { ACTION_TOGGLE_LIST, action_toggle_list},
     };
 
     public StickyNoteWindow (Jorts.Application app, NoteData data) {
@@ -70,11 +60,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_OUT, {"<Control>minus", "<Control>KP_Subtract"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_DEFAULT, {"<Control>equal", "<Control>0", "<Control>KP_0"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_IN, {"<Control>plus", "<Control>KP_Add"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_MONO, {"<Control>m"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_FOCUS_TITLE, {"<Control>L"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_EMOJI, {"<Control>period"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_LIST, {"<Shift>F12"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_MENU, {"<Control>G", "<Control>O"});
+
 
         color_controller = new Jorts.ColorController (this);
         zoom_controller = new Jorts.ZoomController (this);
@@ -88,7 +74,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
 
-        add_css_class ("rounded");
         title = "" + _(" - Jorts");
 
 
@@ -102,8 +87,15 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view = new NoteView ();
         textview = view.textview;
 
-        popover = new Jorts.Popover (this);
-        view.menu_button.popover = popover;
+        insert_action_group ("noteview", view.actions);
+
+
+
+        popover = view.popover;
+        view.popover.scroll_controller.scroll.connect (zoom_controller.on_scroll);
+        view.popover.keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
+        view.popover.keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
+
 
         set_child (view);
         set_focus (view);
@@ -224,13 +216,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     private void has_changed () {changed ();}
 
-    private void action_focus_title () {view.action_focus_title ();}
-    private void action_show_emoji () {view.action_show_emoji ();}
-    private void action_show_menu () {view.action_show_menu ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
-    private void action_toggle_mono () {popover.monospace = !popover.monospace;}
-    private void action_toggle_list () {view.action_toggle_list ();}
-
     private void action_zoom_out () {zoom_controller.zoom_out ();}
     private void action_zoom_default () {zoom_controller.zoom_default ();}
     private void action_zoom_in () {zoom_controller.zoom_in ();}

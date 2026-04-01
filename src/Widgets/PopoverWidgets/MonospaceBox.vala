@@ -28,7 +28,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
 
         ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {
-            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_MONO,
+            action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO,
             child = new Gtk.Label (_("Default")),
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>m"},
@@ -38,7 +38,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
         };
 
         mono_monospace_toggle = new Gtk.ToggleButton () {
-            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_MONO,
+            action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO,
             child = new Gtk.Label (_("Monospace")),
                 tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>m"},
