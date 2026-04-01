@@ -26,17 +26,16 @@ public class Jorts.ZoomBox : Gtk.Box {
         }
     }
 
-    public signal void zoom_changed (Jorts.ZoomType zoomtype);
-
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
         homogeneous = true;
         hexpand = true;
-        margin_start = 10;
-        margin_end = 10;
+        margin_start = SPACING_DOUBLE;
+        margin_end = SPACING_DOUBLE;
 
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
+            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_OUT,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>minus", "<Control>KP_Subtract"},
                 _("Zoom out")
@@ -44,6 +43,7 @@ public class Jorts.ZoomBox : Gtk.Box {
             };
 
         zoom_default_button = new Gtk.Button () {
+            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_DEFAULT,
             tooltip_markup = Granite.markup_accel_tooltip (
                 { "<Control>equal", "<Control>0", "<Control>KP_0" },
                 _("Default zoom level")
@@ -51,6 +51,7 @@ public class Jorts.ZoomBox : Gtk.Box {
             };
 
         var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
+            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_IN,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>plus", "<Control>KP_Add"},
                 _("Zoom in")
@@ -61,22 +62,5 @@ public class Jorts.ZoomBox : Gtk.Box {
         append (zoom_default_button);
         append (zoom_in_button);
         add_css_class (Granite.STYLE_CLASS_LINKED);
-
-        // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        zoom_out_button.clicked.connect (zoom_out);
-        zoom_default_button.clicked.connect (zoom_default);
-        zoom_in_button.clicked.connect (zoom_in);
-    }
-
-    private void zoom_out () {
-        zoom_changed (ZoomType.ZOOM_OUT);
-    }
-
-    private void zoom_default () {
-        zoom_changed (ZoomType.DEFAULT_ZOOM);
-    }
-
-    private void zoom_in () {
-        zoom_changed (ZoomType.ZOOM_IN);
     }
 }

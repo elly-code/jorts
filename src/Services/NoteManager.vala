@@ -40,7 +40,7 @@ public class Jorts.NoteManager : Object {
 
         if (loaded_data.get_length () == 0) {
             var note_data = new NoteData ();
-            note_data.theme = Constants.DEFAULT_THEME;
+            note_data.theme = DEFAULT_THEME;
             create_note (note_data);
 
         } else {
@@ -117,7 +117,7 @@ public class Jorts.NoteManager : Object {
             GLib.Source.remove (debounce_timer_id);
         }
 
-        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, debounce_handler);
+        debounce_timer_id = Timeout.add (DEBOUNCE, debounce_handler);
     }
 
     public bool debounce_handler () {

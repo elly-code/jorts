@@ -31,7 +31,7 @@
             )
         };
         new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
-        new_item.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        new_item.add_css_class (STYLE_THEMEDBUTTON);
 
         var delete_item = new Gtk.Button () {
             icon_name = "edit-delete-symbolic",
@@ -42,7 +42,7 @@
                 _("Delete sticky note")
             )
         };
-        delete_item.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        delete_item.add_css_class (STYLE_THEMEDBUTTON);
         delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
 
         /* **** RIGHT **** */
@@ -55,7 +55,7 @@
                 _("Toggle list")
             )
         };
-        list_button.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        list_button.add_css_class (STYLE_THEMEDBUTTON);
         list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_LIST;
 
         emojichooser_popover = new Gtk.EmojiChooser ();
@@ -69,7 +69,7 @@
                 _("Insert emoji")
             )
         };
-        emoji_button.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        emoji_button.add_css_class (STYLE_THEMEDBUTTON);
         emoji_button.popover = emojichooser_popover;
 
         menu_button = new Gtk.MenuButton () {
@@ -82,7 +82,7 @@
             )
         };
         menu_button.direction = Gtk.ArrowType.UP;
-        menu_button.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        menu_button.add_css_class (STYLE_THEMEDBUTTON);
 
         /* **** Widget **** */
         actionbar = new Gtk.ActionBar () {
@@ -106,7 +106,7 @@
 
         // Hide the list button if user has specified no list item symbol
         on_prefix_changed ();
-        Application.gsettings.changed[Constants.KEY_LIST].connect (on_prefix_changed);
+        Application.gsettings.changed[KEY_LIST].connect (on_prefix_changed);
 
     }
 
@@ -115,7 +115,7 @@
     * StickyNoteWindow will decide itself whether to show immediately or not
     */
     public void reveal_bind () {
-        Application.gsettings.bind (Constants.KEY_HIDEBAR,
+        Application.gsettings.bind (KEY_HIDEBAR,
             this.actionbar, "revealed",
             SettingsBindFlags.INVERT_BOOLEAN);
     }
@@ -132,6 +132,6 @@
     }
 
     private void on_prefix_changed () {
-        list_button.visible = (Application.gsettings.get_string (Constants.KEY_LIST) != "");
+        list_button.visible = (Application.gsettings.get_string (KEY_LIST) != "");
     }
 }

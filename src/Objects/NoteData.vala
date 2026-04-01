@@ -13,9 +13,9 @@
 public class Jorts.NoteData : Object {
 
     // Will determine properties (or lack thereof) for any new note
-    public static Jorts.Themes latest_theme = Jorts.Constants.DEFAULT_THEME;
-    public static int latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
-    public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
+    public static Jorts.Themes latest_theme = DEFAULT_THEME;
+    public static int latest_zoom = DEFAULT_ZOOM;
+    public static bool latest_mono = DEFAULT_MONO;
 
     public string? title;
     public Jorts.Themes? theme;
@@ -36,8 +36,8 @@ public class Jorts.NoteData : Object {
         this.content = content ?? "";
         this.monospace = monospace ?? latest_mono;
         this.zoom = zoom ?? latest_zoom;
-        this.width = width ?? Jorts.Constants.DEFAULT_WIDTH;
-        this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
+        this.width = width ?? DEFAULT_WIDTH;
+        this.height = height ?? DEFAULT_HEIGHT;
     }
 
     /*************************************************/
@@ -48,15 +48,15 @@ public class Jorts.NoteData : Object {
         title       = node.get_string_member_with_default ("title", (_("Forgot title!")));
         theme       = (Jorts.Themes)node.get_int_member_with_default ("color", Jorts.Themes.random_theme ());
         content     = node.get_string_member_with_default ("content","");
-        monospace   = node.get_boolean_member_with_default ("monospace", Jorts.Constants.DEFAULT_MONO);
-        zoom        = (int)node.get_int_member_with_default ("zoom", Jorts.Constants.DEFAULT_ZOOM);
+        monospace   = node.get_boolean_member_with_default ("monospace", DEFAULT_MONO);
+        zoom        = (int)node.get_int_member_with_default ("zoom", DEFAULT_ZOOM);
 
         // Make sure the values are nothing crazy
-        if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}
-        else if (zoom > Jorts.Constants.ZOOM_MAX)   { zoom = Jorts.Constants.ZOOM_MAX;}
+        if (zoom < ZOOM_MIN)        { zoom = ZOOM_MIN;}
+        else if (zoom > ZOOM_MAX)   { zoom = ZOOM_MAX;}
 
-        width       = (int)node.get_int_member_with_default ("width", Jorts.Constants.DEFAULT_WIDTH);
-        height      = (int)node.get_int_member_with_default ("height", Jorts.Constants.DEFAULT_HEIGHT);
+        width       = (int)node.get_int_member_with_default ("width", DEFAULT_WIDTH);
+        height      = (int)node.get_int_member_with_default ("height", DEFAULT_HEIGHT);
     }
 
     /*************************************************/

@@ -53,9 +53,9 @@ public class Jorts.Popover : Gtk.Popover {
         halign = Gtk.Align.END;
         parent_window = window;
 
-        var view = new Gtk.Box (VERTICAL, 12) {
-            margin_top = 12,
-            margin_bottom = 12
+        var view = new Gtk.Box (VERTICAL, SPACING_TRIPLE) {
+            margin_top = SPACING_TRIPLE,
+            margin_bottom = SPACING_TRIPLE
         };
 
         color_box = new Jorts.ColorBox ();
@@ -71,7 +71,7 @@ public class Jorts.Popover : Gtk.Popover {
         // Propagate settings changes to the higher level
         color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
         monospace_box.monospace_changed.connect (on_monospace_changed);
-        font_size_box.zoom_changed.connect ((zoomtype) => {zoom_changed (zoomtype);});
+        //font_size_box.zoom_changed.connect ((zoomtype) => {zoom_changed (zoomtype);});
 
         // Allow scrolling shenanigans from popover
         var keypress_controller = new Gtk.EventControllerKey ();

@@ -13,10 +13,10 @@
     construct {
         orientation = VERTICAL;
         spacing = 0;
-        margin_top = Constants.SPACING_DOUBLE;
-        margin_bottom = Constants.SPACING_DOUBLE;
-        margin_start = Constants.SPACING_DOUBLE;
-        margin_end = Constants.SPACING_DOUBLE;
+        margin_top = SPACING_DOUBLE;
+        margin_bottom = SPACING_DOUBLE;
+        margin_start = SPACING_DOUBLE;
+        margin_end = SPACING_DOUBLE;
 
         var overlay = new Gtk.Overlay ();
         append (overlay);
@@ -26,14 +26,14 @@
 
             // the box with all the settings
 #if FLATHUB
-            var settings_spacing = Constants.SPACING_STANDARD;
+            var settings_spacing = SPACING_STANDARD;
 #else
-            var settings_spacing = Constants.SPACING_STANDARD + Constants.SPACING_DOUBLE;
+            var settings_spacing = SPACING_STANDARD + SPACING_DOUBLE;
 #endif
             var settingsbox = new Gtk.Box (VERTICAL, settings_spacing) {
-                margin_top = Constants.SPACING_STANDARD,
-                margin_start = Constants.SPACING_STANDARD,
-                margin_end = Constants.SPACING_STANDARD,
+                margin_top = SPACING_STANDARD,
+                margin_start = SPACING_STANDARD,
+                margin_end = SPACING_STANDARD,
                 hexpand = true,
                 vexpand = true,
                 valign = Gtk.Align.START
@@ -63,7 +63,7 @@
                 lists_box.append (list_label);
                 lists_box.append (list_entry);
 
-                Application.gsettings.bind (Constants.KEY_LIST,
+                Application.gsettings.bind (KEY_LIST,
                     list_entry, "text",
                     SettingsBindFlags.DEFAULT);
 
@@ -80,7 +80,7 @@
                 var scribbly_box = new Jorts.SettingsSwitch (
                     _("Scribble mode"),
                     _("Scribble text of unfocused notes (Ctrl+H)"),
-                    Constants.KEY_SCRIBBLY);
+                    KEY_SCRIBBLY);
 
                 settingsbox.append (scribbly_box);
 
@@ -93,7 +93,7 @@
                     ///TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
                     _("Hide bottom bar"),
                     _("Keyboard shortcuts will still function (Ctrl+T)"),
-                    Constants.KEY_HIDEBAR);
+                    KEY_HIDEBAR);
 
                 settingsbox.append (hidebar_box);
 
@@ -146,8 +146,8 @@
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.CenterBox () {
-                margin_start = Constants.SPACING_STANDARD,
-                margin_end = Constants.SPACING_STANDARD,
+                margin_start = SPACING_STANDARD,
+                margin_end = SPACING_STANDARD,
                 valign = Gtk.Align.END,
                 hexpand = true,
                 vexpand = false
@@ -155,7 +155,7 @@
 
             // Monies?
             var support_button = new Gtk.LinkButton.with_label (
-                Jorts.Constants.DONATE_LINK,
+                DONATE_LINK,
                 _("Support us!")
             );
             actionbar.start_widget = support_button;

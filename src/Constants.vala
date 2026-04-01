@@ -9,7 +9,7 @@
 /**
 * I just dump all my constants here
 */
-namespace Jorts.Constants {
+namespace Jorts {
 
     /*************************************************/
     const string DONATE_LINK             = "https://ko-fi.com/teamcons/tip";
@@ -40,6 +40,7 @@ namespace Jorts.Constants {
 
     const int SPACING_STANDARD           = 5;
     const int SPACING_DOUBLE           = 10;
+    const int SPACING_TRIPLE           = 15;
 
     // Autocomplete save me
     const string KEY_SCRIBBLY           = "scribbly-mode-active";

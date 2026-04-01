@@ -108,7 +108,7 @@ public class Jorts.Application : Gtk.Application {
         var granite_settings = Granite.Settings.get_default ();
         gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_icon_theme_name = "elementary";
-        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.to_string ().ascii_down ();
+        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + DEFAULT_THEME.to_string ().ascii_down ();
 
         // Also follow dark if system is dark lIke mY sOul.
         gtk_settings.gtk_application_prefer_dark_theme = (

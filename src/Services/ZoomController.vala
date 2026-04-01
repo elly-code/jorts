@@ -44,7 +44,7 @@ public class Jorts.ZoomController : Object {
     * Wrapper to check an increase doesnt go above limit
     */
     public void zoom_in () {
-        if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+        if ((_old_zoom + 20) <= ZOOM_MAX) {
             zoom = _old_zoom + 20;
         } else {
             Gdk.Display.get_default ().beep ();
@@ -52,8 +52,8 @@ public class Jorts.ZoomController : Object {
     }
 
     public void zoom_default () {
-        if (_old_zoom != Jorts.Constants.DEFAULT_ZOOM ) {
-            zoom = Jorts.Constants.DEFAULT_ZOOM;
+        if (_old_zoom != DEFAULT_ZOOM ) {
+            zoom = DEFAULT_ZOOM;
         } else {
             Gdk.Display.get_default ().beep ();
         }
@@ -63,7 +63,7 @@ public class Jorts.ZoomController : Object {
     * Wrapper to check an increase doesnt go below limit
     */
     public void zoom_out () {
-        if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+        if ((_old_zoom - 20) >= ZOOM_MIN) {
             zoom = _old_zoom - 20;
         } else {
             Gdk.Display.get_default ().beep ();
