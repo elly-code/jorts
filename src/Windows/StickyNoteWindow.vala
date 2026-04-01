@@ -14,6 +14,7 @@
 * Reports to the NoteManager for saving
 */
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
+
     public Jorts.NoteView view;
     public Popover popover;
     public TextView textview;
@@ -21,17 +22,15 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private Jorts.ColorController color_controller;
     public Jorts.ZoomController zoom_controller;
     private Jorts.ScribblyController scribbly_controller;
-
-    public NoteData data {
-        owned get { return packaged ();}
-        set { load_data (value);}
-    }
-
-    public signal void changed ();
-
     private Gtk.EventControllerKey keypress_controller;
     private Gtk.EventControllerScroll scroll_controller;
 
+    public NoteData data {
+        owned get {return packaged ();}
+        set {load_data (value);}
+    }
+
+    public signal void changed ();
     public const string ACTION_PREFIX = "win.";
     public const string ACTION_DELETE = "action_delete";
     public const string ACTION_ZOOM_OUT = "action_zoom_out";
@@ -76,34 +75,21 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         title = "" + _(" - Jorts");
 
-
-        /*****************************************/
-        /*              HEADERBAR                */
-        /*****************************************/
-
-        // No
+        // The view has its own titlebar
         titlebar = new Gtk.Grid () {visible = false};
 
         view = new NoteView ();
         textview = view.textview;
-
         insert_action_group ("noteview", view.actions);
 
-
-
+        // Have shortcuts keep working with the popover open.
         popover = view.popover;
         view.popover.scroll_controller.scroll.connect (zoom_controller.on_scroll);
         view.popover.keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
         view.popover.keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
 
-
         set_child (view);
         set_focus (view);
-
-        /****************************************/
-        /*              LOADING                 */
-        /****************************************/
-
         load_data (data);
 
 #if DEVEL
@@ -133,15 +119,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Respect animation settings for showing ui elements
         if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
-                show.connect_after (delayed_show);
+            show.connect_after (delayed_show);
 
         } else {
             bind_hidebar ();
         }
-
-
     }
-
 
         /********************************************/
         /*                  METHODS                 */
@@ -157,11 +140,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     private void bind_hidebar () {
-            Application.gsettings.bind (
-                "hide-bar",
-                view.actionbar.actionbar,
-                "revealed",
-                SettingsBindFlags.INVERT_BOOLEAN);
+        Application.gsettings.bind (
+            "hide-bar",
+            view.actionbar.actionbar,
+            "revealed",
+            SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     /**
@@ -205,9 +188,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Loading noteData…");
 
         set_default_size (data.width, data.height);
-        view.editablelabel.text = data.title;
-        title = view.editablelabel.text + _(" - Jorts");
-        view.textview.buffer.text = data.content;
+        view.title = data.title;
+        title = view.title + _(" - Jorts");
+        view.content = data.content;
 
         color_controller.theme = data.theme;
         zoom_controller.zoom = data.zoom;
@@ -215,7 +198,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     private void has_changed () {changed ();}
-
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
     private void action_zoom_out () {zoom_controller.zoom_out ();}
     private void action_zoom_default () {zoom_controller.zoom_default ();}

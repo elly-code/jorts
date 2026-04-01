@@ -18,11 +18,6 @@
 
     public Gtk.ScrolledWindow scrolled;
 
-    public bool monospace {
-        get { return textview.monospace;}
-        set { mono_set (value);}
-    }
-
     public string title {
         owned get { return editablelabel.text;}
         set { editablelabel.text = value;}
@@ -32,6 +27,18 @@
         owned get { return textview.text;}
         set { textview.text = value;}
     }
+
+    public bool monospace {
+        get { return textview.monospace;}
+        set { mono_set (value);}
+    }
+
+    public Themes color {
+        get { return popover.color;}
+        set { popover.color = value;}
+    }
+
+    public signal void changed ();
 
     public SimpleActionGroup actions { get; construct; }
     public const string ACTION_PREFIX = "noteview.";
