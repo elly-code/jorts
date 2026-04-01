@@ -111,7 +111,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
-
         popover.theme_changed.connect (color_controller.on_color_changed);
 
         // Use the color theme of this sticky note when focused
@@ -194,7 +193,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         color_controller.theme = data.theme;
         zoom_controller.zoom = data.zoom;
-        popover.monospace = data.monospace;
+        view.monospace = data.monospace;
     }
 
     private void has_changed () {changed ();}

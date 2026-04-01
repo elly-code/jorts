@@ -29,7 +29,6 @@ public class Jorts.Popover : Gtk.Popover {
     }
 
     public int zoom { set {font_size_box.zoom = value;}}
-
     public signal void theme_changed (Jorts.Themes selected);
 
     static construct
@@ -54,8 +53,8 @@ public class Jorts.Popover : Gtk.Popover {
         halign = Gtk.Align.END;
 
         var view = new Gtk.Box (VERTICAL, SPACING_TRIPLE) {
-            margin_top = SPACING_TRIPLE,
-            margin_bottom = SPACING_TRIPLE
+            margin_top = SPACING_DOUBLE,
+            margin_bottom = SPACING_DOUBLE
         };
 
         color_box = new Jorts.ColorBox ();
@@ -70,8 +69,7 @@ public class Jorts.Popover : Gtk.Popover {
 
         // Propagate settings changes to the higher level
         color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
-        //monospace_box.monospace_changed.connect (on_monospace_changed);
-        //font_size_box.zoom_changed.connect ((zoomtype) => {zoom_changed (zoomtype);});
+
 
         // Allow scrolling shenanigans from popover
         keypress_controller = new Gtk.EventControllerKey ();
@@ -88,7 +86,6 @@ public class Jorts.Popover : Gtk.Popover {
     */
     private void on_monospace_changed (bool monospace) {
         debug ("Updating monospace to %s".printf (monospace.to_string ()));
-
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
     }

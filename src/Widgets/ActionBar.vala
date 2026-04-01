@@ -17,71 +17,75 @@
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;
     public Gtk.WindowHandle handle;
+    public Jorts.Popover popover;
+
+    const int ICON_SIZE = 32;
 
     construct {
 
         /* **** LEFT **** */
         var new_item = new Gtk.Button () {
+            action_name = Application.ACTION_PREFIX + Application.ACTION_NEW,
             icon_name = "list-add-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>n"},
                 _("New sticky note")
             )
         };
-        new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
         new_item.add_css_class (STYLE_THEMEDBUTTON);
 
         var delete_item = new Gtk.Button () {
+            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE,
             icon_name = "edit-delete-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>w"},
                 _("Delete sticky note")
             )
         };
         delete_item.add_css_class (STYLE_THEMEDBUTTON);
-        delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
 
         /* **** RIGHT **** */
         list_button = new Gtk.Button () {
+            action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_LIST,
             icon_name = "view-list-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Shift>F12"},
                 _("Toggle list")
             )
         };
         list_button.add_css_class (STYLE_THEMEDBUTTON);
-        list_button.action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_LIST;
 
         emojichooser_popover = new Gtk.EmojiChooser ();
-
         emoji_button = new Gtk.MenuButton () {
+            popover = emojichooser_popover,
             icon_name = Jorts.Utils.random_emote (),
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>period"},
                 _("Insert emoji")
             )
         };
         emoji_button.add_css_class (STYLE_THEMEDBUTTON);
-        emoji_button.popover = emojichooser_popover;
 
+        popover = new Jorts.Popover ();
         menu_button = new Gtk.MenuButton () {
+            popover = popover,
             icon_name = "open-menu-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>g", "<Control>o"},
                 _("Preferences for this sticky note")
-            )
+            ),
+            direction = Gtk.ArrowType.UP
         };
-        menu_button.direction = Gtk.ArrowType.UP;
         menu_button.add_css_class (STYLE_THEMEDBUTTON);
 
         /* **** Widget **** */
@@ -116,7 +120,7 @@
     */
     public void reveal_bind () {
         Application.gsettings.bind (KEY_HIDEBAR,
-            this.actionbar, "revealed",
+            actionbar, "revealed",
             SettingsBindFlags.INVERT_BOOLEAN);
     }
 

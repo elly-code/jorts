@@ -71,6 +71,8 @@
         app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_LIST, {"<Shift>F12"});
 
 
+
+
         orientation = VERTICAL;
         spacing = 0;
 
@@ -90,17 +92,17 @@
         };
 
         actionbar = new Jorts.ActionBar ();
+
         emoji_button = actionbar.emoji_button;
         emojichooser_popover = actionbar.emojichooser_popover;
-        menu_button = actionbar.menu_button;
-        popover = new Jorts.Popover ();
 
-        menu_button.popover = popover;
+        menu_button = actionbar.menu_button;
+        popover = (Jorts.Popover)menu_button.popover;
 
         append (headerbar);
         append (scrolled);
         append (actionbar);
-        //set_focus_child (textview);
+
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -108,8 +110,8 @@
 
         emojichooser_popover.show.connect (randomize_emote_button);
         emojichooser_popover.emoji_picked.connect (on_emoji_picked);
-        //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
 
+        //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
         //textview.bind_property ("on_list_item", actionbar.list_button, "active", GLib.BindingFlags.DEFAULT);
     }
 
@@ -129,6 +131,7 @@
         editablelabel.monospace = if_mono;
         textview.monospace = if_mono;
         popover.monospace = if_mono;
+        NoteData.latest_mono = if_mono;
     }
 
     private void action_focus_title () {editablelabel.editing = true;}
