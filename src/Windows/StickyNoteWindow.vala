@@ -33,9 +33,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public signal void changed ();
     public const string ACTION_PREFIX = "win.";
     public const string ACTION_DELETE = "action_delete";
-    public const string ACTION_ZOOM_OUT = "action_zoom_out";
-    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-    public const string ACTION_ZOOM_IN = "action_zoom_in";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
@@ -195,7 +192,4 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     private void has_changed () {changed ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
-    private void action_zoom_out () {zoom_controller.zoom_out ();}
-    private void action_zoom_default () {zoom_controller.zoom_default ();}
-    private void action_zoom_in () {zoom_controller.zoom_in ();}
 }
