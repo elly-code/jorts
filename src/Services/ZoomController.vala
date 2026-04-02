@@ -23,8 +23,33 @@ public class Jorts.ZoomController : Object {
         set {do_set_zoom (value);}
     }
 
+    public SimpleActionGroup actions { get; construct; }
+    public const string ACTION_PREFIX = "zoom_controller.";
+    public const string ACTION_ZOOM_OUT = "action_zoom_out";
+    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    public const string ACTION_ZOOM_IN = "action_zoom_in";
+
+    public static Gee.MultiMap<string, string> action_accelerators;
+
+    private const GLib.ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_ZOOM_OUT, zoom_out},
+        { ACTION_ZOOM_DEFAULT, zoom_default},
+        { ACTION_ZOOM_IN, zoom_in}
+    };
+
+
     public ZoomController (Jorts.StickyNoteWindow window) {
         this.window = window;
+    }
+
+    construct {
+        actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+
+        unowned var app = ((Gtk.Application) GLib.Application.get_default ());
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_OUT, {"<Control>minus", "<Control>KP_Subtract"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_DEFAULT, {"<Control>equal", "<Control>0", "<Control>KP_0"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_IN, {"<Control>plus", "<Control>KP_Add"});
     }
 
     /**

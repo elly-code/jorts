@@ -24,7 +24,7 @@ public class Jorts.ColorBox : Gtk.Box {
     public ColorBox () {
         orientation = Gtk.Orientation.HORIZONTAL;
         accessible_role = Gtk.AccessibleRole.LIST;
-
+        homogeneous = true;
         spacing = 1;
         margin_start = SPACING_DOUBLE;
         margin_end = SPACING_DOUBLE;

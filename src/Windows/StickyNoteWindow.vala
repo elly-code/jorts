@@ -40,10 +40,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_DELETE, action_delete},
-        { ACTION_ZOOM_OUT, action_zoom_out},
-        { ACTION_ZOOM_DEFAULT, action_zoom_default},
-        { ACTION_ZOOM_IN, action_zoom_in},
+        { ACTION_DELETE, action_delete}
     };
 
     public StickyNoteWindow (Jorts.Application app, NoteData data) {
@@ -56,9 +53,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         insert_action_group ("win", actions);
 
         app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_OUT, {"<Control>minus", "<Control>KP_Subtract"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_DEFAULT, {"<Control>equal", "<Control>0", "<Control>KP_0"});
-        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_IN, {"<Control>plus", "<Control>KP_Add"});
+
 
 
         color_controller = new Jorts.ColorController (this);
@@ -82,6 +77,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         textview = view.textview;
         insert_action_group ("noteview", view.actions);
         insert_action_group ("textview", textview.actions);
+        insert_action_group ("zoom_controller", zoom_controller.actions);
 
         // Have shortcuts keep working with the popover open.
         popover = view.popover;
