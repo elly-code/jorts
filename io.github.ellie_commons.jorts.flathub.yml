@@ -17,7 +17,6 @@ cleanup:
   -  '/include'
   -  '/lib/pkgconfig'
   -  '/man'
-  -  '/share/doc'
   -  '/share/gtk-doc'
   -  '/share/man'
   -  '/share/pkgconfig'
