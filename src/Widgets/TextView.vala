@@ -57,11 +57,13 @@ public class Jorts.TextView : Granite.HyperTextView {
         add_controller (keyboard);
 
         // Alternate way to access preferences
-        var menuitem = new GLib.MenuItem (_("Show Preferences"), Application.ACTION_PREFIX + Application.ACTION_SHOW_PREFERENCES);
+        var menuitem_pref = new GLib.MenuItem (_("Show Preferences"), Application.ACTION_PREFIX + Application.ACTION_SHOW_PREFERENCES);
+        var menuitem_quit = new GLib.MenuItem (_("Quit Jorts"), Application.ACTION_PREFIX + Application.ACTION_QUIT);
         var extra = new GLib.Menu ();
         var section = new GLib.Menu ();
 
-        section.append_item (menuitem);
+        section.append_item (menuitem_pref);
+        section.append_item (menuitem_quit);
         extra.append_section (null, section);
         extra_menu = extra;
 
