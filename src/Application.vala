@@ -44,7 +44,7 @@ public class Jorts.Application : Gtk.Application {
     public static GLib.Settings gsettings;
     public static Gtk.Settings gtk_settings;
 
-    public Jorts.NoteManager manager;
+    public Jorts.NoteManager note_manager;
     public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
@@ -53,7 +53,6 @@ public class Jorts.Application : Gtk.Application {
 
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
-    public const string ACTION_NEW = "action_new";
     public const string ACTION_TOGGLE_SCRIBBLY = "action_toggle_scribbly";
     public const string ACTION_TOGGLE_ACTIONBAR = "action_toggle_actionbar";
     public const string ACTION_SHOW_PREFERENCES = "action_show_preferences";
@@ -63,17 +62,32 @@ public class Jorts.Application : Gtk.Application {
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_QUIT, quit},
-        { ACTION_NEW, action_new },
         { ACTION_TOGGLE_SCRIBBLY, action_toggle_scribbly},
         { ACTION_TOGGLE_ACTIONBAR, action_toggle_actionbar},
         { ACTION_SHOW_PREFERENCES, action_show_preferences},
-        { ACTION_SAVE, action_save},
     };
 
     public Application () {
         Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                 application_id: APP_ID);
     }
+
+
+    /*************************************************/        
+    static construct {
+        gsettings = new GLib.Settings (APP_ID);
+    }
+
+    /*************************************************/
+    construct {
+        // The localization thingamabob
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
+    }
+
+
 
     /*************************************************/
     public override void startup () {
@@ -84,11 +98,12 @@ public class Jorts.Application : Gtk.Application {
 
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.action_quit", {"<Control>Q"});
-        set_accels_for_action ("app.action_new", {"<Control>N"});
-        set_accels_for_action ("app.action_save", {"<Control>S"});
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
         set_accels_for_action ("app.action_show_preferences", {"<Control>P"});
         set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
+
+        note_manager = new Jorts.NoteManager (this);        
+        add_action_entries (NoteManager.ACTION_ENTRIES, note_manager);
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
@@ -139,23 +154,6 @@ Please wait while the app remembers all the things...
         );
     }
 
-    /*************************************************/        
-    static construct {
-        gsettings = new GLib.Settings (APP_ID);
-    }
-
-    /*************************************************/
-    construct {
-        // The localization thingamabob
-        Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        Intl.textdomain (GETTEXT_PACKAGE);
-
-        //add_main_option_entries (CMD_OPTION_ENTRIES);
-        manager = new Jorts.NoteManager (this);
-    }
-
     // Clicked: Either show all windows, or rebuild from storage
     protected override void activate () {
         debug ("[JORTS] Jorts, activate!");
@@ -164,25 +162,20 @@ Please wait while the app remembers all the things...
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
 
         /* Either we show all sticky notes, or we load everything lol */
-        if (manager.open_notes.size > 0) {
-            foreach (var window in manager.open_notes) {
+        if (note_manager.open_notes.size > 0) {
+            foreach (var window in note_manager.open_notes) {
                 if (window.visible) {window.present ();}
             }
         } else {
-            manager.init ();
+            note_manager.init ();
         }
 
-        if (new_note) {manager.create_note (); new_note = false;}
+        if (new_note) {note_manager.create_note (); new_note = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
     }
 
     public static int main (string[] args) {
         return new Application ().run (args);
-    }
-
-    private void action_new () {
-        debug ("New Note");
-        manager.create_note ();
     }
 
     private void action_show_preferences () {
@@ -207,11 +200,6 @@ Please wait while the app remembers all the things...
         debug ("Toggling actionbar");
         var current = Application.gsettings.get_boolean ("hide-bar");
         gsettings.set_boolean ("hide-bar", !current);
-    }
-
-    private void action_save () {
-        debug ("Saving...");
-        manager.save_all ();
     }
 
     // checked upon window closing to make sure we do not linger in the background

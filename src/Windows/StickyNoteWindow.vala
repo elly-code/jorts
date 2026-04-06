@@ -48,9 +48,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
-
         app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
-
 
 
         color_controller = new Jorts.ColorController (this);
@@ -191,5 +189,5 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     private void has_changed () {changed ();}
-    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
+    private void action_delete () {((Jorts.Application)this.application).note_manager.delete_note (this); this.destroy ();}
 }

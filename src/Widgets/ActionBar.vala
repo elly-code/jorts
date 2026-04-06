@@ -25,7 +25,7 @@
 
         /* **** LEFT **** */
         var new_item = new Gtk.Button () {
-            action_name = Application.ACTION_PREFIX + Application.ACTION_NEW,
+            action_name = NoteManager.ACTION_PREFIX + NoteManager.ACTION_NEW,
             icon_name = "list-add-symbolic",
             width_request = ICON_SIZE,
             height_request = ICON_SIZE,
