@@ -115,7 +115,7 @@ public class Jorts.ZoomController : Object {
         // Keep it for next new notes
         NoteData.latest_zoom = zoom;
 
-        window.changed ();
+        window.has_changed ();
     }
 
     public bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {

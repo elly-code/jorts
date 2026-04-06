@@ -143,7 +143,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 #if DEVEL
         title += _(" (Development)");
 #endif
-        changed ();
+        has_changed ();
     }
 
     /**
@@ -185,7 +185,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.monospace = data.monospace;
     }
 
-    private void has_changed () {
+    public void has_changed () {
         application.activate_action (NoteManager.ACTION_SAVE, null);
     }
     private void action_delete () {((Jorts.Application)this.application).note_manager.delete_note (this); this.destroy ();}

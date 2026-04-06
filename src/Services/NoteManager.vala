@@ -101,7 +101,6 @@ public class Jorts.NoteManager : Object {
         
         /* LETSGO */
         open_notes.add (note);
-        note.changed.connect (save_all);
 
         note.show ();
         note.present ();
@@ -115,7 +114,6 @@ public class Jorts.NoteManager : Object {
         debug ("Removing a note…");
 
         open_notes.remove (note);
-        note.changed.disconnect (save_all);
         application.remove_window ((Gtk.Window)note);
 
         note.close ();
