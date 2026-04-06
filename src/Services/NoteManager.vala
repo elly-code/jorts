@@ -27,7 +27,7 @@ public class Jorts.NoteManager : Object {
 
     public const GLib.ActionEntry[] ACTION_ENTRIES = {
         {ACTION_NEW, action_new},
-        {ACTION_SAVE, immediately_save},
+        {ACTION_SAVE, save_all},
     };
 
     public NoteManager (Jorts.Application app) {

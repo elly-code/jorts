@@ -30,12 +30,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         set {load_data (value);}
     }
 
-    public signal void changed ();
     public const string ACTION_PREFIX = "win.";
     public const string ACTION_DELETE = "action_delete";
 
     public static Gee.MultiMap<string, string> action_accelerators;
-
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_DELETE, action_delete}
     };
@@ -49,7 +47,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
         app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
-
 
         color_controller = new Jorts.ColorController (this);
         zoom_controller = new Jorts.ZoomController (this);
@@ -188,6 +185,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.monospace = data.monospace;
     }
 
-    private void has_changed () {changed ();}
+    private void has_changed () {
+        application.activate_action (NoteManager.ACTION_SAVE, null);
+    }
     private void action_delete () {((Jorts.Application)this.application).note_manager.delete_note (this); this.destroy ();}
 }
