@@ -14,6 +14,7 @@
 * Reports to the NoteManager for saving
 */
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
+
     public Jorts.NoteView view;
     public Popover popover;
     public TextView textview;
@@ -21,40 +22,20 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private Jorts.ColorController color_controller;
     public Jorts.ZoomController zoom_controller;
     private Jorts.ScribblyController scribbly_controller;
-
-    public NoteData data {
-        owned get { return packaged ();}
-        set { load_data (value);}
-    }
-
-    public signal void changed ();
-
     private Gtk.EventControllerKey keypress_controller;
     private Gtk.EventControllerScroll scroll_controller;
 
+    public NoteData data {
+        owned get {return packaged ();}
+        set {load_data (value);}
+    }
+
     public const string ACTION_PREFIX = "win.";
-    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
-    public const string ACTION_SHOW_MENU = "action_show_menu";
-    public const string ACTION_FOCUS_TITLE = "action_focus_title";
-    public const string ACTION_ZOOM_OUT = "action_zoom_out";
-    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-    public const string ACTION_ZOOM_IN = "action_zoom_in";
-    public const string ACTION_TOGGLE_MONO = "action_toggle_mono";
     public const string ACTION_DELETE = "action_delete";
-    public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
     public static Gee.MultiMap<string, string> action_accelerators;
-
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_DELETE, action_delete},
-        { ACTION_SHOW_EMOJI, action_show_emoji},
-        { ACTION_SHOW_MENU, action_show_menu},
-        { ACTION_FOCUS_TITLE, action_focus_title},
-        { ACTION_ZOOM_OUT, action_zoom_out},
-        { ACTION_ZOOM_DEFAULT, action_zoom_default},
-        { ACTION_ZOOM_IN, action_zoom_in},
-        { ACTION_TOGGLE_MONO, action_toggle_mono},
-        { ACTION_TOGGLE_LIST, action_toggle_list},
+        { ACTION_DELETE, action_delete}
     };
 
     public StickyNoteWindow (Jorts.Application app, NoteData data) {
@@ -65,6 +46,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
 
         color_controller = new Jorts.ColorController (this);
         zoom_controller = new Jorts.ZoomController (this);
@@ -78,33 +60,25 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
 
-        add_css_class ("rounded");
         title = "" + _(" - Jorts");
 
-
-
-
-
-        /*****************************************/
-        /*              HEADERBAR                */
-        /*****************************************/
-
-        // No
+        // The view has its own titlebar
         titlebar = new Gtk.Grid () {visible = false};
 
         view = new NoteView ();
         textview = view.textview;
+        insert_action_group ("noteview", view.actions);
+        insert_action_group ("textview", textview.actions);
+        insert_action_group ("zoom_controller", zoom_controller.actions);
 
-        popover = new Jorts.Popover (this);
-        view.menu_button.popover = popover;
+        // Have shortcuts keep working with the popover open.
+        popover = view.popover;
+        view.popover.scroll_controller.scroll.connect (zoom_controller.on_scroll);
+        view.popover.keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
+        view.popover.keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
 
         set_child (view);
         set_focus (view);
-
-        /****************************************/
-        /*              LOADING                 */
-        /****************************************/
-
         load_data (data);
 
 #if DEVEL
@@ -126,7 +100,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
-        popover.zoom_changed.connect (zoom_controller.zoom_changed);
         popover.theme_changed.connect (color_controller.on_color_changed);
 
         // Use the color theme of this sticky note when focused
@@ -134,15 +107,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Respect animation settings for showing ui elements
         if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
-                show.connect_after (delayed_show);
+            show.connect_after (delayed_show);
 
         } else {
             bind_hidebar ();
         }
-
-
     }
-
 
         /********************************************/
         /*                  METHODS                 */
@@ -158,11 +128,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     private void bind_hidebar () {
-            Application.gsettings.bind (
-                "hide-bar",
-                view.actionbar.actionbar,
-                "revealed",
-                SettingsBindFlags.INVERT_BOOLEAN);
+        Application.gsettings.bind (
+            "hide-bar",
+            view.actionbar.actionbar,
+            "revealed",
+            SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     /**
@@ -173,7 +143,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 #if DEVEL
         title += _(" (Development)");
 #endif
-        changed ();
+        has_changed ();
     }
 
     /**
@@ -206,25 +176,17 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Loading noteData…");
 
         set_default_size (data.width, data.height);
-        view.editablelabel.text = data.title;
-        title = view.editablelabel.text + _(" - Jorts");
-        view.textview.buffer.text = data.content;
+        view.title = data.title;
+        title = view.title + _(" - Jorts");
+        view.content = data.content;
 
         color_controller.theme = data.theme;
         zoom_controller.zoom = data.zoom;
-        popover.monospace = data.monospace;
+        view.monospace = data.monospace;
     }
 
-    private void has_changed () {changed ();}
-
-    private void action_focus_title () {view.action_focus_title ();}
-    private void action_show_emoji () {view.action_show_emoji ();}
-    private void action_show_menu () {view.action_show_menu ();}
-    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
-    private void action_toggle_mono () {popover.monospace = !popover.monospace;}
-    private void action_toggle_list () {view.action_toggle_list ();}
-
-    private void action_zoom_out () {zoom_controller.zoom_out ();}
-    private void action_zoom_default () {zoom_controller.zoom_default ();}
-    private void action_zoom_in () {zoom_controller.zoom_in ();}
+    public void has_changed () {
+        application.activate_action (NoteManager.ACTION_SAVE, null);
+    }
+    private void action_delete () {((Jorts.Application)this.application).note_manager.delete_note (this); this.destroy ();}
 }

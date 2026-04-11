@@ -1,15 +1,13 @@
 # Name our project
 project(
-    'io.github.elly_code.jorts',
+    'jorts',
     'vala', 'c',
     version: '4.0.2'
 )
 
 app_name = 'Jorts'
-
-
-correct_app_id = 'io.github.elly_code.jorts'
-legacy_app_id = 'io.github.ellie_commons.jorts'
+correct_app_id = 'io.github.elly_code.' + meson.project_name()
+legacy_app_id = 'io.github.ellie_commons.' +  meson.project_name()
 
 if get_option('legacy-rdnn')
     app_id = legacy_app_id

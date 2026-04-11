@@ -10,7 +10,10 @@
 * Contains a setting for color, one for monospace font, one for zoom
 */
 public class Jorts.Popover : Gtk.Popover {
-    private weak Jorts.StickyNoteWindow parent_window;
+
+    public Gtk.EventControllerKey keypress_controller;
+    public Gtk.EventControllerScroll scroll_controller;
+
     private Jorts.ColorBox color_box;
     private Jorts.MonospaceBox monospace_box;
     private Jorts.ZoomBox font_size_box;
@@ -26,36 +29,33 @@ public class Jorts.Popover : Gtk.Popover {
     }
 
     public int zoom { set {font_size_box.zoom = value;}}
-
     public signal void theme_changed (Jorts.Themes selected);
-    public signal void zoom_changed (Jorts.ZoomType zoomtype);
-    public signal void monospace_changed (bool if_monospace);
 
     static construct
     {
-        add_binding_action(Gdk.Key.plus, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_IN, null);
-        add_binding_action(Gdk.Key.equal, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_DEFAULT, null);    
-        add_binding_action(48, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_DEFAULT, null);    
-        add_binding_action(Gdk.Key.minus, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_OUT, null);
+        add_binding_action(Gdk.Key.plus, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_IN, null);
+        add_binding_action(Gdk.Key.equal, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_DEFAULT, null);    
+        add_binding_action(48, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_DEFAULT, null);    
+        add_binding_action(Gdk.Key.minus, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_OUT, null);
 
-        add_binding_action(Gdk.Key.w, Gdk.ModifierType.CONTROL_MASK, Application.ACTION_PREFIX + Application.ACTION_NEW, null);
+        add_binding_action(Gdk.Key.n, Gdk.ModifierType.CONTROL_MASK, NoteManager.ACTION_PREFIX + NoteManager.ACTION_NEW, null);
         add_binding_action(Gdk.Key.w, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE, null);
-        add_binding_action(Gdk.Key.m, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_MONO, null);    
-        add_binding_action(Gdk.Key.g, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
-        add_binding_action(Gdk.Key.o, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
-        add_binding_action(Gdk.Key.l, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_FOCUS_TITLE, null);
+        add_binding_action(Gdk.Key.l, Gdk.ModifierType.CONTROL_MASK, NoteView.ACTION_PREFIX + NoteView.ACTION_FOCUS_TITLE, null);
+        add_binding_action(Gdk.Key.g, Gdk.ModifierType.CONTROL_MASK, NoteView.ACTION_PREFIX + NoteView.ACTION_SHOW_MENU, null);
+        add_binding_action(Gdk.Key.o, Gdk.ModifierType.CONTROL_MASK, NoteView.ACTION_PREFIX + NoteView.ACTION_SHOW_MENU, null);
+        add_binding_action(Gdk.Key.m, Gdk.ModifierType.CONTROL_MASK, NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO, null);    
+
+        add_binding_action(Gdk.Key.F12, Gdk.ModifierType.SHIFT_MASK, TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST, null);
    }
 
-
     /****************/
-    public Popover (Jorts.StickyNoteWindow window) {
+    construct {
         position = Gtk.PositionType.TOP;
         halign = Gtk.Align.END;
-        parent_window = window;
 
-        var view = new Gtk.Box (VERTICAL, 12) {
-            margin_top = 12,
-            margin_bottom = 12
+        var view = new Gtk.Box (VERTICAL, SPACING_TRIPLE) {
+            margin_top = SPACING_DOUBLE,
+            margin_bottom = SPACING_DOUBLE
         };
 
         color_box = new Jorts.ColorBox ();
@@ -70,20 +70,16 @@ public class Jorts.Popover : Gtk.Popover {
 
         // Propagate settings changes to the higher level
         color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
-        monospace_box.monospace_changed.connect (on_monospace_changed);
-        font_size_box.zoom_changed.connect ((zoomtype) => {zoom_changed (zoomtype);});
+
 
         // Allow scrolling shenanigans from popover
-        var keypress_controller = new Gtk.EventControllerKey ();
-        var scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
+        keypress_controller = new Gtk.EventControllerKey ();
+        scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
             propagation_phase = Gtk.PropagationPhase.CAPTURE
         };
 
         ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
-        scroll_controller.scroll.connect (window.zoom_controller.on_scroll);
-        keypress_controller.key_pressed.connect (window.zoom_controller.on_key_press_event);
-        keypress_controller.key_released.connect (window.zoom_controller.on_key_release_event);
     }
 
     /**
@@ -91,11 +87,7 @@ public class Jorts.Popover : Gtk.Popover {
     */
     private void on_monospace_changed (bool monospace) {
         debug ("Updating monospace to %s".printf (monospace.to_string ()));
-
-        parent_window.view.monospace = monospace;
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
-
-       parent_window.changed ();
     }
 }

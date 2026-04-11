@@ -12,7 +12,7 @@
 public class Jorts.TextView : Granite.HyperTextView {
 
     private Gtk.EventControllerKey keyboard;
-    private string list_item_start;
+    public string list_item_start {get; set;}
     public bool on_list_item {public get; private set;}
 
     public string text {
@@ -20,6 +20,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         set {buffer.text = value;}
     }
 
+    public SimpleActionGroup actions {get; construct;}
     public const string ACTION_PREFIX = "textview.";
     public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
@@ -28,40 +29,52 @@ public class Jorts.TextView : Granite.HyperTextView {
     };
 
     construct {
+        wrap_mode = Gtk.WrapMode.WORD_CHAR;
         buffer = new Gtk.TextBuffer (null);
-        bottom_margin   = Constants.SPACING_DOUBLE;
-        left_margin     = Constants.SPACING_DOUBLE;
-        right_margin    = Constants.SPACING_DOUBLE;
-        top_margin      = Constants.SPACING_STANDARD;
-
+        bottom_margin = SPACING_DOUBLE;
+        left_margin = SPACING_DOUBLE;
+        right_margin = SPACING_DOUBLE;
+        top_margin = SPACING_STANDARD;
         hexpand = true;
         vexpand = true;
-        wrap_mode = Gtk.WrapMode.WORD_CHAR;
 
-        var actions = new SimpleActionGroup ();
+
+        /***************************************************/
+        /*              Actions and controllers            */
+        /***************************************************/
+
+
+        // Action stuff
+        actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("textview", actions);
 
-        list_item_start = Application.gsettings.get_string (Constants.KEY_LIST);
-        Application.gsettings.changed[Constants.KEY_LIST].connect (on_prefix_changed);
+        unowned var app = ((Gtk.Application) GLib.Application.get_default ());
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_LIST, {"<Shift>F12"});
 
         keyboard = new Gtk.EventControllerKey ();
-        add_controller (keyboard);
         keyboard.key_pressed.connect (on_key_pressed);
+        add_controller (keyboard);
 
-        //TODO: Buggy. Clicking anywhere brings it out of whack
-        // on_cursor_changed ();
-        // move_cursor.connect_after (on_cursor_changed);
+        // Alternate way to access preferences
+        var menuitem_pref = new GLib.MenuItem (_("Show Preferences"), Application.ACTION_PREFIX + Application.ACTION_SHOW_PREFERENCES);
+        var menuitem_quit = new GLib.MenuItem (_("Quit Jorts"), Application.ACTION_PREFIX + Application.ACTION_QUIT);
+        var extra = new GLib.Menu ();
+        var section = new GLib.Menu ();
+
+        section.append_item (menuitem_pref);
+        section.append_item (menuitem_quit);
+        extra.append_section (null, section);
+        extra_menu = extra;
 
 
-        // var menuitem = new GLib.MenuItem (_("Toggle list"), TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST);
-        // var extra = new GLib.Menu ();
-        // var section = new GLib.Menu ();
+        /***************************************************/
+        /*              CONNECTS AND BINDS                 */
+        /***************************************************/
 
-        // section.append_item (menuitem);
-        // extra.append_section (null, section);
-
-        // this.extra_menu = extra;
+        Application.gsettings.bind (KEY_LIST,
+            this, "list-item-start",
+            GLib.SettingsBindFlags.DEFAULT);
     }
 
     public void toggle_list () {
@@ -75,12 +88,11 @@ public class Jorts.TextView : Granite.HyperTextView {
         var selected_is_list = this.is_list (first_line, last_line, list_item_start);
 
         buffer.begin_user_action ();
-        if (selected_is_list)
-        {
-            this.remove_list (first_line, last_line);
+        if (selected_is_list) {
+            remove_list (first_line, last_line);
 
         } else {
-            this.set_list (first_line, last_line);
+            set_list (first_line, last_line);
         }
         buffer.end_user_action ();
 
@@ -205,10 +217,6 @@ public class Jorts.TextView : Granite.HyperTextView {
 
         // Nothing, carry on
         return false;
-    }
-
-    private void on_prefix_changed () {
-        list_item_start = Application.gsettings.get_string ("list-item-start");
     }
 
 /*      private void on_cursor_changed () {

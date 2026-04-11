@@ -18,6 +18,18 @@ public class Jorts.NoteManager : Object {
 
     private static uint debounce_timer_id;
 
+    public SimpleActionGroup actions { get; construct; }
+    public const string ACTION_PREFIX = "app.";
+    public const string ACTION_NEW = "action_new";
+    public const string ACTION_SAVE = "action_save";
+
+    public static Gee.MultiMap<string, string> action_accelerators;
+
+    public const GLib.ActionEntry[] ACTION_ENTRIES = {
+        {ACTION_NEW, action_new},
+        {ACTION_SAVE, save_all},
+    };
+
     public NoteManager (Jorts.Application app) {
         this.application = app;
     }
@@ -25,6 +37,14 @@ public class Jorts.NoteManager : Object {
     construct {
         open_notes = new Gee.ArrayList<StickyNoteWindow> ();
         storage = new Jorts.Storage ();
+
+        actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+
+        // Translation view
+        unowned var app = ((Gtk.Application) GLib.Application.get_default ());
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_NEW, {"<Control>N"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_SAVE, {"<Control>S"});
     }
 
     /*************************************************/
@@ -40,7 +60,7 @@ public class Jorts.NoteManager : Object {
 
         if (loaded_data.get_length () == 0) {
             var note_data = new NoteData ();
-            note_data.theme = Constants.DEFAULT_THEME;
+            note_data.theme = DEFAULT_THEME;
             create_note (note_data);
 
         } else {
@@ -81,7 +101,6 @@ public class Jorts.NoteManager : Object {
         
         /* LETSGO */
         open_notes.add (note);
-        note.changed.connect (save_all);
 
         note.show ();
         note.present ();
@@ -95,7 +114,6 @@ public class Jorts.NoteManager : Object {
         debug ("Removing a note…");
 
         open_notes.remove (note);
-        note.changed.disconnect (save_all);
         application.remove_window ((Gtk.Window)note);
 
         note.close ();
@@ -117,7 +135,7 @@ public class Jorts.NoteManager : Object {
             GLib.Source.remove (debounce_timer_id);
         }
 
-        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, debounce_handler);
+        debounce_timer_id = Timeout.add (DEBOUNCE, debounce_handler);
     }
 
     public bool debounce_handler () {
@@ -126,7 +144,7 @@ public class Jorts.NoteManager : Object {
         return GLib.Source.REMOVE;
     }
 
-    private void immediately_save () {
+    public void immediately_save () {
         var array = new Json.Array ();
 
         foreach (Jorts.StickyNoteWindow note in open_notes) {
@@ -158,5 +176,10 @@ public class Jorts.NoteManager : Object {
                 }
             }
         }
+    }
+
+    public void action_new () {
+        debug ("New Note");
+        create_note ();
     }
 }

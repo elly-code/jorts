@@ -3,7 +3,7 @@ id: io.github.ellie_commons.jorts
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
 runtime: org.gnome.Platform
-runtime-version: '50beta'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: io.github.ellie_commons.jorts
 
@@ -17,7 +17,6 @@ cleanup:
   -  '/include'
   -  '/lib/pkgconfig'
   -  '/man'
-  -  '/share/doc'
   -  '/share/gtk-doc'
   -  '/share/man'
   -  '/share/pkgconfig'

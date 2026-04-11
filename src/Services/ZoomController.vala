@@ -14,7 +14,7 @@
 public class Jorts.ZoomController : Object {
 
     private static bool is_control_key_pressed = false;
-    private weak Jorts.StickyNoteWindow window;
+    private weak Jorts.StickyNoteWindow window {get; set;}
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private int _old_zoom;
@@ -23,8 +23,33 @@ public class Jorts.ZoomController : Object {
         set {do_set_zoom (value);}
     }
 
+    public SimpleActionGroup actions { get; construct; }
+    public const string ACTION_PREFIX = "zoom_controller.";
+    public const string ACTION_ZOOM_OUT = "action_zoom_out";
+    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    public const string ACTION_ZOOM_IN = "action_zoom_in";
+
+    public static Gee.MultiMap<string, string> action_accelerators;
+
+    private const GLib.ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_ZOOM_OUT, zoom_out},
+        { ACTION_ZOOM_DEFAULT, zoom_default},
+        { ACTION_ZOOM_IN, zoom_in}
+    };
+
+
     public ZoomController (Jorts.StickyNoteWindow window) {
         this.window = window;
+    }
+
+    construct {
+        actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+
+        unowned var app = ((Gtk.Application) GLib.Application.get_default ());
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_OUT, {"<Control>minus", "<Control>KP_Subtract"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_DEFAULT, {"<Control>equal", "<Control>0", "<Control>KP_0"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_IN, {"<Control>plus", "<Control>KP_Add"});
     }
 
     /**
@@ -44,7 +69,7 @@ public class Jorts.ZoomController : Object {
     * Wrapper to check an increase doesnt go above limit
     */
     public void zoom_in () {
-        if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+        if ((_old_zoom + 20) <= ZOOM_MAX) {
             zoom = _old_zoom + 20;
         } else {
             Gdk.Display.get_default ().beep ();
@@ -52,8 +77,8 @@ public class Jorts.ZoomController : Object {
     }
 
     public void zoom_default () {
-        if (_old_zoom != Jorts.Constants.DEFAULT_ZOOM ) {
-            zoom = Jorts.Constants.DEFAULT_ZOOM;
+        if (_old_zoom != DEFAULT_ZOOM ) {
+            zoom = DEFAULT_ZOOM;
         } else {
             Gdk.Display.get_default ().beep ();
         }
@@ -63,7 +88,7 @@ public class Jorts.ZoomController : Object {
     * Wrapper to check an increase doesnt go below limit
     */
     public void zoom_out () {
-        if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+        if ((_old_zoom - 20) >= ZOOM_MIN) {
             zoom = _old_zoom - 20;
         } else {
             Gdk.Display.get_default ().beep ();
@@ -90,7 +115,7 @@ public class Jorts.ZoomController : Object {
         // Keep it for next new notes
         NoteData.latest_zoom = zoom;
 
-        window.changed ();
+        window.has_changed ();
     }
 
     public bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {
@@ -119,6 +144,6 @@ public class Jorts.ZoomController : Object {
         zoom_changed (ZoomType.from_delta (dy));
         debug ("Go! Zoooommmmm");
 
-        return Gdk.EVENT_PROPAGATE;
+        return Gdk.EVENT_STOP;
     }
 }

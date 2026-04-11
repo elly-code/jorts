@@ -14,18 +14,18 @@ public class Jorts.EditableLabel : Granite.Bin {
     public signal void changed ();
 
     public string text {
-        owned get { return editablelabel.text;}
-        set { editablelabel.text = value;}
+        owned get {return editablelabel.text;}
+        set {editablelabel.text = value;}
     }
 
     public bool editing {
-        get { return editablelabel.editing;}
-        set { editablelabel.editing = value;}
+        get {return editablelabel.editing;}
+        set {editablelabel.editing = value;}
     }
 
     public bool monospace {
-        get { return "monospace" in this.css_classes;}
-        set { mono_set (value);}
+        get {return "monospace" in this.css_classes;}
+        set {mono_set (value);}
     }
 
     construct {
@@ -52,11 +52,8 @@ public class Jorts.EditableLabel : Granite.Bin {
     private void mono_set (bool if_mono) {
         if (if_mono) {
             this.add_css_class ("monospace");
-
-        } else {
-            if ("monospace" in this.css_classes) {
-                this.remove_css_class ("monospace");
-            }
+            return;
         }
+        remove_css_class ("monospace");
     }
 }

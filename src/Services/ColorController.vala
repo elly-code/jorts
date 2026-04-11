@@ -47,7 +47,7 @@ public class Jorts.ColorController : Object {
         Application.gtk_settings.gtk_theme_name = stylesheet;
 
         // Cleanup;
-        window.changed ();
+        window.has_changed ();
     }
 
     /**

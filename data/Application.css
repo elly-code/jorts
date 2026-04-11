@@ -77,65 +77,65 @@ window.scribbly editablelabel {
 }
 
 /* Font zooms */
-window.s20 textview.view {font-size: 40%;}
-window.s20 editablelabel {font-size: 25%;}
-window.s20 editablelabel.editing {font-size: 20%;}
+.s20 textview.view {font-size: 40%;}
+.s20 editablelabel {font-size: 25%;}
+.s20 editablelabel.editing {font-size: 20%;}
 
-window.s40 textview.view {font-size: 60%;}
-window.s40 editablelabel {font-size: 45%;}
-window.s40 editablelabel.editing {font-size: 40%;}
+.s40 textview.view {font-size: 60%;}
+.s40 editablelabel {font-size: 45%;}
+.s40 editablelabel.editing {font-size: 40%;}
 
-window.s60 textview.view {font-size: 80%;}
-window.s60 editablelabel {font-size: 65%;}
-window.s60 editablelabel.editing {font-size: 60%;}
+.s60 textview.view {font-size: 80%;}
+.s60 editablelabel {font-size: 65%;}
+.s60 editablelabel.editing {font-size: 60%;}
 
-window.s80 textview.view {font-size: 100%;}
-window.s80 editablelabel {font-size: 85%;}
-window.s80 editablelabel.editing {font-size: 80%;}
+.s80 textview.view {font-size: 100%;}
+.s80 editablelabel {font-size: 85%;}
+.s80 editablelabel.editing {font-size: 80%;}
 
-window.s100 textview.view {font-size: 120%;}
-window.s100 editablelabel {font-size: 105%;}
-window.s100 editablelabel.editing {font-size: 100%;}
+.s100 textview.view {font-size: 120%;}
+.s100 editablelabel {font-size: 105%;}
+.s100 editablelabel.editing {font-size: 100%;}
 
-window.s120 textview.view {font-size: 140%;}
-window.s120 editablelabel {font-size: 125%;}
-window.s120 editablelabel.editing {font-size: 120%;}
+.s120 textview.view {font-size: 140%;}
+.s120 editablelabel {font-size: 125%;}
+.s120 editablelabel.editing {font-size: 120%;}
 
-window.s140 textview.view {font-size: 160%;}
-window.s140 editablelabel {font-size: 145%;}
-window.s140 editablelabel.editing {font-size: 140%;}
+.s140 textview.view {font-size: 160%;}
+.s140 editablelabel {font-size: 145%;}
+.s140 editablelabel.editing {font-size: 140%;}
 
-window.s160 textview.view {font-size: 180%;}
-window.s160 editablelabel {font-size: 165%;}
-window.s160 editablelabel.editing {font-size: 160%;}
+.s160 textview.view {font-size: 180%;}
+.s160 editablelabel {font-size: 165%;}
+.s160 editablelabel.editing {font-size: 160%;}
 
-window.s180 textview.view {font-size: 200%;}
-window.s180 editablelabel {font-size: 185%;}
-window.s180 editablelabel.editing {font-size: 180%;}
+.s180 textview.view {font-size: 200%;}
+.s180 editablelabel {font-size: 185%;}
+.s180 editablelabel.editing {font-size: 180%;}
 
-window.s200 textview.view {font-size: 220%;}
-window.s200 editablelabel {font-size: 205%;}
-window.s200 editablelabel.editing {font-size: 200%;}
+.s200 textview.view {font-size: 220%;}
+.s200 editablelabel {font-size: 205%;}
+.s200 editablelabel.editing {font-size: 200%;}
 
-window.s220 textview.view {font-size: 240%;}
-window.s220 editablelabel {font-size: 225%;}
-window.s220 editablelabel.editing {font-size: 220%;}
+.s220 textview.view {font-size: 240%;}
+.s220 editablelabel {font-size: 225%;}
+.s220 editablelabel.editing {font-size: 220%;}
 
-window.s240 textview.view {font-size: 260%;}
-window.s240 editablelabel {font-size: 245%;}
-window.s240 editablelabel.editing {font-size: 240%;}
+.s240 textview.view {font-size: 260%;}
+.s240 editablelabel {font-size: 245%;}
+.s240 editablelabel.editing {font-size: 240%;}
 
-window.s260 textview.view {font-size: 280%;}
-window.s260 editablelabel {font-size: 265%;}
-window.s260 editablelabel.editing {font-size: 260%;}
+.s260 textview.view {font-size: 280%;}
+.s260 editablelabel {font-size: 265%;}
+.s260 editablelabel.editing {font-size: 260%;}
 
-window.s280 textview.view {font-size: 300%;}
-window.s280 editablelabel {font-size: 285%;}
-window.s280 editablelabel.editing {font-size: 280%;}
+.s280 textview.view {font-size: 300%;}
+.s280 editablelabel {font-size: 285%;}
+.s280 editablelabel.editing {font-size: 280%;}
 
-window.s300 textview.view {font-size: 320%;}
-window.s300 editablelabel {font-size: 305%;}
-window.s300 editablelabel.editing {font-size: 300%;}
+.s300 textview.view {font-size: 320%;}
+.s300 editablelabel {font-size: 305%;}
+.s300 editablelabel.editing {font-size: 300%;}
 
 
 /* ANIMATION */

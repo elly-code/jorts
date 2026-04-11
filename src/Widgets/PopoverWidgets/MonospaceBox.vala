@@ -19,17 +19,16 @@ public class Jorts.MonospaceBox : Gtk.Box {
         set { mono_monospace_toggle.active = value;}
     }
 
-    public signal void monospace_changed (bool monospace);
-
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
         homogeneous = true;
         hexpand = true;
-        margin_start = 10;
-        margin_end = 10;
+        margin_start = SPACING_DOUBLE;
+        margin_end = SPACING_DOUBLE;
 
         ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {
+            action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO,
             child = new Gtk.Label (_("Default")),
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>m"},
@@ -39,8 +38,9 @@ public class Jorts.MonospaceBox : Gtk.Box {
         };
 
         mono_monospace_toggle = new Gtk.ToggleButton () {
+            action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO,
             child = new Gtk.Label (_("Monospace")),
-                        tooltip_markup = Granite.markup_accel_tooltip (
+                tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>m"},
                 _("Use monospaced font")
             )
@@ -57,11 +57,5 @@ public class Jorts.MonospaceBox : Gtk.Box {
             "active",
             GLib.BindingFlags.BIDIRECTIONAL | GLib.BindingFlags.INVERT_BOOLEAN
         );
-
-        mono_monospace_toggle.notify["active"].connect (on_monospace_changed);
-    }
-
-    public void on_monospace_changed () {
-        monospace_changed (mono_monospace_toggle.active);
     }
 }

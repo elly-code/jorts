@@ -17,72 +17,80 @@
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;
     public Gtk.WindowHandle handle;
+    public Jorts.Popover popover;
+
+    const int ICON_SIZE = 32;
 
     construct {
 
         /* **** LEFT **** */
         var new_item = new Gtk.Button () {
+            action_name = NoteManager.ACTION_PREFIX + NoteManager.ACTION_NEW,
             icon_name = "list-add-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>n"},
                 _("New sticky note")
             )
         };
-        new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
-        new_item.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        new_item.add_css_class (STYLE_THEMEDBUTTON);
 
         var delete_item = new Gtk.Button () {
+            action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE,
             icon_name = "edit-delete-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>w"},
                 _("Delete sticky note")
-            )
+            ),
+            has_frame = false
         };
-        delete_item.add_css_class (Constants.STYLE_THEMEDBUTTON);
-        delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
+        delete_item.add_css_class (STYLE_THEMEDBUTTON);
 
         /* **** RIGHT **** */
         list_button = new Gtk.Button () {
+            action_name = TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST,
             icon_name = "view-list-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Shift>F12"},
                 _("Toggle list")
-            )
+            ),
+            has_frame = false
         };
-        list_button.add_css_class (Constants.STYLE_THEMEDBUTTON);
-        list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_LIST;
+        list_button.add_css_class (STYLE_THEMEDBUTTON);
 
         emojichooser_popover = new Gtk.EmojiChooser ();
-
         emoji_button = new Gtk.MenuButton () {
+            popover = emojichooser_popover,
             icon_name = Jorts.Utils.random_emote (),
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>period"},
                 _("Insert emoji")
-            )
+            ),
+            has_frame = false
         };
-        emoji_button.add_css_class (Constants.STYLE_THEMEDBUTTON);
-        emoji_button.popover = emojichooser_popover;
+        emoji_button.add_css_class (STYLE_THEMEDBUTTON);
 
+        popover = new Jorts.Popover ();
         menu_button = new Gtk.MenuButton () {
+            popover = popover,
             icon_name = "open-menu-symbolic",
-            width_request = 32,
-            height_request = 32,
+            width_request = ICON_SIZE,
+            height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>g", "<Control>o"},
                 _("Preferences for this sticky note")
-            )
+            ),
+            has_frame = false,
+            direction = Gtk.ArrowType.UP
         };
-        menu_button.direction = Gtk.ArrowType.UP;
-        menu_button.add_css_class (Constants.STYLE_THEMEDBUTTON);
+        menu_button.add_css_class (STYLE_THEMEDBUTTON);
 
         /* **** Widget **** */
         actionbar = new Gtk.ActionBar () {
@@ -106,8 +114,7 @@
 
         // Hide the list button if user has specified no list item symbol
         on_prefix_changed ();
-        Application.gsettings.changed[Constants.KEY_LIST].connect (on_prefix_changed);
-
+        Application.gsettings.changed[KEY_LIST].connect (on_prefix_changed);
     }
 
     /**
@@ -115,8 +122,8 @@
     * StickyNoteWindow will decide itself whether to show immediately or not
     */
     public void reveal_bind () {
-        Application.gsettings.bind (Constants.KEY_HIDEBAR,
-            this.actionbar, "revealed",
+        Application.gsettings.bind (KEY_HIDEBAR,
+            actionbar, "revealed",
             SettingsBindFlags.INVERT_BOOLEAN);
     }
 
@@ -131,7 +138,10 @@
         );
     }
 
+    /**
+    * If user leaves list prefix blank, then they dont need the button.
+    */
     private void on_prefix_changed () {
-        list_button.visible = (Application.gsettings.get_string (Constants.KEY_LIST) != "");
+        list_button.visible = (Application.gsettings.get_string (KEY_LIST) != "");
     }
 }

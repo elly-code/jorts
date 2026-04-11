@@ -86,7 +86,7 @@ namespace Jorts.Utils {
     */
     public string random_emote (string? skip_emote = null) {
         Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
-        allemotes.add_all_array (Jorts.Constants.EMOTES);
+        allemotes.add_all_array (EMOTES);
 
         if (skip_emote != null) {
             allemotes.remove (skip_emote);
