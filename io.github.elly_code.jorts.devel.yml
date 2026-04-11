@@ -6,7 +6,7 @@ id: io.github.elly_code.jorts.devel
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
 runtime: org.gnome.Platform
-runtime-version: '50'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: io.github.elly_code.jorts.devel
 
