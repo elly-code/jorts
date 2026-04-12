@@ -87,8 +87,6 @@ public class Jorts.Application : Gtk.Application {
         Intl.textdomain (GETTEXT_PACKAGE);
     }
 
-
-
     /*************************************************/
     public override void startup () {
         debug ("Jorts Startup…");

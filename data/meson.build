@@ -3,7 +3,7 @@ gschema_conf = configuration_data()
 gschema_conf.set('APP_ID', app_id)
 gschema_file = configure_file(
     input: 'jorts.gschema.xml.in',
-    output: '@0@.gschema.xml'.format(app_id),
+    output: app_id + '.gschema.xml',
     configuration: gschema_conf,
 )
 
@@ -67,14 +67,14 @@ if not windows_build
     desktop_conf.set('APP_ID', app_id)
     desktop_file_in = configure_file(
     input: 'jorts.desktop.in.in',
-    output: '@0@.desktop.in'.format(app_id),
+    output: app_id + '.desktop.in',
     configuration: desktop_conf,
     )
 
     desktop_file = i18n.merge_file(
     input: desktop_file_in,
-    output: '@0@.desktop'.format(app_id),
-    po_dir: meson.project_source_root() / 'po',
+    output: app_id + '.desktop',
+    po_dir: meson.project_source_root() / 'po' / 'extra',
     type: 'desktop',
     install: true,
     install_dir: get_option('datadir') / 'applications',
@@ -89,14 +89,15 @@ if not windows_build
     appstream_conf.set('ALTERNATE_APP_ID', alternate_app_id)
     appstream_file_in = configure_file(
         input: 'jorts.metainfo.xml.in.in',
-        output: '@0@.metainfo.xml.in'.format(app_id),
+        output: app_id + '.metainfo.xml.in',
         configuration: appstream_conf,
     )
 
     appstream_file = i18n.merge_file(
         input: appstream_file_in,
-        output: '@0@.metainfo.xml'.format(app_id),
-        po_dir: meson.project_source_root() / 'po',
+        output: app_id + '.metainfo.xml',
+        po_dir: meson.project_source_root() / 'po' / 'extra',
+        type: 'xml',
         install: true,
         install_dir: get_option('datadir') / 'metainfo',
     )

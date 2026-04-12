@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.elly_code.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 14:18+0100\n"
+"POT-Creation-Date: 2026-04-13 00:39+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -19,32 +19,42 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr "Nhấp để chỉnh sửa tiêu đề"
 
-#: src/Widgets/ActionBar.vala:30
+#. Alternate way to access preferences
+#: src/Widgets/TextView.vala:60
+#, fuzzy
+msgid "Show Preferences"
+msgstr "Hiển thị tùy chỉnh"
+
+#: src/Widgets/TextView.vala:61
+#, fuzzy
+msgid "Quit Jorts"
+msgstr " - Jorts"
+
+#: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
 msgstr "Giấy ghi chú mới"
 
-#: src/Widgets/ActionBar.vala:42
+#: src/Widgets/ActionBar.vala:47
 msgid "Delete sticky note"
 msgstr "Xóa giấy ghi chú"
 
-#: src/Widgets/ActionBar.vala:55
+#: src/Widgets/ActionBar.vala:61
 msgid "Toggle list"
 msgstr "Bật/tắt danh sách"
 
-#: src/Widgets/ActionBar.vala:69
+#: src/Widgets/ActionBar.vala:75
 msgid "Insert emoji"
 msgstr "Chèn biểu tượng cảm xúc"
 
-#: src/Widgets/ActionBar.vala:81
+#: src/Widgets/ActionBar.vala:89
 msgid "Preferences for this sticky note"
 msgstr "Tùy chỉnh cho giấy ghi chú này"
 
-#. /TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:33
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:32
 msgid "Default"
 msgstr "Mặc định"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:35
 msgid "Use default text font"
 msgstr "Sử dụng phông chữ văn bản mặc định"
 
@@ -63,7 +73,7 @@ msgstr "Sử dụng phông chữ đơn cách"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:42
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:41
 msgid "Zoom out"
 msgstr "Thu nhỏ"
 
@@ -71,9 +81,13 @@ msgstr "Thu nhỏ"
 msgid "Default zoom level"
 msgstr "Mức phóng mặc định"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:57
 msgid "Zoom in"
 msgstr "Phóng to"
+
+#: src/Objects/NoteData.vala:48
+msgid "Forgot title!"
+msgstr ""
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
 #: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
@@ -363,50 +377,54 @@ msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
 msgid "Set Jorts to start with the computer"
 msgstr "Đặt Jorts để bắt đầu với máy tính"
 
-#: src/Views/PreferencesView.vala:23
+#: src/Views/PreferencesView.vala:17
 msgid "Request to system sent"
 msgstr "Đã gửi yêu cầu tới hệ thống"
 
 #: src/Views/PreferencesView.vala:51
+msgid "Reset to default"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:54
 msgid "List item prefix"
 msgstr "Prefix mục danh sách"
 
-#: src/Views/PreferencesView.vala:53
+#: src/Views/PreferencesView.vala:56
 msgid "If left empty, the list button will be hidden"
 msgstr "Nếu để trống, nút danh sách sẽ ẩn"
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:78
 msgid "Scribble mode"
 msgstr "Chế độ viết nguệch ngoạc"
 
-#: src/Views/PreferencesView.vala:77
+#: src/Views/PreferencesView.vala:79
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "Viết nguệch ngoạc văn bản của các ghi chú không tập trung (Ctrl+H)"
 
 #. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:89
+#: src/Views/PreferencesView.vala:91
 msgid "Hide bottom bar"
 msgstr "Ẩn thanh dưới cùng"
 
-#: src/Views/PreferencesView.vala:90
+#: src/Views/PreferencesView.vala:92
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Phím tắt vẫn hoạt động (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
+#: src/Views/PreferencesView.vala:108
 msgid "Enable"
 msgstr "Bật"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
+#: src/Views/PreferencesView.vala:119
 msgid "Disable"
 msgstr "Tắt"
 
-#: src/Views/PreferencesView.vala:131
+#: src/Views/PreferencesView.vala:133
 msgid "Automatically start Jorts"
 msgstr "Tự động khởi động Jorts"
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:136
 msgid "Show your sticky notes when you log in"
 msgstr "Hiển thị giấy ghi chú của bạn khi bạn đăng nhập"
 
@@ -422,27 +440,31 @@ msgstr "Đóng"
 msgid "Close preferences"
 msgstr "Đóng tùy chỉnh"
 
-#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
-#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
+#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:51
 msgid " - Jorts"
 msgstr " - Jorts"
+
+#: src/Windows/StickyNoteWindow.vala:144
+msgid " (Development)"
+msgstr ""
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:33
+#: src/Windows/PreferenceWindow.vala:49
 msgid "Preferences for your Jorts"
 msgstr "Tùy chỉnh cho Jorts của bạn"
 
-#: src/Windows/PreferenceWindow.vala:35
+#: src/Windows/PreferenceWindow.vala:51
 msgid "Preferences"
 msgstr "Tùy chỉnh"
 
-#: src/Application.vala:245
+#: src/Application.vala:217
 msgid "Create a new note"
 msgstr "Tạo ghi chú mới"
 
-#: src/Application.vala:246
+#: src/Application.vala:218
 msgid "Show preferences"
 msgstr "Hiển thị tùy chỉnh"

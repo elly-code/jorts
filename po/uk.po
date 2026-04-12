@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.elly_code.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 14:18+0100\n"
+"POT-Creation-Date: 2026-04-13 00:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,33 +16,43 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr "Натисніть, щоб змінити назву"
 
-#: src/Widgets/ActionBar.vala:30
+#. Alternate way to access preferences
+#: src/Widgets/TextView.vala:60
+#, fuzzy
+msgid "Show Preferences"
+msgstr "Показати налаштування"
+
+#: src/Widgets/TextView.vala:61
+#, fuzzy
+msgid "Quit Jorts"
+msgstr " - Джинси"
+
+#: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
 msgstr "Нова наліпка"
 
-#: src/Widgets/ActionBar.vala:42
+#: src/Widgets/ActionBar.vala:47
 msgid "Delete sticky note"
 msgstr "Видалити наліпку"
 
-#: src/Widgets/ActionBar.vala:55
+#: src/Widgets/ActionBar.vala:61
 msgid "Toggle list"
 msgstr ""
 
-#: src/Widgets/ActionBar.vala:69
+#: src/Widgets/ActionBar.vala:75
 msgid "Insert emoji"
 msgstr "Вставте емодзі"
 
-#: src/Widgets/ActionBar.vala:81
+#: src/Widgets/ActionBar.vala:89
 msgid "Preferences for this sticky note"
 msgstr "Уподобання для цієї наліпки"
 
-#. /TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:33
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:32
 #, fuzzy
 msgid "Default"
 msgstr "Скидання до налаштувань за замовчуванням"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:35
 #, fuzzy
 msgid "Use default text font"
 msgstr "Натисніть, щоб використовувати шрифт за замовчуванням"
@@ -63,7 +73,7 @@ msgstr "Натисніть, щоб використовувати моношир
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:42
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:41
 msgid "Zoom out"
 msgstr "Зменшити"
 
@@ -71,9 +81,14 @@ msgstr "Зменшити"
 msgid "Default zoom level"
 msgstr "Рівень масштабування за замовчуванням"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:57
 msgid "Zoom in"
 msgstr "Збільшити"
+
+#: src/Objects/NoteData.vala:48
+#, fuzzy
+msgid "Forgot title!"
+msgstr "Редагувати заголовок"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
 #: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
@@ -365,35 +380,39 @@ msgstr "Видалити Jorts з автозапуску системи"
 msgid "Set Jorts to start with the computer"
 msgstr "Налаштуйте Jorts на запуск з комп'ютера"
 
-#: src/Views/PreferencesView.vala:23
+#: src/Views/PreferencesView.vala:17
 msgid "Request to system sent"
 msgstr "Запит до системи відправлено"
 
 #: src/Views/PreferencesView.vala:51
+msgid "Reset to default"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:54
 msgid "List item prefix"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:53
+#: src/Views/PreferencesView.vala:56
 msgid "If left empty, the list button will be hidden"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:78
 #, fuzzy
 msgid "Scribble mode"
 msgstr "Увімкнути режим каракулів"
 
-#: src/Views/PreferencesView.vala:77
+#: src/Views/PreferencesView.vala:79
 #, fuzzy
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "Приховати вміст нефокусованих стікерів"
 
 #. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:89
+#: src/Views/PreferencesView.vala:91
 #, fuzzy
 msgid "Hide bottom bar"
 msgstr "Приховати панель кнопок"
 
-#: src/Views/PreferencesView.vala:90
+#: src/Views/PreferencesView.vala:92
 #, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
@@ -401,20 +420,20 @@ msgstr ""
 "працюватимуть як і раніше (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
+#: src/Views/PreferencesView.vala:108
 msgid "Enable"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
+#: src/Views/PreferencesView.vala:119
 msgid "Disable"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:131
+#: src/Views/PreferencesView.vala:133
 msgid "Automatically start Jorts"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:136
 msgid "Show your sticky notes when you log in"
 msgstr ""
 
@@ -430,29 +449,33 @@ msgstr "Закрити"
 msgid "Close preferences"
 msgstr "Близькі уподобання"
 
-#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
-#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
+#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:51
 msgid " - Jorts"
 msgstr " - Джинси"
+
+#: src/Windows/StickyNoteWindow.vala:144
+msgid " (Development)"
+msgstr ""
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:33
+#: src/Windows/PreferenceWindow.vala:49
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Налаштування для всіх стікерів"
 
-#: src/Windows/PreferenceWindow.vala:35
+#: src/Windows/PreferenceWindow.vala:51
 msgid "Preferences"
 msgstr "Уподобання"
 
-#: src/Application.vala:245
+#: src/Application.vala:217
 msgid "Create a new note"
 msgstr "Створіть нову нотатку"
 
-#: src/Application.vala:246
+#: src/Application.vala:218
 msgid "Show preferences"
 msgstr "Показати налаштування"
 
@@ -499,9 +522,6 @@ msgstr "Показати налаштування"
 #, fuzzy
 #~ msgid "Autostart apps"
 #~ msgstr "Автозапуск програм у flathub"
-
-#~ msgid "Edit title"
-#~ msgstr "Редагувати заголовок"
 
 #~ msgid "Hi im a square"
 #~ msgstr "Привіт, я квадрат."

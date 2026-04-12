@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.elly_code.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 14:18+0100\n"
+"POT-Creation-Date: 2026-04-13 00:39+0200\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,33 +16,43 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr "Clique para editar o título"
 
-#: src/Widgets/ActionBar.vala:30
+#. Alternate way to access preferences
+#: src/Widgets/TextView.vala:60
+#, fuzzy
+msgid "Show Preferences"
+msgstr "Mostrar preferências"
+
+#: src/Widgets/TextView.vala:61
+#, fuzzy
+msgid "Quit Jorts"
+msgstr " - Jorts"
+
+#: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
 msgstr "Nova nota adesiva"
 
-#: src/Widgets/ActionBar.vala:42
+#: src/Widgets/ActionBar.vala:47
 msgid "Delete sticky note"
 msgstr "Excluir nota adesiva"
 
-#: src/Widgets/ActionBar.vala:55
+#: src/Widgets/ActionBar.vala:61
 msgid "Toggle list"
 msgstr ""
 
-#: src/Widgets/ActionBar.vala:69
+#: src/Widgets/ActionBar.vala:75
 msgid "Insert emoji"
 msgstr "Insira emoji"
 
-#: src/Widgets/ActionBar.vala:81
+#: src/Widgets/ActionBar.vala:89
 msgid "Preferences for this sticky note"
 msgstr "Preferências para esta nota pegajosa"
 
-#. /TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:33
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:32
 #, fuzzy
 msgid "Default"
 msgstr "Nível de zoom padrão"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:35
 #, fuzzy
 msgid "Use default text font"
 msgstr "Clique para usar a fonte de texto padrão"
@@ -63,7 +73,7 @@ msgstr "Clique para usar uma fonte monoespaçada"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:42
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:41
 msgid "Zoom out"
 msgstr "Reduzir o zoom"
 
@@ -71,9 +81,14 @@ msgstr "Reduzir o zoom"
 msgid "Default zoom level"
 msgstr "Nível de zoom padrão"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:57
 msgid "Zoom in"
 msgstr "Aumentar o zoom"
+
+#: src/Objects/NoteData.vala:48
+#, fuzzy
+msgid "Forgot title!"
+msgstr "Editar título"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
 #: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
@@ -365,35 +380,40 @@ msgstr "Remover o Jorts da inicialização automática do sistema"
 msgid "Set Jorts to start with the computer"
 msgstr "Configurar o Jorts para iniciar com o computador"
 
-#: src/Views/PreferencesView.vala:23
+#: src/Views/PreferencesView.vala:17
 msgid "Request to system sent"
 msgstr "Solicitação enviada ao sistema"
 
 #: src/Views/PreferencesView.vala:51
+#, fuzzy
+msgid "Reset to default"
+msgstr "Redefinir para o padrão"
+
+#: src/Views/PreferencesView.vala:54
 msgid "List item prefix"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:53
+#: src/Views/PreferencesView.vala:56
 msgid "If left empty, the list button will be hidden"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:78
 #, fuzzy
 msgid "Scribble mode"
 msgstr "Ativar o modo scribbly"
 
-#: src/Views/PreferencesView.vala:77
+#: src/Views/PreferencesView.vala:79
 #, fuzzy
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "ocultar o conteúdo de notas pegajosas sem foco"
 
 #. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:89
+#: src/Views/PreferencesView.vala:91
 #, fuzzy
 msgid "Hide bottom bar"
 msgstr "Ocultar a barra de botões"
 
-#: src/Views/PreferencesView.vala:90
+#: src/Views/PreferencesView.vala:92
 #, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
@@ -401,20 +421,20 @@ msgstr ""
 "teclado continuarão funcionando (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
+#: src/Views/PreferencesView.vala:108
 msgid "Enable"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
+#: src/Views/PreferencesView.vala:119
 msgid "Disable"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:131
+#: src/Views/PreferencesView.vala:133
 msgid "Automatically start Jorts"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:136
 msgid "Show your sticky notes when you log in"
 msgstr ""
 
@@ -430,29 +450,33 @@ msgstr "Fechar"
 msgid "Close preferences"
 msgstr "Fechar preferências"
 
-#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
-#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
+#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:51
 msgid " - Jorts"
 msgstr " - Jorts"
+
+#: src/Windows/StickyNoteWindow.vala:144
+msgid " (Development)"
+msgstr ""
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:33
+#: src/Windows/PreferenceWindow.vala:49
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Preferências para esta nota pegajosa"
 
-#: src/Windows/PreferenceWindow.vala:35
+#: src/Windows/PreferenceWindow.vala:51
 msgid "Preferences"
 msgstr "Preferências"
 
-#: src/Application.vala:245
+#: src/Application.vala:217
 msgid "Create a new note"
 msgstr "Criar uma nova nota"
 
-#: src/Application.vala:246
+#: src/Application.vala:218
 msgid "Show preferences"
 msgstr "Mostrar preferências"
 
@@ -487,9 +511,6 @@ msgstr "Mostrar preferências"
 #~ msgid "Reset all settings"
 #~ msgstr "Redefinir todas as configurações para os padrões"
 
-#~ msgid "Reset to Default"
-#~ msgstr "Redefinir para o padrão"
-
 #~ msgid "Permissions"
 #~ msgstr "Permissões"
 
@@ -503,9 +524,6 @@ msgstr "Mostrar preferências"
 #, fuzzy
 #~ msgid "Autostart apps"
 #~ msgstr "Inicialização automática de aplicativos no flathub"
-
-#~ msgid "Edit title"
-#~ msgstr "Editar título"
 
 #~ msgid "Hi im a square"
 #~ msgstr "Oi, eu sou um quadrado"
