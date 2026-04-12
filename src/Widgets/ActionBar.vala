@@ -32,7 +32,8 @@
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>n"},
                 _("New sticky note")
-            )
+            ),
+            has_frame = false
         };
         new_item.add_css_class (STYLE_THEMEDBUTTON);
 

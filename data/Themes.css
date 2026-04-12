@@ -1,12 +1,10 @@
 
 
-/* Accent color 
-mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3) */
-            
+@define-color ACCENT_BLUEBERRY mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3);
+
 window.BLUEBERRY {
     background-color: @BLUEBERRY_100;
 }
-
 
 window.BLUEBERRY undershoot.top {
     background:
@@ -27,16 +25,16 @@ window.BLUEBERRY undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.BLUEBERRY overshoot.top {
-background: linear-gradient(to top, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0) 80%, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
 
 window.BLUEBERRY overshoot.right {
-background: linear-gradient(to right, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0) 80%, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
 
 window.BLUEBERRY overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0) 80%, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
 
 window.BLUEBERRY overshoot.left {
-background: linear-gradient(to left, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0) 80%, alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
 
 window.BLUEBERRY text selection {
     color: shade(@BLUEBERRY_100, 1.88);
@@ -47,8 +45,6 @@ window.BLUEBERRY titlebar,
 window.BLUEBERRY titlebar image,
 window.BLUEBERRY .themedbutton > button > box > image,
 window.BLUEBERRY .themedbutton > image,
-window.BLUEBERRY windowcontrols,
-window.BLUEBERRY windowcontrols image,
 window.BLUEBERRY {
     color: @BLUEBERRY_900;
 }
@@ -73,12 +69,11 @@ window.BLUEBERRY editablelabel {
 
 window.BLUEBERRY editablelabel:hover,
 window.BLUEBERRY editablelabel:focus {
-    border: 1px solid alpha(mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_BLUEBERRY,0.88);
 }
 
 window.BLUEBERRY editablelabel.editing {
     border: 1px solid @BLUEBERRY_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@BLUEBERRY_100, @BLUEBERRY_500, 0.3);  */
 }
 
 window.BLUEBERRY:backdrop editablelabel {
@@ -87,20 +82,16 @@ window.BLUEBERRY:backdrop editablelabel {
 
 window.BLUEBERRY:backdrop editablelabel,
 window.BLUEBERRY:backdrop actionbar,
-window.BLUEBERRY:backdrop actionbar image,
-window.BLUEBERRY:backdrop windowcontrols,
-window.BLUEBERRY:backdrop windowcontrols image {
+window.BLUEBERRY:backdrop actionbar image {
     color: alpha(@BLUEBERRY_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@MINT_500, @MINT_700, 0.3) */
-            
+@define-color ACCENT_MINT mix(@MINT_500, @MINT_700, 0.3);
+
 window.MINT {
     background-color: @MINT_100;
 }
-
 
 window.MINT undershoot.top {
     background:
@@ -121,16 +112,16 @@ window.MINT undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.MINT overshoot.top {
-background: linear-gradient(to top, alpha(mix(@MINT_500, @MINT_700, 0.3), 0) 80%, alpha(mix(@MINT_500, @MINT_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
 
 window.MINT overshoot.right {
-background: linear-gradient(to right, alpha(mix(@MINT_500, @MINT_700, 0.3), 0) 80%, alpha(mix(@MINT_500, @MINT_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
 
 window.MINT overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@MINT_500, @MINT_700, 0.3), 0) 80%, alpha(mix(@MINT_500, @MINT_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
 
 window.MINT overshoot.left {
-background: linear-gradient(to left, alpha(mix(@MINT_500, @MINT_700, 0.3), 0) 80%, alpha(mix(@MINT_500, @MINT_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
 
 window.MINT text selection {
     color: shade(@MINT_100, 1.88);
@@ -141,8 +132,6 @@ window.MINT titlebar,
 window.MINT titlebar image,
 window.MINT .themedbutton > button > box > image,
 window.MINT .themedbutton > image,
-window.MINT windowcontrols,
-window.MINT windowcontrols image,
 window.MINT {
     color: @MINT_900;
 }
@@ -167,12 +156,11 @@ window.MINT editablelabel {
 
 window.MINT editablelabel:hover,
 window.MINT editablelabel:focus {
-    border: 1px solid alpha(mix(@MINT_500, @MINT_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_MINT,0.88);
 }
 
 window.MINT editablelabel.editing {
     border: 1px solid @MINT_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@MINT_100, @MINT_500, 0.3);  */
 }
 
 window.MINT:backdrop editablelabel {
@@ -181,20 +169,16 @@ window.MINT:backdrop editablelabel {
 
 window.MINT:backdrop editablelabel,
 window.MINT:backdrop actionbar,
-window.MINT:backdrop actionbar image,
-window.MINT:backdrop windowcontrols,
-window.MINT:backdrop windowcontrols image {
+window.MINT:backdrop actionbar image {
     color: alpha(@MINT_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@LIME_500, @LIME_700, 0.3) */
-            
+@define-color ACCENT_LIME mix(@LIME_500, @LIME_700, 0.3);
+
 window.LIME {
     background-color: @LIME_100;
 }
-
 
 window.LIME undershoot.top {
     background:
@@ -215,16 +199,16 @@ window.LIME undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.LIME overshoot.top {
-background: linear-gradient(to top, alpha(mix(@LIME_500, @LIME_700, 0.3), 0) 80%, alpha(mix(@LIME_500, @LIME_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
 
 window.LIME overshoot.right {
-background: linear-gradient(to right, alpha(mix(@LIME_500, @LIME_700, 0.3), 0) 80%, alpha(mix(@LIME_500, @LIME_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
 
 window.LIME overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@LIME_500, @LIME_700, 0.3), 0) 80%, alpha(mix(@LIME_500, @LIME_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
 
 window.LIME overshoot.left {
-background: linear-gradient(to left, alpha(mix(@LIME_500, @LIME_700, 0.3), 0) 80%, alpha(mix(@LIME_500, @LIME_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
 
 window.LIME text selection {
     color: shade(@LIME_100, 1.88);
@@ -235,8 +219,6 @@ window.LIME titlebar,
 window.LIME titlebar image,
 window.LIME .themedbutton > button > box > image,
 window.LIME .themedbutton > image,
-window.LIME windowcontrols,
-window.LIME windowcontrols image,
 window.LIME {
     color: @LIME_900;
 }
@@ -261,12 +243,11 @@ window.LIME editablelabel {
 
 window.LIME editablelabel:hover,
 window.LIME editablelabel:focus {
-    border: 1px solid alpha(mix(@LIME_500, @LIME_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_LIME,0.88);
 }
 
 window.LIME editablelabel.editing {
     border: 1px solid @LIME_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@LIME_100, @LIME_500, 0.3);  */
 }
 
 window.LIME:backdrop editablelabel {
@@ -275,20 +256,16 @@ window.LIME:backdrop editablelabel {
 
 window.LIME:backdrop editablelabel,
 window.LIME:backdrop actionbar,
-window.LIME:backdrop actionbar image,
-window.LIME:backdrop windowcontrols,
-window.LIME:backdrop windowcontrols image {
+window.LIME:backdrop actionbar image {
     color: alpha(@LIME_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@BANANA_500, @BANANA_700, 0.3) */
-            
+@define-color ACCENT_BANANA mix(@BANANA_500, @BANANA_700, 0.3);
+
 window.BANANA {
     background-color: @BANANA_100;
 }
-
 
 window.BANANA undershoot.top {
     background:
@@ -309,16 +286,16 @@ window.BANANA undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.BANANA overshoot.top {
-background: linear-gradient(to top, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0) 80%, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
 
 window.BANANA overshoot.right {
-background: linear-gradient(to right, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0) 80%, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
 
 window.BANANA overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0) 80%, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
 
 window.BANANA overshoot.left {
-background: linear-gradient(to left, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0) 80%, alpha(mix(@BANANA_500, @BANANA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
 
 window.BANANA text selection {
     color: shade(@BANANA_100, 1.88);
@@ -329,8 +306,6 @@ window.BANANA titlebar,
 window.BANANA titlebar image,
 window.BANANA .themedbutton > button > box > image,
 window.BANANA .themedbutton > image,
-window.BANANA windowcontrols,
-window.BANANA windowcontrols image,
 window.BANANA {
     color: @BANANA_900;
 }
@@ -355,12 +330,11 @@ window.BANANA editablelabel {
 
 window.BANANA editablelabel:hover,
 window.BANANA editablelabel:focus {
-    border: 1px solid alpha(mix(@BANANA_500, @BANANA_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_BANANA,0.88);
 }
 
 window.BANANA editablelabel.editing {
     border: 1px solid @BANANA_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@BANANA_100, @BANANA_500, 0.3);  */
 }
 
 window.BANANA:backdrop editablelabel {
@@ -369,20 +343,16 @@ window.BANANA:backdrop editablelabel {
 
 window.BANANA:backdrop editablelabel,
 window.BANANA:backdrop actionbar,
-window.BANANA:backdrop actionbar image,
-window.BANANA:backdrop windowcontrols,
-window.BANANA:backdrop windowcontrols image {
+window.BANANA:backdrop actionbar image {
     color: alpha(@BANANA_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@ORANGE_500, @ORANGE_700, 0.3) */
-            
+@define-color ACCENT_ORANGE mix(@ORANGE_500, @ORANGE_700, 0.3);
+
 window.ORANGE {
     background-color: @ORANGE_100;
 }
-
 
 window.ORANGE undershoot.top {
     background:
@@ -403,16 +373,16 @@ window.ORANGE undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.ORANGE overshoot.top {
-background: linear-gradient(to top, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0) 80%, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
 
 window.ORANGE overshoot.right {
-background: linear-gradient(to right, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0) 80%, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
 
 window.ORANGE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0) 80%, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
 
 window.ORANGE overshoot.left {
-background: linear-gradient(to left, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0) 80%, alpha(mix(@ORANGE_500, @ORANGE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
 
 window.ORANGE text selection {
     color: shade(@ORANGE_100, 1.88);
@@ -423,8 +393,6 @@ window.ORANGE titlebar,
 window.ORANGE titlebar image,
 window.ORANGE .themedbutton > button > box > image,
 window.ORANGE .themedbutton > image,
-window.ORANGE windowcontrols,
-window.ORANGE windowcontrols image,
 window.ORANGE {
     color: @ORANGE_900;
 }
@@ -449,12 +417,11 @@ window.ORANGE editablelabel {
 
 window.ORANGE editablelabel:hover,
 window.ORANGE editablelabel:focus {
-    border: 1px solid alpha(mix(@ORANGE_500, @ORANGE_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_ORANGE,0.88);
 }
 
 window.ORANGE editablelabel.editing {
     border: 1px solid @ORANGE_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@ORANGE_100, @ORANGE_500, 0.3);  */
 }
 
 window.ORANGE:backdrop editablelabel {
@@ -463,20 +430,16 @@ window.ORANGE:backdrop editablelabel {
 
 window.ORANGE:backdrop editablelabel,
 window.ORANGE:backdrop actionbar,
-window.ORANGE:backdrop actionbar image,
-window.ORANGE:backdrop windowcontrols,
-window.ORANGE:backdrop windowcontrols image {
+window.ORANGE:backdrop actionbar image {
     color: alpha(@ORANGE_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3) */
-            
+@define-color ACCENT_STRAWBERRY mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3);
+
 window.STRAWBERRY {
     background-color: @STRAWBERRY_100;
 }
-
 
 window.STRAWBERRY undershoot.top {
     background:
@@ -497,16 +460,16 @@ window.STRAWBERRY undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.STRAWBERRY overshoot.top {
-background: linear-gradient(to top, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0) 80%, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
 
 window.STRAWBERRY overshoot.right {
-background: linear-gradient(to right, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0) 80%, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
 
 window.STRAWBERRY overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0) 80%, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
 
 window.STRAWBERRY overshoot.left {
-background: linear-gradient(to left, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0) 80%, alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
 
 window.STRAWBERRY text selection {
     color: shade(@STRAWBERRY_100, 1.88);
@@ -517,8 +480,6 @@ window.STRAWBERRY titlebar,
 window.STRAWBERRY titlebar image,
 window.STRAWBERRY .themedbutton > button > box > image,
 window.STRAWBERRY .themedbutton > image,
-window.STRAWBERRY windowcontrols,
-window.STRAWBERRY windowcontrols image,
 window.STRAWBERRY {
     color: @STRAWBERRY_900;
 }
@@ -543,12 +504,11 @@ window.STRAWBERRY editablelabel {
 
 window.STRAWBERRY editablelabel:hover,
 window.STRAWBERRY editablelabel:focus {
-    border: 1px solid alpha(mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_STRAWBERRY,0.88);
 }
 
 window.STRAWBERRY editablelabel.editing {
     border: 1px solid @STRAWBERRY_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@STRAWBERRY_100, @STRAWBERRY_500, 0.3);  */
 }
 
 window.STRAWBERRY:backdrop editablelabel {
@@ -557,20 +517,16 @@ window.STRAWBERRY:backdrop editablelabel {
 
 window.STRAWBERRY:backdrop editablelabel,
 window.STRAWBERRY:backdrop actionbar,
-window.STRAWBERRY:backdrop actionbar image,
-window.STRAWBERRY:backdrop windowcontrols,
-window.STRAWBERRY:backdrop windowcontrols image {
+window.STRAWBERRY:backdrop actionbar image {
     color: alpha(@STRAWBERRY_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3) */
-            
+@define-color ACCENT_BUBBLEGUM mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3);
+
 window.BUBBLEGUM {
     background-color: @BUBBLEGUM_100;
 }
-
 
 window.BUBBLEGUM undershoot.top {
     background:
@@ -591,16 +547,16 @@ window.BUBBLEGUM undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.BUBBLEGUM overshoot.top {
-background: linear-gradient(to top, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0) 80%, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
 
 window.BUBBLEGUM overshoot.right {
-background: linear-gradient(to right, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0) 80%, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
 
 window.BUBBLEGUM overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0) 80%, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
 
 window.BUBBLEGUM overshoot.left {
-background: linear-gradient(to left, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0) 80%, alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
 
 window.BUBBLEGUM text selection {
     color: shade(@BUBBLEGUM_100, 1.88);
@@ -611,8 +567,6 @@ window.BUBBLEGUM titlebar,
 window.BUBBLEGUM titlebar image,
 window.BUBBLEGUM .themedbutton > button > box > image,
 window.BUBBLEGUM .themedbutton > image,
-window.BUBBLEGUM windowcontrols,
-window.BUBBLEGUM windowcontrols image,
 window.BUBBLEGUM {
     color: @BUBBLEGUM_900;
 }
@@ -637,12 +591,11 @@ window.BUBBLEGUM editablelabel {
 
 window.BUBBLEGUM editablelabel:hover,
 window.BUBBLEGUM editablelabel:focus {
-    border: 1px solid alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_BUBBLEGUM,0.88);
 }
 
 window.BUBBLEGUM editablelabel.editing {
     border: 1px solid @BUBBLEGUM_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@BUBBLEGUM_100, @BUBBLEGUM_500, 0.3);  */
 }
 
 window.BUBBLEGUM:backdrop editablelabel {
@@ -651,20 +604,16 @@ window.BUBBLEGUM:backdrop editablelabel {
 
 window.BUBBLEGUM:backdrop editablelabel,
 window.BUBBLEGUM:backdrop actionbar,
-window.BUBBLEGUM:backdrop actionbar image,
-window.BUBBLEGUM:backdrop windowcontrols,
-window.BUBBLEGUM:backdrop windowcontrols image {
+window.BUBBLEGUM:backdrop actionbar image {
     color: alpha(@BUBBLEGUM_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@GRAPE_500, @GRAPE_700, 0.3) */
-            
+@define-color ACCENT_GRAPE mix(@GRAPE_500, @GRAPE_700, 0.3);
+
 window.GRAPE {
     background-color: @GRAPE_100;
 }
-
 
 window.GRAPE undershoot.top {
     background:
@@ -685,16 +634,16 @@ window.GRAPE undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.GRAPE overshoot.top {
-background: linear-gradient(to top, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0) 80%, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
 
 window.GRAPE overshoot.right {
-background: linear-gradient(to right, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0) 80%, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
 
 window.GRAPE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0) 80%, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
 
 window.GRAPE overshoot.left {
-background: linear-gradient(to left, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0) 80%, alpha(mix(@GRAPE_500, @GRAPE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
 
 window.GRAPE text selection {
     color: shade(@GRAPE_100, 1.88);
@@ -705,8 +654,6 @@ window.GRAPE titlebar,
 window.GRAPE titlebar image,
 window.GRAPE .themedbutton > button > box > image,
 window.GRAPE .themedbutton > image,
-window.GRAPE windowcontrols,
-window.GRAPE windowcontrols image,
 window.GRAPE {
     color: @GRAPE_900;
 }
@@ -731,12 +678,11 @@ window.GRAPE editablelabel {
 
 window.GRAPE editablelabel:hover,
 window.GRAPE editablelabel:focus {
-    border: 1px solid alpha(mix(@GRAPE_500, @GRAPE_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_GRAPE,0.88);
 }
 
 window.GRAPE editablelabel.editing {
     border: 1px solid @GRAPE_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@GRAPE_100, @GRAPE_500, 0.3);  */
 }
 
 window.GRAPE:backdrop editablelabel {
@@ -745,20 +691,16 @@ window.GRAPE:backdrop editablelabel {
 
 window.GRAPE:backdrop editablelabel,
 window.GRAPE:backdrop actionbar,
-window.GRAPE:backdrop actionbar image,
-window.GRAPE:backdrop windowcontrols,
-window.GRAPE:backdrop windowcontrols image {
+window.GRAPE:backdrop actionbar image {
     color: alpha(@GRAPE_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@COCOA_500, @COCOA_700, 0.3) */
-            
+@define-color ACCENT_COCOA mix(@COCOA_500, @COCOA_700, 0.3);
+
 window.COCOA {
     background-color: @COCOA_100;
 }
-
 
 window.COCOA undershoot.top {
     background:
@@ -779,16 +721,16 @@ window.COCOA undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.COCOA overshoot.top {
-background: linear-gradient(to top, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0) 80%, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
 
 window.COCOA overshoot.right {
-background: linear-gradient(to right, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0) 80%, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
 
 window.COCOA overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0) 80%, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
 
 window.COCOA overshoot.left {
-background: linear-gradient(to left, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0) 80%, alpha(mix(@COCOA_500, @COCOA_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
 
 window.COCOA text selection {
     color: shade(@COCOA_100, 1.88);
@@ -799,8 +741,6 @@ window.COCOA titlebar,
 window.COCOA titlebar image,
 window.COCOA .themedbutton > button > box > image,
 window.COCOA .themedbutton > image,
-window.COCOA windowcontrols,
-window.COCOA windowcontrols image,
 window.COCOA {
     color: @COCOA_900;
 }
@@ -825,12 +765,11 @@ window.COCOA editablelabel {
 
 window.COCOA editablelabel:hover,
 window.COCOA editablelabel:focus {
-    border: 1px solid alpha(mix(@COCOA_500, @COCOA_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_COCOA,0.88);
 }
 
 window.COCOA editablelabel.editing {
     border: 1px solid @COCOA_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@COCOA_100, @COCOA_500, 0.3);  */
 }
 
 window.COCOA:backdrop editablelabel {
@@ -839,20 +778,16 @@ window.COCOA:backdrop editablelabel {
 
 window.COCOA:backdrop editablelabel,
 window.COCOA:backdrop actionbar,
-window.COCOA:backdrop actionbar image,
-window.COCOA:backdrop windowcontrols,
-window.COCOA:backdrop windowcontrols image {
+window.COCOA:backdrop actionbar image {
     color: alpha(@COCOA_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@SLATE_500, @SLATE_700, 0.3) */
-            
+@define-color ACCENT_SLATE mix(@SLATE_500, @SLATE_700, 0.3);
+
 window.SLATE {
     background-color: @SLATE_100;
 }
-
 
 window.SLATE undershoot.top {
     background:
@@ -873,16 +808,16 @@ window.SLATE undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.SLATE overshoot.top {
-background: linear-gradient(to top, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0) 80%, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
 
 window.SLATE overshoot.right {
-background: linear-gradient(to right, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0) 80%, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
 
 window.SLATE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0) 80%, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
 
 window.SLATE overshoot.left {
-background: linear-gradient(to left, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0) 80%, alpha(mix(@SLATE_500, @SLATE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
 
 window.SLATE text selection {
     color: shade(@SLATE_100, 1.88);
@@ -893,8 +828,6 @@ window.SLATE titlebar,
 window.SLATE titlebar image,
 window.SLATE .themedbutton > button > box > image,
 window.SLATE .themedbutton > image,
-window.SLATE windowcontrols,
-window.SLATE windowcontrols image,
 window.SLATE {
     color: @SLATE_900;
 }
@@ -919,12 +852,11 @@ window.SLATE editablelabel {
 
 window.SLATE editablelabel:hover,
 window.SLATE editablelabel:focus {
-    border: 1px solid alpha(mix(@SLATE_500, @SLATE_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_SLATE,0.88);
 }
 
 window.SLATE editablelabel.editing {
     border: 1px solid @SLATE_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@SLATE_100, @SLATE_500, 0.3);  */
 }
 
 window.SLATE:backdrop editablelabel {
@@ -933,20 +865,16 @@ window.SLATE:backdrop editablelabel {
 
 window.SLATE:backdrop editablelabel,
 window.SLATE:backdrop actionbar,
-window.SLATE:backdrop actionbar image,
-window.SLATE:backdrop windowcontrols,
-window.SLATE:backdrop windowcontrols image {
+window.SLATE:backdrop actionbar image {
     color: alpha(@SLATE_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@LATTE_500, @LATTE_700, 0.3) */
-            
+@define-color ACCENT_LATTE mix(@LATTE_500, @LATTE_700, 0.3);
+
 window.LATTE {
     background-color: @LATTE_100;
 }
-
 
 window.LATTE undershoot.top {
     background:
@@ -967,16 +895,16 @@ window.LATTE undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.LATTE overshoot.top {
-background: linear-gradient(to top, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0) 80%, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
 
 window.LATTE overshoot.right {
-background: linear-gradient(to right, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0) 80%, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
 
 window.LATTE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0) 80%, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
 
 window.LATTE overshoot.left {
-background: linear-gradient(to left, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0) 80%, alpha(mix(@LATTE_500, @LATTE_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
 
 window.LATTE text selection {
     color: shade(@LATTE_100, 1.88);
@@ -987,8 +915,6 @@ window.LATTE titlebar,
 window.LATTE titlebar image,
 window.LATTE .themedbutton > button > box > image,
 window.LATTE .themedbutton > image,
-window.LATTE windowcontrols,
-window.LATTE windowcontrols image,
 window.LATTE {
     color: @LATTE_900;
 }
@@ -1013,12 +939,11 @@ window.LATTE editablelabel {
 
 window.LATTE editablelabel:hover,
 window.LATTE editablelabel:focus {
-    border: 1px solid alpha(mix(@LATTE_500, @LATTE_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_LATTE,0.88);
 }
 
 window.LATTE editablelabel.editing {
     border: 1px solid @LATTE_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@LATTE_100, @LATTE_500, 0.3);  */
 }
 
 window.LATTE:backdrop editablelabel {
@@ -1027,20 +952,16 @@ window.LATTE:backdrop editablelabel {
 
 window.LATTE:backdrop editablelabel,
 window.LATTE:backdrop actionbar,
-window.LATTE:backdrop actionbar image,
-window.LATTE:backdrop windowcontrols,
-window.LATTE:backdrop windowcontrols image {
+window.LATTE:backdrop actionbar image {
     color: alpha(@LATTE_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@SILVER_500, @SILVER_700, 0.3) */
-            
+@define-color ACCENT_SILVER mix(@SILVER_500, @SILVER_700, 0.3);
+
 window.SILVER {
     background-color: @SILVER_100;
 }
-
 
 window.SILVER undershoot.top {
     background:
@@ -1061,16 +982,16 @@ window.SILVER undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.SILVER overshoot.top {
-background: linear-gradient(to top, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0) 80%, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
 
 window.SILVER overshoot.right {
-background: linear-gradient(to right, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0) 80%, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
 
 window.SILVER overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0) 80%, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
 
 window.SILVER overshoot.left {
-background: linear-gradient(to left, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0) 80%, alpha(mix(@SILVER_500, @SILVER_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
 
 window.SILVER text selection {
     color: shade(@SILVER_100, 1.88);
@@ -1081,8 +1002,6 @@ window.SILVER titlebar,
 window.SILVER titlebar image,
 window.SILVER .themedbutton > button > box > image,
 window.SILVER .themedbutton > image,
-window.SILVER windowcontrols,
-window.SILVER windowcontrols image,
 window.SILVER {
     color: @SILVER_900;
 }
@@ -1107,12 +1026,11 @@ window.SILVER editablelabel {
 
 window.SILVER editablelabel:hover,
 window.SILVER editablelabel:focus {
-    border: 1px solid alpha(mix(@SILVER_500, @SILVER_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_SILVER,0.88);
 }
 
 window.SILVER editablelabel.editing {
     border: 1px solid @SILVER_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@SILVER_100, @SILVER_500, 0.3);  */
 }
 
 window.SILVER:backdrop editablelabel {
@@ -1121,20 +1039,16 @@ window.SILVER:backdrop editablelabel {
 
 window.SILVER:backdrop editablelabel,
 window.SILVER:backdrop actionbar,
-window.SILVER:backdrop actionbar image,
-window.SILVER:backdrop windowcontrols,
-window.SILVER:backdrop windowcontrols image {
+window.SILVER:backdrop actionbar image {
     color: alpha(@SILVER_900, 0.65);
 }
 
 
-/* Accent color 
-mix(@BLACK_500, @BLACK_700, 0.3) */
-            
+@define-color ACCENT_BLACK mix(@BLACK_500, @BLACK_700, 0.3);
+
 window.BLACK {
     background-color: @BLACK_100;
 }
-
 
 window.BLACK undershoot.top {
     background:
@@ -1155,16 +1069,16 @@ window.BLACK undershoot.bottom {
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.BLACK overshoot.top {
-background: linear-gradient(to top, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0) 80%, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to top, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
 
 window.BLACK overshoot.right {
-background: linear-gradient(to right, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0) 80%, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to right, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
 
 window.BLACK overshoot.bottom {
-background: linear-gradient(to bottom, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0) 80%, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to bottom, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
 
 window.BLACK overshoot.left {
-background: linear-gradient(to left, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0) 80%, alpha(mix(@BLACK_500, @BLACK_700, 0.3), 0.25) 100%); }
+background: linear-gradient(to left, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
 
 window.BLACK text selection {
     color: shade(@BLACK_100, 1.88);
@@ -1175,8 +1089,6 @@ window.BLACK titlebar,
 window.BLACK titlebar image,
 window.BLACK .themedbutton > button > box > image,
 window.BLACK .themedbutton > image,
-window.BLACK windowcontrols,
-window.BLACK windowcontrols image,
 window.BLACK {
     color: @BLACK_900;
 }
@@ -1201,12 +1113,11 @@ window.BLACK editablelabel {
 
 window.BLACK editablelabel:hover,
 window.BLACK editablelabel:focus {
-    border: 1px solid alpha(mix(@BLACK_500, @BLACK_700, 0.3),0.88);
+    border: 1px solid alpha(@ACCENT_BLACK,0.88);
 }
 
 window.BLACK editablelabel.editing {
     border: 1px solid @BLACK_700;
-    /*  box-shadow: inset 0 0 2px 2px mix(@BLACK_100, @BLACK_500, 0.3);  */
 }
 
 window.BLACK:backdrop editablelabel {
@@ -1215,9 +1126,7 @@ window.BLACK:backdrop editablelabel {
 
 window.BLACK:backdrop editablelabel,
 window.BLACK:backdrop actionbar,
-window.BLACK:backdrop actionbar image,
-window.BLACK:backdrop windowcontrols,
-window.BLACK:backdrop windowcontrols image {
+window.BLACK:backdrop actionbar image {
     color: alpha(@BLACK_900, 0.65);
 }
 

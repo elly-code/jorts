@@ -16,7 +16,7 @@
 */
 public class Jorts.Storage : Object {
 
-    private const string FILENAME           = "saved_state.json";
+    private const string FILENAME = "saved_state.json";
     private string data_directory;
     private string storage_path;
 
