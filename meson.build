@@ -20,6 +20,7 @@ else
 endif
 
 app_version = meson.project_version()
+gettext_name = meson.project_name()
 
 vala_flags = []
 if get_option('development')
@@ -38,7 +39,7 @@ endif
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (gettext_name), language:'c')
 windows_build = build_machine.system() == 'windows'
 
 
@@ -75,7 +76,7 @@ endif
 ## Set de config data
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
 config_data.set_quoted('APP_NAME', app_name)
 config_data.set_quoted('APP_ID', app_id)
 config_data.set_quoted('APP_VERSION', app_version)

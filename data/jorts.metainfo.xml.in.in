@@ -5,7 +5,7 @@
     <project_license>GPL-3.0+</project_license>
     <launchable type="desktop-id">@APP_ID@.desktop</launchable>
     
-    <name translate="no">@APP_NAME@</name>
+    <name>Jorts</name>
     <summary>Write on colourful little squares</summary>
     <description>
         <p>Neither jeans nor shorts, just like jorts!</p>
@@ -40,7 +40,7 @@
     <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">@APP_ID@</translation>
+    <translation type="gettext">@GETTEXT_PACKAGE@</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -72,15 +72,15 @@
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/default.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/default.png</image>
         </screenshot>
         <screenshot>
             <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/scribbly.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/scribbly.png</image>
         </screenshot>
         <screenshot>
             <caption>Look! Ascii art in a sticky note!</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/ascii.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/ascii.png</image>
         </screenshot>
         <screenshot environment="pantheon">
             <caption>The preferences dialog in light mode</caption>
