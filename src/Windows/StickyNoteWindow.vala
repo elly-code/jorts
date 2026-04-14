@@ -79,6 +79,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         set_child (view);
         set_focus (view);
+
+        add_css_class (STYLE_ANIMATED);
         load_data (data);
 
 #if DEVEL
@@ -106,7 +108,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.notify["is-active"].connect (color_controller.on_focus_changed);
 
         // Respect animation settings for showing ui elements
-        if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
+        if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean (KEY_HIDEBAR))) {
             show.connect_after (delayed_show);
 
         } else {
@@ -129,7 +131,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     private void bind_hidebar () {
         Application.gsettings.bind (
-            "hide-bar",
+            KEY_HIDEBAR,
             view.actionbar.actionbar,
             "revealed",
             SettingsBindFlags.INVERT_BOOLEAN);
