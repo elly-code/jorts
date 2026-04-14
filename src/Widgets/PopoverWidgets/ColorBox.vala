@@ -62,7 +62,7 @@ public class Jorts.ColorBox : Gtk.Box {
         accent_color_action = new SimpleAction.stateful ("prefers-accent-color", GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
         var action_group = new SimpleActionGroup ();
         action_group.add_action (accent_color_action);
-        insert_action_group ("popover", action_group);
+        insert_action_group ("win", action_group);
 
         accent_color_action.activate.connect (set_broadcast);
     }

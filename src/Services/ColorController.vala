@@ -12,16 +12,31 @@
 */
 public class Jorts.ColorController : Object {
 
-    private weak Jorts.StickyNoteWindow window;
+    public weak Jorts.StickyNoteWindow window;
 
-    private Jorts.Themes _theme;
     public Jorts.Themes theme {
-        get { return _theme;}
-        set { on_color_changed (value);}
+        get { return (Jorts.Themes)accent_color_action.get_state ();}
+        set { action_prefers_color ((GLib.Variant)value);}
     }
+
+    public SimpleAction accent_color_action;
+    public SimpleActionGroup actions { get; construct; }
+    public const string ACTION_PREFIX = "color_controller.";
+    public const string ACTION_PREFERS_COLOR = "action_prefers_color";
 
     public ColorController (Jorts.StickyNoteWindow window) {
         this.window = window;
+    }
+
+    construct {
+        actions = new SimpleActionGroup ();
+        accent_color_action = new SimpleAction.stateful (
+            ACTION_PREFERS_COLOR,
+            GLib.VariantType.INT32,
+            new Variant.int32 (Themes.IDK));
+
+        accent_color_action.activate.connect (action_prefers_color);
+        actions.add_action (accent_color_action);
     }
 
     /**
@@ -31,14 +46,13 @@ public class Jorts.ColorController : Object {
     public void on_color_changed (Jorts.Themes new_theme) {
         debug ("Updating theme to %s".printf (new_theme.to_string ()));
 
+        var old_theme = (Jorts.Themes)accent_color_action.get_state ();
+
         // Add remove class
-        if (_theme.to_string () in window.css_classes) {
-            window.remove_css_class (_theme.to_string ());
-        }
+        window.remove_css_class (old_theme.to_string ());
         window.add_css_class (new_theme.to_string ());
 
         // Propagate values
-        _theme = new_theme;
         window.popover.color = new_theme;
         NoteData.latest_theme = new_theme;
 
@@ -58,8 +72,17 @@ public class Jorts.ColorController : Object {
         debug ("Focus changed!");
 
         if (window.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + _theme.to_string ().ascii_down ();
+            var stylesheet = "io.elementary.stylesheet." + theme.to_string ().ascii_down ();
             Application.gtk_settings.gtk_theme_name = stylesheet;
         }
+    }
+
+    public void action_prefers_color (GLib.Variant? value) {
+        if (accent_color_action.get_state ().equal (value)) {
+            return;
+        }
+
+        on_color_changed ((Jorts.Themes)value);
+        accent_color_action.set_state (value);
     }
 }

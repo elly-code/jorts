@@ -70,6 +70,7 @@ public class Jorts.Popover : Gtk.Popover {
 
         child = view;
 
+
         // Allow scrolling shenanigans from popover
         keypress_controller = new Gtk.EventControllerKey ();
         scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {

@@ -67,6 +67,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         view = new NoteView ();
         textview = view.textview;
+        insert_action_group ("color_controller", color_controller.actions);
         insert_action_group ("noteview", view.actions);
         insert_action_group ("textview", textview.actions);
         insert_action_group ("zoom_controller", zoom_controller.actions);
