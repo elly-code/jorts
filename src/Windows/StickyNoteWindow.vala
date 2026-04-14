@@ -129,7 +129,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     private void bind_hidebar () {
         Application.gsettings.bind (
-            "hide-bar",
+            KEY_HIDEBAR,
             view.actionbar.actionbar,
             "revealed",
             SettingsBindFlags.INVERT_BOOLEAN);
