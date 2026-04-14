@@ -1,4 +1,4 @@
-# Name our project
+
 project(
     'jorts',
     'vala', 'c',
@@ -7,16 +7,20 @@ project(
 
 app_name = 'Jorts'
 correct_app_id = 'io.github.elly_code.' + meson.project_name()
+correct_app_path = '/io/github/elly_code/' + meson.project_name() + '/'
+
 legacy_app_id = 'io.github.ellie_commons.' +  meson.project_name()
+legacy_app_path = '/io/github/ellie_commons/' + meson.project_name() + '/'
+
 
 if get_option('legacy-rdnn')
     app_id = legacy_app_id
     alternate_app_id = correct_app_id
-
+    app_path = legacy_app_path
 else
     app_id = correct_app_id
     alternate_app_id = legacy_app_id
-
+    app_path = correct_app_path
 endif
 
 app_version = meson.project_version()
@@ -62,59 +66,7 @@ if windows_build
     vala_flags += ['--define', 'WINDOWS']
 endif
 
-# Hot fixes for flathub builds
-flathub = get_option('flathub')
-if flathub
-    vala_flags += ['--define', 'FLATHUB']
-endif
-
-
-
-#================================
-# Import the stylesheet
-
-## Set de config data
-config_data = configuration_data()
-config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
-config_data.set_quoted('APP_NAME', app_name)
-config_data.set_quoted('APP_ID', app_id)
-config_data.set_quoted('APP_VERSION', app_version)
-config_file = configure_file(
-    input: 'src/Config.vala.in',
-    output: '@BASENAME@',
-    configuration: config_data
-)
-
-# Le stylesheet
-gresource = gnome.compile_resources(
-    'gresource',
-    'data' / 'jorts.gresource.xml',
-    source_dir: 'data'
-)
-
-#================================
-# dependencies
-
 add_project_arguments(vala_flags, language: 'vala')
-dependencies = [
-        dependency('granite-7'),
-        dependency('gobject-2.0'),
-        dependency('json-glib-1.0'),
-        dependency('gee-0.8'),
-        dependency('gtk4')
-    ]
-
-# We need to compile an icon into the exe to avoid "missing icon" icon at every turn
-# Libportal is not available in MSYS2, built the file only on linuxes
-if windows_build
-    dependencies += dependency('gio-windows-2.0')
-    ico_src = import('windows').compile_resources('windows/icons/ico.rc')
-
-else
-    dependencies += dependency('gio-unix-2.0')
-    dependencies += dependency('libportal')
-endif
 
 
 #================================

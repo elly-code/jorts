@@ -36,7 +36,7 @@
     <url type="bugtracker">https://github.com/elly-code/jorts/issues</url>
     <url type="help">https://github.com/elly-code/jorts/wiki</url>
     <url type="translate">https://github.com/elly-code/jorts/blob/main/po/README.md</url>
-    <url type="donation">https://ko-fi.com/teamcons</url>
+    <url type="donation">https://ko-fi.com/teamcons/tip</url>
     <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
@@ -84,15 +84,24 @@
         </screenshot>
         <screenshot environment="pantheon">
             <caption>The preferences dialog in light mode</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/preferences-light.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/preferences-light.png</image>
         </screenshot>
         <screenshot environment="pantheon:dark">
             <caption>The preferences dialog in dark mode</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/preferences-dark.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/preferences-dark.png</image>
         </screenshot>
     </screenshots>
 
     <releases>
+        <release version="4.0.2" date="2026-04-13">
+            <description>
+                <p>Jorts of Spring</p>
+                <p>A very unflashy release. There is a lot of cleaning up, documenting, refactoring the internals. We love Jorts and want to have it be as good as we can</p>
+                <ul>
+                    <li>Added Preferences and Quit to the note right-click</li>
+                </ul>
+            </description>
+        </release>
         <release version="4.0.1" date="2026-01-13">
             <description>
                 <p>Organization change</p>

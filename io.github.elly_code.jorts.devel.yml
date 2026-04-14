@@ -19,16 +19,15 @@ finish-args:
   - '--socket=fallback-x11'
   - '--socket=wayland'
 
-cleanup:
-  -  '/include'
-  -  '/lib/pkgconfig'
-  -  '/man'
-  -  '/share/gtk-doc'
-  -  '/share/man'
-  -  '/share/pkgconfig'
-  -  '/share/installed-tests'
-  -  '*.la'
-  -  '*.a'
+cleanup-commands:
+  - rm -rf /app/bin/sassc
+  - rm -rf /app/include
+  - rm -rf /app/lib/girepository-1.0
+  - rm -rf /app/lib/pkgconfig
+  - rm -rf /app/share/gir-1.0
+  - rm -rf /app/share/vala
+  - rm -rf /app/lib/libgee*
+  - rm -rf /app/lib/libsass*
 
 modules:
   # Needed for the Scribbly mode

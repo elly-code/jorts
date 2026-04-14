@@ -136,7 +136,7 @@ Please wait while the app remembers all the things...
 
         // build all the stylesheets
         var app_provider = new Gtk.CssProvider ();
-        app_provider.load_from_resource ("/io/github/elly_code/jorts/Application.css");
+        app_provider.load_from_resource (APP_PATH + "Application.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             app_provider,
@@ -144,7 +144,7 @@ Please wait while the app remembers all the things...
         );
 
         var theme_provider = new Gtk.CssProvider ();
-        theme_provider.load_from_resource ("/io/github/elly_code/jorts/Themes.css");
+        theme_provider.load_from_resource (APP_PATH + "Themes.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             theme_provider,
@@ -190,14 +190,14 @@ Please wait while the app remembers all the things...
 
     private void action_toggle_scribbly () {
         debug ("Toggling scribbly");
-        var current = Application.gsettings.get_boolean ("scribbly-mode-active");
-        gsettings.set_boolean ("scribbly-mode-active", !current);
+        var current = Application.gsettings.get_boolean (KEY_SCRIBBLY);
+        gsettings.set_boolean (KEY_SCRIBBLY, !current);
     }
 
     private void action_toggle_actionbar () {
         debug ("Toggling actionbar");
-        var current = Application.gsettings.get_boolean ("hide-bar");
-        gsettings.set_boolean ("hide-bar", !current);
+        var current = Application.gsettings.get_boolean (KEY_HIDEBAR);
+        gsettings.set_boolean (KEY_HIDEBAR, !current);
     }
 
     // checked upon window closing to make sure we do not linger in the background

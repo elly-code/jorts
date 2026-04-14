@@ -1,8 +1,28 @@
 
+#========================
+# GRESOURCE
+
+gresource_conf = configuration_data()
+gresource_conf.set('APP_PATH', app_path)
+gresource_file = configure_file(
+    input: meson.project_name() + '.gresource.xml.in',
+    output: app_id + '.gresource.xml',
+    configuration: gresource_conf,
+)
+
+gresource = gnome.compile_resources(
+    'gresource',
+    gresource_file,
+    source_dir: '.'
+)
+
+#========================
+# GSCHEMA
 gschema_conf = configuration_data()
 gschema_conf.set('APP_ID', app_id)
+gschema_conf.set('APP_PATH', app_path)
 gschema_file = configure_file(
-    input: 'jorts.gschema.xml.in',
+    input: meson.project_name() + '.gschema.xml.in',
     output: app_id + '.gschema.xml',
     configuration: gschema_conf,
 )
@@ -19,7 +39,7 @@ args: ['--strict', '--dry-run', meson.current_source_dir()],
 )
 
 
-
+#========================
 # metainfo confuses windows, and icons are 
 if not windows_build
 
@@ -61,12 +81,14 @@ if not windows_build
         )
     endif
 
+    #========================
+    # DESKTOP
     # Inject some variables into the desktop file before merging in the translations
     desktop_conf = configuration_data()
     desktop_conf.set('APP_NAME', app_name)
     desktop_conf.set('APP_ID', app_id)
     desktop_file_in = configure_file(
-    input: 'jorts.desktop.in.in',
+    input: meson.project_name() + '.desktop.in.in',
     output: app_id + '.desktop.in',
     configuration: desktop_conf,
     )
@@ -80,7 +102,13 @@ if not windows_build
     install_dir: get_option('datadir') / 'applications',
     )
 
+    desktop_utils = find_program('desktop-file-validate', required: false)
+    if desktop_utils.found()
+        test('Validate desktop file', desktop_utils, args: [desktop_file])
+    endif
 
+    #========================
+    # METAINFO
     # Inject some variables into the metainfo file before merging in the translations
     appstream_conf = configuration_data()
     appstream_conf.set('APP_NAME', app_name)
@@ -89,7 +117,7 @@ if not windows_build
     appstream_conf.set('GETTEXT_PACKAGE', gettext_name)
     appstream_conf.set('ALTERNATE_APP_ID', alternate_app_id)
     appstream_file_in = configure_file(
-        input: 'jorts.metainfo.xml.in.in',
+        input: meson.project_name() + '.metainfo.xml.in.in',
         output: app_id + '.metainfo.xml.in',
         configuration: appstream_conf,
     )
@@ -103,17 +131,10 @@ if not windows_build
         install_dir: get_option('datadir') / 'metainfo',
     )
 
-
-
-    # Test definitions
-    desktop_utils = find_program('desktop-file-validate', required: false)
-    if desktop_utils.found()
-        test('Validate desktop file', desktop_utils, args: [desktop_file])
-    endif
-
     appstreamcli = find_program('appstreamcli', required: false, disabler: true)
         test('Validate appstream file',
     appstreamcli,
-    args: ['validate', '--no-net', '--explain', appstream_file],
+    args: ['validate', '--pedantic', '--no-net', '--explain', appstream_file],
     )
+
 endif
