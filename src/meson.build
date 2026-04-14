@@ -18,7 +18,7 @@ config_file = configure_file(
 #======== DEPENDENCIES ========
 
 dependencies = [
-        dependency('granite-7'),
+        dependency('granite-7', version: '>=7.7.0'),
         dependency('gobject-2.0'),
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),

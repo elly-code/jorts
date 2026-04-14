@@ -47,7 +47,7 @@ modules:
   - name: jorts
     buildsystem: meson
     config-opts:
-      - -Dvariant=['default']
+      - -Dvariant=default
     sources:
       - type: dir
         path: .

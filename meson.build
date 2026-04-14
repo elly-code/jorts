@@ -49,7 +49,7 @@ windows_build = build_machine.system() == 'windows'
 
 #================================
 # Cool icon variants
-variant = get_option('variant')[0]
+variant = get_option('variant')
 
 if variant == 'pride'
     vala_flags = ['--define', 'PRIDE']
