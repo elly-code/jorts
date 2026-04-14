@@ -26,7 +26,6 @@ namespace Jorts {
 
     // CSS
     const string STYLE_THEMEDBUTTON      = "themedbutton";
-    const string STYLE_ANIMATED          = "animated";
 
     // We need to say stop at some point
     const int ZOOM_MAX                   = 300;
