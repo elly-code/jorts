@@ -93,12 +93,13 @@
     </screenshots>
 
     <releases>
-        <release version="4.0.2" date="2026-04-13">
+        <release version="4.1.0" date="2026-04-13">
             <description>
                 <p>Jorts of Spring</p>
-                <p>A very unflashy release. There is a lot of cleaning up, documenting, refactoring the internals. We love Jorts and want to have it be as good as we can</p>
                 <ul>
+                    <li>New color: Latte!</li>
                     <li>Added Preferences and Quit to the note right-click</li>
+                    <li>A lot of under-the-hood spring cleaning</li>
                 </ul>
             </description>
         </release>

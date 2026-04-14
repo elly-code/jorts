@@ -22,14 +22,17 @@ public class Jorts.ColorBox : Gtk.Box {
 
 
     public ColorBox () {
-        orientation = Gtk.Orientation.HORIZONTAL;
-        accessible_role = Gtk.AccessibleRole.LIST;
-        homogeneous = true;
-        spacing = 1;
-        margin_start = SPACING_DOUBLE;
-        margin_end = SPACING_DOUBLE;
+        Object (
+            orientation: Gtk.Orientation.HORIZONTAL,
+            accessible_role: Gtk.AccessibleRole.LIST,
+            homogeneous: true,
+            spacing: 1,
+            margin_start: SPACING_DOUBLE,
+            margin_end: SPACING_DOUBLE
+        );
+    }
 
-
+    construct {
         var blueberry_button = new ColorPill (Themes.BLUEBERRY);
         var mint_button = new ColorPill (Themes.MINT, blueberry_button);
         var lime_button = new ColorPill (Themes.LIME, blueberry_button);
@@ -40,6 +43,7 @@ public class Jorts.ColorBox : Gtk.Box {
         var grape_button = new ColorPill (Themes.GRAPE, blueberry_button);
         var cocoa_button = new ColorPill (Themes.COCOA, blueberry_button);
         var slate_button = new ColorPill (Themes.SLATE, blueberry_button);
+        var latte_button = new ColorPill (Themes.LATTE, blueberry_button);
         //var auto_button = new ColorPill (Themes.IDK, blueberry_button);
 
         append (blueberry_button);
@@ -52,6 +56,7 @@ public class Jorts.ColorBox : Gtk.Box {
         append (grape_button);
         append (cocoa_button);
         append (slate_button);
+        append (latte_button);
         //append (auto_button);
 
         accent_color_action = new SimpleAction.stateful ("prefers-accent-color", GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
