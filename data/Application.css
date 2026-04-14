@@ -156,11 +156,7 @@ window.animated actionbar image {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-<<<<<<< HEAD
 @media (prefers-reduced-motion: reduce){ 
-=======
-@media (prefers-reduced-motion){ 
->>>>>>> 162f9db (handle in the CSS the reduce-motion setting)
     window.animated,
     window.animated overshoot,
     window.animated undershoot {
