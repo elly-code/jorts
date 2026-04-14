@@ -6,7 +6,7 @@
  */
 
  public class Jorts.PreferencesView : Granite.Bin {
-    //public Gtk.Button reset_button;
+
     private Granite.Toast toast;
     public Gtk.Button close_button;
 
@@ -17,7 +17,7 @@
         toast = new Granite.Toast (_("Request to system sent"));
         overlay.add_overlay (toast);
 
-        var prefview = new Gtk.Box (Gtk.Orientation.VERTICAL, SPACING_TRIPLE) {
+        var prefview = new Gtk.Box (Gtk.Orientation.VERTICAL, SPACING_DOUBLE) {
             margin_start = SPACING_TRIPLE,
             margin_end = SPACING_TRIPLE,
             margin_top = SPACING_DOUBLE,
@@ -98,6 +98,8 @@
                 /****************************************************/
                 /*               Autostart Request                  */
                 /****************************************************/
+
+// Windows do not have libportal, so we have to skip the autostart options
 #if !WINDOWS
                 var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, SPACING_STANDARD) {
                     halign = Gtk.Align.FILL
@@ -149,13 +151,13 @@
             };
 
             // Monies?
-            var support_button = new Gtk.LinkButton.with_label (
+            actionbar.start_widget = new Gtk.LinkButton.with_label (
                 DONATE_LINK,
                 _("Support us!")
             );
-            actionbar.start_widget = support_button;
 
-            close_button = new Gtk.Button () {
+            actionbar.end_widget = new Gtk.Button () {
+                action_name = "window.close",
                 width_request = 96,
                 label = _("Close"),
                 tooltip_markup = Granite.markup_accel_tooltip (
@@ -163,8 +165,6 @@
                     _("Close preferences")
                 )
             };
-
-            actionbar.end_widget = close_button;
 
             prefview.append (settingsbox);
             prefview.append (actionbar);

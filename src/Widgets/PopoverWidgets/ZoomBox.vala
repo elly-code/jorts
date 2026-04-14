@@ -10,7 +10,7 @@
 * Gives off zoom_changed signal to tell the user has clicked one of three
 * The signal transmits a Jorts.ZoomType Enum
 */
-public class Jorts.ZoomBox : Gtk.Box {
+public class Jorts.ZoomBox : Granite.Box {
 
     private Gtk.Button zoom_default_button;
     private int _zoom = 100;
@@ -26,13 +26,18 @@ public class Jorts.ZoomBox : Gtk.Box {
         }
     }
 
-    construct {
-        orientation = Gtk.Orientation.HORIZONTAL;
-        homogeneous = true;
-        hexpand = true;
-        margin_start = SPACING_DOUBLE;
-        margin_end = SPACING_DOUBLE;
+    public ZoomBox () {
+        Object (
+            orientation: Gtk.Orientation.HORIZONTAL,
+            child_spacing: Spacing.LINKED,
+            homogeneous: true,
+            hexpand: true,
+            margin_start: SPACING_DOUBLE,
+            margin_end: SPACING_DOUBLE
+        );
+    }
 
+    construct {
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
             action_name = ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_OUT,
@@ -61,6 +66,5 @@ public class Jorts.ZoomBox : Gtk.Box {
         append (zoom_out_button);
         append (zoom_default_button);
         append (zoom_in_button);
-        add_css_class (Granite.STYLE_CLASS_LINKED);
     }
 }

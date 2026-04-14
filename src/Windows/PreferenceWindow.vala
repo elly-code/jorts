@@ -46,12 +46,10 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         /********************************************/
 
         /// TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-        var titlelabel = new Gtk.Label (_("Preferences for your Jorts"));
-        titlelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-        set_title (_("Preferences") + _(" - Jorts"));
+        title = (_("Preferences") + _(" - Jorts"));
 
         var headerbar = new Gtk.HeaderBar () {
-            title_widget = titlelabel,
+            title_widget = new Gtk.Label (_("Preferences for your Jorts")),
             show_title_buttons = false
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
@@ -79,8 +77,5 @@ public class Jorts.PreferenceWindow : Gtk.Window {
                 Application.gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
             }
         });
-
-        //prefview.reset_button.clicked.connect (on_reset);
-        prefview.close_button.clicked.connect (() => {close ();});
     }
 }

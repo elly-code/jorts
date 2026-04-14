@@ -38,7 +38,6 @@ public class Jorts.EditableLabel : Granite.Bin {
                 _("Click to edit the title")
             )
         };
-        editablelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
         child = editablelabel;
 
         editablelabel.changed.connect (repeat_change);

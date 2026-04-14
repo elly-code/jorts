@@ -10,7 +10,7 @@
 * Allows user to switch between normal and monospace font
 * Exposes bool monospace, also sends it via signal
 */
-public class Jorts.MonospaceBox : Gtk.Box {
+public class Jorts.MonospaceBox : Granite.Box {
 
     private Gtk.ToggleButton mono_monospace_toggle;
 
@@ -19,13 +19,18 @@ public class Jorts.MonospaceBox : Gtk.Box {
         set { mono_monospace_toggle.active = value;}
     }
 
-    construct {
-        orientation = Gtk.Orientation.HORIZONTAL;
-        homogeneous = true;
-        hexpand = true;
-        margin_start = SPACING_DOUBLE;
-        margin_end = SPACING_DOUBLE;
+    public MonospaceBox () {
+        Object (
+            orientation: Gtk.Orientation.HORIZONTAL,
+            child_spacing: Spacing.LINKED,
+            homogeneous: true,
+            hexpand: true,
+            margin_start: SPACING_DOUBLE,
+            margin_end: SPACING_DOUBLE
+        );
+    }
 
+    construct {
         ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {
             action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO,
@@ -49,7 +54,6 @@ public class Jorts.MonospaceBox : Gtk.Box {
 
         append (mono_default_toggle);
         append (mono_monospace_toggle);
-        add_css_class (Granite.STYLE_CLASS_LINKED);
 
         mono_monospace_toggle.bind_property (
             "active",
