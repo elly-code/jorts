@@ -156,27 +156,6 @@ window.animated actionbar image {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (prefers-reduced-motion: reduce){ 
-    window.animated,
-    window.animated overshoot,
-    window.animated undershoot {
-        transition: none;
-    }
-
-    window.animated textview,
-    window.animated textview text,
-    window.animated headertitle,
-    window.animated actionbar,
-    window.animated actionbar .themedbutton:hover,
-    window.animated actionbar .themedbutton:focus,
-    window.animated editablelabel,
-    window.animated actionbar image {
-        transition: none;
-    }
-}
-
-
-
 /* Devel builds get these. Libadwaita has that too, but we do not use it. */
 window.devel {
 	border-style: solid;
