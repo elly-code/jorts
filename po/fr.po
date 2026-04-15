@@ -17,14 +17,12 @@ msgstr "Cliquez pour modifier le titre"
 
 #. Alternate way to access preferences
 #: src/Widgets/TextView.vala:60
-#, fuzzy
 msgid "Show Preferences"
-msgstr "Fermer les préférences"
+msgstr "Afficher préférences"
 
 #: src/Widgets/TextView.vala:61
-#, fuzzy
 msgid "Quit Jorts"
-msgstr " - Jorts"
+msgstr "Quitter Jorts"
 
 #: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
@@ -36,7 +34,7 @@ msgstr "Supprimer une note autocollante"
 
 #: src/Widgets/ActionBar.vala:61
 msgid "Toggle list"
-msgstr ""
+msgstr "Basculer liste"
 
 #: src/Widgets/ActionBar.vala:75
 msgid "Insert emoji"
@@ -128,11 +126,11 @@ msgstr "Ardoise"
 
 #: src/Objects/Themes.vala:73
 msgid "Latte"
-msgstr ""
+msgstr "Latte"
 
 #: src/Objects/Themes.vala:74
 msgid "No preference, random each time"
-msgstr ""
+msgstr "Pas de préférence, aléatoire à chaque fois"
 
 #: src/Utils/Random.vala:26
 msgid "All my very best friends"
@@ -394,7 +392,6 @@ msgid "Scribble mode"
 msgstr "Mode gribouillis"
 
 #: src/Views/PreferencesView.vala:79
-#, fuzzy
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "Cacher le texte des notes en arrière-plan (Ctrl+H)"
 
@@ -444,7 +441,7 @@ msgstr " - Jorts"
 
 #: src/Windows/StickyNoteWindow.vala:144
 msgid " (Development)"
-msgstr ""
+msgstr " (Développement)"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -460,9 +457,8 @@ msgstr "Préférences"
 
 #: src/Application.vala:217
 msgid "Create a new note"
-msgstr ""
+msgstr "Créer une nouvelle note"
 
 #: src/Application.vala:218
-#, fuzzy
 msgid "Show preferences"
-msgstr "Fermer les préférences"
+msgstr "Afficher préférences"

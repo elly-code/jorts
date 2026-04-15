@@ -17,14 +17,12 @@ msgstr "Klicken, um den Titel zu bearbeiten"
 
 #. Alternate way to access preferences
 #: src/Widgets/TextView.vala:60
-#, fuzzy
 msgid "Show Preferences"
 msgstr "Präferenzen anzeigen"
 
 #: src/Widgets/TextView.vala:61
-#, fuzzy
 msgid "Quit Jorts"
-msgstr " - Jorts"
+msgstr "Jorts beenden"
 
 #: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
@@ -83,7 +81,7 @@ msgstr "Vergrößern"
 
 #: src/Objects/NoteData.vala:48
 msgid "Forgot title!"
-msgstr ""
+msgstr "Titel vergessen!"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
 #: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
@@ -128,7 +126,7 @@ msgstr "Schiefer"
 
 #: src/Objects/Themes.vala:73
 msgid "Latte"
-msgstr ""
+msgstr "Latte"
 
 #: src/Objects/Themes.vala:74
 msgid "No preference, random each time"
@@ -379,7 +377,7 @@ msgstr "Anfrage an das System gesendet"
 
 #: src/Views/PreferencesView.vala:51
 msgid "Reset to default"
-msgstr ""
+msgstr "Auf Standardwerte zurücksetzen"
 
 #: src/Views/PreferencesView.vala:54
 msgid "List item prefix"
@@ -391,11 +389,11 @@ msgstr "Wenn leer gelassen, listenknopf wird ausgeblendet"
 
 #: src/Views/PreferencesView.vala:78
 msgid "Scribble mode"
-msgstr "Scribble-Modus"
+msgstr "Kritzelei-Modus"
 
 #: src/Views/PreferencesView.vala:79
 msgid "Scribble text of unfocused notes (Ctrl+H)"
-msgstr "Text von hintergrundNotizen ausblenden (Strg+H)"
+msgstr "Text von hintergrundnotizen Kritzelen (Strg+H)"
 
 #. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:91
@@ -443,7 +441,7 @@ msgstr " - Jorts"
 
 #: src/Windows/StickyNoteWindow.vala:144
 msgid " (Development)"
-msgstr ""
+msgstr " (Entwicklung)"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -459,7 +457,7 @@ msgstr "Präferenzen"
 
 #: src/Application.vala:217
 msgid "Create a new note"
-msgstr ""
+msgstr "Neue Notiz erstellen"
 
 #: src/Application.vala:218
 msgid "Show preferences"
