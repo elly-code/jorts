@@ -53,8 +53,11 @@ public class Jorts.Popover : Gtk.Popover {
 
         add_binding_action (Gdk.Key.F12, Gdk.ModifierType.SHIFT_MASK, TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST, null);
    }
-   
+
     construct {
+#if DEVEL
+        autohide = false;
+#endif
         var view = new Gtk.Box (VERTICAL, SPACING_DOUBLE) {
             margin_top = SPACING_DOUBLE,
             margin_bottom = SPACING_DOUBLE
