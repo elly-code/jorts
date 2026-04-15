@@ -45,12 +45,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("win", actions);
         app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
 
         color_controller = new Jorts.ColorController (this);
         zoom_controller = new Jorts.ZoomController (this);
         scribbly_controller = new Jorts.ScribblyController (this);
+
+        insert_action_group ("win", actions);
+
 
         keypress_controller = new Gtk.EventControllerKey ();
         scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
@@ -67,7 +69,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         view = new NoteView ();
         textview = view.textview;
-        insert_action_group ("color_controller", color_controller.actions);
         insert_action_group ("noteview", view.actions);
         insert_action_group ("textview", textview.actions);
         insert_action_group ("zoom_controller", zoom_controller.actions);

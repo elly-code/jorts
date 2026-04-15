@@ -33,7 +33,7 @@ public class Jorts.ColorPill : Gtk.CheckButton {
 
             tooltip_text = color.to_nicename ();
 
-            action_name = ColorController.ACTION_PREFIX + ColorController.ACTION_PREFERS_COLOR;
+            action_name = "color." + ColorBox.ACTION_PREFERS_COLOR;
             action_target = new Variant.int32 (color);
         }
 }

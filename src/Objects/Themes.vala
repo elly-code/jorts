@@ -108,4 +108,13 @@ public enum Jorts.Themes {
         var random_in_range = Random.int_range (0, themes.size);
         return themes[random_in_range];
     }
+
+
+    /*************************************************/
+    /**
+    * for the UI, as translated, proper name
+    */
+    public Variant to_variant () {
+        return new Variant.int32 (this);
+    }
 }

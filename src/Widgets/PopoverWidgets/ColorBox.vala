@@ -12,21 +12,16 @@
 public class Jorts.ColorBox : Gtk.Box {
 
     public SimpleAction accent_color_action;
-
-    public Jorts.Themes color {
-        get {return (Jorts.Themes)accent_color_action.get_state ();}
-        set {accent_color_action.set_state (value);}
-    }
-
+    public Jorts.Themes color;
     public signal void theme_changed (Themes selected);
-
+    public const string ACTION_PREFERS_COLOR = "action_prefers_color";
 
     public ColorBox () {
         Object (
             orientation: Gtk.Orientation.HORIZONTAL,
+            spacing: 0,
             accessible_role: Gtk.AccessibleRole.LIST,
             homogeneous: true,
-            spacing: 1,
             margin_start: SPACING_DOUBLE,
             margin_end: SPACING_DOUBLE
         );
@@ -59,10 +54,12 @@ public class Jorts.ColorBox : Gtk.Box {
         append (latte_button);
         //append (auto_button);
 
-        accent_color_action = new SimpleAction.stateful ("prefers-accent-color", GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
+        accent_color_action = new SimpleAction.stateful (ACTION_PREFERS_COLOR, GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
         var action_group = new SimpleActionGroup ();
         action_group.add_action (accent_color_action);
-        insert_action_group ("win", action_group);
+
+        var window = ((Jorts.StickyNoteWindow)get_root ());
+        window.insert_action_group ("color", action_group);
 
         accent_color_action.activate.connect (set_broadcast);
     }
