@@ -18,8 +18,8 @@
 * Boston, MA 02110-1301 USA
 */
 
-headerbar label {
-        font-weight: bold;
+.preftitle {
+    font-weight: bold;
 }
 
 editablelabel {

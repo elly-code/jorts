@@ -53,6 +53,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
             show_title_buttons = false
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        headerbar.add_css_class (STYLE_PREFTITLE);
 
         set_titlebar (headerbar);
         set_size_request (DEFAULT_PREF_WIDTH, DEFAULT_PREF_HEIGHT);
