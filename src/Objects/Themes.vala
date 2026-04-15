@@ -81,7 +81,7 @@ public enum Jorts.Themes {
     * convenient list of all supported themes
     */
     public static Themes[] all () {
-        return {BLUEBERRY, MINT, LIME, BANANA, ORANGE, STRAWBERRY, BUBBLEGUM, GRAPE, COCOA, SLATE};
+        return {BLUEBERRY, MINT, LIME, BANANA, ORANGE, STRAWBERRY, BUBBLEGUM, GRAPE, COCOA, SLATE, LATTE};
     }
 
     /*************************************************/
@@ -89,7 +89,7 @@ public enum Jorts.Themes {
     * convenient list of all supported themes
     */
     public static string[] all_string () {
-        return {"BLUEBERRY", "MINT", "LIME", "BANANA", "ORANGE", "STRAWBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SLATE"};
+        return {"BLUEBERRY", "MINT", "LIME", "BANANA", "ORANGE", "STRAWBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SLATE", "LATTE"};
     }
 
     /*************************************************/
