@@ -148,7 +148,7 @@ Please wait while the app remembers all the things...
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             theme_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         );
     }
 

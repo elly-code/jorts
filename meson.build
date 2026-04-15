@@ -37,6 +37,7 @@ if get_option('development')
 else
   name_prefix = ''
   version_suffix = ''
+  
 endif
 
 
@@ -52,13 +53,13 @@ windows_build = build_machine.system() == 'windows'
 variant = get_option('variant')
 
 if variant == 'pride'
-    vala_flags = ['--define', 'PRIDE']
+    vala_flags += ['--define', 'PRIDE']
 elif variant == 'halloween'
-    vala_flags = ['--define', 'HALLOWEEN']
+    vala_flags += ['--define', 'HALLOWEEN']
 elif variant == 'classic'
-    vala_flags = ['--define', 'CLASSIC']
+    vala_flags += ['--define', 'CLASSIC']
 else
-    vala_flags = ['--define', 'DEFAULT']
+    vala_flags += ['--define', 'DEFAULT']
 endif
 
 # Windows needs icons, special arguments, and skip libportal

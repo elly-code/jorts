@@ -82,7 +82,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         load_data (data);
 
 #if DEVEL
-        add_css_class ("devel");
+        add_css_class (STYLE_DEVEL);
 #endif
 
 
