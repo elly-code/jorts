@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 21:54+0200\n"
+"POT-Creation-Date: 2026-04-17 19:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,21 +47,21 @@ msgstr "Vložte emotikon"
 msgid "Preferences for this sticky note"
 msgstr "Predvoľby pre túto samolepiacu poznámku"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:32
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
 #, fuzzy
 msgid "Default"
 msgstr "Predvolené písmo"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:35
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
 #, fuzzy
 msgid "Use default text font"
 msgstr "Kliknutím použijete predvolené písmo textu"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
 #, fuzzy
 msgid "Use monospaced font"
 msgstr "Kliknutím na položku použijete jednoliate písmo"
@@ -73,15 +73,15 @@ msgstr "Kliknutím na položku použijete jednoliate písmo"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:41
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
 msgid "Zoom out"
 msgstr "Zväčšenie"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:49
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
 msgid "Default zoom level"
 msgstr "Predvolená úroveň priblíženia"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:57
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
 msgid "Zoom in"
 msgstr "Priblíženie"
 
@@ -421,37 +421,37 @@ msgstr ""
 "Klávesové skratky budú stále funkčné (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:108
+#: src/Views/PreferencesView.vala:110
 msgid "Enable"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:119
+#: src/Views/PreferencesView.vala:121
 msgid "Disable"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:133
+#: src/Views/PreferencesView.vala:135
 msgid "Automatically start Jorts"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:136
+#: src/Views/PreferencesView.vala:138
 msgid "Show your sticky notes when you log in"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:154
+#: src/Views/PreferencesView.vala:156
 msgid "Support us!"
 msgstr "Podporte nás!"
 
-#: src/Views/PreferencesView.vala:160
+#: src/Views/PreferencesView.vala:162
 msgid "Close"
 msgstr "Zatvoriť"
 
-#: src/Views/PreferencesView.vala:163
+#: src/Views/PreferencesView.vala:165
 msgid "Close preferences"
 msgstr "Zatvoriť preferencie"
 
 #: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:51
+#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
 msgid " - Jorts"
 msgstr " - Šortky"
 
@@ -464,13 +464,13 @@ msgstr ""
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
+msgid "Preferences"
+msgstr "Predvoľby"
+
+#: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Predvoľby pre všetky samolepiace poznámky"
-
-#: src/Windows/PreferenceWindow.vala:51
-msgid "Preferences"
-msgstr "Predvoľby"
 
 #: src/Application.vala:217
 msgid "Create a new note"

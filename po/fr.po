@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 21:54+0200\n"
+"POT-Creation-Date: 2026-04-17 19:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,19 +44,19 @@ msgstr "Insérer un émoji"
 msgid "Preferences for this sticky note"
 msgstr "Préférences pour cette note autocollante"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:32
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
 msgid "Default"
 msgstr "Standard"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:35
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
 msgid "Use default text font"
 msgstr "Utiliser la police de texte par défaut"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
 msgid "Monospace"
 msgstr "Monospacial"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
 msgid "Use monospaced font"
 msgstr "Utiliser une police monospaciale"
 
@@ -67,15 +67,15 @@ msgstr "Utiliser une police monospaciale"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:41
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:49
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
 msgid "Default zoom level"
 msgstr "Zoom par défaut"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:57
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
 msgid "Zoom in"
 msgstr "Zoom avant"
 
@@ -405,37 +405,37 @@ msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Les raccourcis clavier vont toujours fonctionner (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:108
+#: src/Views/PreferencesView.vala:110
 msgid "Enable"
 msgstr "Activer"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:119
+#: src/Views/PreferencesView.vala:121
 msgid "Disable"
 msgstr "Désactiver"
 
-#: src/Views/PreferencesView.vala:133
+#: src/Views/PreferencesView.vala:135
 msgid "Automatically start Jorts"
 msgstr "Démarrer Jorts automatiquement"
 
-#: src/Views/PreferencesView.vala:136
+#: src/Views/PreferencesView.vala:138
 msgid "Show your sticky notes when you log in"
 msgstr "Afficher vos notes quand vous vous connectez"
 
-#: src/Views/PreferencesView.vala:154
+#: src/Views/PreferencesView.vala:156
 msgid "Support us!"
 msgstr "Nous soutenir !"
 
-#: src/Views/PreferencesView.vala:160
+#: src/Views/PreferencesView.vala:162
 msgid "Close"
 msgstr "Fermer"
 
-#: src/Views/PreferencesView.vala:163
+#: src/Views/PreferencesView.vala:165
 msgid "Close preferences"
 msgstr "Fermer les préférences"
 
 #: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:51
+#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
 msgid " - Jorts"
 msgstr " - Jorts"
 
@@ -448,12 +448,12 @@ msgstr " (Développement)"
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences for your Jorts"
-msgstr "Préférences pour vos Jorts"
-
-#: src/Windows/PreferenceWindow.vala:51
 msgid "Preferences"
 msgstr "Préférences"
+
+#: src/Windows/PreferenceWindow.vala:52
+msgid "Preferences for your Jorts"
+msgstr "Préférences pour vos Jorts"
 
 #: src/Application.vala:217
 msgid "Create a new note"
