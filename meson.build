@@ -29,15 +29,7 @@ gettext_name = meson.project_name()
 vala_flags = []
 if get_option('development')
   app_id +=  '.devel'
-  name_prefix = '(devel) '
-  vcs_tag = run_command('git', 'rev-parse', '--short', 'HEAD').stdout().strip()
-  version_suffix = '-@0@'.format (vcs_tag)
   vala_flags += ['--define', 'DEVEL']
-
-else
-  name_prefix = ''
-  version_suffix = ''
-  
 endif
 
 
