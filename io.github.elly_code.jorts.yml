@@ -10,15 +10,12 @@ finish-args:
   - '--socket=fallback-x11'
   - '--socket=wayland'
 
-cleanup-commands:
-  - rm -rf /app/bin/sassc
-  - rm -rf /app/include
-  - rm -rf /app/lib/girepository-1.0
-  - rm -rf /app/lib/pkgconfig
-  - rm -rf /app/share/gir-1.0
-  - rm -rf /app/share/vala
-  - rm -rf /app/lib/libgee*
-  - rm -rf /app/lib/libsass*
+cleanup:
+  - /include
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /share/gir-1.0
+  - /share/vala
 
 modules:
   # Needed for the Scribbly mode
