@@ -1,0 +1,7 @@
+# Code structure
+
+## Application
+
+
+
+## MainWindow
