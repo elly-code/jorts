@@ -32,10 +32,6 @@ install_data(
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
 )
 
-compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)
-if compile_schemas.found()
-    test('Validate schema file', compile_schemas, args: ['--strict', '--dry-run', meson.current_source_dir()])
-endif
 
 #========================
 # metainfo confuses windows, and icons are handled differently there
@@ -68,11 +64,6 @@ if not windows_build
     install_dir: get_option('datadir') / 'applications',
     )
 
-    desktop_utils = find_program('desktop-file-validate', required: false)
-    if desktop_utils.found()
-        test('Validate desktop file', desktop_utils, args: [desktop_file])
-    endif
-
     #========================
     # METAINFO
     # Inject some variables into the metainfo file before merging in the translations
@@ -97,7 +88,21 @@ if not windows_build
         install_dir: get_option('datadir') / 'metainfo',
     )
 
-    appstreamcli = find_program('appstreamcli', required: false, disabler: true)
+
+    #========================
+    # TESTS
+
+    compile_schemas = find_program('glib-compile-schemas', required: false)
+    if compile_schemas.found()
+        test('Validate schema file', compile_schemas, args: ['--strict', '--dry-run', meson.current_source_dir()])
+    endif
+
+    desktop_utils = find_program('desktop-file-validate', required: false)
+    if desktop_utils.found()
+        test('Validate desktop file', desktop_utils, args: [desktop_file])
+    endif
+
+    appstreamcli = find_program('appstreamcli', required: false)
     if appstreamcli.found()
         test('Validate appstream file', appstreamcli, args: ['validate', '--pedantic', '--no-net', '--explain', appstream_file])
     endif
