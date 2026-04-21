@@ -65,8 +65,8 @@ add_project_arguments(vala_flags, language: 'vala')
 #================================
 # Add subfolders for Meson to look
 
-subdir('data')
 subdir('po')
+subdir('data')
 subdir('src')
 
 gnome.post_install(
