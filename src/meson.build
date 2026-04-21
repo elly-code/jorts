@@ -29,7 +29,6 @@ dependencies = [
 # Libportal is not available in MSYS2, built the file only on linuxes
 if windows_build
     dependencies += dependency('gio-windows-2.0')
-    ico_src = import('windows').compile_resources('windows/icons/ico.rc')
 
 else
     dependencies += dependency('gio-unix-2.0')
@@ -75,6 +74,7 @@ sources = files (
 )
 
 if windows_build
+    ico_src = import('windows').compile_resources('../windows/icons/ico.rc')
     sources += ico_src
 else
     sources += files('Utils' / 'Libportal.vala')
