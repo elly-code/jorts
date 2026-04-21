@@ -40,46 +40,14 @@ args: ['--strict', '--dry-run', meson.current_source_dir()],
 
 
 #========================
-# metainfo confuses windows, and icons are 
+# metainfo confuses windows, and icons are handled differently there
 if not windows_build
 
 
-    # Install the standard icons in standard build
-    if not get_option('development')
 
-
-        #======== ICONS ========
-        # Install our icons in all the required sizes
-        # "variant" variable has been declared earlier in the base meson
-        icon_sizes = ['16', '24', '32', '48', '64', '128']
-
-        foreach i : icon_sizes
-            install_data(
-                'icons' / variant / 'hicolor' / i + '.png',
-                install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
-                rename: app_id + '.png'
-            )
-            install_data(
-                'icons' / variant / 'hicolor@2' / i + '@2.png',
-                install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
-                rename: app_id + '.png'
-            )
-        endforeach
-
-        install_data(
-            'icons' / variant / 'scalable.svg',
-            install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
-            rename: app_id + '.svg'
-        )
-
-    # Install the dev icon in development builds
-    else
-        install_data(
-            'icons' / 'dev.svg',
-            install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps',
-            rename: app_id + '.svg'
-        )
-    endif
+    #========================
+    # ICONS
+    subdir('icons')
 
     #========================
     # DESKTOP
@@ -132,9 +100,7 @@ if not windows_build
     )
 
     appstreamcli = find_program('appstreamcli', required: false, disabler: true)
-        test('Validate appstream file',
-    appstreamcli,
-    args: ['validate', '--pedantic', '--no-net', '--explain', appstream_file],
-    )
-
+    if appstreamcli.found()
+        test('Validate appstream file', appstreamcli, args: ['validate', '--pedantic', '--no-net', '--explain', appstream_file])
+    endif
 endif
