@@ -74,8 +74,6 @@ public class Jorts.NoteManager : Object {
         }
 
         saving_lock = false;
-        on_reduceanimation_changed ();
-        Gtk.Settings.get_default ().notify["enable-animations"].connect (on_reduceanimation_changed);
     }
 
     /*************************************************/
@@ -154,28 +152,6 @@ public class Jorts.NoteManager : Object {
         };
 
         storage.save (array);  
-    }
-
-    /*************************************************/
-    /**
-    * Handler to add or remove CSS animations from all active notes
-    */
-    public void on_reduceanimation_changed () {
-        debug ("Reduce animation changed!");
-
-        if (Gtk.Settings.get_default ().gtk_enable_animations) {
-            foreach (var window in open_notes) {
-                window.add_css_class ("animated");
-            }
-
-        } else {
-            foreach (var window in open_notes) {
-                // If we remove without checking we get a critical
-                if ("animated" in window.css_classes) {
-                    window.remove_css_class ("animated");
-                }
-            }
-        }
     }
 
     public void action_new () {
