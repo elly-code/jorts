@@ -136,7 +136,7 @@ Please wait while the app remembers all the things...
 
         // build all the stylesheets
         var app_provider = new Gtk.CssProvider ();
-        app_provider.load_from_resource (APP_PATH + "Application.css");
+        app_provider.load_from_resource (APP_PATH + "/Application.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             app_provider,
@@ -144,7 +144,7 @@ Please wait while the app remembers all the things...
         );
 
         var theme_provider = new Gtk.CssProvider ();
-        theme_provider.load_from_resource (APP_PATH + "Themes.css");
+        theme_provider.load_from_resource (APP_PATH + "/Themes.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             theme_provider,

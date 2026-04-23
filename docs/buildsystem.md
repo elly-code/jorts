@@ -3,11 +3,11 @@
 The buildsystem in use is Meson
 the following base variable are defined once, then gets built in where relevant:
 
-app_name
+app_name (used for gettext too)
 app_id
 app_path
 app_version
-gettext_name
+
 
 
 ## Structure

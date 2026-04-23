@@ -3,7 +3,7 @@
 # GRESOURCE
 
 gresource_file = configure_file(
-    input: meson.project_name() + '.gresource.xml.in',
+    input: app_name + '.gresource.xml.in',
     output: app_id + '.gresource.xml',
     configuration: config_data,
 )
@@ -18,7 +18,7 @@ gresource = gnome.compile_resources(
 # GSCHEMA
 
 gschema_file = configure_file(
-    input: meson.project_name() + '.gschema.xml.in',
+    input: app_name + '.gschema.xml.in',
     output: app_id + '.gschema.xml',
     configuration: config_data,
 )
@@ -48,7 +48,7 @@ if not windows_build
     # Inject some variables into the desktop file before merging in the translations
 
     desktop_file_in = configure_file(
-        input: meson.project_name() + '.desktop.in.in',
+        input: app_name + '.desktop.in.in',
         output: app_id + '.desktop.in',
         configuration: config_data,
     )
@@ -73,7 +73,7 @@ if not windows_build
     # Inject some variables into the metainfo file before merging in the translations
 
     appstream_file_in = configure_file(
-        input: meson.project_name() + '.metainfo.xml.in.in',
+        input: app_name + '.metainfo.xml.in.in',
         output: app_id + '.metainfo.xml.in',
         configuration: config_data,
     )

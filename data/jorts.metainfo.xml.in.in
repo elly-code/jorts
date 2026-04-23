@@ -4,7 +4,8 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <launchable type="desktop-id">@APP_ID@.desktop</launchable>
-    
+    <translation type="gettext">@APP_NAME@</translation>
+
     <name>Jorts</name>
     <summary>Write on colourful little squares</summary>
     <description>
@@ -32,15 +33,14 @@
         <name>Lainsce + Stella + Charlie</name>
     </developer>
     <project_group>elly-code</project_group>
-    <url type="homepage">https://github.com/elly-code/jorts</url>
-    <url type="bugtracker">https://github.com/elly-code/jorts/issues</url>
-    <url type="help">https://github.com/elly-code/jorts/wiki</url>
-    <url type="translate">https://github.com/elly-code/jorts/blob/main/po/README.md</url>
+    <url type="homepage">https://github.com/elly-code/@APP_NAME@</url>
+    <url type="bugtracker">https://github.com/elly-code/@APP_NAME@/issues</url>
+    <url type="help">https://github.com/elly-code/@APP_NAME@/wiki</url>
+    <url type="translate">https://github.com/elly-code/@APP_NAME@/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons/tip</url>
-    <url type="vcs-browser">https://github.com/elly-code/jorts</url>
+    <url type="vcs-browser">https://github.com/elly-code/@APP_NAME@</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext">@GETTEXT_PACKAGE@</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -72,23 +72,23 @@
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/default.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/default.png</image>
         </screenshot>
         <screenshot>
             <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/scribbly.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/scribbly.png</image>
         </screenshot>
         <screenshot>
             <caption>Look! Ascii art in a sticky note!</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/ascii.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/ascii.png</image>
         </screenshot>
         <screenshot environment="pantheon">
             <caption>The preferences dialog in light mode</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/preferences-light.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/preferences-light.png</image>
         </screenshot>
         <screenshot environment="pantheon:dark">
             <caption>The preferences dialog in dark mode</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/@APP_VERSION@/data/screenshots/preferences-dark.png</image>
+            <image>https://raw.githubusercontent.com/elly-code/@APP_NAME@/@APP_VERSION@/data/screenshots/preferences-dark.png</image>
         </screenshot>
     </screenshots>
 
@@ -116,7 +116,7 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
+                <issue url="https://github.com/elly-code/@APP_NAME@/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="4.0.0" date="2025-11-22">
@@ -138,10 +138,10 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/elly-code/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
-                <issue url="https://github.com/elly-code/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
-                <issue url="https://github.com/elly-code/jorts/issues/78">Added Ctrl+scroll</issue>
-                <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
+                <issue url="https://github.com/elly-code/@APP_NAME@/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
+                <issue url="https://github.com/elly-code/@APP_NAME@/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
+                <issue url="https://github.com/elly-code/@APP_NAME@/issues/78">Added Ctrl+scroll</issue>
+                <issue url="https://github.com/elly-code/@APP_NAME@/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">
