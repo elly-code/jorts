@@ -2,7 +2,7 @@ project(
     'jorts',
     'vala', 'c',
     version: '4.1.0',
-    license: 'GPL-3.0'
+    license: 'GPL-3.0-or-later'
 )
 
 app_name = meson.project_name()
