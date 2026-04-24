@@ -1,24 +1,5 @@
 # Other packaging formats and OSes
 
-## On Windows
-
-1. First go on a Windows box, 
-
-2. [and install MSYS2, which is some kind of linux subsystem thingie](https://www.msys2.org/)
-
-3. Then from the MSYS2 shell navigate to whatever folder you put the sources in, and cd into said folder
-
-4. run the "./windows/prep.sh" script. It will install all needed dependencies with Pacman
-
-5. Then run "./windows/deploy.sh". It will:
-* build the app. Meson includes the extra cruft for windows stuff
-* then compile it like grandma does when she cooks
-* then move it along with needed dependencies in the deploy
-* then create an NSIS script for an installer with everything
-* then create the installer
-
-6. The resulting exe has everything bundled up in it, including uninstaller.
-It is built so as to not need admin rights. You can distribute as is.
 
 ## Without packaging
 
