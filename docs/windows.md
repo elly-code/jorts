@@ -3,6 +3,7 @@
 
 Ugh.
 
+
 ## Warning
 Windows builds are a bit different
 
@@ -19,20 +20,45 @@ Windows builds are a bit different
 
 1. First go on a Windows box, 
 
-2. [and install MSYS2, which is some kind of linux subsystem thingie](https://www.msys2.org/)
+2. [and install MSYS2, which is some kind of linux subsystem thingie](https://www.msys2.org/). We just go with the default here.
 
-3. Then from the MSYS2 shell navigate to whatever folder you put the sources in, and cd into said folder
+3. Maybe update, make sure everything is fresh and ready
 
-4. run the "./windows/prep.sh" script. It will install all needed dependencies with Pacman
+```bash
+pacman -Syu --noconfirm
+```
 
-5. Then run "./windows/deploy.sh". It will:
+4. Then from the MSYS2 shell navigate to whatever folder you put the sources in, and cd into said folder.
+
+usually your user folder is in
+
+/c/Documents\ and\ Settings/
+
+as in
+
+/c/Documents\ and\ Settings/YourName/Desktop
+
+is your user folder
+
+
+
+5. Install all we need (note: Some in the list may not be needed)
+
+```bash
+pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-w64-ucrt-x86_64-{gtk4,granite7,vala,ninja,meson,nsis,gcc} mingw-w64-libgee mingw-w64-gsettings-desktop-schemas mingw-w64-x86_64-gtk-elementary-theme mingw-w64-x86_64-elementary-icon-theme mingw-w64-x86_64-vala mingw-w64-x86_64-librsvg
+```
+
+
+
+6. Then run "./windows/deploy.sh". It will:
 * build the app. Meson includes the extra cruft for windows stuff
 * then compile it like grandma does when she cooks
 * then move it along with needed dependencies in the deploy
 * then create an NSIS script for an installer with everything
 * then create the installer
 
-6. The resulting exe has everything bundled up in it, including uninstaller.
+7. If everything goes right, the resulting exe has everything bundled up in it, including uninstaller.
+
 It is built so as to not need admin rights. You can distribute as is.
 
 
