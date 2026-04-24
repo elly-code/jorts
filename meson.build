@@ -50,13 +50,16 @@ endif
 #================================
 gnome = import('gnome')
 i18n = import('i18n')
-windows_build = build_machine.system() == 'windows'
 
 # Windows needs icons, special arguments, and skip libportal
+windows_build = get_option('windows_build')
+if build_machine.system() == 'windows'
+    windows_build = true
+endif
+
 if windows_build
     vala_flags += ['--define', 'WINDOWS']
 endif
-
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 add_project_arguments(vala_flags, language: 'vala')

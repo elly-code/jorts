@@ -13,6 +13,8 @@ Windows builds are a bit different
  - I do this to myself because i want our windows-only friends to enjoy what we do. You have to find a reason to keep on, even in hard days where you stand in the rain and your socks are wet.
 
 
+## Set up your IDE
+
 ## Step by step
 
 1. First go on a Windows box, 
