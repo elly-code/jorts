@@ -1,7 +1,8 @@
 project(
     'jorts',
     'vala', 'c',
-    version: '4.1.0'
+    version: '4.1.0',
+    license: 'GPL-3.0'
 )
 
 app_name = meson.project_name()
@@ -62,7 +63,7 @@ if windows_build
 endif
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
-add_project_arguments(vala_flags, language: 'vala')
+
 
 
 #================================
