@@ -1,8 +1,8 @@
 option('variant',
     type : 'combo',
-    choices : ['default', 'classic', 'pride', 'halloween'],
+    choices : ['default', 'classic', 'pride', 'halloween', 'devel'],
     value : 'default',
-    description : 'The name of the seasonal icon and style to use. Only the first value is chosen.'
+    description : 'The name of the seasonal icon and style to use.'
 )
 option('development', type: 'boolean', value: false, description: 'If this is a development build')
 option('legacy-rdnn', type: 'boolean', value: false, description: 'If this uses the legacy RDNN')
