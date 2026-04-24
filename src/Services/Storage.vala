@@ -33,7 +33,7 @@ public class Jorts.Storage : Object {
 
 #if WINDOWS
         // In Windows we arent in a sandbox, so we need to have some courtesy and not dump in the allfolder
-        data_directory      = GLib.Path.build_path("/", Environment.get_user_data_dir (), "Jorts");
+        data_directory      = GLib.Path.build_path("/", Environment.get_user_data_dir (), APP_ID);
 #else
         data_directory      = Environment.get_user_data_dir ();
 #endif
