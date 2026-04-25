@@ -29,7 +29,9 @@ endif
 
 
 vala_flags = []
-if get_option('development')
+
+development_build = get_option('development')
+if development_build
   app_id +=  '.devel'
   vala_flags += ['--define', 'DEVEL']
 endif

@@ -1,7 +1,7 @@
 
 
 # Override only default 
-if get_option('development') and variant == 'default'
+if development_build and variant == 'default'
     variant = 'devel'
 endif
 
