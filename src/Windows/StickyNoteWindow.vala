@@ -60,8 +60,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
 
-        title = "" + _(" - Jorts");
-
         // The view has its own titlebar
         titlebar = new Gtk.Grid () {visible = false};
 
@@ -139,9 +137,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * Simple handler for the EditableLabel
     */
     private void on_editable_changed () {
-        title = view.editablelabel.text + _(" - Jorts");
 #if DEVEL
-        title += _(" (Development)");
+        title = _("%s - Jorts (Development)").printf (view.title);
+#else
+        title = _("%s - Jorts").printf (view.title);
 #endif
         has_changed ();
     }
@@ -177,7 +176,13 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         set_default_size (data.width, data.height);
         view.title = data.title;
-        title = view.title + _(" - Jorts");
+
+#if DEVEL
+        title = _("%s - Jorts (Development)").printf (view.title);
+#else
+        title = _("%s - Jorts").printf (view.title);
+#endif
+
         view.content = data.content;
 
         color_controller.theme = data.theme;
