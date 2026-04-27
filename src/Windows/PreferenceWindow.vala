@@ -46,7 +46,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         /********************************************/
 
         /// TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-        title = (_("Preferences") + _(" - Jorts"));
+        title = _("Preferences - Jorts");
 
         var headerbar = new Gtk.HeaderBar () {
             title_widget = new Gtk.Label (_("Preferences for your Jorts")),
