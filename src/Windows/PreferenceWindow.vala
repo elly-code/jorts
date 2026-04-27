@@ -38,7 +38,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         application = app;
 
 #if DEVEL
-        add_css_class ("devel");
+        add_css_class (STYLE_DEVEL);
 #endif
 
         /********************************************/
