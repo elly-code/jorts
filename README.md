@@ -13,6 +13,8 @@
 
 <br/>
 
+
+
 ## 🦺 Installation
 
 You can download and install Jorts from various sources:
@@ -23,6 +25,8 @@ You can download and install Jorts from various sources:
 
 On Windows: Grab the Exe installer in Release
 Not all releases have an exe, because bundling for Windows and testing it works is a HASSLE.
+
+
 
 
 ## ❓ Questions, building, etc
@@ -44,12 +48,16 @@ Roadmap:
  - More translations would be nice
 
 
+
+
 ## 💝 Donations
 
 On the right you can donate to various contributors:
  - teamcons, the main devs and maintainers behind jorts
  - wpkelso, the author of the modern icon and its Pride variant
  - lains, the initial creator of the app (It was Notejot, now something very different)
+
+
 
 
 ## 💾 Notes Storage
