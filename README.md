@@ -18,25 +18,30 @@
 You can download and install Jorts from various sources:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.elly_code.jorts) 
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.elly_code.jorts)
 
-
-On Windows:
-Grab the Exe installer in Release
+On Windows: Grab the Exe installer in Release
+Not all releases have an exe, because bundling for Windows and testing it works is a HASSLE.
 
 
 ## ❓ Questions, building, etc
 
-[Check the wiki, lol](https://github.com/elly-code/jorts/wiki/%F0%9F%8F%A1Home)
+
+You may want to check the [documentation](https://github.com/elly-code/jorts/tree/main/docs)
 
 
+## 🛣️ The Future
 
-## 🛣️ Roadmap
+The app is destined to stay simple. If anything there is already too much in the UI for my comfort, so do not expect /more/
 
-Jorts is a cute simple and lightweight little notes app, and i wanna keep it this way
-Top priority is to have the clearest, simplest, most efficient code ever
-
+Roadmap:
+ - Fix an annoying memory leak where deleted notes linger in memory
+ - Bin the whole saving infra and use Gtk 4.24 save-state new thing
+ - More icon variants
+ - Better list/bullets
+ - Co-maintainers would be nice
+ - More translations would be nice
 
 
 ## 💝 Donations
@@ -51,6 +56,7 @@ On the right you can donate to various contributors:
 
 
 Notes are stored in `~/.var/app/io.github.elly_code.jorts/data`
+if from flathub, `~/.var/app/io.github.ellie_commons.jorts/data`
 
 You can get it all by entering in a terminal:
 
