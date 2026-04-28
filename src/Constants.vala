@@ -17,8 +17,10 @@ namespace Jorts {
     // signature theme
 #if HALLOWEEN
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.ORANGE;
+    const string DEFAULT_STYLESHEET     = "io.elementary.stylesheet.orange";
 #else
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BLUEBERRY;
+    const string DEFAULT_STYLESHEET     = "io.elementary.stylesheet.blueberry";
 #endif
 
     // in ms

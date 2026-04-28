@@ -38,7 +38,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         application = app;
 
 #if DEVEL
-        add_css_class ("devel");
+        add_css_class (STYLE_DEVEL);
 #endif
 
         /********************************************/
@@ -46,7 +46,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         /********************************************/
 
         /// TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-        title = (_("Preferences") + _(" - Jorts"));
+        title = _("Preferences - Jorts");
 
         var headerbar = new Gtk.HeaderBar () {
             title_widget = new Gtk.Label (_("Preferences for your Jorts")),
@@ -75,7 +75,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         // we have to revert to default when this one is focused
         this.notify["is-active"].connect (() => {
             if (this.is_active) {
-                Application.gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
+                Application.gtk_settings.gtk_theme_name = DEFAULT_STYLESHEET;
             }
         });
     }

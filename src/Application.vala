@@ -72,7 +72,6 @@ public class Jorts.Application : Gtk.Application {
                 application_id: APP_ID);
     }
 
-
     /*************************************************/        
     static construct {
         gsettings = new GLib.Settings (APP_ID);
@@ -107,7 +106,7 @@ public class Jorts.Application : Gtk.Application {
         var granite_settings = Granite.Settings.get_default ();
         gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_icon_theme_name = "elementary";
-        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + DEFAULT_THEME.to_string ().ascii_down ();
+        gtk_settings.gtk_theme_name = DEFAULT_STYLESHEET;
 
         // Also follow dark if system is dark lIke mY sOul.
         gtk_settings.gtk_application_prefer_dark_theme = (
@@ -136,7 +135,7 @@ Please wait while the app remembers all the things...
 
         // build all the stylesheets
         var app_provider = new Gtk.CssProvider ();
-        app_provider.load_from_resource (APP_PATH + "Application.css");
+        app_provider.load_from_resource (APP_PATH + "/Application.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             app_provider,
@@ -144,7 +143,7 @@ Please wait while the app remembers all the things...
         );
 
         var theme_provider = new Gtk.CssProvider ();
-        theme_provider.load_from_resource (APP_PATH + "Themes.css");
+        theme_provider.load_from_resource (APP_PATH + "/Themes.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             theme_provider,

@@ -10,7 +10,7 @@
 * Allows user to switch between normal and monospace font
 * Exposes bool monospace, also sends it via signal
 */
-public class Jorts.MonospaceBox : Granite.Box {
+public class Jorts.MonospaceBox : Gtk.Box {
 
     private Gtk.ToggleButton mono_monospace_toggle;
 
@@ -22,7 +22,8 @@ public class Jorts.MonospaceBox : Granite.Box {
     public MonospaceBox () {
         Object (
             orientation: Gtk.Orientation.HORIZONTAL,
-            child_spacing: Spacing.LINKED,
+            spacing: SPACING_STANDARD,
+            //child_spacing: Spacing.LINKED,
             homogeneous: true,
             hexpand: true,
             margin_start: SPACING_DOUBLE,

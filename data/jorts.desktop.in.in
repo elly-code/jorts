@@ -1,7 +1,7 @@
 [Desktop Entry]
-Type=Application
 Version=1.5
-Name=@APP_NAME@
+Type=Application
+Name=Jorts
 GenericName=Sticky notes
 Comment=Write down notes, reminders, random thoughts and other short-term informations
 Icon=@APP_ID@
