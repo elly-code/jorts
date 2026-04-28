@@ -83,6 +83,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         add_css_class (STYLE_DEVEL);
 #endif
 
+        save_state.connect (on_save_state);
+        restore_state.connect (on_restore_state);  
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -194,4 +196,23 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         application.activate_action (NoteManager.ACTION_SAVE, null);
     }
     private void action_delete () {((Jorts.Application)this.application).note_manager.delete_note (this); this.destroy ();}
+
+    private bool on_save_state (VariantDict state) {
+        state.insert_value ("title", new GLib.Variant ("s", data.title));
+        state.insert_value ("content", new GLib.Variant ("s", data.content));
+        state.insert_value ("color", new GLib.Variant ("s", data.theme.to_string ()));
+        state.insert_value ("mono", new GLib.Variant ("s", data.monospace.to_string ()));
+        state.insert_value ("zoom", new GLib.Variant ("s", data.zoom.to_string ()));
+        return false;
+    }
+
+    // Check what we can save
+    private bool on_restore_state (VariantDict state) {
+        var title_v = state.lookup_value ("title", GLib.VariantType.STRING);
+        print ("\n" + title_v.get_string ());
+
+        return true;
+    }
+
+
 }
