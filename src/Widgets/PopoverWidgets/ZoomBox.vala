@@ -10,7 +10,7 @@
 * Gives off zoom_changed signal to tell the user has clicked one of three
 * The signal transmits a Jorts.ZoomType Enum
 */
-public class Jorts.ZoomBox : Granite.Box {
+public class Jorts.ZoomBox : Gtk.Box {
 
     private Gtk.Button zoom_default_button;
     private int _zoom = 100;
@@ -29,7 +29,8 @@ public class Jorts.ZoomBox : Granite.Box {
     public ZoomBox () {
         Object (
             orientation: Gtk.Orientation.HORIZONTAL,
-            child_spacing: Spacing.LINKED,
+            spacing: SPACING_STANDARD,
+            //child_spacing: Spacing.LINKED,
             homogeneous: true,
             hexpand: true,
             margin_start: SPACING_DOUBLE,
