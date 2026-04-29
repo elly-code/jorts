@@ -178,6 +178,33 @@ public class Jorts.TextView : Granite.HyperTextView {
     }
 
     /**
+     * Add the list prefix only to lines who hasnt it already
+     */
+    private void set_list_at (int line) {
+        Gtk.TextIter line_start;
+
+        buffer.get_iter_at_line_offset (out line_start, line, 0);
+        var line_end = line_start.copy ();
+        line_end.forward_to_line_end ();
+        buffer.apply_tag (tag_list, line_start, line_end);
+
+        buffer.insert (ref line_start, "%s\t".printf (list_item_start), -1);
+    }
+
+
+
+    private void remove_list_at (int line) {
+        if (!has_prefix (line)) {
+            return;
+        }
+
+        Gtk.TextIter line_start;
+        remove_prefix (line);
+    }
+
+
+
+    /**
      * Remove list prefix from line x to line y. Presuppose it is there
      */
     private void remove_list (int first_line, int last_line) {
