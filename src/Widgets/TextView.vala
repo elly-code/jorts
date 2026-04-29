@@ -6,8 +6,9 @@
  */
 
 /**
-* A textview incorporating detecting links and emails
-* Fairly vanilla but having a definition allows to easily extend it
+* A textview subclassing {@link Granite.HyperTextView}, allowing it to do clickable links and emails
+* 
+* Extended with bullet lists that follows user settings
 */
 public class Jorts.TextView : Granite.HyperTextView {
 
@@ -28,6 +29,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         { ACTION_TOGGLE_LIST, toggle_list},
     };
 
+
+
+    
     construct {
         wrap_mode = Gtk.WrapMode.WORD_CHAR;
         buffer = new Gtk.TextBuffer (null);
@@ -66,6 +70,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         section.append_item (menuitem_quit);
         extra.append_section (null, section);
         extra_menu = extra;
+
+        var list_tag = buffer.create_tag ("list");
+        list_tag.indent = 5;
 
 
         /***************************************************/
