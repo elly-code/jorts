@@ -21,6 +21,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         set {buffer.text = value;}
     }
 
+    Gtk.TextTag tag_list;
+    private const string TAG_LIST = "list";
+
     public SimpleActionGroup actions {get; construct;}
     public const string ACTION_PREFIX = "textview.";
     public const string ACTION_TOGGLE_LIST = "action_toggle_list";
@@ -32,7 +35,6 @@ public class Jorts.TextView : Granite.HyperTextView {
     public TextView () {
         Object (
             wrap_mode: Gtk.WrapMode.WORD_CHAR,
-            buffer: new Gtk.TextBuffer (null),
             bottom_margin: SPACING_DOUBLE,
             left_margin: SPACING_DOUBLE,
             right_margin: SPACING_DOUBLE,
@@ -71,8 +73,14 @@ public class Jorts.TextView : Granite.HyperTextView {
         extra.append_section (null, section);
         extra_menu = extra;
 
-        var list_tag = buffer.create_tag ("list");
-        list_tag.indent = 5;
+
+
+        var tag_table = new Gtk.TextTagTable ();
+        buffer = new Gtk.TextBuffer (tag_table);
+
+
+        tag_list = buffer.create_tag (TAG_LIST);
+        tag_list.indent = -24;
 
 
         /***************************************************/
@@ -150,8 +158,15 @@ public class Jorts.TextView : Granite.HyperTextView {
             if (!this.has_prefix (line_number)) {
                 buffer.get_iter_at_line_offset (out line_start, line_number, 0);
                 buffer.insert (ref line_start, list_item_start, -1);
+
+                buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+
+                var line_end = line_start.copy ();
+                line_end.forward_to_line_end ();
+                buffer.apply_tag (tag_list, line_start, line_end);
             }
         }
+
     }
 
     /**
@@ -174,6 +189,10 @@ public class Jorts.TextView : Granite.HyperTextView {
         buffer.get_iter_at_line_offset (out line_start, line_number, 0);
         buffer.get_iter_at_line_offset (out prefix_end, line_number, remove_range);
         buffer.delete (ref line_start, ref prefix_end);
+
+        var line_end = line_start.copy ();
+        line_end.forward_to_line_end ();
+        buffer.remove_tag (tag_list, line_start, line_end);
     }
 
     /**
