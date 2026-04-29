@@ -22,7 +22,7 @@ public class Jorts.TextView : Granite.HyperTextView {
     }
 
     Gtk.TextTag tag_list;
-    private const string TAG_LIST = "list";
+    private const string TAG_LIST = "list_item";
 
     public SimpleActionGroup actions {get; construct;}
     public const string ACTION_PREFIX = "textview.";
@@ -34,7 +34,7 @@ public class Jorts.TextView : Granite.HyperTextView {
 
     public TextView () {
         Object (
-            wrap_mode: Gtk.WrapMode.WORD_CHAR,
+            wrap_mode: Gtk.WrapMode.WORD,
             bottom_margin: SPACING_DOUBLE,
             left_margin: SPACING_DOUBLE,
             right_margin: SPACING_DOUBLE,
@@ -79,9 +79,17 @@ public class Jorts.TextView : Granite.HyperTextView {
         buffer = new Gtk.TextBuffer (tag_table);
 
 
-        tag_list = buffer.create_tag (TAG_LIST);
-        tag_list.indent = -24;
 
+
+        var a = new Pango.TabArray (2, true);
+        a.set_tab (0, Pango.TabAlign.LEFT, 0);
+        a.set_tab (1, Pango.TabAlign.LEFT, 14);
+
+        tag_list = buffer.create_tag (TAG_LIST);
+        tag_list.indent = -14;
+        tag_list.left_margin = 14;
+        tag_list.wrap_mode = Gtk.WrapMode.WORD;
+        tag_list.tabs = a;
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -157,13 +165,13 @@ public class Jorts.TextView : Granite.HyperTextView {
             debug ("doing line " + line_number.to_string ());
             if (!this.has_prefix (line_number)) {
                 buffer.get_iter_at_line_offset (out line_start, line_number, 0);
-                buffer.insert (ref line_start, list_item_start, -1);
-
-                buffer.get_iter_at_line_offset (out line_start, line_number, 0);
 
                 var line_end = line_start.copy ();
                 line_end.forward_to_line_end ();
                 buffer.apply_tag (tag_list, line_start, line_end);
+
+                buffer.insert (ref line_start, "%s\t".printf (list_item_start), -1);
+
             }
         }
 
