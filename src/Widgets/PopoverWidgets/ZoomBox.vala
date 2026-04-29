@@ -29,7 +29,6 @@ public class Jorts.ZoomBox : Gtk.Box {
     public ZoomBox () {
         Object (
             orientation: Gtk.Orientation.HORIZONTAL,
-            spacing: SPACING_STANDARD,
             //child_spacing: Spacing.LINKED,
             homogeneous: true,
             hexpand: true,
