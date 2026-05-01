@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgid "Click to edit the title"
 msgstr "Muokkaa otsikkoa napsauttamalla"
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Näytä asetukset"
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 #, fuzzy
 msgid "Quit Jorts"
 msgstr " - Jortsit"
@@ -47,21 +47,21 @@ msgstr "Lisää hymiö"
 msgid "Preferences for this sticky note"
 msgstr "Tämän muistilapun asetukset"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 #, fuzzy
 msgid "Default"
 msgstr "Oletusfontti"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 #, fuzzy
 msgid "Use default text font"
 msgstr "Napsauta käyttääksesi tekstin oletusfonttia"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 #, fuzzy
 msgid "Use monospaced font"
 msgstr "Klikkaa käyttääksesi monospaced-fonttia"
@@ -73,15 +73,15 @@ msgstr "Klikkaa käyttääksesi monospaced-fonttia"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "Pienennä"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "Oletusarvoinen zoomaustaso"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "Suurenna"
 
@@ -140,11 +140,13 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+#, fuzzy
+msgid "All my best friends"
 msgstr "Kaikki parhaat ystäväni"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+#, fuzzy
+msgid "My secret recipe"
 msgstr "Minun superhyvä salainen reseptini"
 
 #: src/Utils/Random.vala:28
@@ -159,85 +161,86 @@ msgstr "Supersalaisuus, jota ei saa kertoa kenellekään"
 msgid "My grocery list"
 msgstr "Ostoslistani"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+#, fuzzy
+msgid "Shower thoughts"
 msgstr "Satunnaisia ajatuksia suihkusta"
 
-#: src/Utils/Random.vala:32
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "Minun suosikki fanifiktiot"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "Minun suosikkini dinosaurukset"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "Minun pahan aivoriiheni suunnitelma"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "Mikä sai minut hymyilemään tänään"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "Hei maailma!"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "Uusi tarra, uusi minä"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+#: src/Utils/Random.vala:39
+#, fuzzy
+msgid "Pirate treasure location"
 msgstr "Piilotettu merirosvoaarre"
 
-#: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "Ettei unohda, koskaan"
-
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr ""
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "Rakas päiväkirja,"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "Hyvää päivänjatkoa! :)"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "Lääkkeideni aikataulu"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "Kotityöt"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "Oodi kissalleni"
-
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+#, fuzzy
+msgid "My cats favourite mischiefs"
 msgstr "Koirieni lempilelut"
 
 #: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "Koirieni lempilelut"
+
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "Kuinka siistejä lintuni ovat"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "Viimeisen keksin tapauksen epäillyt"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "Sanat, jotka papukaijani tuntevat"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "Siistit ja hauskat kohteliaisuudet jaettavaksi"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "Kuunnelkaa,"
+#, fuzzy
+msgid "Original compliments to give out"
+msgstr "Siistit ja hauskat kohteliaisuudet jaettavaksi"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -264,7 +267,8 @@ msgid "My amazing mixtape"
 msgstr "Minun hämmästyttävä mixtape"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+#, fuzzy
+msgid "Margin scribbles"
 msgstr "Lautasliina scribblys"
 
 #: src/Utils/Random.vala:58
@@ -346,15 +350,29 @@ msgid "My funniest jokes"
 msgstr "Minun hauskimmat vitsini"
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+#, fuzzy
+msgid "The perfect breakfast"
 msgstr "Täydellinen aamiainen on..."
 
+#: src/Utils/Random.vala:78
+#, fuzzy
+msgid "What makes me smile"
+msgstr "Mikä sai minut hymyilemään tänään"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr ""
+
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Onnittelut!🔥"
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -450,35 +468,49 @@ msgstr "Sulje"
 msgid "Close preferences"
 msgstr "Sulje asetukset"
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
-msgstr " - Jortsit"
-
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, fuzzy, c-format
+msgid "%s - Jorts"
+msgstr " - Jortsit"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr "Asetukset"
+#, fuzzy
+msgid "Preferences - Jorts"
+msgstr "Kaikkien muistilappujen asetukset"
 
 #: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Kaikkien muistilappujen asetukset"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr "Luo uusi huomautus"
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr "Näytä asetukset"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "Ettei unohda, koskaan"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "Oodi kissalleni"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "Kuunnelkaa,"
+
+#~ msgid "Preferences"
+#~ msgstr "Asetukset"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Tee keskittymättömistä muistiinpanoista lukukelvottomia"

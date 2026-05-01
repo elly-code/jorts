@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgid "Click to edit the title"
 msgstr "Kliknutím upravíte názov"
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Zobraziť predvoľby"
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 #, fuzzy
 msgid "Quit Jorts"
 msgstr " - Šortky"
@@ -47,21 +47,21 @@ msgstr "Vložte emotikon"
 msgid "Preferences for this sticky note"
 msgstr "Predvoľby pre túto samolepiacu poznámku"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 #, fuzzy
 msgid "Default"
 msgstr "Predvolené písmo"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 #, fuzzy
 msgid "Use default text font"
 msgstr "Kliknutím použijete predvolené písmo textu"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 #, fuzzy
 msgid "Use monospaced font"
 msgstr "Kliknutím na položku použijete jednoliate písmo"
@@ -73,15 +73,15 @@ msgstr "Kliknutím na položku použijete jednoliate písmo"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "Zväčšenie"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "Predvolená úroveň priblíženia"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "Priblíženie"
 
@@ -140,11 +140,13 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+#, fuzzy
+msgid "All my best friends"
 msgstr "Všetci moji najlepší priatelia"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+#, fuzzy
+msgid "My secret recipe"
 msgstr "Môj super dobrý tajný recept"
 
 #: src/Utils/Random.vala:28
@@ -159,85 +161,86 @@ msgstr "Super tajomstvo, ktoré nikomu nepoviete"
 msgid "My grocery list"
 msgstr "Môj zoznam potravín"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+#, fuzzy
+msgid "Shower thoughts"
 msgstr "Náhodné myšlienky zo sprchy"
 
-#: src/Utils/Random.vala:32
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "Moje obľúbené fanfics"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "Moje obľúbené dinosaury"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "Môj zlý plán"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "Čo ma dnes rozosmialo"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "Ahoj, svete!"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "Nové lepidlo, nové ja"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+#: src/Utils/Random.vala:39
+#, fuzzy
+msgid "Pirate treasure location"
 msgstr "Skrytý pirátsky poklad"
 
-#: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "Nezabudnúť, nikdy"
-
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr ""
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "Drahý denník,"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "Prajem pekný deň! :)"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "Môj rozpis liekov"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "Domáce práce"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "Óda na moju mačku"
-
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+#, fuzzy
+msgid "My cats favourite mischiefs"
 msgstr "Obľúbené hračky mojich psov"
 
 #: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "Obľúbené hračky mojich psov"
+
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "Aké sú moje vtáky cool"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "Podozriví v kauze Last Cookie"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "Slová, ktoré moje papagáje poznajú"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "Chladné a vtipné komplimenty na rozdávanie"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "Dobre, počúvajte,"
+#, fuzzy
+msgid "Original compliments to give out"
+msgstr "Chladné a vtipné komplimenty na rozdávanie"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -264,7 +267,8 @@ msgid "My amazing mixtape"
 msgstr "Môj úžasný mixtape"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+#, fuzzy
+msgid "Margin scribbles"
 msgstr "Uteráčik scribblys"
 
 #: src/Utils/Random.vala:58
@@ -346,15 +350,29 @@ msgid "My funniest jokes"
 msgstr "Moje najvtipnejšie vtipy"
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+#, fuzzy
+msgid "The perfect breakfast"
 msgstr "Dokonalé raňajky majú..."
 
+#: src/Utils/Random.vala:78
+#, fuzzy
+msgid "What makes me smile"
+msgstr "Čo ma dnes rozosmialo"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr ""
+
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Gratulujeme!🔥"
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -450,35 +468,49 @@ msgstr "Zatvoriť"
 msgid "Close preferences"
 msgstr "Zatvoriť preferencie"
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
-msgstr " - Šortky"
-
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, fuzzy, c-format
+msgid "%s - Jorts"
+msgstr " - Šortky"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr "Predvoľby"
+#, fuzzy
+msgid "Preferences - Jorts"
+msgstr "Predvoľby pre všetky samolepiace poznámky"
 
 #: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Predvoľby pre všetky samolepiace poznámky"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr "Vytvorenie novej poznámky"
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr "Zobraziť predvoľby"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "Nezabudnúť, nikdy"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "Óda na moju mačku"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "Dobre, počúvajte,"
+
+#~ msgid "Preferences"
+#~ msgstr "Predvoľby"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Znemožnite čítanie nesústredených poznámok"

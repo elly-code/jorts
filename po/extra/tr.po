@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:45+0200\n"
+"POT-Creation-Date: 2026-05-01 20:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,9 +12,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/jorts.desktop.in.in:5
-msgid "@APP_NAME@"
-msgstr ""
+#: data/jorts.desktop.in.in:5 data/jorts.metainfo.xml.in.in:9
+msgid "Jorts"
+msgstr "Şort"
 
 #: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:49
 msgid "Sticky notes"
@@ -41,47 +41,43 @@ msgstr "Yeni yapışkan not"
 msgid "Show Preferences"
 msgstr "Tercihler"
 
-#: data/jorts.metainfo.xml.in.in:8
-msgid "Jorts"
-msgstr "Şort"
-
-#: data/jorts.metainfo.xml.in.in:9
+#: data/jorts.metainfo.xml.in.in:10
 msgid "Write on colourful little squares"
 msgstr "Renkli küçük karelere yazın"
 
-#: data/jorts.metainfo.xml.in.in:11
+#: data/jorts.metainfo.xml.in.in:12
 #, fuzzy
 msgid "Neither jeans nor shorts, just like jorts!"
 msgstr "Ne kot ne de şort, tıpkı şort gibi"
 
-#: data/jorts.metainfo.xml.in.in:12
+#: data/jorts.metainfo.xml.in.in:13
 msgid "Features include:"
 msgstr "Özellikler şunlardır:"
 
-#: data/jorts.metainfo.xml.in.in:14
+#: data/jorts.metainfo.xml.in.in:15
 #, fuzzy
 msgid "Colourful: Ten pretty themes. Any new note gets a random one"
 msgstr "Renkler: On güzel tema. Her yeni not rastgele bir tane alır"
 
-#: data/jorts.metainfo.xml.in.in:15
+#: data/jorts.metainfo.xml.in.in:16
 msgid "Adaptive: New notes get the zoom you last chose"
 msgstr "Uyarlanabilir: Yeni notlar en son seçtiğiniz yakınlaştırmayı alır"
 
-#: data/jorts.metainfo.xml.in.in:16
+#: data/jorts.metainfo.xml.in.in:17
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
 "Sevimli: Her yeni notun komik veya sevimli rastgele (düzenlenebilir) bir "
 "başlığı vardır"
 
-#: data/jorts.metainfo.xml.in.in:17
+#: data/jorts.metainfo.xml.in.in:18
 msgid "Handy: You can open links and emails with Ctrl+Click"
 msgstr "Kullanışlı: Bağlantıları ve e-postaları Ctrl+Click ile açabilirsiniz"
 
-#: data/jorts.metainfo.xml.in.in:18
+#: data/jorts.metainfo.xml.in.in:19
 msgid "Private: Try the scribble mode!"
 msgstr "Özel: Karalama modunu deneyin!"
 
-#: data/jorts.metainfo.xml.in.in:20
+#: data/jorts.metainfo.xml.in.in:21
 #, fuzzy
 msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce. The community "
@@ -91,9 +87,9 @@ msgstr ""
 "çalışması olmadan var olamazdı. Topluluk bunu çok sevdi, biz de yeniden "
 "canlandırmanın harika olacağını düşündük!"
 
-#: data/jorts.metainfo.xml.in.in:32
+#: data/jorts.metainfo.xml.in.in:33
 #, fuzzy
-msgid "Lainsce + Stella + Charlie"
+msgid "Lainsce + Stella and Charlie"
 msgstr "Lainsce + Stella"
 
 #: data/jorts.metainfo.xml.in.in:50
@@ -163,229 +159,199 @@ msgid "The preferences dialog in dark mode"
 msgstr "Karanlık modda tercihler iletişim kutusu"
 
 #: data/jorts.metainfo.xml.in.in:98
+msgid "Minor touchups"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:103
 msgid "Jorts of Spring"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:100
+#: data/jorts.metainfo.xml.in.in:105
 msgid "New color: Latte!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:101
+#: data/jorts.metainfo.xml.in.in:106
 msgid "Added Preferences and Quit to the note right-click"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:102
+#: data/jorts.metainfo.xml.in.in:107
 msgid "A lot of under-the-hood spring cleaning"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:108
+#: data/jorts.metainfo.xml.in.in:113
 msgid "Organization change"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:110
+#: data/jorts.metainfo.xml.in.in:115
 msgid "From ellie-commons to elly-code"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:112 data/jorts.metainfo.xml.in.in:134
-#: data/jorts.metainfo.xml.in.in:169 data/jorts.metainfo.xml.in.in:209
+#: data/jorts.metainfo.xml.in.in:117 data/jorts.metainfo.xml.in.in:139
 msgid "😎 Guests stars:"
 msgstr "😎 Konuk yıldızlar:"
 
-#: data/jorts.metainfo.xml.in.in:114
+#: data/jorts.metainfo.xml.in.in:119
 #, fuzzy
 msgid "Updated sv-SE translation thanks to @yeager!"
 msgstr "Güncellenmiş çeviriler"
 
-#: data/jorts.metainfo.xml.in.in:115
+#: data/jorts.metainfo.xml.in.in:120
 #, fuzzy
 msgid "Added vietnamese translation thanks to @hthienloc!"
 msgstr "Güncellenmiş çeviriler"
 
-#: data/jorts.metainfo.xml.in.in:124
+#: data/jorts.metainfo.xml.in.in:129
 #, fuzzy
 msgid "🚀 4.0.0 Jorts of Hyperspace!"
 msgstr "2.2.0 Işığın Jorts'u"
 
-#: data/jorts.metainfo.xml.in.in:126
+#: data/jorts.metainfo.xml.in.in:131
 msgid "Version 4 to align with Gtk version"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:127
+#: data/jorts.metainfo.xml.in.in:132
 msgid "Added button to toggle lists, and ability to customize them"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:128
+#: data/jorts.metainfo.xml.in.in:133
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:129
+#: data/jorts.metainfo.xml.in.in:134
 msgid "More zoom options"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:130
+#: data/jorts.metainfo.xml.in.in:135
 msgid "Keyboard shortcuts work from popover now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:131
+#: data/jorts.metainfo.xml.in.in:136
 msgid "A couple visual bugfixes as well!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:132
+#: data/jorts.metainfo.xml.in.in:137
 msgid "Various under the hood performance improvements"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:136
+#: data/jorts.metainfo.xml.in.in:141
 #, fuzzy
 msgid "Updated JA translation thanks to @ryonakano!"
 msgstr "Güncellenmiş çeviriler"
 
-#: data/jorts.metainfo.xml.in.in:137
+#: data/jorts.metainfo.xml.in.in:142
 msgid "You, the user, for liking this lil app!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:149
-msgid "Added windows build. It doesnt need admin rights. Mostly works."
-msgstr ""
-
-#: data/jorts.metainfo.xml.in.in:154
-msgid "No fun allowed: revert back to default style"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in.in:159
 #, fuzzy
-msgid "🕷️ 3.4.0 Scary Jorts of Boo"
-msgstr "2.2.0 Işığın Jorts'u"
+#~ msgid "🕷️ 3.4.0 Scary Jorts of Boo"
+#~ msgstr "2.2.0 Işığın Jorts'u"
 
-#: data/jorts.metainfo.xml.in.in:161
-msgid "Some UI elements show up after being shown, for a sleek vibe"
-msgstr ""
-"Şık bir hava için bazı kullanıcı arayüzü öğeleri gösterildikten sonra ortaya "
-"çıkıyor"
+#~ msgid "Some UI elements show up after being shown, for a sleek vibe"
+#~ msgstr ""
+#~ "Şık bir hava için bazı kullanıcı arayüzü öğeleri gösterildikten sonra "
+#~ "ortaya çıkıyor"
 
-#: data/jorts.metainfo.xml.in.in:162
-msgid "Ctrl+L to focus note title"
-msgstr "Not başlığına odaklanmak için Ctrl+L"
+#~ msgid "Ctrl+L to focus note title"
+#~ msgstr "Not başlığına odaklanmak için Ctrl+L"
 
-#: data/jorts.metainfo.xml.in.in:163
 #, fuzzy
-msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
-msgstr "Not ayarlarını şimdi açmak için Ctrl+M"
+#~ msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
+#~ msgstr "Not ayarlarını şimdi açmak için Ctrl+M"
 
-#: data/jorts.metainfo.xml.in.in:164
-msgid "Alt+Number to change theme quickly"
-msgstr "Temayı hızlıca değiştirmek için Alt+Number"
+#~ msgid "Alt+Number to change theme quickly"
+#~ msgstr "Temayı hızlıca değiştirmek için Alt+Number"
 
-#: data/jorts.metainfo.xml.in.in:165
 #, fuzzy
-msgid ""
-"New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
-"for ascii doodles"
-msgstr ""
-"Yeni not ayarı: Monospace. Erişilebilirlik için olabilir, ascii karalamalar "
-"için olabilir"
+#~ msgid ""
+#~ "New note setting: Monospace (Ctrl+M). Could be for accessibility, could "
+#~ "be for ascii doodles"
+#~ msgstr ""
+#~ "Yeni not ayarı: Monospace. Erişilebilirlik için olabilir, ascii "
+#~ "karalamalar için olabilir"
 
-#: data/jorts.metainfo.xml.in.in:166
-msgid ""
-"Cleaner, nicer code under the hood. Probably marginally enhanced "
-"performances or less edge bugs"
-msgstr ""
-"Kaputun altında daha temiz, daha güzel kod. Muhtemelen marjinal olarak "
-"geliştirilmiş performans veya daha az kenar hatası"
+#~ msgid ""
+#~ "Cleaner, nicer code under the hood. Probably marginally enhanced "
+#~ "performances or less edge bugs"
+#~ msgstr ""
+#~ "Kaputun altında daha temiz, daha güzel kod. Muhtemelen marjinal olarak "
+#~ "geliştirilmiş performans veya daha az kenar hatası"
 
-#: data/jorts.metainfo.xml.in.in:167
-msgid "Added a reset-settings commandline option. Could be handy."
-msgstr "Reset-settings komut satırı seçeneği eklendi. Kullanışlı olabilir."
+#~ msgid "Added a reset-settings commandline option. Could be handy."
+#~ msgstr "Reset-settings komut satırı seçeneği eklendi. Kullanışlı olabilir."
 
-#: data/jorts.metainfo.xml.in.in:171
-msgid "@wpkelso strikes again with an amazing special edition icon!"
-msgstr "wpkelso muhteşem bir özel sürüm ikonuyla yine karşınızda!"
+#~ msgid "@wpkelso strikes again with an amazing special edition icon!"
+#~ msgstr "wpkelso muhteşem bir özel sürüm ikonuyla yine karşınızda!"
 
-#: data/jorts.metainfo.xml.in.in:178
-msgid ""
-"Bugfix: Fix Jorts lingering in the background not opening anymore if all "
-"windows were closed (#77)"
-msgstr ""
-"Hata Düzeltmesi: Tüm pencereler kapalıysa arka planda kalan Jorts'un artık "
-"açılmaması düzeltildi (#77)"
+#~ msgid ""
+#~ "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
+#~ "windows were closed (#77)"
+#~ msgstr ""
+#~ "Hata Düzeltmesi: Tüm pencereler kapalıysa arka planda kalan Jorts'un "
+#~ "artık açılmaması düzeltildi (#77)"
 
-#: data/jorts.metainfo.xml.in.in:184
-msgid "3.3.0 Star Platinum Jorts"
-msgstr "3.3.0 Yıldız Platin Şort"
+#~ msgid "3.3.0 Star Platinum Jorts"
+#~ msgstr "3.3.0 Yıldız Platin Şort"
 
-#: data/jorts.metainfo.xml.in.in:186
-msgid ""
-"Bugfix: Whole window being grabbable interfered with text editing. Only "
-"actionbar and header are, now (#75, #76)"
-msgstr ""
-"Hata Düzeltme: Tüm pencerenin yakalanabilir olması metin düzenlemeyi "
-"engelliyordu. Artık sadece eylem çubuğu ve başlık (#75, #76)"
+#~ msgid ""
+#~ "Bugfix: Whole window being grabbable interfered with text editing. Only "
+#~ "actionbar and header are, now (#75, #76)"
+#~ msgstr ""
+#~ "Hata Düzeltme: Tüm pencerenin yakalanabilir olması metin düzenlemeyi "
+#~ "engelliyordu. Artık sadece eylem çubuğu ve başlık (#75, #76)"
 
-#: data/jorts.metainfo.xml.in.in:187
-msgid "Added more random titles"
-msgstr "Daha fazla rastgele başlık eklendi"
+#~ msgid "Added more random titles"
+#~ msgstr "Daha fazla rastgele başlık eklendi"
 
-#: data/jorts.metainfo.xml.in.in:188
-msgid "Buttons for add/remove autostart"
-msgstr "Otomatik başlatma ekleme/kaldırma düğmeleri"
+#~ msgid "Buttons for add/remove autostart"
+#~ msgstr "Otomatik başlatma ekleme/kaldırma düğmeleri"
 
-#: data/jorts.metainfo.xml.in.in:189
-msgid "Some more title placeholders"
-msgstr "Biraz daha başlık yer tutucu"
+#~ msgid "Some more title placeholders"
+#~ msgstr "Biraz daha başlık yer tutucu"
 
-#: data/jorts.metainfo.xml.in.in:190
 #, fuzzy
-msgid "Under the hood is a bit cleaner now"
-msgstr "Daha temiz kod için burada ve orada kaputun altında değişiklikler"
+#~ msgid "Under the hood is a bit cleaner now"
+#~ msgstr "Daha temiz kod için burada ve orada kaputun altında değişiklikler"
 
-#: data/jorts.metainfo.xml.in.in:196
-msgid ""
-"Bugfix: When toggled off, the actionbar would leave an empty space. It is "
-"now fixed - With now a flashier animation to boot."
-msgstr ""
-"Hata Düzeltmesi: Kapatıldığında, eylem çubuğu boş bir alan bırakıyordu. "
-"Artık düzeltildi - Üstelik şimdi daha gösterişli bir animasyonla."
+#~ msgid ""
+#~ "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
+#~ "now fixed - With now a flashier animation to boot."
+#~ msgstr ""
+#~ "Hata Düzeltmesi: Kapatıldığında, eylem çubuğu boş bir alan bırakıyordu. "
+#~ "Artık düzeltildi - Üstelik şimdi daha gösterişli bir animasyonla."
 
-#: data/jorts.metainfo.xml.in.in:201
 #, fuzzy
-msgid "🌈 3.2.0 Jorts of Resilience and Love"
-msgstr "2.2.0 Işığın Jorts'u"
+#~ msgid "🌈 3.2.0 Jorts of Resilience and Love"
+#~ msgstr "2.2.0 Işığın Jorts'u"
 
-#: data/jorts.metainfo.xml.in.in:203
-msgid "Add a cool little animation when enabling/disabling actionbar"
-msgstr ""
-"Eylem çubuğunu etkinleştirirken/devre dışı bırakırken küçük bir animasyon "
-"ekleyin"
+#~ msgid "Add a cool little animation when enabling/disabling actionbar"
+#~ msgstr ""
+#~ "Eylem çubuğunu etkinleştirirken/devre dışı bırakırken küçük bir animasyon "
+#~ "ekleyin"
 
-#: data/jorts.metainfo.xml.in.in:204
 #, fuzzy
-msgid "Fixed blurrinness in high-scaled display"
-msgstr "Flathub BS nedeniyle yüksek ölçekli ekrandaki bulanıklık düzeltildi"
+#~ msgid "Fixed blurrinness in high-scaled display"
+#~ msgstr "Flathub BS nedeniyle yüksek ölçekli ekrandaki bulanıklık düzeltildi"
 
-#: data/jorts.metainfo.xml.in.in:205
-msgid "Added high-resolution screenshots"
-msgstr "Yüksek çözünürlüklü ekran görüntüleri eklendi"
+#~ msgid "Added high-resolution screenshots"
+#~ msgstr "Yüksek çözünürlüklü ekran görüntüleri eklendi"
 
-#: data/jorts.metainfo.xml.in.in:206
-msgid ""
-"Last minute bugfix, somehow accels did not work when the Preferences were "
-"focused"
-msgstr ""
-"Son dakika hata düzeltmesi, Tercihler odaklandığında bir şekilde accels "
-"çalışmıyordu"
+#~ msgid ""
+#~ "Last minute bugfix, somehow accels did not work when the Preferences were "
+#~ "focused"
+#~ msgstr ""
+#~ "Son dakika hata düzeltmesi, Tercihler odaklandığında bir şekilde accels "
+#~ "çalışmıyordu"
 
-#: data/jorts.metainfo.xml.in.in:207
-msgid "A bit of housekeeping for FR and DE while at it"
-msgstr "Hazır başlamışken FR ve DE için biraz temizlik yapalım"
+#~ msgid "A bit of housekeeping for FR and DE while at it"
+#~ msgstr "Hazır başlamışken FR ve DE için biraz temizlik yapalım"
 
-#: data/jorts.metainfo.xml.in.in:211
 #, fuzzy
-msgid "A lovely temporary icon by @wpkelso"
-msgstr "Gurur Sürümü: Wpkelso'dan sevimli bir geçici simge"
+#~ msgid "A lovely temporary icon by @wpkelso"
+#~ msgstr "Gurur Sürümü: Wpkelso'dan sevimli bir geçici simge"
 
-#: data/jorts.metainfo.xml.in.in:212
 #, fuzzy
-msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
-msgstr "Güncellenmiş çeviriler"
+#~ msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
+#~ msgstr "Güncellenmiş çeviriler"
 
 #~ msgid "Change colours, zoom in and out, and there is even an emoji button!"
 #~ msgstr ""

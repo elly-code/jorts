@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgid "Click to edit the title"
 msgstr "Başlığı düzenlemek için tıklayın"
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Tercihleri göster"
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 #, fuzzy
 msgid "Quit Jorts"
 msgstr " - Şort"
@@ -47,21 +47,21 @@ msgstr "Emoji ekle"
 msgid "Preferences for this sticky note"
 msgstr "Bu yapışkan not için tercihler"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 #, fuzzy
 msgid "Default"
 msgstr "Varsayılana Sıfırla"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 #, fuzzy
 msgid "Use default text font"
 msgstr "Varsayılan metin yazı tipini kullanmak için tıklayın"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 #, fuzzy
 msgid "Use monospaced font"
 msgstr "Tek aralıklı yazı tipi kullanmak için tıklayın"
@@ -73,15 +73,15 @@ msgstr "Tek aralıklı yazı tipi kullanmak için tıklayın"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "Varsayılan yakınlaştırma düzeyi"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "Yakınlaştır"
 
@@ -140,11 +140,13 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+#, fuzzy
+msgid "All my best friends"
 msgstr "En iyi arkadaşlarımın hepsi"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+#, fuzzy
+msgid "My secret recipe"
 msgstr "Benim süper iyi gizli tarifim"
 
 #: src/Utils/Random.vala:28
@@ -159,85 +161,86 @@ msgstr "Kimseye söylememeniz gereken süper sır"
 msgid "My grocery list"
 msgstr "Alışveriş listem"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+#, fuzzy
+msgid "Shower thoughts"
 msgstr "Rastgele duş düşünceleri"
 
-#: src/Utils/Random.vala:32
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "En sevdiğim fanfikler"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "En sevdiğim dinozorlar"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "Benim şeytani planım"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "Bugün beni gülümseten şey"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "Merhaba dünya!"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "Yeni yapışkan, yeni ben"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+#: src/Utils/Random.vala:39
+#, fuzzy
+msgid "Pirate treasure location"
 msgstr "Gizli korsan hazinesi"
 
-#: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "Unutmamak için, asla"
-
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr ""
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "Sevgili günlük,"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "İyi günler dilerim! :)"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "İlaç programım"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "Ev işleri"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "Kedime Övgü"
-
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+#, fuzzy
+msgid "My cats favourite mischiefs"
 msgstr "Köpeklerimin en sevdiği oyuncaklar"
 
 #: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "Köpeklerimin en sevdiği oyuncaklar"
+
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "Kuşlarım ne kadar havalı"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "Son Kurabiye olayının şüphelileri"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "Papağanlarımın bildiği kelimeler"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "Verilecek havalı ve komik iltifatlar"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "Tamam, dinle,"
+#, fuzzy
+msgid "Original compliments to give out"
+msgstr "Verilecek havalı ve komik iltifatlar"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -264,7 +267,8 @@ msgid "My amazing mixtape"
 msgstr "Muhteşem mixtape'im"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+#, fuzzy
+msgid "Margin scribbles"
 msgstr "Peçete karalamaları"
 
 #: src/Utils/Random.vala:58
@@ -346,15 +350,29 @@ msgid "My funniest jokes"
 msgstr "En komik şakalarım"
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+#, fuzzy
+msgid "The perfect breakfast"
 msgstr "Mükemmel bir kahvaltı..."
 
+#: src/Utils/Random.vala:78
+#, fuzzy
+msgid "What makes me smile"
+msgstr "Bugün beni gülümseten şey"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr ""
+
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr "Tebrikler!"
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -449,34 +467,48 @@ msgstr "Kapat"
 msgid "Close preferences"
 msgstr "Tercihleri kapat"
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
-msgstr " - Şort"
-
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, fuzzy, c-format
+msgid "%s - Jorts"
+msgstr " - Şort"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr "Tercihler"
+#, fuzzy
+msgid "Preferences - Jorts"
+msgstr "Şortunuz için tercihleriniz"
 
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences for your Jorts"
 msgstr "Şortunuz için tercihleriniz"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr "Yeni bir not oluşturun"
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr "Tercihleri göster"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "Unutmamak için, asla"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "Kedime Övgü"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "Tamam, dinle,"
+
+#~ msgid "Preferences"
+#~ msgstr "Tercihler"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Odaklanmamış notları okunamaz hale getirin"

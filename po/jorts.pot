@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,11 @@ msgid "Click to edit the title"
 msgstr ""
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 msgid "Show Preferences"
 msgstr ""
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 msgid "Quit Jorts"
 msgstr ""
 
@@ -50,19 +50,19 @@ msgstr ""
 msgid "Preferences for this sticky note"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 msgid "Default"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Use default text font"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 msgid "Use monospaced font"
 msgstr ""
 
@@ -73,15 +73,15 @@ msgstr ""
 msgid "%d%%"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr ""
 
@@ -139,11 +139,11 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+msgid "All my best friends"
 msgstr ""
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+msgid "My secret recipe"
 msgstr ""
 
 #: src/Utils/Random.vala:28
@@ -158,84 +158,81 @@ msgstr ""
 msgid "My grocery list"
 msgstr ""
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
-msgstr ""
-
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
 #: src/Utils/Random.vala:32
-msgid "My fav fanfics"
+msgid "Shower thoughts"
 msgstr ""
 
 #: src/Utils/Random.vala:33
-msgid "My fav dinosaurs"
+msgid "My fav fanfics"
 msgstr ""
 
 #: src/Utils/Random.vala:34
-msgid "My evil mastermind plan"
+msgid "My fav dinosaurs"
 msgstr ""
 
 #: src/Utils/Random.vala:35
-msgid "What made me smile today"
+msgid "My evil mastermind plan"
 msgstr ""
 
 #: src/Utils/Random.vala:36
-msgid "Hello world!"
+msgid "What made me smile today"
 msgstr ""
 
 #: src/Utils/Random.vala:37
-msgid "New sticky, new me"
+msgid "Hello world!"
 msgstr ""
 
 #: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+msgid "New sticky, new me"
 msgstr ""
 
 #: src/Utils/Random.vala:39
-msgid "To not forget, ever"
+msgid "Pirate treasure location"
 msgstr ""
 
 #: src/Utils/Random.vala:40
-msgid "Dear Diary,"
+msgid "To remember"
 msgstr ""
 
 #: src/Utils/Random.vala:41
-msgid "Have a nice day! :)"
+msgid "Dear Diary,"
 msgstr ""
 
 #: src/Utils/Random.vala:42
-msgid "My meds schedule"
+msgid "Have a nice day! :)"
 msgstr ""
 
 #: src/Utils/Random.vala:43
-msgid "Household chores"
+msgid "My meds schedule"
 msgstr ""
 
 #: src/Utils/Random.vala:44
-msgid "Ode to my cat"
+msgid "Household chores"
 msgstr ""
 
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+msgid "My cats favourite mischiefs"
 msgstr ""
 
 #: src/Utils/Random.vala:46
-msgid "How cool my birds are"
+msgid "My dogs favourite toys"
 msgstr ""
 
 #: src/Utils/Random.vala:47
-msgid "Suspects in the Last Cookie affair"
+msgid "How cool my birds are"
 msgstr ""
 
 #: src/Utils/Random.vala:48
-msgid "Words my parrots know"
+msgid "Suspects in the Last Cookie affair"
 msgstr ""
 
 #: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
+msgid "Words my parrots know"
 msgstr ""
 
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
+msgid "Original compliments to give out"
 msgstr ""
 
 #: src/Utils/Random.vala:51
@@ -263,7 +260,7 @@ msgid "My amazing mixtape"
 msgstr ""
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+msgid "Margin scribbles"
 msgstr ""
 
 #: src/Utils/Random.vala:58
@@ -343,15 +340,27 @@ msgid "My funniest jokes"
 msgstr ""
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+msgid "The perfect breakfast"
+msgstr ""
+
+#: src/Utils/Random.vala:78
+msgid "What makes me smile"
+msgstr ""
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
 msgstr ""
 
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -433,13 +442,14 @@ msgstr ""
 msgid "Close preferences"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, c-format
+msgid "%s - Jorts"
 msgstr ""
 
 #. ******************************************
@@ -447,17 +457,17 @@ msgstr ""
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
+msgid "Preferences - Jorts"
 msgstr ""
 
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences for your Jorts"
 msgstr ""
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr ""
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr ""

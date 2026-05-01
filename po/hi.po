@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,11 @@ msgid "Click to edit the title"
 msgstr ""
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 msgid "Show Preferences"
 msgstr ""
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 msgid "Quit Jorts"
 msgstr ""
 
@@ -50,19 +50,19 @@ msgstr "इमोजी डालें"
 msgid "Preferences for this sticky note"
 msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 msgid "Default"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Use default text font"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 msgid "Use monospaced font"
 msgstr ""
 
@@ -73,15 +73,15 @@ msgstr ""
 msgid "%d%%"
 msgstr ""
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "ज़ूम आउट"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "डिफ़ॉल्ट ज़ूम स्तर"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "ज़ूम इन"
 
@@ -140,11 +140,13 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+#, fuzzy
+msgid "All my best friends"
 msgstr "मेरे सभी सबसे अच्छे दोस्त"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+#, fuzzy
+msgid "My secret recipe"
 msgstr "मेरा सुपर गुड सीक्रेट रेसिपी"
 
 #: src/Utils/Random.vala:28
@@ -159,85 +161,86 @@ msgstr "किसी को नहीं बताने के लिए सु
 msgid "My grocery list"
 msgstr "मेरी किराने की सूची"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+#, fuzzy
+msgid "Shower thoughts"
 msgstr "यादृच्छिक शावर विचार"
 
-#: src/Utils/Random.vala:32
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "मेरे फेव फैनफिक्स"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "मेरे फेव डायनासोर"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "मेरी दुष्ट मास्टरमाइंड योजना"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "आज मुझे क्या मुस्कुरा दिया"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "हैलो वर्ल्ड!"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "नया चिपचिपा, नया मुझे"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+#: src/Utils/Random.vala:39
+#, fuzzy
+msgid "Pirate treasure location"
 msgstr "छिपा हुआ समुद्री डाकू खजाना"
 
-#: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "कभी नहीं भूलना, कभी भी"
-
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr ""
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "प्रिय डायरी,"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "आपका दिन शुभ हो! "
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "मेरे मेड्स शेड्यूल"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "घरेलू काम"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "मेरी बिल्ली के लिए ode"
-
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+#, fuzzy
+msgid "My cats favourite mischiefs"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
 #: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "मेरे कुत्ते पसंदीदा खिलौने"
+
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "मेरे पक्षी कितने शांत हैं"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "अंतिम कुकी चक्कर में संदिग्ध"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "शब्द मेरे तोते जानते हैं"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "ठीक है, यहाँ सुनो,"
+#, fuzzy
+msgid "Original compliments to give out"
+msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -264,7 +267,8 @@ msgid "My amazing mixtape"
 msgstr "मेरा अद्भुत मिक्सटेप"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+#, fuzzy
+msgid "Margin scribbles"
 msgstr "नैपकिन स्क्रिबल्स"
 
 #: src/Utils/Random.vala:58
@@ -346,15 +350,28 @@ msgid "My funniest jokes"
 msgstr ""
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+msgid "The perfect breakfast"
+msgstr ""
+
+#: src/Utils/Random.vala:78
+#, fuzzy
+msgid "What makes me smile"
+msgstr "आज मुझे क्या मुस्कुरा दिया"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
 msgstr ""
 
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -437,13 +454,14 @@ msgstr ""
 msgid "Close preferences"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, c-format
+msgid "%s - Jorts"
 msgstr ""
 
 #. ******************************************
@@ -451,21 +469,31 @@ msgstr ""
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr ""
+#, fuzzy
+msgid "Preferences - Jorts"
+msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"
 
 #: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr ""
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr ""
+
+#~ msgid "To not forget, ever"
+#~ msgstr "कभी नहीं भूलना, कभी भी"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "मेरी बिल्ली के लिए ode"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "ठीक है, यहाँ सुनो,"
 
 #~ msgid "Hi im a square"
 #~ msgstr "हाय एक वर्ग im"
