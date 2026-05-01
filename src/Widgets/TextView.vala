@@ -78,9 +78,6 @@ public class Jorts.TextView : Granite.HyperTextView {
         var tag_table = new Gtk.TextTagTable ();
         buffer = new Gtk.TextBuffer (tag_table);
 
-
-
-
         var a = new Pango.TabArray (2, true);
         a.set_tab (0, Pango.TabAlign.LEFT, 0);
         a.set_tab (1, Pango.TabAlign.LEFT, 14);
@@ -166,12 +163,13 @@ public class Jorts.TextView : Granite.HyperTextView {
             if (!this.has_prefix (line_number)) {
                 buffer.get_iter_at_line_offset (out line_start, line_number, 0);
 
-                var line_end = line_start.copy ();
-                line_end.forward_to_line_end ();
-                buffer.apply_tag (tag_list, line_start, line_end);
-
                 buffer.insert (ref line_start, "%s\t".printf (list_item_start), -1);
 
+                buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+                var line_end = line_start.copy ();
+                line_end.forward_to_line_end ();
+
+                buffer.apply_tag (tag_list, line_start, line_end);
             }
         }
 
