@@ -10,11 +10,11 @@ config_file = configure_file(
 
 #================================
 dependencies = [
-        dependency('gtk4'),
+        dependency('gtk4', version: '>=4.23'),
         dependency('granite-7', version: '>=7.6.0'),
         dependency('gee-0.8'),
         dependency('gobject-2.0'),
-        dependency('json-glib-1.0'),
+        dependency('json-glib-1.0')
     ]
 
 #================================
