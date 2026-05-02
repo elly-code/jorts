@@ -15,25 +15,26 @@ legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 
+vala_flags = []
+
 if get_option('legacy-rdnn')
     app_id = legacy_app_id
     alternate_app_id = correct_app_id
     app_path = legacy_app_path
 
+    #TODO: Remove once appcenter has latte
+    vala_flags += ['--define', 'LATTE']
 else
     app_id = correct_app_id
     alternate_app_id = legacy_app_id
     app_path = correct_app_path
-
 endif
-
-
-vala_flags = []
 
 development_build = get_option('development')
 if development_build
   app_id +=  '.devel'
   vala_flags += ['--define', 'DEVEL']
+  vala_flags += ['--define', 'LATTE']
 endif
 
 #================================
