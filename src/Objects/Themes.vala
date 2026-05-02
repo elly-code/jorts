@@ -81,11 +81,7 @@ public enum Jorts.Themes {
     * convenient list of all supported themes
     */
     public static Themes[] all () {
-#if LATTE
         return {BLUEBERRY, MINT, LIME, BANANA, ORANGE, STRAWBERRY, BUBBLEGUM, GRAPE, COCOA, SLATE, LATTE};
-#else
-        return {BLUEBERRY, MINT, LIME, BANANA, ORANGE, STRAWBERRY, BUBBLEGUM, GRAPE, COCOA, SLATE};
-#endif
     }
 
     /*************************************************/
@@ -93,11 +89,7 @@ public enum Jorts.Themes {
     * convenient list of all supported themes
     */
     public static string[] all_string () {
-#if LATTE
         return {"BLUEBERRY", "MINT", "LIME", "BANANA", "ORANGE", "STRAWBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SLATE", "LATTE"};
-#else
-        return {"BLUEBERRY", "MINT", "LIME", "BANANA", "ORANGE", "STRAWBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SLATE"};
-#endif
     }
 
     /*************************************************/

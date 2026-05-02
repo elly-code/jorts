@@ -56,11 +56,7 @@ public class Jorts.ColorBox : Gtk.Box {
         append (grape_button);
         append (cocoa_button);
         append (slate_button);
-
-#if LATTE
         append (latte_button);
-#endif
-
         //append (auto_button);
 
         accent_color_action = new SimpleAction.stateful ("prefers-accent-color", GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
