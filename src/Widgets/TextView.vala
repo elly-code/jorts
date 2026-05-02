@@ -6,8 +6,9 @@
  */
 
 /**
-* A textview incorporating detecting links and emails
-* Fairly vanilla but having a definition allows to easily extend it
+* A textview subclassing {@link Granite.HyperTextView}, allowing it to do clickable links and emails
+* 
+* Extended with bullet lists that follows user settings
 */
 public class Jorts.TextView : Granite.HyperTextView {
 
@@ -20,6 +21,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         set {buffer.text = value;}
     }
 
+    Gtk.TextTag tag_list;
+    private const string TAG_LIST = "list_item";
+
     public SimpleActionGroup actions {get; construct;}
     public const string ACTION_PREFIX = "textview.";
     public const string ACTION_TOGGLE_LIST = "action_toggle_list";
@@ -30,8 +34,7 @@ public class Jorts.TextView : Granite.HyperTextView {
 
     public TextView () {
         Object (
-            wrap_mode: Gtk.WrapMode.WORD_CHAR,
-            buffer: new Gtk.TextBuffer (null),
+            wrap_mode: Gtk.WrapMode.WORD,
             bottom_margin: SPACING_DOUBLE,
             left_margin: SPACING_DOUBLE,
             right_margin: SPACING_DOUBLE,
@@ -70,6 +73,20 @@ public class Jorts.TextView : Granite.HyperTextView {
         extra.append_section (null, section);
         extra_menu = extra;
 
+
+
+        var tag_table = new Gtk.TextTagTable ();
+        buffer = new Gtk.TextBuffer (tag_table);
+
+        var a = new Pango.TabArray (2, true);
+        a.set_tab (0, Pango.TabAlign.LEFT, 0);
+        a.set_tab (1, Pango.TabAlign.LEFT, 14);
+
+        tag_list = buffer.create_tag (TAG_LIST);
+        tag_list.indent = -14;
+        tag_list.left_margin = 14;
+        tag_list.wrap_mode = Gtk.WrapMode.WORD;
+        tag_list.tabs = a;
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -145,10 +162,45 @@ public class Jorts.TextView : Granite.HyperTextView {
             debug ("doing line " + line_number.to_string ());
             if (!this.has_prefix (line_number)) {
                 buffer.get_iter_at_line_offset (out line_start, line_number, 0);
-                buffer.insert (ref line_start, list_item_start, -1);
+
+                buffer.insert (ref line_start, "%s\t".printf (list_item_start), -1);
+
+                buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+                var line_end = line_start.copy ();
+                line_end.forward_to_line_end ();
+
+                buffer.apply_tag (tag_list, line_start, line_end);
             }
         }
+
     }
+
+    /**
+     * Add the list prefix only to lines who hasnt it already
+     */
+    private void set_list_at (int line) {
+        Gtk.TextIter line_start;
+
+        buffer.get_iter_at_line_offset (out line_start, line, 0);
+        var line_end = line_start.copy ();
+        line_end.forward_to_line_end ();
+        buffer.apply_tag (tag_list, line_start, line_end);
+
+        buffer.insert (ref line_start, "%s\t".printf (list_item_start), -1);
+    }
+
+
+
+    private void remove_list_at (int line) {
+        if (!has_prefix (line)) {
+            return;
+        }
+
+        Gtk.TextIter line_start;
+        remove_prefix (line);
+    }
+
+
 
     /**
      * Remove list prefix from line x to line y. Presuppose it is there
@@ -170,6 +222,10 @@ public class Jorts.TextView : Granite.HyperTextView {
         buffer.get_iter_at_line_offset (out line_start, line_number, 0);
         buffer.get_iter_at_line_offset (out prefix_end, line_number, remove_range);
         buffer.delete (ref line_start, ref prefix_end);
+
+        var line_end = line_start.copy ();
+        line_end.forward_to_line_end ();
+        buffer.remove_tag (tag_list, line_start, line_end);
     }
 
     /**
