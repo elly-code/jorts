@@ -2,8 +2,18 @@
 
 # Building
 
+1. [Prerequisite](#prerequisite)
+   - [elementary OS](#elementary-os)
+   - [Ubuntu](#ubuntu)
+2. [Setup Meson](#setup-meson)
+   -[Configure](#configure)
+   -[Compile](#compile)
+   -[Update translations](#update-translations)
+3. [Installing](#installing)
+4. [Tools](#tools)
 
-## Prerequisite
+
+## 1. Prerequisite
 
 Please make sure you have these dependencies first before building Jorts.
 
@@ -33,7 +43,9 @@ sudo apt install libgranite-7-common libjson-glib-1.0-0 libgee-0.8-2 meson libva
 
 
 
-## Building
+## Setup Meson
+
+### configure
 
 It is recommended to create a clean build environment. Run `meson` to configure the build environment and then `ninja` to build
 "cd" into the source folder, then
@@ -48,11 +60,30 @@ Once the building is done you can
 cd builddir
 ```
 
-then compile:
+then
+
+### compile
 
 ```bash
 ninja
 ```
+
+### update translations
+
+Update translation template
+
+```bash
+ninja jorts-pot
+```
+
+Update all languages following the template
+
+```bash
+ninja jorts-update-po
+```
+
+For extra text such as desktop file and metainfo, repeat but with extra-pot, extra-update-po
+
 
 
 ## Installing
@@ -76,3 +107,9 @@ To uninstall, navigate to the same folder, then
 ```bash
 ninja uninstall
 ```
+
+
+
+## Tools
+
+You can check out [the elementary OS developer tools] (https://docs.elementary.io/contributor-guide/development/developer-tools)
