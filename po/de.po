@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgid "Click to edit the title"
 msgstr "Klicken, um den Titel zu bearbeiten"
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 msgid "Show Preferences"
 msgstr "Präferenzen anzeigen"
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 msgid "Quit Jorts"
 msgstr "Jorts beenden"
 
@@ -44,19 +44,19 @@ msgstr "Emoji einfügen"
 msgid "Preferences for this sticky note"
 msgstr "Einstellungen für diese Haftnotiz"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 msgid "Default"
 msgstr "Standard"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Use default text font"
 msgstr "Standardschriftart verwenden"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Festbreite"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 msgid "Use monospaced font"
 msgstr "Festbreitenschrift verwenden"
 
@@ -67,15 +67,15 @@ msgstr "Festbreitenschrift verwenden"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "Standard-Zoomstufe"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "Vergrößern"
 
@@ -133,12 +133,12 @@ msgid "No preference, random each time"
 msgstr "Keine Präferenz, jedes Mal zufällig"
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
-msgstr "Alle meine allerbesten Freunde"
+msgid "All my best friends"
+msgstr "Alle meine beste Freunde"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
-msgstr "Mein super gutes Geheimrezept"
+msgid "My secret recipe"
+msgstr "Mein Geheimrezept"
 
 #: src/Utils/Random.vala:28
 msgid "My todo list"
@@ -152,85 +152,82 @@ msgstr "Supergeheimnis, das niemandem verraten werden darf"
 msgid "My grocery list"
 msgstr "Meine Lebensmittelliste"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
-msgstr "Zufällige Gedanken zum Duschen"
-
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
 #: src/Utils/Random.vala:32
+msgid "Shower thoughts"
+msgstr "Zufällige Gedanken"
+
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "Meine Lieblingsfanfics"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "Meine Lieblingsdinosaurier"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "Mein böser genialer Plan"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "Was mich heute zum Lächeln gebracht hat"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "Hallo Welt!"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "Neuer Kleber, neues Ich"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
-msgstr "Versteckter Piratenschatz"
-
 #: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "Nicht vergessen, niemals"
+msgid "Pirate treasure location"
+msgstr "Ort des Piratenschatzes"
 
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr "Zum merken"
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "Liebes Tagebuch,"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "Einen schönen Tag noch! :)"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "Mein Medikamentenplan"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "Aufgaben im Haushalt"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "Ode an meine Katze"
-
 #: src/Utils/Random.vala:45
+msgid "My cats favourite mischiefs"
+msgstr "Die Lieblingsstreiche meiner Katzen"
+
+#: src/Utils/Random.vala:46
 msgid "My dogs favourite toys"
 msgstr "Lieblingsspielzeug meiner Hunde"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "Wie cool meine Vögel sind"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "Verdächtige in der Last-Cookie-Affäre"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "Worte, die meine Papageien kennen"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "Coole und lustige Komplimente zum Verteilen"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "Ok, hören Sie zu,"
+msgid "Original compliments to give out"
+msgstr "Originale Komplimente zum Verteilen"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -257,8 +254,8 @@ msgid "My amazing mixtape"
 msgstr "Mein erstaunliches Mixtape"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
-msgstr "Serviette scribblys"
+msgid "Margin scribbles"
+msgstr "Randnotizen"
 
 #: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
@@ -337,15 +334,27 @@ msgid "My funniest jokes"
 msgstr "Meine lustigsten Witze"
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
-msgstr "Das perfekte Frühstück hat..."
+msgid "The perfect breakfast"
+msgstr "Das perfekte Frühstück"
+
+#: src/Utils/Random.vala:78
+msgid "What makes me smile"
+msgstr "Was mich zum Lächeln bringt"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr "Die interessantesten Figuren"
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr "Aktivitäten mit Freunden"
 
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Herzlichen Glückwunsch!🔥"
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -434,31 +443,44 @@ msgstr "Schließen"
 msgid "Close preferences"
 msgstr "Einstellungen schließen"
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
-msgstr " - Jorts"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
+msgstr "%s - Jorts (Entwicklung)"
 
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
-msgstr " (Entwicklung)"
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, c-format
+msgid "%s - Jorts"
+msgstr "%s - Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr "Präferenzen"
+msgid "Preferences - Jorts"
+msgstr "Präferenzen - Jorts!"
 
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences for your Jorts"
-msgstr "Präferenzen für deine Jorts!"
+msgstr "Präferenzen für deine Jorts"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr "Neue Notiz erstellen"
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr "Präferenzen anzeigen"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "Nicht vergessen, niemals"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "Ode an meine Katze"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "Ok, hören Sie zu,"
+
+#~ msgid "Preferences"
+#~ msgstr "Präferenzen"

@@ -1,17 +1,28 @@
+
+
 # Flatpak
 
-## First thing first
 
-1. Install flatpak
 
-2. Install latest flatpak-builder
+
+## Prerequisite
+
+
+1. Install flatpak. Make sure [you have the flathub remote set up](https://flathub.org/setup)
+
+3. Install latest flatpak-builder
 
 ```bash
 flatpak install flatpak-builder
 ```
 
-3. next up, download the sources, open a terminal, and navigate to the source folder
+4. next up, download the sources, either via git clone, or the archive you then extract
 
+```bash
+git clone https://github.com/elly-code/jorts.git
+```
+
+then navigate with the terminal into the source folder
 
 
 ## On elementary OS / with Appcenter remote
@@ -24,7 +35,7 @@ flatpak-builder --force-clean --user --install-deps-from=appcenter --install bui
 ```
 
 
-# On other systems:
+## On other systems
 
 Built using the official command for building and submitting flathub apps,the elementary BaseApp to use Granite, and Gnome Platform
 
@@ -36,7 +47,7 @@ io.github.ellie_commons.jorts.flathub.yml
 ```
 
 
-# The Devel version
+## Developmment version
 
 It can be installed alongside any other version, and is intended for spicy testing. The command and manifest are built for flathub, which is usually more modern than what elementary OS bundles. This allows to test for the bigger user base, and early-troubleshoot bugs in Gnome runtime, baseapp...
 

@@ -34,19 +34,25 @@ Not all releases have an exe, because bundling for Windows and testing it works 
 
 You may want to check the [documentation](https://github.com/elly-code/jorts/tree/main/docs)
 
+Issues are all filed [here in the Issues tab](https://github.com/elly-code/jorts/issues)
+
+You can also [come over in matrix](https://matrix.to/#/#elly-code:matrix.org) to talk to me directly
+
+
+
 
 ## 🛣️ The Future
 
 The app is destined to stay simple. If anything there is already too much in the UI for my comfort, so do not expect /more/
 
 Roadmap:
+ - Document stuff
  - Fix an annoying memory leak where deleted notes linger in memory
  - Bin the whole saving infra and use Gtk 4.24 save-state new thing
  - More icon variants
  - Better list/bullets
  - Co-maintainers would be nice
  - More translations would be nice
-
 
 
 

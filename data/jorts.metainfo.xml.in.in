@@ -30,7 +30,7 @@
     </replaces>
 
     <developer id="io.github.elly-code">
-        <name>Lainsce + Stella + Charlie</name>
+        <name>Lainsce + Stella and Charlie</name>
     </developer>
     <project_group>elly-code</project_group>
     <url type="homepage">https://github.com/elly-code/@APP_NAME@</url>
@@ -93,6 +93,11 @@
     </screenshots>
 
     <releases>
+        <release version="4.1.1" date="2026-05-01">
+            <description>
+                <p>Minor touchups</p>
+            </description>
+        </release>
         <release version="4.1.0" date="2026-04-25">
             <description>
                 <p>Jorts of Spring</p>
@@ -143,75 +148,6 @@
                 <issue url="https://github.com/elly-code/@APP_NAME@/issues/78">Added Ctrl+scroll</issue>
                 <issue url="https://github.com/elly-code/@APP_NAME@/issues/63">Added list feature</issue>
             </issues>
-        </release>
-        <release version="3.5.0" date="2025-11-06">
-            <description>
-                <p>Added windows build. It doesnt need admin rights. Mostly works.</p>
-            </description>
-        </release>
-        <release version="3.4.1" date="2025-11-01">
-            <description>
-                <p>No fun allowed: revert back to default style</p>
-            </description>
-        </release>
-        <release version="3.4.0" date="2025-09-30">
-            <description>
-                <p>🕷️ 3.4.0 Scary Jorts of Boo</p>
-                <ul>
-                    <li>Some UI elements show up after being shown, for a sleek vibe</li>
-                    <li>Ctrl+L to focus note title</li>
-                    <li>Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now</li>
-                    <li>Alt+Number to change theme quickly</li>
-                    <li>New note setting: Monospace (Ctrl+M). Could be for accessibility, could be for ascii doodles</li>
-                    <li>Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs</li>
-                    <li>Added a reset-settings commandline option. Could be handy.</li>
-                </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>@wpkelso strikes again with an amazing special edition icon!</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.3.1" date="2025-07-12">
-            <description>
-                <ul>
-                    <li>Bugfix: Fix Jorts lingering in the background not opening anymore if all windows were closed (#77)</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.3.0" date="2025-07-06">
-            <description>
-                <p>3.3.0 Star Platinum Jorts</p>
-                <ul>
-                    <li>Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now (#75, #76)</li>
-                    <li>Added more random titles</li>
-                    <li>Buttons for add/remove autostart</li>
-                    <li>Some more title placeholders</li>
-                    <li>Under the hood is a bit cleaner now</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.2.2" date="2025-06-05">
-            <description>
-                <p>Bugfix: When toggled off, the actionbar would leave an empty space. It is now fixed - With now a flashier animation to boot.</p>
-            </description>
-        </release>
-        <release version="3.2.0" date="2025-06-03">
-            <description>
-                <p>🌈 3.2.0 Jorts of Resilience and Love</p>
-                <ul>
-                    <li>Add a cool little animation when enabling/disabling actionbar</li>
-                    <li>Fixed blurrinness in high-scaled display</li>
-                    <li>Added high-resolution screenshots</li>
-                    <li>Last minute bugfix, somehow accels did not work when the Preferences were focused</li>
-                    <li>A bit of housekeeping for FR and DE while at it</li>
-                </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>A lovely temporary icon by @wpkelso</li>
-                    <li>Updated EL translations thanks to @OrionasKakomoiroglou!</li>
-                </ul>
-            </description>
         </release>
     </releases>   
 </component>
