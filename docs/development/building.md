@@ -3,12 +3,7 @@
 # Building
 
 1. [Prerequisite](#prerequisite)
-   - [elementary OS](#elementary-os)
-   - [Ubuntu](#ubuntu)
 2. [Setup Meson](#setup-meson)
-   - [Configure](#configure)
-   - [Compile](#compile)
-   - [Update translations](#update-translations)
 3. [Installing](#installing)
 4. [Tools](#tools)
 
@@ -28,13 +23,13 @@ Please make sure you have these dependencies first before building Jorts.
 
 As of the current date (4th May 2026), here is the command to install on...
 
-### elementary OS
+elementary OS
 
 ```bash
 sudo apt install elementary-sdk
 ```
 
-### Ubuntu
+Ubuntu
 
 ```bash
 sudo apt install libgranite-7-common libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 libportal-gtk4-dev
@@ -60,29 +55,18 @@ Once the building is done you can
 cd builddir
 ```
 
-then
-
-### compile
+then compile
 
 ```bash
 ninja
 ```
 
-### update translations
-
-Update translation template
+Update translations
 
 ```bash
-ninja jorts-pot
+ninja jorts-pot ; ninja jorts-update-po
+ninja extra-pot ; ninja extra-update-po
 ```
-
-Update all languages following the template
-
-```bash
-ninja jorts-update-po
-```
-
-For extra text such as desktop file and metainfo, repeat but with extra-pot, extra-update-po
 
 
 
