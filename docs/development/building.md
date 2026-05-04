@@ -96,4 +96,4 @@ ninja uninstall
 
 ## Tools
 
-You can check out [the elementary OS developer tools] (https://docs.elementary.io/contributor-guide/development/developer-tools)
+You can check out [the elementary OS developer tools](https://docs.elementary.io/contributor-guide/development/developer-tools)
