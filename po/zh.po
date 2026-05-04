@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgid "Click to edit the title"
 msgstr "点击编辑标题"
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 #, fuzzy
 msgid "Show Preferences"
 msgstr "显示首选项"
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 #, fuzzy
 msgid "Quit Jorts"
 msgstr "- 短裤"
@@ -47,21 +47,21 @@ msgstr "插入表情符号"
 msgid "Preferences for this sticky note"
 msgstr "该便笺的首选项"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 #, fuzzy
 msgid "Default"
 msgstr "重置为默认值"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 #, fuzzy
 msgid "Use default text font"
 msgstr "点击使用默认文本字体"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 #, fuzzy
 msgid "Use monospaced font"
 msgstr "点击使用单倍行距字体"
@@ -73,15 +73,15 @@ msgstr "点击使用单倍行距字体"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "放大"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "默认缩放级别"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "放大"
 
@@ -140,11 +140,13 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+#, fuzzy
+msgid "All my best friends"
 msgstr "我所有最好的朋友"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+#, fuzzy
+msgid "My secret recipe"
 msgstr "我的超级美味秘方"
 
 #: src/Utils/Random.vala:28
@@ -159,85 +161,86 @@ msgstr "不告诉任何人的超级秘密"
 msgid "My grocery list"
 msgstr "我的杂货清单"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+#, fuzzy
+msgid "Shower thoughts"
 msgstr "淋浴时的随想"
 
-#: src/Utils/Random.vala:32
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "我最喜欢的同人小说"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "我最喜欢的恐龙"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "我的邪恶主谋计划"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "今天让我微笑的事情"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "世界你好"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "新的粘性，新的我"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+#: src/Utils/Random.vala:39
+#, fuzzy
+msgid "Pirate treasure location"
 msgstr "隐藏的海盗宝藏"
 
-#: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "永远不要忘记"
-
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr ""
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "亲爱的日记"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "祝您愉快:)"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "我的服药时间表"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "家务劳动"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "我的猫颂"
-
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+#, fuzzy
+msgid "My cats favourite mischiefs"
 msgstr "我的狗狗最喜欢的玩具"
 
 #: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "我的狗狗最喜欢的玩具"
+
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "我的小鸟多酷啊"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "最后一块饼干事件的嫌疑人"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "我的鹦鹉会说的话"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "酷炫有趣的赞美词"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "好吧，听我说、"
+#, fuzzy
+msgid "Original compliments to give out"
+msgstr "酷炫有趣的赞美词"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -264,7 +267,8 @@ msgid "My amazing mixtape"
 msgstr "我的神奇混音带"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+#, fuzzy
+msgid "Margin scribbles"
 msgstr "餐巾纸涂鸦"
 
 #: src/Utils/Random.vala:58
@@ -346,15 +350,29 @@ msgid "My funniest jokes"
 msgstr "我最有趣的笑话"
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+#, fuzzy
+msgid "The perfect breakfast"
 msgstr "完美的早餐有..."
 
+#: src/Utils/Random.vala:78
+#, fuzzy
+msgid "What makes me smile"
+msgstr "今天让我微笑的事情"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr ""
+
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW 恭喜！ 🔥"
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -447,35 +465,49 @@ msgstr "关闭"
 msgid "Close preferences"
 msgstr "关闭首选项"
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
-msgstr "- 短裤"
-
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, fuzzy, c-format
+msgid "%s - Jorts"
+msgstr "- 短裤"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr "首选项"
+#, fuzzy
+msgid "Preferences - Jorts"
+msgstr "所有便笺的首选项"
 
 #: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "所有便笺的首选项"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr "创建新备注"
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr "显示首选项"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "永远不要忘记"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "我的猫颂"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "好吧，听我说、"
+
+#~ msgid "Preferences"
+#~ msgstr "首选项"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "让没有重点的笔记无法阅读"

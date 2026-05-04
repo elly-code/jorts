@@ -29,7 +29,6 @@ public class Jorts.ZoomBox : Gtk.Box {
     public ZoomBox () {
         Object (
             orientation: Gtk.Orientation.HORIZONTAL,
-            spacing: SPACING_STANDARD,
             //child_spacing: Spacing.LINKED,
             homogeneous: true,
             hexpand: true,
@@ -39,6 +38,8 @@ public class Jorts.ZoomBox : Gtk.Box {
     }
 
     construct {
+        add_css_class (Granite.STYLE_CLASS_LINKED);
+
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
             action_name = ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_OUT,

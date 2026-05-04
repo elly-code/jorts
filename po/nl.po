@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 19:44+0200\n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgid "Click to edit the title"
 msgstr "Klik om de titel te bewerken"
 
 #. Alternate way to access preferences
-#: src/Widgets/TextView.vala:60
+#: src/Widgets/TextView.vala:63
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Voorkeuren tonen"
 
-#: src/Widgets/TextView.vala:61
+#: src/Widgets/TextView.vala:64
 #, fuzzy
 msgid "Quit Jorts"
 msgstr " - Korte broek"
@@ -47,21 +47,21 @@ msgstr "Emoji invoegen"
 msgid "Preferences for this sticky note"
 msgstr "Voorkeuren voor deze sticky note"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:37
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 #, fuzzy
 msgid "Default"
 msgstr "Standaard lettertype"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 #, fuzzy
 msgid "Use default text font"
 msgstr "Klik om het standaard tekstlettertype te gebruiken"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:47
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:50
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
 #, fuzzy
 msgid "Use monospaced font"
 msgstr "Klik om een enkel lettertype te gebruiken"
@@ -73,15 +73,15 @@ msgstr "Klik om een enkel lettertype te gebruiken"
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:46
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
 msgid "Zoom out"
 msgstr "Uitzoomen"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:54
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Default zoom level"
 msgstr "Standaard zoomniveau"
 
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:62
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
 msgid "Zoom in"
 msgstr "Inzoomen"
 
@@ -140,11 +140,13 @@ msgid "No preference, random each time"
 msgstr ""
 
 #: src/Utils/Random.vala:26
-msgid "All my very best friends"
+#, fuzzy
+msgid "All my best friends"
 msgstr "Al mijn allerbeste vrienden"
 
 #: src/Utils/Random.vala:27
-msgid "My super good secret recipe"
+#, fuzzy
+msgid "My secret recipe"
 msgstr "Mijn supergoede geheime recept"
 
 #: src/Utils/Random.vala:28
@@ -159,85 +161,86 @@ msgstr "Supergeheim om aan niemand te vertellen"
 msgid "My grocery list"
 msgstr "Mijn boodschappenlijstje"
 
-#: src/Utils/Random.vala:31
-msgid "Random shower thoughts"
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+#, fuzzy
+msgid "Shower thoughts"
 msgstr "Willekeurige douche gedachten"
 
-#: src/Utils/Random.vala:32
+#: src/Utils/Random.vala:33
 msgid "My fav fanfics"
 msgstr "Mijn favoriete fanfics"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav dinosaurs"
 msgstr "Mijn favoriete dinosaurussen"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My evil mastermind plan"
 msgstr "Mijn kwade meesterbrein plan"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "What made me smile today"
 msgstr "Wat me vandaag deed glimlachen"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "Hello world!"
 msgstr "Hallo wereld!"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "New sticky, new me"
 msgstr "Nieuwe klever, nieuwe ik"
 
-#: src/Utils/Random.vala:38
-msgid "Hidden pirate treasure"
+#: src/Utils/Random.vala:39
+#, fuzzy
+msgid "Pirate treasure location"
 msgstr "Verborgen piratenschat"
 
-#: src/Utils/Random.vala:39
-msgid "To not forget, ever"
-msgstr "Om nooit te vergeten"
-
 #: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr ""
+
+#: src/Utils/Random.vala:41
 msgid "Dear Diary,"
 msgstr "Lief dagboek,"
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Have a nice day! :)"
 msgstr "Fijne dag! :)"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "My meds schedule"
 msgstr "Mijn medicatieschema"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "Household chores"
 msgstr "Huishoudelijke taken"
 
-#: src/Utils/Random.vala:44
-msgid "Ode to my cat"
-msgstr "Ode aan mijn kat"
-
 #: src/Utils/Random.vala:45
-msgid "My dogs favourite toys"
+#, fuzzy
+msgid "My cats favourite mischiefs"
 msgstr "Het favoriete speelgoed van mijn honden"
 
 #: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "Het favoriete speelgoed van mijn honden"
+
+#: src/Utils/Random.vala:47
 msgid "How cool my birds are"
 msgstr "Hoe cool mijn vogels zijn"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
 msgstr "Verdachten in de laatste koekjesaffaire"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "Woorden die mijn papegaaien kennen"
 
-#: src/Utils/Random.vala:49
-msgid "Cool and funny compliments to give out"
-msgstr "Leuke en grappige complimenten om uit te delen"
-
 #: src/Utils/Random.vala:50
-msgid "Ok, listen here,"
-msgstr "Ok, luister hier,"
+#, fuzzy
+msgid "Original compliments to give out"
+msgstr "Leuke en grappige complimenten om uit te delen"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -264,7 +267,8 @@ msgid "My amazing mixtape"
 msgstr "Mijn geweldige mixtape"
 
 #: src/Utils/Random.vala:57
-msgid "Napkin scribblys"
+#, fuzzy
+msgid "Margin scribbles"
 msgstr "Servet krabbetjes"
 
 #: src/Utils/Random.vala:58
@@ -346,15 +350,29 @@ msgid "My funniest jokes"
 msgstr "Mijn grappigste grappen"
 
 #: src/Utils/Random.vala:77
-msgid "The perfect breakfast has..."
+#, fuzzy
+msgid "The perfect breakfast"
 msgstr "Het perfecte ontbijt heeft..."
 
+#: src/Utils/Random.vala:78
+#, fuzzy
+msgid "What makes me smile"
+msgstr "Wat me vandaag deed glimlachen"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr ""
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr ""
+
 #. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:113
+#: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
 msgstr "Gefeliciteerd!"
 
-#: src/Utils/Random.vala:115
+#: src/Utils/Random.vala:118
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -450,35 +468,49 @@ msgstr "Sluit"
 msgid "Close preferences"
 msgstr "Voorkeuren sluiten"
 
-#: src/Windows/StickyNoteWindow.vala:63 src/Windows/StickyNoteWindow.vala:142
-#: src/Windows/StickyNoteWindow.vala:180 src/Windows/PreferenceWindow.vala:49
-msgid " - Jorts"
-msgstr " - Korte broek"
-
-#: src/Windows/StickyNoteWindow.vala:144
-msgid " (Development)"
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
 msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, fuzzy, c-format
+msgid "%s - Jorts"
+msgstr " - Korte broek"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-msgid "Preferences"
-msgstr "Voorkeuren"
+#, fuzzy
+msgid "Preferences - Jorts"
+msgstr "Voorkeuren voor alle plaknotities"
 
 #: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Voorkeuren voor alle plaknotities"
 
-#: src/Application.vala:217
+#: src/Application.vala:216
 msgid "Create a new note"
 msgstr "Een nieuwe notitie maken"
 
-#: src/Application.vala:218
+#: src/Application.vala:217
 msgid "Show preferences"
 msgstr "Voorkeuren tonen"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "Om nooit te vergeten"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "Ode aan mijn kat"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "Ok, luister hier,"
+
+#~ msgid "Preferences"
+#~ msgstr "Voorkeuren"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Maak ongerichte notities onleesbaar"

@@ -25,20 +25,23 @@ public class Jorts.TextView : Granite.HyperTextView {
     public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_TOGGLE_LIST, toggle_list},
+        { ACTION_TOGGLE_LIST, toggle_list}
     };
 
+    public TextView () {
+        Object (
+            wrap_mode: Gtk.WrapMode.WORD_CHAR,
+            buffer: new Gtk.TextBuffer (null),
+            bottom_margin: SPACING_DOUBLE,
+            left_margin: SPACING_DOUBLE,
+            right_margin: SPACING_DOUBLE,
+            top_margin: SPACING_STANDARD,
+            hexpand: true,
+            vexpand: true
+        );
+    }
+
     construct {
-        wrap_mode = Gtk.WrapMode.WORD_CHAR;
-        buffer = new Gtk.TextBuffer (null);
-        bottom_margin = SPACING_DOUBLE;
-        left_margin = SPACING_DOUBLE;
-        right_margin = SPACING_DOUBLE;
-        top_margin = SPACING_STANDARD;
-        hexpand = true;
-        vexpand = true;
-
-
         /***************************************************/
         /*              Actions and controllers            */
         /***************************************************/

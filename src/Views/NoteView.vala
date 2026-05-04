@@ -85,7 +85,8 @@
 
         textview = new Jorts.TextView ();
         scrolled = new Gtk.ScrolledWindow () {
-            child = textview
+            child = textview,
+            hscrollbar_policy = Gtk.PolicyType.NEVER
         };
 
         actionbar = new Jorts.ActionBar ();

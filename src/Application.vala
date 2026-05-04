@@ -213,8 +213,8 @@ Please wait while the app remembers all the things...
         debug ("Parsing commandline arguments...");
 
         OptionEntry[] CMD_OPTION_ENTRIES = {
-                {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, _("Create a new note"), null},
-                {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, _("Show preferences"), null}
+            {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, _("Create a new note"), null},
+            {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, _("Show preferences"), null}
         };
 
         // We have to make an extra copy of the array, since .parse assumes
