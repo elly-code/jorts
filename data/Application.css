@@ -71,8 +71,8 @@ actionbar .themedbutton:focus {
 }
 
 /* Obfuscate note */
-window.scribbly textview.view,
-window.scribbly editablelabel {
+window.scribbly:backdrop textview.view,
+window.scribbly:backdrop editablelabel {
     font-family: "Redacted Script";
 }
 

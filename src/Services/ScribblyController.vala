@@ -22,11 +22,12 @@ public class Jorts.ScribblyController : Object {
 
     public ScribblyController (Jorts.StickyNoteWindow window) {
         this.window = window;
+        window.add_css_class ("scribbly");
 
-        Application.gsettings.bind (
-            "scribbly-mode-active",
-            this, "scribble",
-            SettingsBindFlags.DEFAULT);
+        //  Application.gsettings.bind (
+        //      "scribbly-mode-active",
+        //      this, "scribble",
+        //      SettingsBindFlags.DEFAULT);
     }
 
     /**
