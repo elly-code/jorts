@@ -151,7 +151,7 @@ window.animated headertitle,
 window.animated actionbar,
 window.animated actionbar .themedbutton:hover,
 window.animated actionbar .themedbutton:focus,
-window.animated editablelabel,
+window.animated editablelabel label,
 window.animated actionbar image {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
