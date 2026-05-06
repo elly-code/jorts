@@ -5,10 +5,10 @@ sdk: io.elementary.Sdk
 command: io.github.elly_code.jorts
 
 finish-args:
+  - '--socket=wayland'
+  - '--socket=fallback-x11'
   - '--share=ipc'
   - '--device=dri'
-  - '--socket=fallback-x11'
-  - '--socket=wayland'
 
 cleanup:
   - /include
@@ -18,17 +18,6 @@ cleanup:
   - /share/vala
 
 modules:
-  # Needed for the Scribbly mode
-  # It should be present by default on elementary OS, but better not assume it is the case
-  - name: RedactedScript
-    buildsystem: simple
-    build-commands:
-      - install -Dm0644 RedactedScript-Regular.ttf -t ${FLATPAK_DEST}/share/fonts
-    sources:
-      - type: file
-        url: https://github.com/christiannaths/redacted-font/raw/63e542017bab347ba9be54d7d99b99d4754c3d97/RedactedScript/fonts/ttf/RedactedScript-Regular.ttf
-        sha256: 1ebaab9642a2f43fa33f449760469903143fd1d08b2433eb6c15e28602d9360d
-
   - name: jorts
     buildsystem: meson
     config-opts:

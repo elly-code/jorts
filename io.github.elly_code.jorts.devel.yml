@@ -14,10 +14,10 @@ tags: ['devel']
 desktop-file-name-suffix: ' (Development)'
 
 finish-args:
+  - '--socket=wayland'
+  - '--socket=fallback-x11'
   - '--share=ipc'
   - '--device=dri'
-  - '--socket=fallback-x11'
-  - '--socket=wayland'
 
 modules:
   - name: jorts
