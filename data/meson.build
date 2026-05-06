@@ -43,6 +43,12 @@ if not windows_build
     # ICONS
     subdir('icons')
 
+
+    #========================
+    # FONTS
+    subdir('fonts')
+
+
     #========================
     # DESKTOP
     # Inject some variables into the desktop file before merging in the translations
