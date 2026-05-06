@@ -4,5 +4,5 @@ i18n.gettext(app_name,
 )
 
 if not windows_build
-    subdir ('extra')
+    subdir('extra')
 endif

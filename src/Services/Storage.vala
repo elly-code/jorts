@@ -18,7 +18,7 @@ public class Jorts.Storage : Object {
 
     private const string FILENAME = "saved_state.json";
     private string data_directory;
-    private string storage_path;
+    private string storage_file;
 
     /**
     * Convenience property wrapping load() and save()
@@ -38,7 +38,9 @@ public class Jorts.Storage : Object {
         data_directory      = Environment.get_user_data_dir ();
 #endif
 
-        storage_path        = data_directory + "/" + FILENAME;
+        storage_file        = GLib.Path.build_path("/", data_directory, FILENAME);
+        print (storage_file);
+
         check_if_stash ();
     }
 
@@ -50,13 +52,16 @@ public class Jorts.Storage : Object {
         debug ("do we have a data directory?");
         var dir = File.new_for_path (data_directory);
 
+        if (dir.query_exists ()) {
+            return;
+        }
+
         try {
-			if (!dir.query_exists ()) {
-				dir.make_directory ();
-				debug ("[STORAGE] yes we do now");
-			}
-		} catch (Error e) {
-			warning ("[STORAGE] Failed to prepare target data directory %s\n", e.message);
+			dir.make_directory_with_parents ();
+			debug ("yes we do now");
+
+        } catch (Error e) {
+			warning ("Failed to prepare target data directory %s\n", e.message);
 		}
 	}
 
@@ -73,7 +78,7 @@ public class Jorts.Storage : Object {
             var node = new Json.Node (Json.NodeType.ARRAY);
             node.set_array (json_data);
             generator.set_root (node);
-            generator.to_file (storage_path);
+            generator.to_file (storage_file);
             
         } catch (Error e) {
             warning ("[STORAGE] Failed to save notes %s", e.message);
@@ -86,14 +91,14 @@ public class Jorts.Storage : Object {
     /**
     * Grab from storage, into a Json.Node we can parse. Insist if necessary
     */
-    public Json.Array? load () {
+    public Json.Array load () {
         debug("Loading from storage letsgo");
         check_if_stash ();
         var parser = new Json.Parser ();
         var array = new Json.Array ();
 
         try {
-            parser.load_from_mapped_file (storage_path);
+            parser.load_from_mapped_file (storage_file);
             var node = parser.get_root ();
             array = node.get_array ();
 
