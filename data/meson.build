@@ -1,3 +1,6 @@
+#
+#   METADATA
+#
 
 #========================
 # GRESOURCE
@@ -42,6 +45,12 @@ if not windows_build
     #========================
     # ICONS
     subdir('icons')
+
+
+    #========================
+    # FONTS
+    subdir('fonts')
+
 
     #========================
     # DESKTOP
