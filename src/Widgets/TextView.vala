@@ -80,7 +80,21 @@ public class Jorts.TextView : Granite.HyperTextView {
             GLib.SettingsBindFlags.DEFAULT);
     }
 
+    private void ensure_tags () {
+        if (buffer.tag_table.lookup ("list_item") == null) {
+            var layout = this.create_pango_layout (list_item_start);
+            int width, height;
+            layout.get_pixel_size (out width, out height);
+
+            buffer.create_tag ("list_item",
+                "indent", -width,
+                "left-margin", SPACING_DOUBLE + width
+            );
+        }
+    }
+
     public void toggle_list () {
+        ensure_tags ();
         Gtk.TextIter start, end;
         buffer.get_selection_bounds (out start, out end);
 
@@ -147,6 +161,13 @@ public class Jorts.TextView : Granite.HyperTextView {
                 buffer.get_iter_at_line_offset (out line_start, line_number, 0);
                 buffer.insert (ref line_start, list_item_start, -1);
             }
+
+            // Apply hanging indent tag to the line
+            Gtk.TextIter ls, le;
+            buffer.get_iter_at_line_offset (out ls, line_number, 0);
+            le = ls.copy ();
+            le.forward_to_line_end ();
+            buffer.apply_tag_by_name ("list_item", ls, le);
         }
     }
 
@@ -163,13 +184,19 @@ public class Jorts.TextView : Granite.HyperTextView {
      * Remove list prefix from line x to line y. Presuppose it is there
      */
     private void remove_prefix (int line_number) {
-        Gtk.TextIter line_start, prefix_end;
+        Gtk.TextIter line_start, prefix_end, line_end;
         var remove_range = list_item_start.char_count ();
 
         debug ("doing line " + line_number.to_string ());
         buffer.get_iter_at_line_offset (out line_start, line_number, 0);
         buffer.get_iter_at_line_offset (out prefix_end, line_number, remove_range);
         buffer.delete (ref line_start, ref prefix_end);
+
+        // Remove hanging indent tag from the line
+        buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+        line_end = line_start.copy ();
+        line_end.forward_to_line_end ();
+        buffer.remove_tag_by_name ("list_item", line_start, line_end);
     }
 
     /**
@@ -177,6 +204,7 @@ public class Jorts.TextView : Granite.HyperTextView {
      * Some local stuff is deduplicated in the Ifs, because i do not like the idea of getting computation done not needed 98% of the time
      */
     private bool on_key_pressed (uint keyval, uint keycode, Gdk.ModifierType state) {
+        ensure_tags ();
 
         // If backspace on a prefix: Delete the prefix.
         if (keyval == Gdk.Key.BackSpace) {
@@ -197,6 +225,13 @@ public class Jorts.TextView : Granite.HyperTextView {
                     buffer.begin_user_action ();
                     buffer.delete (ref start, ref end);
                     buffer.insert_at_cursor ("\n", -1);
+
+                    // The line is now an empty normal line, so remove the hanging indent
+                    buffer.get_iter_at_line_offset (out start, line_number, 0);
+                    end = start.copy ();
+                    end.forward_to_line_end ();
+                    buffer.remove_tag_by_name ("list_item", start, end);
+
                     buffer.end_user_action ();
                 }
             }
@@ -212,6 +247,13 @@ public class Jorts.TextView : Granite.HyperTextView {
 
                 buffer.begin_user_action ();
                 buffer.insert_at_cursor ("\n" + list_item_start, -1);
+
+                // Ensure new line has tag applied since it was just inserted
+                buffer.get_iter_at_line_offset (out start, line_number + 1, 0);
+                end = start.copy ();
+                end.forward_to_line_end ();
+                buffer.apply_tag_by_name ("list_item", start, end);
+
                 buffer.end_user_action ();
 
                 return true;
