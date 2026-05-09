@@ -208,7 +208,6 @@ public class Jorts.TextView : Granite.HyperTextView {
 
         // If backspace on a prefix: Delete the prefix.
         if (keyval == Gdk.Key.BackSpace) {
-            print ("backspace");
 
             Gtk.TextIter start, end;
             buffer.get_selection_bounds (out start, out end);
