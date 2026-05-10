@@ -18,26 +18,24 @@ msgstr "Klik for at redigere titlen"
 
 #. Alternate way to access preferences
 #: src/Widgets/TextView.vala:63
-#, fuzzy
 msgid "Show Preferences"
 msgstr "Vis præferencer"
 
 #: src/Widgets/TextView.vala:64
-#, fuzzy
 msgid "Quit Jorts"
-msgstr " - Jorts"
+msgstr "Afslut - Jorts"
 
 #: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
-msgstr "Ny sticky note"
+msgstr "Ny huskeseddel"
 
 #: src/Widgets/ActionBar.vala:47
 msgid "Delete sticky note"
-msgstr "Slet klistermærke"
+msgstr "Slet huskeseddel"
 
 #: src/Widgets/ActionBar.vala:61
 msgid "Toggle list"
-msgstr ""
+msgstr "Skift til liste format"
 
 #: src/Widgets/ActionBar.vala:75
 msgid "Insert emoji"
@@ -48,23 +46,20 @@ msgid "Preferences for this sticky note"
 msgstr "Indstillinger for denne huskeseddel"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
-#, fuzzy
 msgid "Default"
-msgstr "Nulstil til standard"
+msgstr "Standard"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
-#, fuzzy
 msgid "Use default text font"
-msgstr "Klik for at bruge standardskrifttype"
+msgstr "Brug standardskrifttype"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
 msgid "Monospace"
 msgstr "Monospace"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
-#, fuzzy
 msgid "Use monospaced font"
-msgstr "Klik for at bruge monospaced font"
+msgstr "Brug monospaced font"
 
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
@@ -86,9 +81,8 @@ msgid "Zoom in"
 msgstr "Zoom ind"
 
 #: src/Objects/NoteData.vala:48
-#, fuzzy
 msgid "Forgot title!"
-msgstr "Rediger titel"
+msgstr "Glemt titel!"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
 #: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
@@ -121,7 +115,7 @@ msgstr "Bubblegum"
 
 #: src/Objects/Themes.vala:70
 msgid "Grape"
-msgstr "Drue"
+msgstr "Vindrue"
 
 #: src/Objects/Themes.vala:71
 msgid "Cocoa"
@@ -133,21 +127,19 @@ msgstr "Skifer"
 
 #: src/Objects/Themes.vala:73
 msgid "Latte"
-msgstr ""
+msgstr "Latte"
 
 #: src/Objects/Themes.vala:74
 msgid "No preference, random each time"
-msgstr ""
+msgstr "Ingen standard, forskellig hver gang"
 
 #: src/Utils/Random.vala:26
-#, fuzzy
 msgid "All my best friends"
-msgstr "Alle mine allerbedste venner"
+msgstr "Alle mine bedste venner"
 
 #: src/Utils/Random.vala:27
-#, fuzzy
 msgid "My secret recipe"
-msgstr "Min supergode hemmelige opskrift"
+msgstr "Min hemmelige opskrift"
 
 #: src/Utils/Random.vala:28
 msgid "My todo list"
@@ -155,7 +147,7 @@ msgstr "Min todo-liste"
 
 #: src/Utils/Random.vala:29
 msgid "Super secret to not tell anyone"
-msgstr "Superhemmelighed, som du ikke må fortælle nogen"
+msgstr "Super hemmeligt, fortæl ingen"
 
 #: src/Utils/Random.vala:30
 msgid "My grocery list"
@@ -163,9 +155,8 @@ msgstr "Min indkøbsliste"
 
 #. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
 #: src/Utils/Random.vala:32
-#, fuzzy
 msgid "Shower thoughts"
-msgstr "Tilfældige tanker om brusebad"
+msgstr "Brusebads tanker"
 
 #: src/Utils/Random.vala:33
 msgid "My fav fanfics"
@@ -189,16 +180,15 @@ msgstr "Hej verden!"
 
 #: src/Utils/Random.vala:38
 msgid "New sticky, new me"
-msgstr "Nyt klistermærke, ny mig"
+msgstr "Nyt huskeseddel, ny mig"
 
 #: src/Utils/Random.vala:39
-#, fuzzy
 msgid "Pirate treasure location"
-msgstr "Skjult piratskat"
+msgstr "Piratskats lokationen"
 
 #: src/Utils/Random.vala:40
 msgid "To remember"
-msgstr ""
+msgstr "At huske"
 
 #: src/Utils/Random.vala:41
 msgid "Dear Diary,"
@@ -217,9 +207,8 @@ msgid "Household chores"
 msgstr "Huslige pligter"
 
 #: src/Utils/Random.vala:45
-#, fuzzy
 msgid "My cats favourite mischiefs"
-msgstr "Mine hundes yndlingslegetøj"
+msgstr "Mine kattes yndlings drillerier"
 
 #: src/Utils/Random.vala:46
 msgid "My dogs favourite toys"
@@ -231,16 +220,15 @@ msgstr "Hvor seje mine fugle er"
 
 #: src/Utils/Random.vala:48
 msgid "Suspects in the Last Cookie affair"
-msgstr "Mistænkte i sagen om den sidste cookie"
+msgstr "Mistænkte i sagen om den sidste småkage"
 
 #: src/Utils/Random.vala:49
 msgid "Words my parrots know"
 msgstr "Ord, som mine papegøjer kender"
 
 #: src/Utils/Random.vala:50
-#, fuzzy
 msgid "Original compliments to give out"
-msgstr "Seje og sjove komplimenter at give"
+msgstr "Originale komplimenter at give"
 
 #: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
@@ -252,7 +240,7 @@ msgstr "Mine små noter"
 
 #: src/Utils/Random.vala:53
 msgid "Surprise gift list"
-msgstr "Overraskende gaveliste"
+msgstr "Overraskelsesgave liste"
 
 #: src/Utils/Random.vala:54
 msgid "Brainstorming notes"
@@ -260,16 +248,15 @@ msgstr "Noter til brainstorming"
 
 #: src/Utils/Random.vala:55
 msgid "To bring to the party"
-msgstr "At tage med til festen"
+msgstr "Tag dette med til festen"
 
 #: src/Utils/Random.vala:56
 msgid "My amazing mixtape"
 msgstr "Mit fantastiske mixtape"
 
 #: src/Utils/Random.vala:57
-#, fuzzy
 msgid "Margin scribbles"
-msgstr "Servietskriblerier"
+msgstr "Margin-skriblerier"
 
 #: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
@@ -292,9 +279,8 @@ msgid "For the barbecue"
 msgstr "Til grillen"
 
 #: src/Utils/Random.vala:63
-#, fuzzy
 msgid "My favourite bands"
-msgstr "Mine hundes yndlingslegetøj"
+msgstr "Mine favorit bands"
 
 #: src/Utils/Random.vala:64
 msgid "Best ingredients for salad"
@@ -330,7 +316,7 @@ msgstr "Alles pizzabestilling"
 
 #: src/Utils/Random.vala:72
 msgid "Today selfcare to do"
-msgstr "I dag skal du lave selvpleje"
+msgstr "Selvpleje du skal lave i dag"
 
 #: src/Utils/Random.vala:73
 msgid "Important affirmations to remember"
@@ -341,36 +327,33 @@ msgid "The coolest linux apps"
 msgstr "De fedeste linux-apps"
 
 #: src/Utils/Random.vala:75
-#, fuzzy
 msgid "My favourite dishes"
-msgstr "Mine hundes yndlingslegetøj"
+msgstr "Mine yndlingsretter"
 
 #: src/Utils/Random.vala:76
 msgid "My funniest jokes"
 msgstr "Mine sjoveste vittigheder"
 
 #: src/Utils/Random.vala:77
-#, fuzzy
 msgid "The perfect breakfast"
-msgstr "Den perfekte morgenmad har..."
+msgstr "Den perfekte morgenmad"
 
 #: src/Utils/Random.vala:78
-#, fuzzy
 msgid "What makes me smile"
-msgstr "Hvad fik mig til at smile i dag"
+msgstr "Dette fik mig til at smile"
 
 #: src/Utils/Random.vala:79
 msgid "Most interesting characters"
-msgstr ""
+msgstr "Mest interessante karakterer"
 
 #: src/Utils/Random.vala:80
 msgid "Activities to do with friends"
-msgstr ""
+msgstr "Aktiviteter man kan lave med venner"
 
 #. /TRANSLATORS: This is for an easter egg
 #: src/Utils/Random.vala:116
 msgid "🔥WOW Congratulations!🔥"
-msgstr "🔥WOW Tillykke! 🔥"
+msgstr "🔥WOW Tillykke!🔥"
 
 #: src/Utils/Random.vala:118
 msgid ""
@@ -404,56 +387,50 @@ msgstr "Anmodning til systemet sendt"
 
 #: src/Views/PreferencesView.vala:51
 msgid "Reset to default"
-msgstr ""
+msgstr "Nulstil til standard"
 
 #: src/Views/PreferencesView.vala:54
 msgid "List item prefix"
-msgstr ""
+msgstr "Præfix til listelement"
 
 #: src/Views/PreferencesView.vala:56
 msgid "If left empty, the list button will be hidden"
-msgstr ""
+msgstr "Hvis efterladt tom, vil liste kappen være skjult"
 
 #: src/Views/PreferencesView.vala:78
-#, fuzzy
 msgid "Scribble mode"
-msgstr "Aktiver scribbly-tilstand"
+msgstr "Scrible-tilstand"
 
 #: src/Views/PreferencesView.vala:79
-#, fuzzy
 msgid "Scribble text of unfocused notes (Ctrl+H)"
-msgstr "Skjul indholdet af ufokuserede sticky notes"
+msgstr "Skribler teksten på ufokuseret noter"
 
 #. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:91
-#, fuzzy
 msgid "Hide bottom bar"
-msgstr "Skjul knapbjælke"
+msgstr "Skjul nederste bjælke"
 
 #: src/Views/PreferencesView.vala:92
-#, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr ""
-"Hvis den er aktiveret, skjules den nederste bjælke i klistermærker. "
-"Tastaturgenveje vil stadig fungere (Ctrl+T)"
+msgstr "Tastaturgenveje vil stadig fungere (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:110
 msgid "Enable"
-msgstr ""
+msgstr "Aktiver"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:121
 msgid "Disable"
-msgstr ""
+msgstr "Deaktiver"
 
 #: src/Views/PreferencesView.vala:135
 msgid "Automatically start Jorts"
-msgstr ""
+msgstr "Start Jorts automatisk"
 
 #: src/Views/PreferencesView.vala:138
 msgid "Show your sticky notes when you log in"
-msgstr ""
+msgstr "Vis dine huskesedler når du logger ind"
 
 #: src/Views/PreferencesView.vala:156
 msgid "Support us!"
@@ -470,21 +447,20 @@ msgstr "Luk indstillinger"
 #: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
 #, c-format
 msgid "%s - Jorts (Development)"
-msgstr ""
+msgstr "%s - Jorts (Udvikling)"
 
 #: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
-#, fuzzy, c-format
+#, c-format
 msgid "%s - Jorts"
-msgstr " - Jorts"
+msgstr "%s - Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:49
-#, fuzzy
 msgid "Preferences - Jorts"
-msgstr "Præferencer for dine Jorts"
+msgstr "Præferencer - Jorts"
 
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences for your Jorts"
