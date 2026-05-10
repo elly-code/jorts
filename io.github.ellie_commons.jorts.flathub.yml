@@ -28,8 +28,8 @@ modules:
   - name: jorts
     buildsystem: meson
     config-opts:
-      - -Dvariant=default
-      - -Dlegacy-rdnn=true
+      - -Dprofile=legacy-rdnn
+      - -Dicon-variant=default
     sources:
       - type: dir
         path: .
