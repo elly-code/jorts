@@ -131,7 +131,7 @@ msgstr "Latte"
 
 #: src/Objects/Themes.vala:74
 msgid "No preference, random each time"
-msgstr "Ingen standard, forskellig hver gang"
+msgstr "Intet foretrukket, tilfældigt hver gang"
 
 #: src/Utils/Random.vala:26
 msgid "All my best friends"
