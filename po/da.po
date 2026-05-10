@@ -23,7 +23,7 @@ msgstr "Vis præferencer"
 
 #: src/Widgets/TextView.vala:64
 msgid "Quit Jorts"
-msgstr "Afslut - Jorts"
+msgstr "Afslut Jorts"
 
 #: src/Widgets/ActionBar.vala:34
 msgid "New sticky note"
