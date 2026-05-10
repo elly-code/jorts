@@ -81,16 +81,30 @@ public class Jorts.TextView : Granite.HyperTextView {
     }
 
     private void ensure_tags () {
-        if (buffer.tag_table.lookup ("list_item") == null) {
-            var layout = this.create_pango_layout (list_item_start);
-            int width, height;
-            layout.get_pixel_size (out width, out height);
+        if (list_item_start == "") {
+            return;
+        }
 
+        var layout = this.create_pango_layout (list_item_start);
+        int width, height;
+        layout.get_pixel_size (out width, out height);
+
+        var list_item_tag = buffer.tag_table.lookup ("list_item");
+
+        if (list_item_tag == null) {
             buffer.create_tag ("list_item",
                 "indent", -width,
                 "left-margin", SPACING_DOUBLE + width
             );
+            return;
         }
+
+        list_item_tag.indent = -width;
+        list_item_tag.left_margin = SPACING_DOUBLE + width;
+    }
+
+    public void refresh_list_item_indentation () {
+        ensure_tags ();
     }
 
     public void toggle_list () {
