@@ -1,0 +1,480 @@
+# Croatian translation for jorts.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the jorts package.
+# Milo Ivir <mail@milotype.de>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: jorts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-01 20:34+0200\n"
+"PO-Revision-Date: 2026-05-11 18:46+0200\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: src/Widgets/EditableLabel.vala:38
+msgid "Click to edit the title"
+msgstr "Klikni za uređivanje naslova"
+
+#. Alternate way to access preferences
+#: src/Widgets/TextView.vala:63
+msgid "Show Preferences"
+msgstr "Prikaži postavke"
+
+#: src/Widgets/TextView.vala:64
+msgid "Quit Jorts"
+msgstr "Zatvori Jorts"
+
+#: src/Widgets/ActionBar.vala:34
+msgid "New sticky note"
+msgstr "Nova ljepljiva bilješka"
+
+#: src/Widgets/ActionBar.vala:47
+msgid "Delete sticky note"
+msgstr "Izbriši ljepljivu bilješku"
+
+#: src/Widgets/ActionBar.vala:61
+msgid "Toggle list"
+msgstr "Uključi/Isključi popis"
+
+#: src/Widgets/ActionBar.vala:75
+msgid "Insert emoji"
+msgstr "Umetni emoji"
+
+#: src/Widgets/ActionBar.vala:89
+msgid "Preferences for this sticky note"
+msgstr "Postavke za ovu ljepljivu bilješku"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
+msgid "Default"
+msgstr "Standardno"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+msgid "Use default text font"
+msgstr "Koristi standardni font za tekst"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
+msgid "Monospace"
+msgstr "Font fiksne širine"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
+msgid "Use monospaced font"
+msgstr "Koristi font fiksne širine"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
+#, c-format
+msgid "%d%%"
+msgstr "%d %%"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
+msgid "Zoom out"
+msgstr "Smanji prikaz"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+msgid "Default zoom level"
+msgstr "Standardna razina zumiranja"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
+msgid "Zoom in"
+msgstr "Uvećaj prikaz"
+
+#: src/Objects/NoteData.vala:48
+msgid "Forgot title!"
+msgstr "Zaboravio/la sam naslov!"
+
+#. /TRANSLATORS: These are the names of the elementary OS colours
+#: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
+msgid "Blueberry"
+msgstr "Borovnica"
+
+#: src/Objects/Themes.vala:64
+msgid "Mint"
+msgstr "Mint"
+
+#: src/Objects/Themes.vala:65
+msgid "Lime"
+msgstr "Limunasto žuta"
+
+#: src/Objects/Themes.vala:66
+msgid "Banana"
+msgstr "Banana"
+
+#: src/Objects/Themes.vala:67
+msgid "Orange"
+msgstr "Narančasta"
+
+#: src/Objects/Themes.vala:68
+msgid "Strawberry"
+msgstr "Jagoda"
+
+#: src/Objects/Themes.vala:69
+msgid "Bubblegum"
+msgstr "Bubblegum"
+
+#: src/Objects/Themes.vala:70
+msgid "Grape"
+msgstr "Grožđe"
+
+#: src/Objects/Themes.vala:71
+msgid "Cocoa"
+msgstr "Kakao"
+
+#: src/Objects/Themes.vala:72
+msgid "Slate"
+msgstr "Tamnosiva"
+
+#: src/Objects/Themes.vala:73
+msgid "Latte"
+msgstr "Latte"
+
+#: src/Objects/Themes.vala:74
+msgid "No preference, random each time"
+msgstr "Bez preferencije, svaki put nasumično"
+
+#: src/Utils/Random.vala:26
+msgid "All my best friends"
+msgstr "Svi moji najbolji prijatelji"
+
+#: src/Utils/Random.vala:27
+msgid "My secret recipe"
+msgstr "Moj tajni recept"
+
+#: src/Utils/Random.vala:28
+msgid "My todo list"
+msgstr "Moj popis zadataka"
+
+#: src/Utils/Random.vala:29
+msgid "Super secret to not tell anyone"
+msgstr "Super tajna koju nikome ne smijem reći"
+
+#: src/Utils/Random.vala:30
+msgid "My grocery list"
+msgstr "Moj popis za kupovinu"
+
+#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:32
+msgid "Shower thoughts"
+msgstr "Razmišljanja pod tušem"
+
+#: src/Utils/Random.vala:33
+msgid "My fav fanfics"
+msgstr "Moje omiljene fan fiction priče"
+
+#: src/Utils/Random.vala:34
+msgid "My fav dinosaurs"
+msgstr "Moji omiljeni dinosauri"
+
+#: src/Utils/Random.vala:35
+msgid "My evil mastermind plan"
+msgstr "Moj zlokoban genijalni plan"
+
+#: src/Utils/Random.vala:36
+msgid "What made me smile today"
+msgstr "Što me danas nasmijalo"
+
+#: src/Utils/Random.vala:37
+msgid "Hello world!"
+msgstr "Bok svijete!"
+
+#: src/Utils/Random.vala:38
+msgid "New sticky, new me"
+msgstr "Nova ljepljiva bilješka, novi ja"
+
+#: src/Utils/Random.vala:39
+msgid "Pirate treasure location"
+msgstr "Lokacija piratskog blaga"
+
+#: src/Utils/Random.vala:40
+msgid "To remember"
+msgstr "Za pamćenje"
+
+#: src/Utils/Random.vala:41
+msgid "Dear Diary,"
+msgstr "Dragi dnevniče,"
+
+#: src/Utils/Random.vala:42
+msgid "Have a nice day! :)"
+msgstr "Želim ti ugodan dan! :)"
+
+#: src/Utils/Random.vala:43
+msgid "My meds schedule"
+msgstr "Moj raspored uzimanja lijekova"
+
+#: src/Utils/Random.vala:44
+msgid "Household chores"
+msgstr "Kućne obaveze"
+
+#: src/Utils/Random.vala:45
+msgid "My cats favourite mischiefs"
+msgstr "Omiljeni nestašluci mojih mački"
+
+#: src/Utils/Random.vala:46
+msgid "My dogs favourite toys"
+msgstr "Omiljene igračke mojih pasa"
+
+#: src/Utils/Random.vala:47
+msgid "How cool my birds are"
+msgstr "Genijalnost mojih ptica"
+
+#: src/Utils/Random.vala:48
+msgid "Suspects in the Last Cookie affair"
+msgstr "Osumnjičeni u aferi zadnji kolačić"
+
+#: src/Utils/Random.vala:49
+msgid "Words my parrots know"
+msgstr "Riječi koje moji papige znaju"
+
+#: src/Utils/Random.vala:50
+msgid "Original compliments to give out"
+msgstr "Originalni komplimenti za dijeljenje"
+
+#: src/Utils/Random.vala:51
+msgid "My dream Pokemon team"
+msgstr "Moj Pokemon tim iz snova"
+
+#: src/Utils/Random.vala:52
+msgid "My little notes"
+msgstr "Moje male bilješke"
+
+#: src/Utils/Random.vala:53
+msgid "Surprise gift list"
+msgstr "Popis iznenađenja za poklone"
+
+#: src/Utils/Random.vala:54
+msgid "Brainstorming notes"
+msgstr "Bilješke o razmišljanju"
+
+#: src/Utils/Random.vala:55
+msgid "To bring to the party"
+msgstr "Ponijeti na party"
+
+#: src/Utils/Random.vala:56
+msgid "My amazing mixtape"
+msgstr "Moj nevjerojatan mixtape"
+
+#: src/Utils/Random.vala:57
+msgid "Margin scribbles"
+msgstr "Zabilješke u marginama"
+
+#: src/Utils/Random.vala:58
+msgid "My fav songs to sing along"
+msgstr "Moje omiljene pjesme za pjevanje"
+
+#: src/Utils/Random.vala:59
+msgid "When to water which plant"
+msgstr "Kada zalijevati koju biljku"
+
+#: src/Utils/Random.vala:60
+msgid "Top 10 anime betrayals"
+msgstr "Top 10 izdaja animea"
+
+#: src/Utils/Random.vala:61
+msgid "Amazing ascii art!"
+msgstr "Nevjerojatna ascii slika!"
+
+#: src/Utils/Random.vala:62
+msgid "For the barbecue"
+msgstr "Za roštilj"
+
+#: src/Utils/Random.vala:63
+msgid "My favourite bands"
+msgstr "Moji omiljeni bendovi"
+
+#: src/Utils/Random.vala:64
+msgid "Best ingredients for salad"
+msgstr "Najbolji sastojci za salatu"
+
+#: src/Utils/Random.vala:65
+msgid "Books to read"
+msgstr "Knjige za čitanje"
+
+#: src/Utils/Random.vala:66
+msgid "Places to visit"
+msgstr "Mjesta za posjetiti"
+
+#: src/Utils/Random.vala:67
+msgid "Hobbies to try out"
+msgstr "Hobiji koje treba isprobati"
+
+#: src/Utils/Random.vala:68
+msgid "Who would win against Goku"
+msgstr "Tko će pobijediti protiv Gokua"
+
+#: src/Utils/Random.vala:69
+msgid "To plant in the garden"
+msgstr "Za sadnju u vrtu"
+
+#: src/Utils/Random.vala:70
+msgid "Meals this week"
+msgstr "Obroci ovaj tjedan"
+
+#: src/Utils/Random.vala:71
+msgid "Everyone's pizza order"
+msgstr "Narudžba pizze za svakoga"
+
+#: src/Utils/Random.vala:72
+msgid "Today selfcare to do"
+msgstr "Današnja briga o sebi"
+
+#: src/Utils/Random.vala:73
+msgid "Important affirmations to remember"
+msgstr "Važna potvrđivanja za zapamtiti"
+
+#: src/Utils/Random.vala:74
+msgid "The coolest linux apps"
+msgstr "Najbolje linux aplikacije"
+
+#: src/Utils/Random.vala:75
+msgid "My favourite dishes"
+msgstr "Moja omiljena jela"
+
+#: src/Utils/Random.vala:76
+msgid "My funniest jokes"
+msgstr "Moji najsmješniji vicevi"
+
+#: src/Utils/Random.vala:77
+msgid "The perfect breakfast"
+msgstr "Savršen doručak"
+
+#: src/Utils/Random.vala:78
+msgid "What makes me smile"
+msgstr "Što me nasmijava"
+
+#: src/Utils/Random.vala:79
+msgid "Most interesting characters"
+msgstr "Najzanimljiviji likovi"
+
+#: src/Utils/Random.vala:80
+msgid "Activities to do with friends"
+msgstr "Aktivnosti s prijateljima"
+
+#. /TRANSLATORS: This is for an easter egg
+#: src/Utils/Random.vala:116
+msgid "🔥WOW Congratulations!🔥"
+msgstr "🔥WOW čestitke!🔥"
+
+#: src/Utils/Random.vala:118
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+msgstr ""
+"Pronašao/la si Zlatnu ljepljivu bilješku!\n"
+"\n"
+"LUDILO, ALI ISTINA: Ova se poruka pojavljuje jednom u tisuću puta!\n"
+"Nitko ti neće vjerovati hehehe ;)\n"
+"\n"
+"Nadam se da će ti moja mala aplikacija donijeti puno radosti\n"
+"Želim ti ugodan dan! 🎇\n"
+
+#: src/Utils/Libportal.vala:16
+msgid "Remove Jorts from system autostart"
+msgstr "Ukloni Jortsa iz sustavskog automatskog pokretanja"
+
+#: src/Utils/Libportal.vala:29
+msgid "Set Jorts to start with the computer"
+msgstr "Postavi Jorts da se pokrene s računalom"
+
+#: src/Views/PreferencesView.vala:17
+msgid "Request to system sent"
+msgstr "Zahtjev sustavu je poslan"
+
+#: src/Views/PreferencesView.vala:51
+msgid "Reset to default"
+msgstr "Resetiraj na standardne vrijednosti"
+
+#: src/Views/PreferencesView.vala:54
+msgid "List item prefix"
+msgstr "Prefiks stavke popisa"
+
+#: src/Views/PreferencesView.vala:56
+msgid "If left empty, the list button will be hidden"
+msgstr "Ako ostane prazan, gumb za popis će se sakriti"
+
+#: src/Views/PreferencesView.vala:78
+msgid "Scribble mode"
+msgstr "Modus zabilješki"
+
+#: src/Views/PreferencesView.vala:79
+msgid "Scribble text of unfocused notes (Ctrl+H)"
+msgstr "Tekst zabilješka nefokusiranih bilješki (Ctrl+H)"
+
+#. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#: src/Views/PreferencesView.vala:91
+msgid "Hide bottom bar"
+msgstr "Sakrij donju traku"
+
+#: src/Views/PreferencesView.vala:92
+msgid "Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Tipkovni prečaci će i dalje raditi (Ctrl+T)"
+
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/PreferencesView.vala:110
+msgid "Enable"
+msgstr "Aktiviraj"
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/PreferencesView.vala:121
+msgid "Disable"
+msgstr "Deaktiviraj"
+
+#: src/Views/PreferencesView.vala:135
+msgid "Automatically start Jorts"
+msgstr "Pokreni Jorts automatski"
+
+#: src/Views/PreferencesView.vala:138
+msgid "Show your sticky notes when you log in"
+msgstr "Prikaži svoje ljepljive bilješke kada se prijaviš"
+
+#: src/Views/PreferencesView.vala:156
+msgid "Support us!"
+msgstr "Podrži nas!"
+
+#: src/Views/PreferencesView.vala:162
+msgid "Close"
+msgstr "Zatvori"
+
+#: src/Views/PreferencesView.vala:165
+msgid "Close preferences"
+msgstr "Zatvori postavke"
+
+#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#, c-format
+msgid "%s - Jorts (Development)"
+msgstr "%s – Jorts (razvoj)"
+
+#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#, c-format
+msgid "%s - Jorts"
+msgstr "%s – Jorts"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:49
+msgid "Preferences - Jorts"
+msgstr "Postavke – Jorts"
+
+#: src/Windows/PreferenceWindow.vala:52
+msgid "Preferences for your Jorts"
+msgstr "Postavke za tvoju Jorts aplikaciju"
+
+#: src/Application.vala:216
+msgid "Create a new note"
+msgstr "Stvori novu bilješku"
+
+#: src/Application.vala:217
+msgid "Show preferences"
+msgstr "Prikaži postavke"
