@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 20:10+0200\n"
+"POT-Creation-Date: 2026-05-12 18:48+0200\n"
 "PO-Revision-Date: 2025-04-06 17:08+0400\n"
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "Language-Team: none\n"
@@ -16,7 +16,7 @@ msgstr ""
 msgid "Jorts"
 msgstr "Jorts"
 
-#: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:49
+#: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:48
 msgid "Sticky notes"
 msgstr "Стикеры для заметок"
 
@@ -57,13 +57,14 @@ msgid "Features include:"
 msgstr "Включенные функции:"
 
 #: data/jorts.metainfo.xml.in.in:15
-#, fuzzy
-msgid "Colourful: Ten pretty themes. Any new note gets a random one"
+msgid "Colourful: Eleven pretty pastel themes"
 msgstr ""
-"Цвета: Десять красивых тем. Любая новая заметка выбирается случайным образом"
 
 #: data/jorts.metainfo.xml.in.in:16
-msgid "Adaptive: New notes get the zoom you last chose"
+#, fuzzy
+msgid ""
+"Adaptive: New notes get the zoom and font you last chose, and a random new "
+"color"
 msgstr ""
 "Адаптивность: новые заметки получают масштаб, который вы выбирали в прошлый "
 "раз"
@@ -82,68 +83,58 @@ msgstr "Вы можете открывать ссылки и электронн�
 msgid "Private: Try the scribble mode!"
 msgstr "Частное лицо: Попробуйте режим каракулей!"
 
-#: data/jorts.metainfo.xml.in.in:21
-#, fuzzy
-msgid ""
-"This is a fork of an old version of \"Notejot\" by lainsce. The community "
-"liked it so much, we thought it would be great to revive it!"
-msgstr ""
-"Это ответвление старой версии «Notejot» от lainsce, которое не существовало "
-"бы без её работы. Сообществу оно так понравилось, что мы решили возродить "
-"его!"
-
-#: data/jorts.metainfo.xml.in.in:33
+#: data/jorts.metainfo.xml.in.in:32
 #, fuzzy
 msgid "Lainsce + Stella and Charlie"
 msgstr "Лайнс + Стелла"
 
-#: data/jorts.metainfo.xml.in.in:50
+#: data/jorts.metainfo.xml.in.in:49
 #, fuzzy
 msgid "Sticky note"
 msgstr "Стикеры для заметок"
 
-#: data/jorts.metainfo.xml.in.in:51
+#: data/jorts.metainfo.xml.in.in:50
 #, fuzzy
 msgid "Stickies"
 msgstr "Стикеры для заметок"
 
-#: data/jorts.metainfo.xml.in.in:52
+#: data/jorts.metainfo.xml.in.in:51
 msgid "Colourful"
 msgstr "Разноцветные"
 
-#: data/jorts.metainfo.xml.in.in:53
+#: data/jorts.metainfo.xml.in.in:52
 msgid "Notes"
 msgstr "Примечания"
 
-#: data/jorts.metainfo.xml.in.in:54
+#: data/jorts.metainfo.xml.in.in:53
 msgid "Cute"
 msgstr "Милый"
 
-#: data/jorts.metainfo.xml.in.in:55
+#: data/jorts.metainfo.xml.in.in:54
 msgid "Desktop"
 msgstr "Настольный компьютер"
 
-#: data/jorts.metainfo.xml.in.in:56
+#: data/jorts.metainfo.xml.in.in:55
 msgid "Reminder"
 msgstr "Напоминание"
 
-#: data/jorts.metainfo.xml.in.in:57
+#: data/jorts.metainfo.xml.in.in:56
 msgid "Utility"
 msgstr "Коммунальное хозяйство"
 
-#: data/jorts.metainfo.xml.in.in:58
+#: data/jorts.metainfo.xml.in.in:57
 msgid "Pantheon"
 msgstr "Пантеон"
 
-#: data/jorts.metainfo.xml.in.in:59
+#: data/jorts.metainfo.xml.in.in:58
 msgid "elementary OS"
 msgstr "элементарная ОС"
 
-#: data/jorts.metainfo.xml.in.in:74
+#: data/jorts.metainfo.xml.in.in:73
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "Стикер с темой «Черника»"
 
-#: data/jorts.metainfo.xml.in.in:78
+#: data/jorts.metainfo.xml.in.in:77
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
@@ -151,101 +142,143 @@ msgstr ""
 "Трансляция? Боитесь, что кто-то заглянет вам через плечо? Попробуйте режим "
 "рисования!"
 
-#: data/jorts.metainfo.xml.in.in:82
+#: data/jorts.metainfo.xml.in.in:81
 msgid "Look! Ascii art in a sticky note!"
 msgstr "Смотрите! Искусство Ascii в стикерах!"
 
-#: data/jorts.metainfo.xml.in.in:86
+#: data/jorts.metainfo.xml.in.in:85
 msgid "The preferences dialog in light mode"
 msgstr "Диалог настроек в режиме освещения"
 
-#: data/jorts.metainfo.xml.in.in:90
+#: data/jorts.metainfo.xml.in.in:89
 msgid "The preferences dialog in dark mode"
 msgstr "Диалог настроек в темном режиме"
 
-#: data/jorts.metainfo.xml.in.in:98
+#: data/jorts.metainfo.xml.in.in:97
+msgid "The Unyielding Jorts"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:99
+msgid "Lovely Pride variant thanks to @wpkelso!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:100
+msgid "Added tabulated lists thanks to @MysterieCatDev!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:101
+#, fuzzy
+msgid "Added Danish translation thanks to @pracedru!"
+msgstr "Обновленные переводы"
+
+#: data/jorts.metainfo.xml.in.in:102
+#, fuzzy
+msgid "Added Croatian translation thanks to @milotype!"
+msgstr "Обновленные переводы"
+
+#: data/jorts.metainfo.xml.in.in:103
+#, fuzzy
+msgid "Updated Spanish translation thanks to Eli!"
+msgstr "Обновленные переводы"
+
+#: data/jorts.metainfo.xml.in.in:109
 msgid "Minor touchups"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:103
+#: data/jorts.metainfo.xml.in.in:114
 msgid "Jorts of Spring"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:105
+#: data/jorts.metainfo.xml.in.in:116
 msgid "New color: Latte!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:106
+#: data/jorts.metainfo.xml.in.in:117
 msgid "Added Preferences and Quit to the note right-click"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:107
+#: data/jorts.metainfo.xml.in.in:118
 msgid "A lot of under-the-hood spring cleaning"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:113
+#: data/jorts.metainfo.xml.in.in:124
 msgid "Organization change"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:115
+#: data/jorts.metainfo.xml.in.in:126
 msgid "From ellie-commons to elly-code"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:117 data/jorts.metainfo.xml.in.in:139
+#: data/jorts.metainfo.xml.in.in:128 data/jorts.metainfo.xml.in.in:150
 msgid "😎 Guests stars:"
 msgstr "😎 Гости-звезды:"
 
-#: data/jorts.metainfo.xml.in.in:119
+#: data/jorts.metainfo.xml.in.in:130
 #, fuzzy
 msgid "Updated sv-SE translation thanks to @yeager!"
 msgstr "Обновленные переводы"
 
-#: data/jorts.metainfo.xml.in.in:120
+#: data/jorts.metainfo.xml.in.in:131
 #, fuzzy
 msgid "Added vietnamese translation thanks to @hthienloc!"
 msgstr "Обновленные переводы"
 
-#: data/jorts.metainfo.xml.in.in:129
+#: data/jorts.metainfo.xml.in.in:140
 #, fuzzy
 msgid "🚀 4.0.0 Jorts of Hyperspace!"
 msgstr "2.4.0 The Jorts of Ice"
 
-#: data/jorts.metainfo.xml.in.in:131
+#: data/jorts.metainfo.xml.in.in:142
 msgid "Version 4 to align with Gtk version"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:132
+#: data/jorts.metainfo.xml.in.in:143
 msgid "Added button to toggle lists, and ability to customize them"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:133
+#: data/jorts.metainfo.xml.in.in:144
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:134
+#: data/jorts.metainfo.xml.in.in:145
 msgid "More zoom options"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:135
+#: data/jorts.metainfo.xml.in.in:146
 msgid "Keyboard shortcuts work from popover now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:136
+#: data/jorts.metainfo.xml.in.in:147
 msgid "A couple visual bugfixes as well!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:137
+#: data/jorts.metainfo.xml.in.in:148
 msgid "Various under the hood performance improvements"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:141
+#: data/jorts.metainfo.xml.in.in:152
 #, fuzzy
 msgid "Updated JA translation thanks to @ryonakano!"
 msgstr "Обновленные переводы"
 
-#: data/jorts.metainfo.xml.in.in:142
+#: data/jorts.metainfo.xml.in.in:153
 msgid "You, the user, for liking this lil app!"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Colourful: Ten pretty themes. Any new note gets a random one"
+#~ msgstr ""
+#~ "Цвета: Десять красивых тем. Любая новая заметка выбирается случайным "
+#~ "образом"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is a fork of an old version of \"Notejot\" by lainsce. The community "
+#~ "liked it so much, we thought it would be great to revive it!"
+#~ msgstr ""
+#~ "Это ответвление старой версии «Notejot» от lainsce, которое не "
+#~ "существовало бы без её работы. Сообществу оно так понравилось, что мы "
+#~ "решили возродить его!"
 
 #, fuzzy
 #~ msgid "🕷️ 3.4.0 Scary Jorts of Boo"

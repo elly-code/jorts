@@ -81,7 +81,7 @@ public class Jorts.Storage : Object {
             generator.to_file (storage_file);
             
         } catch (Error e) {
-            warning ("[STORAGE] Failed to save notes %s", e.message);
+            warning ("Failed to save notes %s", e.message);
         }
 
         print ("\n (Everything saved)");

@@ -40,7 +40,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     public StickyNoteWindow (Jorts.Application app, NoteData data) {
         Intl.setlocale ();
-        debug ("[STICKY NOTE] New StickyNoteWindow instance!");
+        debug ("New StickyNoteWindow instance!");
         application = app;
 
         var actions = new SimpleActionGroup ();
@@ -137,6 +137,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * Simple handler for the EditableLabel
     */
     private void on_editable_changed () {
+        //TRANSLATORS: "%s" is replaced by a specific sticky note title
+        //Ex: "To remember - Jorts"
+        //The text is shown in overviews of all open windows, accompanying the window
 #if DEVEL
         title = _("%s - Jorts (Development)").printf (view.title);
 #else

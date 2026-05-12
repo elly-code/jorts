@@ -35,6 +35,7 @@ public class Jorts.EditableLabel : Granite.Bin {
             valign = Gtk.Align.CENTER,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>L"},
+                //TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
                 _("Click to edit the title")
             )
         };

@@ -45,6 +45,7 @@ public class Jorts.NoteData : Object {
     * Parse a node to create an associated NoteData object
     */
     public NoteData.from_json (Json.Object node) {
+        // Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
         title       = node.get_string_member_with_default ("title", (_("Forgot title!")));
         theme       = (Jorts.Themes)node.get_int_member_with_default ("color", Jorts.Themes.random_theme ());
         content     = node.get_string_member_with_default ("content","");

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 20:34+0200\n"
+"POT-Creation-Date: 2026-05-12 18:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,7 +12,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Widgets/EditableLabel.vala:38
+#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
+#: src/Widgets/EditableLabel.vala:39
 msgid "Click to edit the title"
 msgstr "Klik om de titel te bewerken"
 
@@ -27,23 +28,24 @@ msgstr "Voorkeuren tonen"
 msgid "Quit Jorts"
 msgstr " - Korte broek"
 
-#: src/Widgets/ActionBar.vala:34
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: src/Widgets/ActionBar.vala:35
 msgid "New sticky note"
 msgstr "Nieuw plakbriefje"
 
-#: src/Widgets/ActionBar.vala:47
+#: src/Widgets/ActionBar.vala:48
 msgid "Delete sticky note"
 msgstr "Sticky verwijderen"
 
-#: src/Widgets/ActionBar.vala:61
+#: src/Widgets/ActionBar.vala:62
 msgid "Toggle list"
 msgstr ""
 
-#: src/Widgets/ActionBar.vala:75
+#: src/Widgets/ActionBar.vala:76
 msgid "Insert emoji"
 msgstr "Emoji invoegen"
 
-#: src/Widgets/ActionBar.vala:89
+#: src/Widgets/ActionBar.vala:90
 msgid "Preferences for this sticky note"
 msgstr "Voorkeuren voor deze sticky note"
 
@@ -85,294 +87,299 @@ msgstr "Standaard zoomniveau"
 msgid "Zoom in"
 msgstr "Inzoomen"
 
-#: src/Objects/NoteData.vala:48
+#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
+#: src/Objects/NoteData.vala:49
 #, fuzzy
 msgid "Forgot title!"
 msgstr "Titel bewerken"
 
-#. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
+#. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
+#. They are shown in a tooltip when the user hovers over a little colored pillbutton
+#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
 msgid "Blueberry"
 msgstr "Bosbessen"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:65
 msgid "Mint"
 msgstr "Munt"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:66
 msgid "Lime"
 msgstr "Kalk"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:67
 msgid "Banana"
 msgstr "Banaan"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:68
 msgid "Orange"
 msgstr "Oranje"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:69
 msgid "Strawberry"
 msgstr "Aardbei"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:70
 msgid "Bubblegum"
 msgstr "Bubblegum"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:71
 msgid "Grape"
 msgstr "Druif"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:72
 msgid "Cocoa"
 msgstr "Cacao"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:73
 msgid "Slate"
 msgstr "Leisteen"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:74
 msgid "Latte"
 msgstr ""
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:75
 msgid "No preference, random each time"
 msgstr ""
 
-#: src/Utils/Random.vala:26
+#. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
+#. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
+#: src/Utils/Random.vala:27
 #, fuzzy
 msgid "All my best friends"
 msgstr "Al mijn allerbeste vrienden"
 
-#: src/Utils/Random.vala:27
+#: src/Utils/Random.vala:28
 #, fuzzy
 msgid "My secret recipe"
 msgstr "Mijn supergoede geheime recept"
 
-#: src/Utils/Random.vala:28
+#: src/Utils/Random.vala:29
 msgid "My todo list"
 msgstr "Mijn takenlijst"
 
-#: src/Utils/Random.vala:29
+#: src/Utils/Random.vala:30
 msgid "Super secret to not tell anyone"
 msgstr "Supergeheim om aan niemand te vertellen"
 
-#: src/Utils/Random.vala:30
+#: src/Utils/Random.vala:31
 msgid "My grocery list"
 msgstr "Mijn boodschappenlijstje"
 
-#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
-#: src/Utils/Random.vala:32
+#. TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:33
 #, fuzzy
 msgid "Shower thoughts"
 msgstr "Willekeurige douche gedachten"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav fanfics"
 msgstr "Mijn favoriete fanfics"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My fav dinosaurs"
 msgstr "Mijn favoriete dinosaurussen"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "My evil mastermind plan"
 msgstr "Mijn kwade meesterbrein plan"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "What made me smile today"
 msgstr "Wat me vandaag deed glimlachen"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "Hello world!"
 msgstr "Hallo wereld!"
 
-#: src/Utils/Random.vala:38
+#: src/Utils/Random.vala:39
 msgid "New sticky, new me"
 msgstr "Nieuwe klever, nieuwe ik"
 
-#: src/Utils/Random.vala:39
+#: src/Utils/Random.vala:40
 #, fuzzy
 msgid "Pirate treasure location"
 msgstr "Verborgen piratenschat"
 
-#: src/Utils/Random.vala:40
+#: src/Utils/Random.vala:41
 msgid "To remember"
 msgstr ""
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Dear Diary,"
 msgstr "Lief dagboek,"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "Have a nice day! :)"
 msgstr "Fijne dag! :)"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "My meds schedule"
 msgstr "Mijn medicatieschema"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:45
 msgid "Household chores"
 msgstr "Huishoudelijke taken"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:46
 #, fuzzy
 msgid "My cats favourite mischiefs"
 msgstr "Het favoriete speelgoed van mijn honden"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:47
 msgid "My dogs favourite toys"
 msgstr "Het favoriete speelgoed van mijn honden"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "How cool my birds are"
 msgstr "Hoe cool mijn vogels zijn"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Suspects in the Last Cookie affair"
 msgstr "Verdachten in de laatste koekjesaffaire"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:50
 msgid "Words my parrots know"
 msgstr "Woorden die mijn papegaaien kennen"
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:51
 #, fuzzy
 msgid "Original compliments to give out"
 msgstr "Leuke en grappige complimenten om uit te delen"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:52
 msgid "My dream Pokemon team"
 msgstr "Mijn Pokemon dreamteam"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:53
 msgid "My little notes"
 msgstr "Mijn kleine notities"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:54
 msgid "Surprise gift list"
 msgstr "Lijst met verrassingscadeaus"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:55
 msgid "Brainstorming notes"
 msgstr "Notities brainstormen"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:56
 msgid "To bring to the party"
 msgstr "Om mee te nemen naar het feest"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:57
 msgid "My amazing mixtape"
 msgstr "Mijn geweldige mixtape"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:58
 #, fuzzy
 msgid "Margin scribbles"
 msgstr "Servet krabbetjes"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:59
 msgid "My fav songs to sing along"
 msgstr "Mijn favoriete liedjes om mee te zingen"
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:60
 msgid "When to water which plant"
 msgstr "Wanneer welke plant water geven"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:61
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 anime verraad"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:62
 msgid "Amazing ascii art!"
 msgstr "Geweldige ascii-kunst!"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:63
 msgid "For the barbecue"
 msgstr "Voor de barbecue"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:64
 #, fuzzy
 msgid "My favourite bands"
 msgstr "Het favoriete speelgoed van mijn honden"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:65
 msgid "Best ingredients for salad"
 msgstr "Beste ingrediënten voor salade"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:66
 msgid "Books to read"
 msgstr "Boeken om te lezen"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:67
 msgid "Places to visit"
 msgstr "Plaatsen om te bezoeken"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:68
 msgid "Hobbies to try out"
 msgstr "Hobby's om uit te proberen"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:69
 msgid "Who would win against Goku"
 msgstr "Wie zou er winnen van Goku"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:70
 msgid "To plant in the garden"
 msgstr "Om in de tuin te planten"
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:71
 msgid "Meals this week"
 msgstr "Maaltijden deze week"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:72
 msgid "Everyone's pizza order"
 msgstr "Pizza bestellen voor iedereen"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:73
 msgid "Today selfcare to do"
 msgstr "Vandaag zelfzorg te doen"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:74
 msgid "Important affirmations to remember"
 msgstr "Belangrijke affirmaties om te onthouden"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:75
 msgid "The coolest linux apps"
 msgstr "De coolste Linux-apps"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:76
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Het favoriete speelgoed van mijn honden"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:77
 msgid "My funniest jokes"
 msgstr "Mijn grappigste grappen"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:78
 #, fuzzy
 msgid "The perfect breakfast"
 msgstr "Het perfecte ontbijt heeft..."
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:79
 #, fuzzy
 msgid "What makes me smile"
 msgstr "Wat me vandaag deed glimlachen"
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:80
 msgid "Most interesting characters"
 msgstr ""
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:81
 msgid "Activities to do with friends"
 msgstr ""
 
-#. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:116
+#. TRANSLATORS: This is for an easter egg, most users may not see this, so this is optional
+#. You can skip if too much, but i would prefer addressing people in their native language
+#: src/Utils/Random.vala:118
 msgid "🔥WOW Congratulations!🔥"
 msgstr "Gefeliciteerd!"
 
-#: src/Utils/Random.vala:118
+#: src/Utils/Random.vala:120
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -425,7 +432,7 @@ msgstr "Scribbly-modus activeren"
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "Verberg de inhoud van ongerichte sticky notes"
 
-#. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:91
 #, fuzzy
 msgid "Hide bottom bar"
@@ -438,12 +445,12 @@ msgstr ""
 "Indien ingeschakeld, wordt de onderste balk in plaknotities verborgen. "
 "Sneltoetsen werken nog steeds (Ctrl+T)"
 
-#. /TRANSLATORS: Button to autostart the application
+#. TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:110
 msgid "Enable"
 msgstr ""
 
-#. /TRANSLATORS: Button to remove the autostart for the application
+#. TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:121
 msgid "Disable"
 msgstr ""
@@ -468,12 +475,15 @@ msgstr "Sluit"
 msgid "Close preferences"
 msgstr "Voorkeuren sluiten"
 
-#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#. TRANSLATORS: "%s" is replaced by a specific sticky note title
+#. Ex: "To remember - Jorts"
+#. The text is shown in overviews of all open windows, accompanying the window
+#: src/Windows/StickyNoteWindow.vala:144 src/Windows/StickyNoteWindow.vala:184
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#: src/Windows/StickyNoteWindow.vala:146 src/Windows/StickyNoteWindow.vala:186
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Korte broek"
@@ -481,12 +491,12 @@ msgstr " - Korte broek"
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:49
+#: src/Windows/PreferenceWindow.vala:48
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Voorkeuren voor alle plaknotities"
 
+#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
 #: src/Windows/PreferenceWindow.vala:52
 #, fuzzy
 msgid "Preferences for your Jorts"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 20:34+0200\n"
+"POT-Creation-Date: 2026-05-12 18:48+0200\n"
 "PO-Revision-Date: 2025-11-02 11:55+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -11,7 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Widgets/EditableLabel.vala:38
+#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
+#: src/Widgets/EditableLabel.vala:39
 msgid "Click to edit the title"
 msgstr "クリックしてタイトルを編集する"
 
@@ -26,23 +27,24 @@ msgstr "設定を閉じる"
 msgid "Quit Jorts"
 msgstr " - Jorts"
 
-#: src/Widgets/ActionBar.vala:34
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: src/Widgets/ActionBar.vala:35
 msgid "New sticky note"
 msgstr "新しい付箋"
 
-#: src/Widgets/ActionBar.vala:47
+#: src/Widgets/ActionBar.vala:48
 msgid "Delete sticky note"
 msgstr "付箋を削除"
 
-#: src/Widgets/ActionBar.vala:61
+#: src/Widgets/ActionBar.vala:62
 msgid "Toggle list"
 msgstr ""
 
-#: src/Widgets/ActionBar.vala:75
+#: src/Widgets/ActionBar.vala:76
 msgid "Insert emoji"
 msgstr "絵文字を挿入"
 
-#: src/Widgets/ActionBar.vala:89
+#: src/Widgets/ActionBar.vala:90
 msgid "Preferences for this sticky note"
 msgstr "この付箋の設定"
 
@@ -81,291 +83,296 @@ msgstr "デフォルトのズームレベル"
 msgid "Zoom in"
 msgstr "拡大"
 
-#: src/Objects/NoteData.vala:48
+#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
+#: src/Objects/NoteData.vala:49
 msgid "Forgot title!"
 msgstr ""
 
-#. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
+#. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
+#. They are shown in a tooltip when the user hovers over a little colored pillbutton
+#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
 msgid "Blueberry"
 msgstr "ブルーベリー"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:65
 msgid "Mint"
 msgstr "ミント"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:66
 msgid "Lime"
 msgstr "ライム"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:67
 msgid "Banana"
 msgstr "バナナ"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:68
 msgid "Orange"
 msgstr "オレンジ"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:69
 msgid "Strawberry"
 msgstr "ストロベリー"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:70
 msgid "Bubblegum"
 msgstr "バブルガム"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:71
 msgid "Grape"
 msgstr "グレープ"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:72
 msgid "Cocoa"
 msgstr "ココア"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:73
 msgid "Slate"
 msgstr "スレート"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:74
 msgid "Latte"
 msgstr ""
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:75
 msgid "No preference, random each time"
 msgstr ""
 
-#: src/Utils/Random.vala:26
+#. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
+#. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
+#: src/Utils/Random.vala:27
 #, fuzzy
 msgid "All my best friends"
 msgstr "私の大事な親友"
 
-#: src/Utils/Random.vala:27
+#: src/Utils/Random.vala:28
 #, fuzzy
 msgid "My secret recipe"
 msgstr "とってもおいしい私の秘伝レシピ"
 
-#: src/Utils/Random.vala:28
+#: src/Utils/Random.vala:29
 msgid "My todo list"
 msgstr "私のやることリスト"
 
-#: src/Utils/Random.vala:29
+#: src/Utils/Random.vala:30
 msgid "Super secret to not tell anyone"
 msgstr "誰にも言えない秘密"
 
-#: src/Utils/Random.vala:30
+#: src/Utils/Random.vala:31
 msgid "My grocery list"
 msgstr "食料品リスト"
 
-#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
-#: src/Utils/Random.vala:32
+#. TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:33
 #, fuzzy
 msgid "Shower thoughts"
 msgstr "脈絡のない思いつき"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav fanfics"
 msgstr "私のお気に入りの二次創作"
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My fav dinosaurs"
 msgstr "私の好きな恐竜"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "My evil mastermind plan"
 msgstr "ぼくのかんがえたさいきょうのいたずら作戦"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "What made me smile today"
 msgstr "今日笑ったこと"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "Hello world!"
 msgstr "こんにちは世界!"
 
-#: src/Utils/Random.vala:38
+#: src/Utils/Random.vala:39
 msgid "New sticky, new me"
 msgstr "新しい付箋、新しい自分"
 
-#: src/Utils/Random.vala:39
+#: src/Utils/Random.vala:40
 #, fuzzy
 msgid "Pirate treasure location"
 msgstr "隠された海賊の財宝"
 
-#: src/Utils/Random.vala:40
+#: src/Utils/Random.vala:41
 msgid "To remember"
 msgstr ""
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Dear Diary,"
 msgstr "私の日記"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "Have a nice day! :)"
 msgstr "良い一日を! :)"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "My meds schedule"
 msgstr "私の服用スケジュール"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:45
 msgid "Household chores"
 msgstr "家事"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:46
 #, fuzzy
 msgid "My cats favourite mischiefs"
 msgstr "お気に入りのお皿"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:47
 msgid "My dogs favourite toys"
 msgstr "愛犬のお気に入りのおもちゃ"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "How cool my birds are"
 msgstr "俺の飼っている鳥が好きすぎる件"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Suspects in the Last Cookie affair"
 msgstr "クッキー最後の一枚消失事件の容疑者"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:50
 msgid "Words my parrots know"
 msgstr "我が家のオウムが知っている言葉"
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:51
 #, fuzzy
 msgid "Original compliments to give out"
 msgstr "クールで面白い褒め言葉"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:52
 msgid "My dream Pokemon team"
 msgstr "夢のポケモンチーム"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:53
 msgid "My little notes"
 msgstr "私の小さなメモ"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:54
 msgid "Surprise gift list"
 msgstr "サプライズプレゼントリスト"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:55
 msgid "Brainstorming notes"
 msgstr "ブレインストーミング"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:56
 msgid "To bring to the party"
 msgstr "パーティーに持参する"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:57
 msgid "My amazing mixtape"
 msgstr "私の素晴らしいミックステープ"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:58
 #, fuzzy
 msgid "Margin scribbles"
 msgstr "紙ナプキンに落書き"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:59
 msgid "My fav songs to sing along"
 msgstr "一緒に歌いたいお気に入りの曲"
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:60
 msgid "When to water which plant"
 msgstr "どの植物にいつ水をやるか"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:61
 msgid "Top 10 anime betrayals"
 msgstr "アニメの裏切りシーントップ 10"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:62
 msgid "Amazing ascii art!"
 msgstr "素晴らしいアスキーアート!"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:63
 msgid "For the barbecue"
 msgstr "バーベキュー用"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:64
 msgid "My favourite bands"
 msgstr "お気に入りのバンド"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:65
 msgid "Best ingredients for salad"
 msgstr "サラダに最適な食材"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:66
 msgid "Books to read"
 msgstr "読みたい本"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:67
 msgid "Places to visit"
 msgstr "行ってみたい場所"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:68
 msgid "Hobbies to try out"
 msgstr "やってみたい趣味"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:69
 msgid "Who would win against Goku"
 msgstr "悟空に勝つのは誰か"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:70
 msgid "To plant in the garden"
 msgstr "庭に欲しい植物"
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:71
 msgid "Meals this week"
 msgstr "今週の食事"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:72
 msgid "Everyone's pizza order"
 msgstr "みんなのピザ注文"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:73
 msgid "Today selfcare to do"
 msgstr "今日のセルフケア"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:74
 msgid "Important affirmations to remember"
 msgstr "覚えておくべき重要なアファメーション"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:75
 msgid "The coolest linux apps"
 msgstr "最強の Linux アプリ"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:76
 msgid "My favourite dishes"
 msgstr "お気に入りのお皿"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:77
 msgid "My funniest jokes"
 msgstr "私の面白いジョーク"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:78
 #, fuzzy
 msgid "The perfect breakfast"
 msgstr "完璧な朝食は..."
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:79
 #, fuzzy
 msgid "What makes me smile"
 msgstr "今日笑ったこと"
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:80
 msgid "Most interesting characters"
 msgstr ""
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:81
 msgid "Activities to do with friends"
 msgstr ""
 
-#. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:116
+#. TRANSLATORS: This is for an easter egg, most users may not see this, so this is optional
+#. You can skip if too much, but i would prefer addressing people in their native language
+#: src/Utils/Random.vala:118
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥おめでとうございます!🔥"
 
-#: src/Utils/Random.vala:118
+#: src/Utils/Random.vala:120
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -416,7 +423,7 @@ msgstr ""
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr ""
 
-#. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:91
 #, fuzzy
 msgid "Hide bottom bar"
@@ -429,12 +436,12 @@ msgstr ""
 "有効にすると、付箋のボトムバーが非表示になります。この場合でもキーボード"
 "ショートカットは利用可能です (Ctrl+T)"
 
-#. /TRANSLATORS: Button to autostart the application
+#. TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:110
 msgid "Enable"
 msgstr ""
 
-#. /TRANSLATORS: Button to remove the autostart for the application
+#. TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:121
 msgid "Disable"
 msgstr ""
@@ -459,12 +466,15 @@ msgstr "閉じる"
 msgid "Close preferences"
 msgstr "設定を閉じる"
 
-#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#. TRANSLATORS: "%s" is replaced by a specific sticky note title
+#. Ex: "To remember - Jorts"
+#. The text is shown in overviews of all open windows, accompanying the window
+#: src/Windows/StickyNoteWindow.vala:144 src/Windows/StickyNoteWindow.vala:184
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#: src/Windows/StickyNoteWindow.vala:146 src/Windows/StickyNoteWindow.vala:186
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Jorts"
@@ -472,12 +482,12 @@ msgstr " - Jorts"
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:49
+#: src/Windows/PreferenceWindow.vala:48
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Jorts の設定"
 
+#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences for your Jorts"
 msgstr "Jorts の設定"

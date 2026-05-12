@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-01 20:34+0200\n"
+"POT-Creation-Date: 2026-05-12 18:48+0200\n"
 "PO-Revision-Date: 2025-06-02 19:29+0300\n"
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
 "noreply.github.com>\n"
@@ -14,7 +14,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 46.0\n"
 
-#: src/Widgets/EditableLabel.vala:38
+#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
+#: src/Widgets/EditableLabel.vala:39
 msgid "Click to edit the title"
 msgstr "Κάντε κλικ για να επεξεργαστείτε τον τίτλο"
 
@@ -29,23 +30,24 @@ msgstr "Εμφάνιση προτιμήσεων"
 msgid "Quit Jorts"
 msgstr " - Τζορτς"
 
-#: src/Widgets/ActionBar.vala:34
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: src/Widgets/ActionBar.vala:35
 msgid "New sticky note"
 msgstr "Νέα σημείωση"
 
-#: src/Widgets/ActionBar.vala:47
+#: src/Widgets/ActionBar.vala:48
 msgid "Delete sticky note"
 msgstr "Διαγραφή σημείωσης"
 
-#: src/Widgets/ActionBar.vala:61
+#: src/Widgets/ActionBar.vala:62
 msgid "Toggle list"
 msgstr ""
 
-#: src/Widgets/ActionBar.vala:75
+#: src/Widgets/ActionBar.vala:76
 msgid "Insert emoji"
 msgstr "Εισαγωγή emoji"
 
-#: src/Widgets/ActionBar.vala:89
+#: src/Widgets/ActionBar.vala:90
 msgid "Preferences for this sticky note"
 msgstr "Προτιμήσεις για αυτή τη σημείωση"
 
@@ -88,292 +90,297 @@ msgstr "Προεπιλεγμένο επίπεδο μεγέθυνσης"
 msgid "Zoom in"
 msgstr "Μεγέθυνση"
 
-#: src/Objects/NoteData.vala:48
+#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
+#: src/Objects/NoteData.vala:49
 msgid "Forgot title!"
 msgstr ""
 
-#. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
+#. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
+#. They are shown in a tooltip when the user hovers over a little colored pillbutton
+#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
 msgid "Blueberry"
 msgstr "Μύρτιλλο"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:65
 msgid "Mint"
 msgstr "Μέντα"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:66
 msgid "Lime"
 msgstr "Μοσχολέμονο"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:67
 msgid "Banana"
 msgstr "Μπανάνα"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:68
 msgid "Orange"
 msgstr "Πορτοκάλι"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:69
 msgid "Strawberry"
 msgstr "Φράουλα"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:70
 msgid "Bubblegum"
 msgstr "Τσιχλόφουσκα"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:71
 msgid "Grape"
 msgstr "Σταφύλι"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:72
 msgid "Cocoa"
 msgstr "Κακάο"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:73
 msgid "Slate"
 msgstr "Γρανίτης"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:74
 msgid "Latte"
 msgstr ""
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:75
 msgid "No preference, random each time"
 msgstr ""
 
-#: src/Utils/Random.vala:26
+#. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
+#. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
+#: src/Utils/Random.vala:27
 #, fuzzy
 msgid "All my best friends"
 msgstr "Όλοι οι κολλητοί μου"
 
-#: src/Utils/Random.vala:27
+#: src/Utils/Random.vala:28
 #, fuzzy
 msgid "My secret recipe"
 msgstr "Η φανταστική μυστική μου συνταγή"
 
-#: src/Utils/Random.vala:28
+#: src/Utils/Random.vala:29
 msgid "My todo list"
 msgstr "Η λίστα υποχρεώσεών μου"
 
-#: src/Utils/Random.vala:29
+#: src/Utils/Random.vala:30
 msgid "Super secret to not tell anyone"
 msgstr "Άκρως απόρρητο· μην το πεις πουθενά"
 
-#: src/Utils/Random.vala:30
+#: src/Utils/Random.vala:31
 msgid "My grocery list"
 msgstr "Η λίστα με τα ψώνια μου"
 
-#. / TRANSLATORS: What is meant are reflective thoughts, random thoughts
-#: src/Utils/Random.vala:32
+#. TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:33
 #, fuzzy
 msgid "Shower thoughts"
 msgstr "Σκέψεις που μου κατέβηκαν στο μυαλό"
 
-#: src/Utils/Random.vala:33
+#: src/Utils/Random.vala:34
 msgid "My fav fanfics"
 msgstr "Μια φορά και έναν καιρό..."
 
-#: src/Utils/Random.vala:34
+#: src/Utils/Random.vala:35
 msgid "My fav dinosaurs"
 msgstr "Οι αγαπημένοι μου δεινόσαυροι"
 
-#: src/Utils/Random.vala:35
+#: src/Utils/Random.vala:36
 msgid "My evil mastermind plan"
 msgstr "Το μυστικό ύπουλό μου σχέδιο"
 
-#: src/Utils/Random.vala:36
+#: src/Utils/Random.vala:37
 msgid "What made me smile today"
 msgstr "Τι με έκανε να χαρώ σήμερα"
 
-#: src/Utils/Random.vala:37
+#: src/Utils/Random.vala:38
 msgid "Hello world!"
 msgstr "Γεια σου κόσμε!"
 
-#: src/Utils/Random.vala:38
+#: src/Utils/Random.vala:39
 msgid "New sticky, new me"
 msgstr "Νέα σημείωση για μια νέα αρχή"
 
-#: src/Utils/Random.vala:39
+#: src/Utils/Random.vala:40
 #, fuzzy
 msgid "Pirate treasure location"
 msgstr "Οδηγίες για να βρείτε τον κρυμμένο πειρατικό θησαυρό"
 
-#: src/Utils/Random.vala:40
+#: src/Utils/Random.vala:41
 msgid "To remember"
 msgstr ""
 
-#: src/Utils/Random.vala:41
+#: src/Utils/Random.vala:42
 msgid "Dear Diary,"
 msgstr "Αγαπητό μου ημερολόγιο,"
 
-#: src/Utils/Random.vala:42
+#: src/Utils/Random.vala:43
 msgid "Have a nice day! :)"
 msgstr "Καλημέρα! :)"
 
-#: src/Utils/Random.vala:43
+#: src/Utils/Random.vala:44
 msgid "My meds schedule"
 msgstr "Πρόγραμμα Φαρμάκων"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:45
 msgid "Household chores"
 msgstr "Δουλειές Σπιτιού"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:46
 #, fuzzy
 msgid "My cats favourite mischiefs"
 msgstr "Τα αγαπημένα μου συγκροτήματα"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:47
 msgid "My dogs favourite toys"
 msgstr "Τα Αγαπημένα Παιχνίδια του Σκύλου μου"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:48
 msgid "How cool my birds are"
 msgstr "Πόσο Όμορφα Είναι τα Καναρίνια μου"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:49
 msgid "Suspects in the Last Cookie affair"
 msgstr "Ύποπτοι στην υπόθεση «Ποιος έφαγε το τελευταίο μπισκότο;»"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:50
 msgid "Words my parrots know"
 msgstr "Λίστα Λέξεων που Ξέρουν τα Παπαγαλάκια μου"
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:51
 #, fuzzy
 msgid "Original compliments to give out"
 msgstr "Τυφλοσούρτης Δημιουργικών και Αστείων Κομπλιμέντων"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:52
 msgid "My dream Pokemon team"
 msgstr "Ομάδες που ονειρεύομαι να φτάσουν Α' Εθνική"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:53
 msgid "My little notes"
 msgstr "Οι μικρές μου σημειώσεις"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:54
 msgid "Surprise gift list"
 msgstr "Λίστα δώρων-έκπληξη"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:55
 msgid "Brainstorming notes"
 msgstr "Καταιγισμός ιδεών"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:56
 msgid "To bring to the party"
 msgstr "Τι να φέρω στο πάρτι"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:57
 msgid "My amazing mixtape"
 msgstr "Η φανταστική μου playlist"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:58
 #, fuzzy
 msgid "Margin scribbles"
 msgstr "Σημειώσεις από Χαρτοπετσέτες"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:59
 msgid "My fav songs to sing along"
 msgstr "Τα αγαπημένα μου τραγούδια για να τραγουδώ"
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:60
 msgid "When to water which plant"
 msgstr "Πότε να ποτίζω τα φυτά μου"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:61
 msgid "Top 10 anime betrayals"
 msgstr "Οι 10 καλύτερες ατάκες"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:62
 msgid "Amazing ascii art!"
 msgstr "Απίθανα σχέδια με γράμματα!"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:63
 msgid "For the barbecue"
 msgstr "Λίστα Ψησίματος"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:64
 msgid "My favourite bands"
 msgstr "Τα αγαπημένα μου συγκροτήματα"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:65
 msgid "Best ingredients for salad"
 msgstr "Καλύτερα συστατικά για σαλάτα"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:66
 msgid "Books to read"
 msgstr "Βιβλία για ανάγνωση"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:67
 msgid "Places to visit"
 msgstr "Μέρη για επίσκεψη"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:68
 msgid "Hobbies to try out"
 msgstr "Χόμπι για να δοκιμάσετε"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:69
 msgid "Who would win against Goku"
 msgstr "Ποιος θα κέρδιζε τον Goku"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:70
 msgid "To plant in the garden"
 msgstr "Για να φυτέψετε στον κήπο"
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:71
 msgid "Meals this week"
 msgstr "Γεύματα αυτή την εβδομάδα"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:72
 msgid "Everyone's pizza order"
 msgstr "Η παραγγελία πίτσας του καθενός"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:73
 msgid "Today selfcare to do"
 msgstr "Σήμερα αυτοφροντίδα για να κάνετε"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:74
 msgid "Important affirmations to remember"
 msgstr "Σημαντικές επιβεβαιώσεις που πρέπει να θυμάστε"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:75
 msgid "The coolest linux apps"
 msgstr "Οι πιο cool εφαρμογές linux"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:76
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Τα αγαπημένα μου συγκροτήματα"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:77
 msgid "My funniest jokes"
 msgstr "Τα πιο αστεία αστεία μου"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:78
 #, fuzzy
 msgid "The perfect breakfast"
 msgstr "Το τέλειο πρωινό έχει..."
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:79
 #, fuzzy
 msgid "What makes me smile"
 msgstr "Τι με έκανε να χαρώ σήμερα"
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:80
 msgid "Most interesting characters"
 msgstr ""
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:81
 msgid "Activities to do with friends"
 msgstr ""
 
-#. /TRANSLATORS: This is for an easter egg
-#: src/Utils/Random.vala:116
+#. TRANSLATORS: This is for an easter egg, most users may not see this, so this is optional
+#. You can skip if too much, but i would prefer addressing people in their native language
+#: src/Utils/Random.vala:118
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥ΟΥΑΟΥ, ΤΑ ΣΥΓΧΑΡΗΤΗΡΙΑ ΜΟΥ🔥"
 
-#: src/Utils/Random.vala:118
+#: src/Utils/Random.vala:120
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -424,7 +431,7 @@ msgstr ""
 msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr ""
 
-#. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:91
 #, fuzzy
 msgid "Hide bottom bar"
@@ -437,12 +444,12 @@ msgstr ""
 "Εάν είναι επιλεγμένο, αποκρύπτει την κάτω μπάρα στο παράθυρο σημειώσεων. \n"
 "Οι συντομεύσεις πληκτρολογίου εξακολουθούν να λειτουργούν κανονικά (Ctrl+T)"
 
-#. /TRANSLATORS: Button to autostart the application
+#. TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:110
 msgid "Enable"
 msgstr ""
 
-#. /TRANSLATORS: Button to remove the autostart for the application
+#. TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:121
 msgid "Disable"
 msgstr ""
@@ -467,12 +474,15 @@ msgstr "Κλείστε το"
 msgid "Close preferences"
 msgstr "Κλείστε τις προτιμήσεις"
 
-#: src/Windows/StickyNoteWindow.vala:141 src/Windows/StickyNoteWindow.vala:181
+#. TRANSLATORS: "%s" is replaced by a specific sticky note title
+#. Ex: "To remember - Jorts"
+#. The text is shown in overviews of all open windows, accompanying the window
+#: src/Windows/StickyNoteWindow.vala:144 src/Windows/StickyNoteWindow.vala:184
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:143 src/Windows/StickyNoteWindow.vala:183
+#: src/Windows/StickyNoteWindow.vala:146 src/Windows/StickyNoteWindow.vala:186
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Τζορτς"
@@ -480,12 +490,12 @@ msgstr " - Τζορτς"
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:49
+#: src/Windows/PreferenceWindow.vala:48
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Ρυθμίσεις του Jorts"
 
+#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences for your Jorts"
 msgstr "Ρυθμίσεις του Jorts"
