@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 18:48+0200\n"
+"POT-Creation-Date: 2026-05-12 19:03+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -22,14 +22,12 @@ msgstr "Nhấp để chỉnh sửa tiêu đề"
 
 #. Alternate way to access preferences
 #: src/Widgets/TextView.vala:63
-#, fuzzy
 msgid "Show Preferences"
-msgstr "Hiển thị tùy chỉnh"
+msgstr "Hiển thị tùy chọn"
 
 #: src/Widgets/TextView.vala:64
-#, fuzzy
 msgid "Quit Jorts"
-msgstr " - Jorts"
+msgstr "Thoát Jorts"
 
 #. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
 #: src/Widgets/ActionBar.vala:35

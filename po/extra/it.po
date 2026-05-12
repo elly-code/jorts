@@ -1,9 +1,8 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 18:48+0200\n"
+"POT-Creation-Date: 2026-05-12 19:03+0200\n"
 "PO-Revision-Date: 2025-12-28 10:16+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -56,14 +55,14 @@ msgstr "le caratteristiche includono:"
 
 #: data/jorts.metainfo.xml.in.in:15
 msgid "Colourful: Eleven pretty pastel themes"
-msgstr ""
+msgstr "Colorato: Undici graziosi temi pastello"
 
 #: data/jorts.metainfo.xml.in.in:16
-#, fuzzy
 msgid ""
 "Adaptive: New notes get the zoom and font you last chose, and a random new "
 "color"
-msgstr "Adaptive: Nuove note Ottieni lo zoom che hai scelto l'ultima volta"
+msgstr "Adattivo: Le nuove note hanno lo zoom e il carattere scelti l'ultima "
+"volta e un nuovo colore"
 
 #: data/jorts.metainfo.xml.in.in:17
 msgid "Cute: Each new note has a funny or cute random (editable) title"
@@ -80,9 +79,8 @@ msgid "Private: Try the scribble mode!"
 msgstr "Privato: Prova la modalità scarabocchio!"
 
 #: data/jorts.metainfo.xml.in.in:32
-#, fuzzy
 msgid "Lainsce + Stella and Charlie"
-msgstr "Lainsce + Stella"
+msgstr "Lainsce + Stella e Charlie"
 
 #: data/jorts.metainfo.xml.in.in:49
 msgid "Sticky note"
@@ -150,30 +148,27 @@ msgstr "La finestra di dialogo delle preferenze in modalità scura"
 
 #: data/jorts.metainfo.xml.in.in:97
 msgid "The Unyielding Jorts"
-msgstr ""
+msgstr "I pantaloncini inflessibili"
 
 #: data/jorts.metainfo.xml.in.in:99
 msgid "Lovely Pride variant thanks to @wpkelso!"
-msgstr ""
+msgstr "Bellissima variante Pride grazie a @wpkelso!"
 
 #: data/jorts.metainfo.xml.in.in:100
 msgid "Added tabulated lists thanks to @MysterieCatDev!"
-msgstr ""
+msgstr "Aggiunte le liste tabellate grazie a @MysterieCatDev!"
 
 #: data/jorts.metainfo.xml.in.in:101
-#, fuzzy
 msgid "Added Danish translation thanks to @pracedru!"
-msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
+msgstr "Aggiunta la traduzione in danese grazie a @pracedru!"
 
 #: data/jorts.metainfo.xml.in.in:102
-#, fuzzy
 msgid "Added Croatian translation thanks to @milotype!"
-msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
+msgstr "Aggiunta la traduzione in croato grazie a @milotype!"
 
 #: data/jorts.metainfo.xml.in.in:103
-#, fuzzy
 msgid "Updated Spanish translation thanks to Eli!"
-msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
+msgstr "Traduzione spagnola aggiornata grazie a Eli!"
 
 #: data/jorts.metainfo.xml.in.in:109
 msgid "Minor touchups"
@@ -208,14 +203,12 @@ msgid "😎 Guests stars:"
 msgstr "😎 Stelle degli ospiti:"
 
 #: data/jorts.metainfo.xml.in.in:130
-#, fuzzy
 msgid "Updated sv-SE translation thanks to @yeager!"
-msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
+msgstr "Traduzione sv-SE aggiornata grazie a @yeager!"
 
 #: data/jorts.metainfo.xml.in.in:131
-#, fuzzy
 msgid "Added vietnamese translation thanks to @hthienloc!"
-msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
+msgstr "Aggiunta la traduzione in vietnamita grazie a @hthienloc!"
 
 #: data/jorts.metainfo.xml.in.in:140
 msgid "🚀 4.0.0 Jorts of Hyperspace!"

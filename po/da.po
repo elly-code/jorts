@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 18:48+0200\n"
+"POT-Creation-Date: 2026-05-12 19:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,7 +83,6 @@ msgstr "Zoom ind"
 
 #. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
 #: src/Objects/NoteData.vala:49
-#, fuzzy
 msgid "Forgot title!"
 msgstr "Glemt titel!"
 
@@ -140,12 +139,10 @@ msgstr "Intet foretrukket, tilfældigt hver gang"
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
 #: src/Utils/Random.vala:27
-#, fuzzy
 msgid "All my best friends"
 msgstr "Alle mine bedste venner"
 
 #: src/Utils/Random.vala:28
-#, fuzzy
 msgid "My secret recipe"
 msgstr "Min hemmelige opskrift"
 
@@ -163,7 +160,6 @@ msgstr "Min indkøbsliste"
 
 #. TRANSLATORS: What is meant are reflective thoughts, random thoughts
 #: src/Utils/Random.vala:33
-#, fuzzy
 msgid "Shower thoughts"
 msgstr "Brusebads tanker"
 
@@ -192,7 +188,6 @@ msgid "New sticky, new me"
 msgstr "Nyt huskeseddel, ny mig"
 
 #: src/Utils/Random.vala:40
-#, fuzzy
 msgid "Pirate treasure location"
 msgstr "Piratskats lokationen"
 
@@ -217,7 +212,6 @@ msgid "Household chores"
 msgstr "Huslige pligter"
 
 #: src/Utils/Random.vala:46
-#, fuzzy
 msgid "My cats favourite mischiefs"
 msgstr "Mine kattes yndlings drillerier"
 
@@ -238,7 +232,6 @@ msgid "Words my parrots know"
 msgstr "Ord, som mine papegøjer kender"
 
 #: src/Utils/Random.vala:51
-#, fuzzy
 msgid "Original compliments to give out"
 msgstr "Originale komplimenter at give"
 
@@ -267,7 +260,6 @@ msgid "My amazing mixtape"
 msgstr "Mit fantastiske mixtape"
 
 #: src/Utils/Random.vala:58
-#, fuzzy
 msgid "Margin scribbles"
 msgstr "Margin-skriblerier"
 
@@ -292,7 +284,6 @@ msgid "For the barbecue"
 msgstr "Til grillen"
 
 #: src/Utils/Random.vala:64
-#, fuzzy
 msgid "My favourite bands"
 msgstr "Mine favorit bands"
 
@@ -341,7 +332,6 @@ msgid "The coolest linux apps"
 msgstr "De fedeste linux-apps"
 
 #: src/Utils/Random.vala:76
-#, fuzzy
 msgid "My favourite dishes"
 msgstr "Mine yndlingsretter"
 
@@ -350,12 +340,10 @@ msgid "My funniest jokes"
 msgstr "Mine sjoveste vittigheder"
 
 #: src/Utils/Random.vala:78
-#, fuzzy
 msgid "The perfect breakfast"
 msgstr "Den perfekte morgenmad"
 
 #: src/Utils/Random.vala:79
-#, fuzzy
 msgid "What makes me smile"
 msgstr "Dette fik mig til at smile"
 
@@ -471,7 +459,7 @@ msgid "%s - Jorts (Development)"
 msgstr "%s - Jorts (Udvikling)"
 
 #: src/Windows/StickyNoteWindow.vala:146 src/Windows/StickyNoteWindow.vala:186
-#, fuzzy, c-format
+#, c-format
 msgid "%s - Jorts"
 msgstr "%s - Jorts"
 
@@ -479,7 +467,6 @@ msgstr "%s - Jorts"
 #. HEADERBAR BS
 #. ******************************************
 #: src/Windows/PreferenceWindow.vala:48
-#, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Præferencer - Jorts"
 
@@ -495,83 +482,3 @@ msgstr "Opret en ny note"
 #: src/Application.vala:217
 msgid "Show preferences"
 msgstr "Vis præferencer"
-
-#~ msgid "To not forget, ever"
-#~ msgstr "For ikke at glemme, nogensinde"
-
-#~ msgid "Ode to my cat"
-#~ msgstr "Ode til min kat"
-
-#~ msgid "Ok, listen here,"
-#~ msgstr "Okay, hør her,"
-
-#~ msgid "Preferences"
-#~ msgstr "Indstillinger"
-
-#~ msgid "Make unfocused notes unreadable"
-#~ msgstr "Gør ufokuserede noter ulæselige"
-
-#, fuzzy
-#~ msgid ""
-#~ "If enabled, unfocused sticky notes become unreadable to protect their "
-#~ "content from peeking eyes (Ctrl+H)"
-#~ msgstr ""
-#~ "Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at "
-#~ "beskytte deres indhold mod nysgerrige blikke."
-
-#~ msgid "Set autostart"
-#~ msgstr "Indstil autostart"
-
-#~ msgid "Remove autostart"
-#~ msgstr "Fjern autostart"
-
-#~ msgid "Allow to start at login"
-#~ msgstr "Tillad at starte ved login"
-
-#~ msgid "You can request the system to start this application automatically"
-#~ msgstr "Du kan bede systemet om at starte denne applikation automatisk"
-
-#~ msgid "Create a note then paste from clipboard"
-#~ msgstr "Opret en note, og indsæt den fra udklipsholderen"
-
-#, fuzzy
-#~ msgid "Reset all settings"
-#~ msgstr "Nulstil alle indstillinger til standard"
-
-#~ msgid "Permissions"
-#~ msgstr "Tilladelser"
-
-#~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
-#~ "autostart"
-#~ msgstr ""
-#~ "Du kan indstille klistermærkerne til at blive vist, når du logger ind, "
-#~ "ved at tilføje Jorts til autostart"
-
-#, fuzzy
-#~ msgid "Autostart apps"
-#~ msgstr "Autostart af apps i flathub"
-
-#~ msgid "Hi im a square"
-#~ msgstr "Hej, jeg er firkantet"
-
-#~ msgid "Now with more ligma!"
-#~ msgstr "Nu med mere ligma!"
-
-#~ msgid "I use arch btw"
-#~ msgstr "Jeg bruger i øvrigt arch"
-
-#~ msgid "Microsoft support"
-#~ msgstr "Support fra Microsoft"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "Sticky Note farve"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "Vælg en farve til denne sticky note"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "Vis altid indholdet af sticky notes"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM%."
