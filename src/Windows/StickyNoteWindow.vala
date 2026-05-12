@@ -13,7 +13,7 @@
 * Can be packaged into a noteData file for convenient storage
 * Reports to the NoteManager for saving
 */
-public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
+public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow, Scribblable {
 
     public Jorts.NoteView view;
     public Popover popover;
@@ -21,7 +21,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     private Jorts.ColorController color_controller;
     public Jorts.ZoomController zoom_controller;
-    private Jorts.ScribblyController scribbly_controller;
+    //private Jorts.ScribblyController scribbly_controller;
     private Gtk.EventControllerKey keypress_controller;
     private Gtk.EventControllerScroll scroll_controller;
 
@@ -50,7 +50,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         color_controller = new Jorts.ColorController (this);
         zoom_controller = new Jorts.ZoomController (this);
-        scribbly_controller = new Jorts.ScribblyController (this);
+        //scribbly_controller = new Jorts.ScribblyController (this);
 
         keypress_controller = new Gtk.EventControllerKey ();
         scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
@@ -102,6 +102,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (color_controller.on_focus_changed);
+
+        scribbling = Application.gsettings.get_boolean (KEY_SCRIBBLY);
+
+        Application.gsettings.bind (KEY_SCRIBBLY,
+            ((Scribblable)this), "scribbling",
+            GLib.SettingsBindFlags.DEFAULT);
 
         // Respect animation settings for showing ui elements
         if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {

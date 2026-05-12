@@ -29,8 +29,9 @@ sources = files (
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
     'Services' / 'ZoomController.vala',
-    'Services' / 'ScribblyController.vala',
     'Services' / 'ColorController.vala',
+
+    'Interfaces' / 'Scribblable.vala',
 
     'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',
