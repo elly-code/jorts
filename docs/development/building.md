@@ -32,7 +32,7 @@ sudo apt install elementary-sdk
 Ubuntu
 
 ```bash
-sudo apt install libgranite-7-common libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 libportal-gtk4-dev
+sudo apt install libgranite-7-dev libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 libportal-gtk4-dev
 ```
 
 Fedora
