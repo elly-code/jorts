@@ -17,8 +17,8 @@
 public class Jorts.Storage : Object {
 
     private const string FILENAME = "saved_state.json";
-    private string data_directory;
-    private string storage_file;
+    private File datadir;
+    private string savefile_path;
 
     /**
     * Convenience property wrapping load() and save()
@@ -30,38 +30,45 @@ public class Jorts.Storage : Object {
 
     /*************************************************/
     construct {
+        var path_data = GLib.Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), APP_ID);
+        datadir = File.new_for_path (path_data);
+        savefile_path = GLib.Path.build_path (Path.DIR_SEPARATOR_S, path_data, FILENAME);
 
-#if WINDOWS
-        // In Windows we arent in a sandbox, so we need to have some courtesy and not dump in the allfolder
-        data_directory      = GLib.Path.build_path("/", Environment.get_user_data_dir (), APP_ID);
-#else
-        data_directory      = Environment.get_user_data_dir ();
-#endif
+        ensure_datadir ();
 
-        storage_file        = GLib.Path.build_path("/", data_directory, FILENAME);
-        print (storage_file);
+        // TODO: Remove the below cruft after a while
+        var old_storage_path = GLib.Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), FILENAME);        
+        var old_storage_file = File.new_for_path (old_storage_path);
+        var savefile = File.new_for_path (savefile_path);
 
-        check_if_stash ();
+        if (old_storage_file.query_exists ()) {
+            try {
+                old_storage_file.move (savefile, GLib.FileCopyFlags.OVERWRITE);
+                print ("Sucessfully moved old storage");
+
+            } catch (Error e) {
+                warning ("Failed to move storage %s\n", e.message);
+            }
+        }
     }
 
     /*************************************************/
     /**
     * Persistently check for the data directory and create if there is none 
     */
-    private void check_if_stash () {
+    private void ensure_datadir () {
         debug ("do we have a data directory?");
-        var dir = File.new_for_path (data_directory);
-
-        if (dir.query_exists ()) {
+        if (datadir.query_exists ()) {
+            debug ("Yes, nevermind");
             return;
         }
 
         try {
-			dir.make_directory_with_parents ();
+			datadir.make_directory_with_parents ();
 			debug ("yes we do now");
 
         } catch (Error e) {
-			warning ("Failed to prepare target data directory %s\n", e.message);
+			warning ("Failed to prepare target data directory %s", e.message);
 		}
 	}
 
@@ -70,21 +77,21 @@ public class Jorts.Storage : Object {
     * Converts a Json.Node into a string and take care of saving it
     */
     public void save (Json.Array json_data) {
-        debug("Writing...");
-        check_if_stash ();
+        ensure_datadir ();
+        debug("Writing %ui elements... (Should be same number as sticky notes)", json_data.get_length ());
 
         try {
             var generator = new Json.Generator ();
             var node = new Json.Node (Json.NodeType.ARRAY);
             node.set_array (json_data);
             generator.set_root (node);
-            generator.to_file (storage_file);
+            generator.to_file (savefile_path);
             
         } catch (Error e) {
-            warning ("[STORAGE] Failed to save notes %s", e.message);
+            warning ("Failed to save notes %s", e.message);
         }
 
-        print ("\n (Everything saved)");
+        print ("\n (%ui notes saved)", json_data.get_length ());
     }
 
     /*************************************************/
@@ -92,21 +99,21 @@ public class Jorts.Storage : Object {
     * Grab from storage, into a Json.Node we can parse. Insist if necessary
     */
     public Json.Array load () {
-        debug("Loading from storage letsgo");
-        check_if_stash ();
+        debug ("Loading from storage letsgo");
         var parser = new Json.Parser ();
         var array = new Json.Array ();
 
         try {
-            parser.load_from_mapped_file (storage_file);
+            parser.load_from_mapped_file (savefile_path);
             var node = parser.get_root ();
             array = node.get_array ();
 
         } catch (Error e) {
-            warning ("Failed to load from storage " + e.message.to_string());
+            warning ("Failed to load from storage %s", e.message);
 
         }
         
+        debug ("Retrieved %ui elements", array.get_length ());
         return array;
     }
 }
