@@ -33,7 +33,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
     construct {
         add_css_class (Granite.STYLE_CLASS_LINKED);
 
-        ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
+        //TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {
             action_name = NoteView.ACTION_PREFIX + NoteView.ACTION_TOGGLE_MONO,
             child = new Gtk.Label (_("Default")),

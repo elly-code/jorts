@@ -40,7 +40,7 @@ public class Jorts.ZoomBox : Gtk.Box {
     construct {
         add_css_class (Granite.STYLE_CLASS_LINKED);
 
-        ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
+        //TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
             action_name = ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_OUT,
             tooltip_markup = Granite.markup_accel_tooltip (
