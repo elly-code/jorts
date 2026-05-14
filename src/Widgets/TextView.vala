@@ -107,6 +107,32 @@ public class Jorts.TextView : Granite.HyperTextView {
         ensure_tags ();
     }
 
+    public void restore_list_item_indentation () {
+        Gtk.TextIter start, end;
+        buffer.get_bounds (out start, out end);
+        buffer.remove_tag_by_name ("list_item", start, end);
+
+        if (list_item_start == "") {
+            return;
+        }
+
+        ensure_tags ();
+
+        var line_count = buffer.get_line_count ();
+
+        for (int line_number = 0; line_number < line_count; line_number++) {
+            if (!this.has_prefix (line_number)) {
+                continue;
+            }
+
+            Gtk.TextIter line_start, line_end;
+            buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+            line_end = line_start.copy ();
+            line_end.forward_to_line_end ();
+            buffer.apply_tag_by_name ("list_item", line_start, line_end);
+        }
+    }
+
     public void toggle_list () {
         ensure_tags ();
         Gtk.TextIter start, end;

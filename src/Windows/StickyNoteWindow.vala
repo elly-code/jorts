@@ -191,6 +191,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         color_controller.theme = data.theme;
         zoom_controller.zoom = data.zoom;
         view.monospace = data.monospace;
+        textview.restore_list_item_indentation ();
     }
 
     public void has_changed () {
