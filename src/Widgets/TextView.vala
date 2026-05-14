@@ -12,7 +12,19 @@
 public class Jorts.TextView : Granite.HyperTextView {
 
     private Gtk.EventControllerKey keyboard;
-    public string list_item_start {get; set;}
+    private string _list_item_start = "";
+    public string list_item_start {
+        get { return _list_item_start; }
+        set {
+            if (_list_item_start == value) {
+                return;
+            }
+
+            var old_prefix = _list_item_start;
+            _list_item_start = value;
+            migrate_list_prefixes (old_prefix, value);
+        }
+    }
     public bool on_list_item {public get; private set;}
 
     public string text {
@@ -159,8 +171,8 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Add the list prefix only to lines who hasnt it already
      */
-    private bool has_prefix (int line_number) {
-        if (list_item_start == "") {return false;}
+    private bool has_specific_prefix (int line_number, string prefix) {
+        if (prefix == "") {return false;}
 
         Gtk.TextIter start, end;
         buffer.get_iter_at_line_offset (out start, line_number, 0);
@@ -170,7 +182,54 @@ public class Jorts.TextView : Granite.HyperTextView {
 
         var text_in_line = buffer.get_slice (start, end, false);
 
-        return text_in_line.has_prefix (list_item_start);
+        return text_in_line.has_prefix (prefix);
+    }
+
+    private bool has_prefix (int line_number) {
+        return has_specific_prefix (line_number, list_item_start);
+    }
+
+    private void replace_prefix (int line_number, string old_prefix, string new_prefix) {
+        Gtk.TextIter line_start, prefix_end;
+
+        buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+        buffer.get_iter_at_line_offset (out prefix_end, line_number, old_prefix.char_count ());
+        buffer.delete (ref line_start, ref prefix_end);
+
+        buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+        buffer.insert (ref line_start, new_prefix, -1);
+    }
+
+    private void migrate_list_prefixes (string old_prefix, string new_prefix) {
+        if (old_prefix == "") {
+            if (new_prefix == "") {
+                Gtk.TextIter start, end;
+                buffer.get_bounds (out start, out end);
+                buffer.remove_tag_by_name ("list_item", start, end);
+            }
+
+            return;
+        }
+
+        var line_count = buffer.get_line_count ();
+        var did_change = false;
+
+        buffer.begin_user_action ();
+
+        for (int line_number = 0; line_number < line_count; line_number++) {
+            if (!has_specific_prefix (line_number, old_prefix)) {
+                continue;
+            }
+
+            replace_prefix (line_number, old_prefix, new_prefix);
+            did_change = true;
+        }
+
+        buffer.end_user_action ();
+
+        if (did_change || new_prefix == "") {
+            restore_list_item_indentation ();
+        }
     }
 
     /**

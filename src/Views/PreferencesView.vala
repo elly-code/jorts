@@ -10,6 +10,16 @@
     private Granite.Toast toast;
     public Gtk.Button close_button;
 
+    private void commit_list_prefix (Gtk.Entry entry) {
+        var current_prefix = Application.gsettings.get_string (KEY_LIST);
+
+        if (entry.text == current_prefix) {
+            return;
+        }
+
+        Application.gsettings.set_string (KEY_LIST, entry.text);
+    }
+
     construct {
         var overlay = new Gtk.Overlay ();
         child = overlay;
@@ -50,6 +60,15 @@
                 list_entry.secondary_icon_name = "view-refresh-symbolic";
                 list_entry.secondary_icon_tooltip_text = _("Reset to default");
                 list_entry.icon_press.connect (on_reset_prefix);
+                list_entry.activate.connect (() => {
+                    commit_list_prefix (list_entry);
+                });
+
+                var list_entry_focus = new Gtk.EventControllerFocus ();
+                list_entry_focus.leave.connect (() => {
+                    commit_list_prefix (list_entry);
+                });
+                list_entry.add_controller (list_entry_focus);
 
                 var list_label = new Granite.HeaderLabel (_("List item prefix")) {
                     mnemonic_widget = list_entry,
@@ -63,7 +82,7 @@
 
                 Application.gsettings.bind (KEY_LIST,
                     list_entry, "text",
-                    SettingsBindFlags.DEFAULT);
+                    SettingsBindFlags.GET);
 
                 settingsbox.append (lists_box);
 
