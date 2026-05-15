@@ -146,4 +146,15 @@ public class Jorts.ZoomController : Object {
 
         return Gdk.EVENT_STOP;
     }
+
+
+    public void on_pinch (double dy) {
+        debug ("Pinch!");
+
+        // Delta is at 1 at rest
+        zoom_changed (ZoomType.from_delta (dy - 1));
+        debug ("Go! Zoooommmmm");
+
+        //return Gdk.EVENT_STOP;
+    }
 }
