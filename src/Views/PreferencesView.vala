@@ -87,7 +87,7 @@
                 /*************************************************/
 
                 var hidebar_box = new Jorts.SettingsSwitch (
-                    ///TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+                    //TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
                     _("Hide bottom bar"),
                     _("Keyboard shortcuts will still function (Ctrl+T)"),
                     KEY_HIDEBAR);
@@ -105,7 +105,7 @@
                     halign = Gtk.Align.FILL
                 };
 
-                ///TRANSLATORS: Button to autostart the application
+                //TRANSLATORS: Button to autostart the application
                 var set_autostart = new Gtk.Button () {
                     label = _("Enable"),
                     valign = Gtk.Align.CENTER
@@ -116,7 +116,7 @@
                     toast.send_notification ();
                 });
 
-                ///TRANSLATORS: Button to remove the autostart for the application
+                //TRANSLATORS: Button to remove the autostart for the application
                 var remove_autostart = new Gtk.Button () {
                     label = _("Disable"),
                     valign = Gtk.Align.CENTER

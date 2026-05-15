@@ -1,7 +1,7 @@
 project(
     'jorts',
     'vala', 'c',
-    version: '4.1.1',
+    version: '4.2.0',
     license: 'GPL-3.0-or-later'
 )
 
