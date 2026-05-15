@@ -1,3 +1,5 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
 src/Views/NoteView.vala
 src/Widgets/EditableLabel.vala
 src/Widgets/TextView.vala
