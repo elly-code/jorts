@@ -12,9 +12,9 @@
 			<description>Whether to hide the actionbar and its buttons</description>
 		</key>
 		<key name="list-item-start" type="s">
-			<default>" • "</default>
-			<summary>Hide actionbar</summary>
-			<description>Whether to hide the actionbar and its buttons</description>
+			<default>"• "</default>
+			<summary>List item start</summary>
+			<description>The string to use at the start of a list item</description>
 		</key>
 	</schema>
 </schemalist>
