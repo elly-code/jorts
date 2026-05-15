@@ -12,6 +12,9 @@
 public class Jorts.TextView : Granite.HyperTextView {
 
     private Gtk.EventControllerKey keyboard;
+    private Gtk.TextBuffer? observed_buffer;
+    private ulong buffer_changed_handler_id = 0;
+    private bool list_item_restore_queued = false;
     private string _list_item_start = "";
     public string list_item_start {
         get { return _list_item_start; }
@@ -87,9 +90,53 @@ public class Jorts.TextView : Granite.HyperTextView {
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
+        notify["buffer"].connect (() => {
+            attach_buffer_observers ();
+            queue_restore_list_item_indentation ();
+        });
+        attach_buffer_observers ();
+
         Application.gsettings.bind (KEY_LIST,
             this, "list-item-start",
             GLib.SettingsBindFlags.DEFAULT);
+    }
+
+    private void attach_buffer_observers () {
+        if (observed_buffer == buffer) {
+            return;
+        }
+
+        detach_buffer_observers ();
+        observed_buffer = buffer;
+
+        buffer_changed_handler_id = observed_buffer.changed.connect_after (queue_restore_list_item_indentation);
+    }
+
+    private void detach_buffer_observers () {
+        if (observed_buffer == null) {
+            return;
+        }
+
+        if (buffer_changed_handler_id != 0) {
+            SignalHandler.disconnect (observed_buffer, buffer_changed_handler_id);
+            buffer_changed_handler_id = 0;
+        }
+
+        observed_buffer = null;
+    }
+
+    private void queue_restore_list_item_indentation () {
+        if (list_item_restore_queued) {
+            return;
+        }
+
+        list_item_restore_queued = true;
+
+        Idle.add (() => {
+            list_item_restore_queued = false;
+            restore_list_item_indentation ();
+            return false;
+        });
     }
 
     private void ensure_tags () {
