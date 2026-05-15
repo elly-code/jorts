@@ -144,22 +144,30 @@ public class Jorts.TextView : Granite.HyperTextView {
             return;
         }
 
-        var layout = this.create_pango_layout (list_item_start);
+        var measured_prefix = list_item_start.strip ();
+
+        if (measured_prefix == "") {
+            measured_prefix = list_item_start;
+        }
+
+        var layout = this.create_pango_layout (measured_prefix);
         int width, height;
         layout.get_pixel_size (out width, out height);
+
+        var indent_width = int.max (width + 4, 8);
 
         var list_item_tag = buffer.tag_table.lookup ("list_item");
 
         if (list_item_tag == null) {
             buffer.create_tag ("list_item",
-                "indent", -width,
-                "left-margin", SPACING_DOUBLE + width
+                "indent", -indent_width,
+                "left-margin", SPACING_DOUBLE + indent_width
             );
             return;
         }
 
-        list_item_tag.indent = -width;
-        list_item_tag.left_margin = SPACING_DOUBLE + width;
+        list_item_tag.indent = -indent_width;
+        list_item_tag.left_margin = SPACING_DOUBLE + indent_width;
     }
 
     public void refresh_list_item_indentation () {
