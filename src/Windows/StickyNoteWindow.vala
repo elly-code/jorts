@@ -24,6 +24,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private Jorts.ScribblyController scribbly_controller;
     private Gtk.EventControllerKey keypress_controller;
     private Gtk.EventControllerScroll scroll_controller;
+    private Gtk.GestureZoom gesturezoom_controller;
 
     public NoteData data {
         owned get {return packaged ();}
@@ -57,8 +58,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             propagation_phase = Gtk.PropagationPhase.CAPTURE
         };
 
+        gesturezoom_controller = new Gtk.GestureZoom ();
+
+
         ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
+        ((Gtk.Widget)this).add_controller (gesturezoom_controller);
 
         // The view has its own titlebar
         titlebar = new Gtk.Grid () {visible = false};
@@ -92,6 +97,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
         keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
         scroll_controller.scroll.connect (zoom_controller.on_scroll);
+        gesturezoom_controller.scale_changed.connect (zoom_controller.on_pinch);
+
+
 
         debug ("Built UI. Lets do connects and binds");
 
