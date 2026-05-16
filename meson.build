@@ -70,13 +70,16 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 #================================
 # Add subfolders for Meson to look
 
-config_data = configuration_data()
-config_data.set('APP_NAME', app_name)
-config_data.set('APP_ID', app_id)
-config_data.set('APP_PATH', app_path)
-config_data.set('APP_VERSION', app_version)
-config_data.set('ALTERNATE_APP_ID', alternate_app_id)
-config_data.set('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+config_data = configuration_data(
+    {
+        'APP_NAME': app_name,
+        'APP_ID': app_id,
+        'APP_PATH': app_path,
+        'APP_VERSION': app_version,
+        'ALTERNATE_APP_ID': alternate_app_id,
+        'LOCALEDIR': get_option('prefix') / get_option('localedir')
+    }
+)
 
 subdir('po')
 subdir('data')
@@ -87,3 +90,12 @@ gnome.post_install(
   gtk_update_icon_cache: true,
   update_desktop_database: true
   )
+
+if development_build
+message('''
+    
+You now have a development version installed.
+Here be dragons.
+
+''')
+endif
