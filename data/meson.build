@@ -14,7 +14,8 @@ gresource_file = configure_file(
 gresource = gnome.compile_resources(
     'gresource',
     gresource_file,
-    source_dir: '.'
+    source_dir: '.',
+    dependencies: blueprints
 )
 
 #========================

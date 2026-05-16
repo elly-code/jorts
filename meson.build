@@ -52,6 +52,7 @@ endif
 #================================
 gnome = import('gnome')
 i18n = import('i18n')
+i18n.gettext(app_name, preset: 'glib')
 
 # Windows needs icons, special arguments, and skip libportal
 windows_build = get_option('windows_build')
@@ -68,7 +69,6 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 
 
 #================================
-# Add subfolders for Meson to look
 
 config_data = configuration_data()
 config_data.set('APP_NAME', app_name)
@@ -77,6 +77,19 @@ config_data.set('APP_PATH', app_path)
 config_data.set('APP_VERSION', app_version)
 config_data.set('ALTERNATE_APP_ID', alternate_app_id)
 config_data.set('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+
+
+blueprints = custom_target('blueprints',
+  input: files(
+    # LIST YOUR BLUEPRINT FILES HERE
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '--minify', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
+
+#================================
+# Add subfolders for Meson to look
 
 subdir('po')
 subdir('data')

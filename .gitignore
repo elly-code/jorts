@@ -11,3 +11,4 @@ builddir
 repo
 .vscode
 deploy
+/subprojects/blueprint-compiler
