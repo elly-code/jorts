@@ -31,6 +31,7 @@
             height_request = ICON_SIZE,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>n"},
+                //TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
                 _("New sticky note")
             ),
             has_frame = false

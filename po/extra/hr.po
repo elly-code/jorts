@@ -1,248 +1,280 @@
-# SOME DESCRIPTIVE TITLE.
+# Croatian translation for jorts-extra.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the extra package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the jorts package.
+# Milo Ivir <mail@milotype.de>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-12 19:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-05-11 18:46+0200\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: \n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/jorts.desktop.in.in:5 data/jorts.metainfo.xml.in.in:9
 msgid "Jorts"
-msgstr ""
+msgstr "Jorts"
 
 #: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:48
 msgid "Sticky notes"
-msgstr ""
+msgstr "Ljepljive bilješke"
 
 #: data/jorts.desktop.in.in:7
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
 msgstr ""
+"Zapiši bilješke, podsjetnike, nasumične misli i druge kratkoročne informacije"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr ""
+msgstr "tekst;običan;neformatiran tekst;notepad;bilješke;fiksirano;post-it;"
 
 #: data/jorts.desktop.in.in:18
 msgid "New sticky note"
-msgstr ""
+msgstr "Nova ljepljiva bilješka"
 
 #: data/jorts.desktop.in.in:23
 msgid "Show Preferences"
-msgstr ""
+msgstr "Prikaži postavke"
 
 #: data/jorts.metainfo.xml.in.in:10
 msgid "Write on colourful little squares"
-msgstr ""
+msgstr "Piši na šarenim malim kvadratićima"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid "Neither jeans nor shorts, just like jorts!"
-msgstr ""
+msgstr "Ni traperice ni kratke hlače, baš kao i jorts!"
 
 #: data/jorts.metainfo.xml.in.in:13
 msgid "Features include:"
-msgstr ""
+msgstr "Funkcije ukljućuju:"
 
 #: data/jorts.metainfo.xml.in.in:15
 msgid "Colourful: Eleven pretty pastel themes"
-msgstr ""
+msgstr "Šareno: Jedanaest lijepih pastelnih tema"
 
 #: data/jorts.metainfo.xml.in.in:16
 msgid ""
 "Adaptive: New notes get the zoom and font you last chose, and a random new "
 "color"
-msgstr ""
+msgstr "Prilagodljivo: nove bilješke nasljeđuju zum i font koje ste zadnje "
+"odabrali te nasumičnu novu boju"
 
 #: data/jorts.metainfo.xml.in.in:17
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
+"Slatko: Svaka nova bilješka ima smiješan ili simpatičan nasumični (urediv) "
+"naslov"
 
 #: data/jorts.metainfo.xml.in.in:18
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr ""
+msgstr "Praktično: Može otvarati poveznice i e-mailove pomoću Ctrl+Click"
 
 #: data/jorts.metainfo.xml.in.in:19
 msgid "Private: Try the scribble mode!"
-msgstr ""
+msgstr "Privatno: Isprobaj modus zabilješka!"
 
 #: data/jorts.metainfo.xml.in.in:32
 msgid "Lainsce + Stella and Charlie"
-msgstr ""
+msgstr "Lainsce + Stella i Charlie"
 
 #: data/jorts.metainfo.xml.in.in:49
 msgid "Sticky note"
-msgstr ""
+msgstr "Ljepljiva bilješka"
 
 #: data/jorts.metainfo.xml.in.in:50
 msgid "Stickies"
-msgstr ""
+msgstr "Naljepnice"
 
 #: data/jorts.metainfo.xml.in.in:51
 msgid "Colourful"
-msgstr ""
+msgstr "Šareno"
 
 #: data/jorts.metainfo.xml.in.in:52
 msgid "Notes"
-msgstr ""
+msgstr "Bilješke"
 
 #: data/jorts.metainfo.xml.in.in:53
 msgid "Cute"
-msgstr ""
+msgstr "Slatko"
 
 #: data/jorts.metainfo.xml.in.in:54
 msgid "Desktop"
-msgstr ""
+msgstr "Radna površina"
 
 #: data/jorts.metainfo.xml.in.in:55
 msgid "Reminder"
-msgstr ""
+msgstr "Podsjetnik"
 
 #: data/jorts.metainfo.xml.in.in:56
 msgid "Utility"
-msgstr ""
+msgstr "Uslužni program"
 
 #: data/jorts.metainfo.xml.in.in:57
 msgid "Pantheon"
-msgstr ""
+msgstr "Pantheon"
 
 #: data/jorts.metainfo.xml.in.in:58
 msgid "elementary OS"
-msgstr ""
+msgstr "elementary OS"
 
 #: data/jorts.metainfo.xml.in.in:73
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr ""
+msgstr "Ljepljiva bilješka s temom „Borovnica”"
 
 #: data/jorts.metainfo.xml.in.in:77
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
 msgstr ""
+"Streaming? Brineš se da netko gleda iza tvojih leđa? Isprobaj scribbly modus!"
 
 #: data/jorts.metainfo.xml.in.in:81
 msgid "Look! Ascii art in a sticky note!"
-msgstr ""
+msgstr "Pogledaj! ASCII slika na ljepljivoj bilješci!"
 
 #: data/jorts.metainfo.xml.in.in:85
 msgid "The preferences dialog in light mode"
-msgstr ""
+msgstr "Dijalog s postavkama u svijetlom modusu"
 
 #: data/jorts.metainfo.xml.in.in:89
 msgid "The preferences dialog in dark mode"
-msgstr ""
+msgstr "Dijalog s postavkama u tamnom modusu"
 
 #: data/jorts.metainfo.xml.in.in:97
 msgid "The Unyielding Jorts"
-msgstr ""
+msgstr "Nepokolebljivi jorts"
 
 #: data/jorts.metainfo.xml.in.in:99
 msgid "Lovely Pride variant thanks to @wpkelso!"
-msgstr ""
+msgstr "Lijepa varijanta Pride zahvaljujući @wpkelso!"
 
 #: data/jorts.metainfo.xml.in.in:100
 msgid "Added tabulated lists thanks to @MysterieCatDev!"
-msgstr ""
+msgstr "Dodani su tabelirani popisi zahvaljujući @MysterieCatDev!"
 
 #: data/jorts.metainfo.xml.in.in:101
 msgid "Added Danish translation thanks to @pracedru!"
-msgstr ""
+msgstr "Dodan danski prijevod zahvaljujući @pracedru!"
 
 #: data/jorts.metainfo.xml.in.in:102
 msgid "Added Croatian translation thanks to @milotype!"
-msgstr ""
+msgstr "Dodan je hrvatski prijevod, hvala @milotype!"
 
 #: data/jorts.metainfo.xml.in.in:103
 msgid "Updated Spanish translation thanks to Eli!"
-msgstr ""
+msgstr "Ažurirani španjolski prijevod zahvaljujući Eli!"
 
 #: data/jorts.metainfo.xml.in.in:109
 msgid "Minor touchups"
-msgstr ""
+msgstr "Manji popravci"
 
 #: data/jorts.metainfo.xml.in.in:114
 msgid "Jorts of Spring"
-msgstr ""
+msgstr "Jorts proljeća"
 
 #: data/jorts.metainfo.xml.in.in:116
 msgid "New color: Latte!"
-msgstr ""
+msgstr "Nova boja: Latte!"
 
 #: data/jorts.metainfo.xml.in.in:117
+#, fuzzy
 msgid "Added Preferences and Quit to the note right-click"
-msgstr ""
+msgstr "Dodao sam postavke i izađi u bilješku desnim klikom"
 
 #: data/jorts.metainfo.xml.in.in:118
+#, fuzzy
 msgid "A lot of under-the-hood spring cleaning"
-msgstr ""
+msgstr "Puno proljetnog čišćenja ispod haube"
 
 #: data/jorts.metainfo.xml.in.in:124
+#, fuzzy
 msgid "Organization change"
-msgstr ""
+msgstr "Promjena organizacije"
 
 #: data/jorts.metainfo.xml.in.in:126
+#, fuzzy
 msgid "From ellie-commons to elly-code"
-msgstr ""
+msgstr "Od ellie-commons do elly-code"
 
 #: data/jorts.metainfo.xml.in.in:128 data/jorts.metainfo.xml.in.in:150
+#, fuzzy
 msgid "😎 Guests stars:"
-msgstr ""
+msgstr "😎 Gostujuće zvijezde:"
 
 #: data/jorts.metainfo.xml.in.in:130
+#, fuzzy
 msgid "Updated sv-SE translation thanks to @yeager!"
-msgstr ""
+msgstr "Ažurirani sv-SE prijevod zahvaljujući @yeager!"
 
 #: data/jorts.metainfo.xml.in.in:131
+#, fuzzy
 msgid "Added vietnamese translation thanks to @hthienloc!"
-msgstr ""
+msgstr "Dodan vijetnamski prijevod zahvaljujući @hthienloc!"
 
 #: data/jorts.metainfo.xml.in.in:140
+#, fuzzy
 msgid "🚀 4.0.0 Jorts of Hyperspace!"
-msgstr ""
+msgstr "🚀 4.0.0 Jorti hipersvemira!"
 
 #: data/jorts.metainfo.xml.in.in:142
+#, fuzzy
 msgid "Version 4 to align with Gtk version"
-msgstr ""
+msgstr "Verzija 4 za usklađivanje s Gtk verzijom"
 
 #: data/jorts.metainfo.xml.in.in:143
+#, fuzzy
 msgid "Added button to toggle lists, and ability to customize them"
-msgstr ""
+msgstr "Dodani gumbi za liste prekidača i mogućnost njihove prilagodbe"
 
 #: data/jorts.metainfo.xml.in.in:144
+#, fuzzy
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
-msgstr ""
+msgstr "Ctrl+Skrolaj za zumiranje, zumiraj dalje"
 
 #: data/jorts.metainfo.xml.in.in:145
+#, fuzzy
 msgid "More zoom options"
-msgstr ""
+msgstr "Više opcija za zumiranje"
 
 #: data/jorts.metainfo.xml.in.in:146
+#, fuzzy
 msgid "Keyboard shortcuts work from popover now"
-msgstr ""
+msgstr "Prečaci na tipkovnici sada rade iz popover okova"
 
 #: data/jorts.metainfo.xml.in.in:147
+#, fuzzy
 msgid "A couple visual bugfixes as well!"
-msgstr ""
+msgstr "I nekoliko vizualnih ispravaka bugova!"
 
 #: data/jorts.metainfo.xml.in.in:148
+#, fuzzy
 msgid "Various under the hood performance improvements"
-msgstr ""
+msgstr "Razna poboljšanja performansi ispod haube"
 
 #: data/jorts.metainfo.xml.in.in:152
+#, fuzzy
 msgid "Updated JA translation thanks to @ryonakano!"
-msgstr ""
+msgstr "Ažurirani JA prijevod zahvaljujući @ryonakano!"
 
 #: data/jorts.metainfo.xml.in.in:153
+#, fuzzy
 msgid "You, the user, for liking this lil app!"
-msgstr ""
+msgstr "Ti, korisnice, što ti se sviđa ova mala aplikacija!"
+
+#~ msgid "Colourful: Ten pretty themes. Any new note gets a random one"
+#~ msgstr "Šareno: Deset lijepih tema. Svaka nova bilješka dobiva nasumičnu"
+
+#~ msgid ""
+#~ "This is a fork of an old version of \"Notejot\" by lainsce. The community "
+#~ "liked it so much, we thought it would be great to revive it!"
+#~ msgstr ""
+#~ "Ovo je fork stare „Notejot” verzije od lainsce. Zajednica ga je toliko "
+#~ "voljela da smo mislili da bi bilo sjajno oživjeti ga!"

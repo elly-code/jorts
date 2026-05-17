@@ -48,7 +48,7 @@ The app is destined to stay simple. If anything there is already too much in the
 Roadmap:
  - Document stuff
  - Fix an annoying memory leak where deleted notes linger in memory
- - Bin the whole saving infra and use Gtk 4.24 save-state new thing
+ - Use Gtk 4.24 save-state new thing if it ever lands
  - More icon variants
  - Better list/bullets
  - Co-maintainers would be nice
@@ -68,25 +68,51 @@ On the right you can donate to various contributors:
 
 ## 💾 Notes Storage
 
-
-Notes are stored in `~/.var/app/io.github.elly_code.jorts/data`
-if from flathub, `~/.var/app/io.github.ellie_commons.jorts/data`
-
-You can get it all by entering in a terminal:
-
-```bash
-cp ~/.var/app/io.github.elly_code.jorts/data ~/
-```
-
-"saved_state.json" contains all notes in JSON format. The structure is quite simple, if not pretty.
+"saved_state.json" contains all notes in JSON format. The structure is quite simple, it is an array of objects, each representing the data of a sticky note
 
 The app reads from it only during startup (rest of the time it writes in) so you could quite easily swap it up to swap between sets of notes.
 
+The app writes to it everytime there is a sticky note change
 
 
-ON WINDOWS: It's in:
 
-YourUserFolder \AppData\Local\io.github.elly_code.jorts
+### If installed from flathub (if you are not on elementary OS)
 
-AppData is a hidden folder. Either you paste the above path in the path bar, from your user folder
-Or you do a "Show hidden files"
+You can get it all by entering in the search bar of your file explorer:
+
+~/.var/app/io.github.ellie_commons.jorts/data/io.github.ellie_commons.jorts/
+
+Or typing the below in a terminal, to move it to your Home folder:
+
+```bash
+cp ~/.var/app/io.github.ellie_commons.jorts/data/io.github.ellie_commons.jorts/saved_data.json ~/
+```
+
+
+### If installed from elementary OS appcenter
+
+The app id is slightly different
+
+Enter the path:
+
+~/.var/app/io.github.elly_code.jorts/data/io.github.elly_code.jorts/
+
+Or the command:
+
+```bash
+cp ~/.var/app/io.github.elly_code.jorts/data/io.github.elly_code.jorts/saved_data.json ~/
+```
+
+
+### WINDOWS
+
+Paste in the explorer window:
+
+%localappdata%\io.github.elly_code.jorts\
+
+
+### UNSUPPORTED PACKAGINGS
+
+Check out in ~/.local/share
+
+It likely is there

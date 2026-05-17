@@ -20,15 +20,16 @@ namespace Jorts.Utils {
     /**
     * Placeholders for titles
     */
-    ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
     public string random_title () {
         string[] alltitles = {
+            //TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
+            //It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
             _("All my best friends"),
             _("My secret recipe"),
             _("My todo list"),
             _("Super secret to not tell anyone"),
             _("My grocery list"),
-            /// TRANSLATORS: What is meant are reflective thoughts, random thoughts
+            // TRANSLATORS: What is meant are reflective thoughts, random thoughts
             _("Shower thoughts"),
             _("My fav fanfics"),
             _("My fav dinosaurs"),
@@ -112,7 +113,8 @@ namespace Jorts.Utils {
         if (random_in_range == 1) {
 
             print ("🔥🔥🔥GOLDEN STICKY🔥🔥🔥");
-            ///TRANSLATORS: This is for an easter egg
+            //TRANSLATORS: This is for an easter egg, most users may not see this, so this is optional
+            // You can skip if too much, but i would prefer addressing people in their native language
             blank_slate.title = _("🔥WOW Congratulations!🔥");
             blank_slate.content = _(
 """You have found the Golden Sticky Note!
