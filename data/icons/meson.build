@@ -3,8 +3,8 @@
 #
 
 # Override only default 
-if development_build and variant == 'default'
-    variant = 'devel'
+if profile == 'development' and icon_variant == 'default'
+    icon_variant = 'devel'
 endif
 
 #========================
@@ -14,13 +14,13 @@ icon_sizes = ['16', '24', '32', '48', '64', '128']
 
 foreach i : icon_sizes
     install_data(
-        variant / 'hicolor' / i + '.png',
+        icon_variant / 'hicolor' / i + '.png',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
         rename: app_id + '.png'
     )
 
     install_data(
-        variant / 'hicolor@2' / i + '@2.png',
+        icon_variant / 'hicolor@2' / i + '@2.png',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
         rename: app_id + '.png'
     )
@@ -28,7 +28,7 @@ foreach i : icon_sizes
 endforeach
 
 install_data(
-    variant / 'scalable.svg',
+    icon_variant / 'scalable.svg',
     install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
     rename: app_id + '.svg'
 )

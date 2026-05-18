@@ -16,8 +16,9 @@ legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 
 vala_flags = []
+profile = get_option('profile')
 
-if get_option('legacy-rdnn')
+if profile == 'legacy-rdnn'
     app_id = legacy_app_id
     alternate_app_id = correct_app_id
     app_path = legacy_app_path
@@ -30,8 +31,7 @@ else
     app_path = correct_app_path
 endif
 
-development_build = get_option('development')
-if development_build
+if profile == 'development'
   app_id +=  '.devel'
   vala_flags += ['--define', 'DEVEL']
   vala_flags += ['--define', 'LATTE']
@@ -39,11 +39,11 @@ endif
 
 #================================
 # Cool icon variants
-variant = get_option('variant')
+icon_variant = get_option('icon-variant')
 
-if variant == 'pride'
+if icon_variant == 'pride'
     vala_flags += ['--define', 'PRIDE']
-elif variant == 'halloween'
+elif icon_variant == 'halloween'
     vala_flags += ['--define', 'HALLOWEEN']
 else
     vala_flags += ['--define', 'DEFAULT']
@@ -84,6 +84,10 @@ config_data = configuration_data(
 subdir('po')
 subdir('data')
 subdir('src')
+
+if windows_build
+    subdir('windows')
+endif
 
 gnome.post_install(
   glib_compile_schemas: true,
