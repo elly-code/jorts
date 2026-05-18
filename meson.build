@@ -85,6 +85,10 @@ subdir('po')
 subdir('data')
 subdir('src')
 
+if windows_build
+    subdir('windows')
+endif
+
 gnome.post_install(
   glib_compile_schemas: true,
   gtk_update_icon_cache: true,
