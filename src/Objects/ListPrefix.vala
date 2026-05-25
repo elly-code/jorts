@@ -43,7 +43,7 @@ public enum Jorts.ListPrefix {
      */
     public const string[] ALL = {
         N_("(Disabled)"),
-        N_(" • Text"),
-        N_(" ⁃ Text")
+        N_(" • List item"),
+        N_(" ⁃ List item")
     };
 }
