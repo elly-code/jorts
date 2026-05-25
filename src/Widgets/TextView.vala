@@ -80,17 +80,14 @@ public class Jorts.TextView : Granite.HyperTextView {
         list_item_prefix = ListPrefix.from_int (int_prefix).to_string ();
         var layout = this.create_pango_layout (list_item_prefix);
 
-        int width, height;
-        layout.get_pixel_size (out width, out height);
-
-        var indent_width = width;   //int.max (width + 4, 8);
+        int indent_width, h;
+        layout.get_pixel_size (out indent_width, out h);
 
         //print ("\n\n%i", indent_width);
         list_buffer = new Jorts.TextBuffer ();
         list_buffer.init_list_handling (list_item_prefix, indent_width);
 
         buffer = (Gtk.TextBuffer)list_buffer;
-
     }
 
     public void refresh_indentation () {
@@ -98,10 +95,8 @@ public class Jorts.TextView : Granite.HyperTextView {
         list_item_prefix = ListPrefix.from_int (int_prefix).to_string ();
         var layout = this.create_pango_layout (list_item_prefix);
 
-        int width, height;
-        layout.get_pixel_size (out width, out height);
-
-        var indent_width = width;
+        int indent_width, h;
+        layout.get_pixel_size (out indent_width, out h);
         list_buffer.refresh_list_item_indentation (indent_width);
     }
 
@@ -122,6 +117,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         } else {
             list_buffer.set_list (first_line, last_line);
         }
+        refresh_indentation ();
         buffer.end_user_action ();
 
         grab_focus ();
@@ -140,14 +136,12 @@ public class Jorts.TextView : Granite.HyperTextView {
 
             Gtk.TextIter start, end;
             list_buffer.get_selection_bounds (out start, out end);
-
             var line_number = start.get_line ();
 
             if (list_buffer.has_prefix (line_number)) {
 
                 list_buffer.get_iter_at_line_offset (out start, line_number, 0);
                 var text_in_line = list_buffer.get_slice (start, end, false);
-
                 print ("\nLength detected: %i", text_in_line.length);
 
                 if (text_in_line == list_item_prefix) {
@@ -156,6 +150,7 @@ public class Jorts.TextView : Granite.HyperTextView {
                     list_buffer.remove_prefix (line_number);
                     list_buffer.end_user_action ();
 
+                    // Stop - Do not propagate further
                     return true;
                 }
             }
@@ -175,7 +170,7 @@ public class Jorts.TextView : Granite.HyperTextView {
                 buffer.get_iter_at_line_offset (out start, line_number + 1, 0);
                 end = start.copy ();
                 end.forward_to_line_end ();
-                buffer.apply_tag_by_name ("list_item", start, end);
+                buffer.apply_tag_by_name (TextBuffer.LIST_TAG_NAME, start, end);
 
                 buffer.end_user_action ();
 

@@ -32,9 +32,9 @@ public enum Jorts.ListPrefix {
     public string to_string () {
         switch (this) {
             case 0: return "";
-            case 1: return " • ";
-            case 2: return " ⁃ ";
-            default: return " • ";
+            case 1: return "• ";
+            case 2: return "⁃ ";
+            default: return "• ";
         }
     }
 

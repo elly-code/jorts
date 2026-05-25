@@ -19,6 +19,8 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
 
         // Setup the bespoke indent
         create_tag (LIST_TAG_NAME,
+                "accumulative-margin", true,
+                "left-margin", 4,
                 "indent", -initial_indent_width
             );
 
@@ -55,6 +57,7 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
 
     public void refresh_list_item_indentation (int new_indent) {
         var list_item_tag = tag_table.lookup (LIST_TAG_NAME);
+        list_item_tag.left_margin = 4;
         list_item_tag.indent = -new_indent;
         indent_width = new_indent;
     }
