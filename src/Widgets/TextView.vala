@@ -156,24 +156,29 @@ public class Jorts.TextView : Granite.HyperTextView {
                     list_buffer.begin_user_action ();
                     list_buffer.remove_prefix (line_number);
                     list_buffer.end_user_action ();
+
+                    return true;
                 }
             }
-            return false;
 
         // If Enter on a list item, add a list prefix on the new line
         } else if (keyval == Gdk.Key.Return) {
             Gtk.TextIter start, end;
-            list_buffer.get_selection_bounds (out start, out end);
+            buffer.get_selection_bounds (out start, out end);
             var line_number = start.get_line ();
 
-            if (list_buffer.is_list (line_number, line_number)) {
+            if (list_buffer.has_prefix (line_number)) {
 
-                print ("\nJump and newlist!");
-                list_buffer.begin_user_action ();
-                list_buffer.insert_at_cursor ("\n", -1);
+                buffer.begin_user_action ();
+                buffer.insert_at_cursor ("\n" + list_item_prefix, -1);
 
-                list_buffer.set_list (line_number +1, line_number);
-                list_buffer.end_user_action ();
+                // Ensure new line has tag applied since it was just inserted
+                buffer.get_iter_at_line_offset (out start, line_number + 1, 0);
+                end = start.copy ();
+                end.forward_to_line_end ();
+                buffer.apply_tag_by_name ("list_item", start, end);
+
+                buffer.end_user_action ();
 
                 return true;
             }
