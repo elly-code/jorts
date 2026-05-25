@@ -111,10 +111,10 @@
 
         //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
         //textview.bind_property ("on_list_item", actionbar.list_button, "active", GLib.BindingFlags.DEFAULT);
-
+/*  
         Application.gsettings.bind (KEY_LIST,
             textview, "list-item-prefix",
-            GLib.SettingsBindFlags.DEFAULT);
+            GLib.SettingsBindFlags.DEFAULT);  */
 
     }
 

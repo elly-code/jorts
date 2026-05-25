@@ -36,6 +36,7 @@ sources = files (
     'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ActionBar.vala',
+    'Widgets' / 'TextBuffer.vala',
 
     'Widgets' / 'PopoverWidgets' / 'ColorPill.vala',
     'Widgets' / 'PopoverWidgets' / 'ColorBox.vala',
