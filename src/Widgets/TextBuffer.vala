@@ -60,6 +60,8 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
         list_item_tag.left_margin = 4;
         list_item_tag.indent = -new_indent;
         indent_width = new_indent;
+
+        restore_list_item_indentation ();
     }
 
     /**
