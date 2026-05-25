@@ -83,10 +83,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         int width, height;
         layout.get_pixel_size (out width, out height);
 
-        //print ("\n\n%i%i\n", width, height);
+        var indent_width = width;   //int.max (width + 4, 8);
 
-        var indent_width = int.max (width + 4, 8);
-
+        //print ("\n\n%i", indent_width);
         list_buffer = new Jorts.TextBuffer ();
         list_buffer.init_list_handling (list_item_prefix, indent_width);
 
@@ -102,7 +101,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         int width, height;
         layout.get_pixel_size (out width, out height);
 
-        var indent_width = int.max (width + 4, 8);
+        var indent_width = width;
         list_buffer.refresh_list_item_indentation (indent_width);
     }
 
