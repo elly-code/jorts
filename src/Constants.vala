@@ -49,7 +49,7 @@ namespace Jorts {
     // Autocomplete save me
     const string KEY_SCRIBBLY           = "scribbly-mode-active";
     const string KEY_HIDEBAR            = "hide-bar";
-    const string KEY_LIST               = "list-item-start";
+    const string KEY_LIST               = "list-prefix";
 
     // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {

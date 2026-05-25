@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
+  <enum id="@APP_ID@.list-prefix">
+    <value value='0' nick="disabled"/>
+    <value value='1' nick="bullet"/>
+    <value value='2' nick="dash"/>
+  </enum>
+
   <schema path="@APP_PATH@/" id="@APP_ID@">
 		<key name="scribbly-mode-active" type="b">
 			<default>false</default>
@@ -11,10 +17,10 @@
 			<summary>Hide actionbar</summary>
 			<description>Whether to hide the actionbar and its buttons</description>
 		</key>
-		<key name="list-item-start" type="s">
-			<default>"• "</default>
-			<summary>List item start</summary>
-			<description>The string to use at the start of a list item</description>
-		</key>
+		<key enum="@APP_ID@.list-prefix" name="list-prefix">
+      		<default>'bullet'</default>
+      		<summary>List item prefix</summary>
+      		<description>The string to use at the start of a list item</description>
+    	</key>
 	</schema>
 </schemalist>

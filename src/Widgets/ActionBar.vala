@@ -144,6 +144,7 @@
     * If user leaves list prefix blank, then they dont need the button.
     */
     private void on_prefix_changed () {
-        list_button.visible = (Application.gsettings.get_string (KEY_LIST) != "");
+        var is_disabled = Application.gsettings.get_enum (KEY_LIST) == ListPrefix.DISABLED;
+        list_button.visible = !is_disabled;
     }
 }

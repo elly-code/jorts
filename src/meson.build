@@ -23,6 +23,7 @@ sources = files (
     'Objects' / 'Zoom.vala',
     'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
+    'Objects' / 'ListPrefix.vala',
 
     'Utils' / 'Random.vala',
 

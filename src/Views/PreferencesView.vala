@@ -10,16 +10,6 @@
     private Granite.Toast toast;
     public Gtk.Button close_button;
 
-    private void commit_list_prefix (Gtk.Entry entry) {
-        var current_prefix = Application.gsettings.get_string (KEY_LIST);
-
-        if (entry.text == current_prefix) {
-            return;
-        }
-
-        Application.gsettings.set_string (KEY_LIST, entry.text);
-    }
-
     construct {
         var overlay = new Gtk.Overlay ();
         child = overlay;
@@ -49,40 +39,26 @@
                 /*               lists                 */
                 /***************************************/
 
-                var list_entry = new Gtk.Entry () {
+                var list_dropdown = new Gtk.DropDown.from_strings (ListPrefix.ALL) {
                     halign = Gtk.Align.END,
                     hexpand = false,
-                    valign = Gtk.Align.CENTER,
-                    max_length = 6,
-                    max_width_chars = 6
+                    valign = Gtk.Align.CENTER
                 };
 
-                list_entry.secondary_icon_name = "view-refresh-symbolic";
-                list_entry.secondary_icon_tooltip_text = _("Reset to default");
-                list_entry.icon_press.connect (on_reset_prefix);
-                list_entry.activate.connect (() => {
-                    commit_list_prefix (list_entry);
+                list_dropdown.selected = Application.gsettings.get_enum (KEY_LIST);
+                list_dropdown.notify["selected"].connect (() => {
+                    Application.gsettings.set_enum (KEY_LIST, (int)list_dropdown.selected);
                 });
-
-                var list_entry_focus = new Gtk.EventControllerFocus ();
-                list_entry_focus.leave.connect (() => {
-                    commit_list_prefix (list_entry);
-                });
-                list_entry.add_controller (list_entry_focus);
 
                 var list_label = new Granite.HeaderLabel (_("List item prefix")) {
-                    mnemonic_widget = list_entry,
+                    mnemonic_widget = list_dropdown,
                     secondary_text = _("If left empty, the list button will be hidden"),
                     hexpand = true
                 };
 
                 var lists_box = new Gtk.Box (HORIZONTAL, SPACING_STANDARD);
                 lists_box.append (list_label);
-                lists_box.append (list_entry);
-
-                Application.gsettings.bind (KEY_LIST,
-                    list_entry, "text",
-                    SettingsBindFlags.GET);
+                lists_box.append (list_dropdown);
 
                 settingsbox.append (lists_box);
 
@@ -187,9 +163,5 @@
 
             prefview.append (settingsbox);
             prefview.append (actionbar);
-    }
-
-    private void on_reset_prefix (Gtk.EntryIconPosition icon_pos) {
-        Application.gsettings.reset (KEY_LIST);
     }
 }
