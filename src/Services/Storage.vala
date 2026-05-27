@@ -78,7 +78,7 @@ public class Jorts.Storage : Object {
     */
     public void save (Json.Array json_data) {
         ensure_datadir ();
-        debug("Writing %ui elements... (Should be same number as sticky notes)", json_data.get_length ());
+        debug("Writing %u elements... (Should be same number as sticky notes)", json_data.get_length ());
 
         try {
             var generator = new Json.Generator ();
@@ -91,7 +91,7 @@ public class Jorts.Storage : Object {
             warning ("Failed to save notes %s", e.message);
         }
 
-        print ("\n (%ui notes saved)", json_data.get_length ());
+        print ("\n (%u notes saved)", json_data.get_length ());
     }
 
     /*************************************************/

@@ -50,9 +50,10 @@
                     Application.gsettings.set_enum (KEY_LIST, (int)list_dropdown.selected);
                 });
 
+
                 var list_label = new Granite.HeaderLabel (_("List item prefix")) {
                     mnemonic_widget = list_dropdown,
-                    secondary_text = _("If left empty, the list button will be hidden"),
+                    secondary_text = _("If disabled, the toggle list button will be hidden"),
                     hexpand = true
                 };
 

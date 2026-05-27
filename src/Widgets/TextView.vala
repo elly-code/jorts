@@ -6,21 +6,34 @@
  */
 
 /**
-* A textview incorporating detecting links and emails
-* Fairly vanilla but having a definition allows to easily extend it
+* A textview for our sticky notes.
+* Inherits Hypertextview to detect links and emails
+* Adds a list feature which is a hot mess
 */
 public class Jorts.TextView : Granite.HyperTextView {
 
-    const string LIST_TAG_NAME = "list_item";
-
+    // We subclass the buffer to manage the list feature at a lower level
+    // We need to keep a reference to its "Extended version"
     public Jorts.TextBuffer list_buffer;
+
+    // We listen to the keyboard to intervene in some situations
     private Gtk.EventControllerKey keyboard;
 
-    private string list_item_prefix;
-
+    // Convenience
     public string text {
         owned get {return buffer.text;}
         set {buffer.text = value;}
+    }
+
+    // Wrapper, handles changing prefixes in a convenient way
+    private ListPrefix _listprefix = ListPrefix.DISABLED;
+    public ListPrefix listprefix {
+        get {return _listprefix;}
+        set {
+            list_buffer.list_item_prefix = value.to_string ();
+            _listprefix = value;
+            refresh_indentation ();
+        }
     }
 
     public SimpleActionGroup actions {get; construct;}
@@ -62,8 +75,16 @@ public class Jorts.TextView : Granite.HyperTextView {
         add_controller (keyboard);
 
         // Alternate way to access preferences
-        var menuitem_pref = new GLib.MenuItem (_("Show Preferences"), Application.ACTION_PREFIX + Application.ACTION_SHOW_PREFERENCES);
-        var menuitem_quit = new GLib.MenuItem (_("Quit Jorts"), Application.ACTION_PREFIX + Application.ACTION_QUIT);
+        var menuitem_pref = new GLib.MenuItem (
+            _("Show Preferences"),
+            Application.ACTION_PREFIX + Application.ACTION_SHOW_PREFERENCES
+        );
+
+        var menuitem_quit = new GLib.MenuItem (
+            _("Quit Jorts"),
+            Application.ACTION_PREFIX + Application.ACTION_QUIT
+        );
+
         var extra = new GLib.Menu ();
         var section = new GLib.Menu ();
 
@@ -76,28 +97,24 @@ public class Jorts.TextView : Granite.HyperTextView {
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        var int_prefix = Application.gsettings.get_enum (KEY_LIST);
-        list_item_prefix = ListPrefix.from_int (int_prefix).to_string ();
-        var layout = this.create_pango_layout (list_item_prefix);
+
+        var layout = this.create_pango_layout (_listprefix.to_string ());
 
         int indent_width, h;
         layout.get_pixel_size (out indent_width, out h);
 
         //print ("\n\n%i", indent_width);
         list_buffer = new Jorts.TextBuffer ();
-        list_buffer.init_list_handling (list_item_prefix, indent_width);
+        list_buffer.init_list_handling (_listprefix.to_string (), indent_width);
 
         buffer = (Gtk.TextBuffer)list_buffer;
     }
 
     public void refresh_indentation () {
-        var int_prefix = Application.gsettings.get_enum (KEY_LIST);
-        list_item_prefix = ListPrefix.from_int (int_prefix).to_string ();
-        var layout = this.create_pango_layout (list_item_prefix);
-
+        var layout = this.create_pango_layout (_listprefix.to_string ());
         int indent_width, h;
         layout.get_pixel_size (out indent_width, out h);
-        list_buffer.refresh_list_item_indentation (indent_width);
+        list_buffer.indent_width = indent_width;
     }
 
     public void toggle_list () {
@@ -144,7 +161,7 @@ public class Jorts.TextView : Granite.HyperTextView {
                 var text_in_line = list_buffer.get_slice (start, end, false);
                 print ("\nLength detected: %i", text_in_line.length);
 
-                if (text_in_line == list_item_prefix) {
+                if (text_in_line == _listprefix.to_string ()) {
                     print ("\nremoving prefix at line %i", line_number);
                     list_buffer.begin_user_action ();
                     list_buffer.remove_prefix (line_number);
@@ -164,7 +181,7 @@ public class Jorts.TextView : Granite.HyperTextView {
             if (list_buffer.has_prefix (line_number)) {
 
                 buffer.begin_user_action ();
-                buffer.insert_at_cursor ("\n" + list_item_prefix, -1);
+                buffer.insert_at_cursor ("\n" + _listprefix.to_string (), -1);
 
                 // Ensure new line has tag applied since it was just inserted
                 buffer.get_iter_at_line_offset (out start, line_number + 1, 0);

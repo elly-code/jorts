@@ -33,7 +33,7 @@ public enum Jorts.ListPrefix {
         switch (this) {
             case 0: return "";
             case 1: return "• ";
-            case 2: return "⁃ ";
+            case 2: return "- ";
             default: return "• ";
         }
     }
@@ -43,7 +43,7 @@ public enum Jorts.ListPrefix {
      */
     public const string[] ALL = {
         N_("(Disabled)"),
-        N_(" • List item"),
-        N_(" ⁃ List item")
+        N_("• List item"),
+        N_("- List item")
     };
 }

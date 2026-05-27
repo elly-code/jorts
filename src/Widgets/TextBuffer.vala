@@ -11,12 +11,32 @@
 public class Jorts.TextBuffer : Gtk.TextBuffer {
 
     public const string LIST_TAG_NAME = "list_item";
-    private const int INDENT_SPACING = 8;
-    private string list_item_prefix;
-    private int indent_width;
+    private const int INDENT_SPACING = 0;
+
+    string _list_item_prefix = "";
+    public string list_item_prefix {
+        get {return _list_item_prefix;}
+        set {
+            migrate_list_prefixes (value);
+            _list_item_prefix = value;
+        }
+    }
+
+    private int _indent_width = 0;
+    public int indent_width {
+        get {return _indent_width;}
+        set {
+            var list_item_tag = tag_table.lookup (LIST_TAG_NAME);
+            list_item_tag.left_margin = INDENT_SPACING;
+            list_item_tag.indent = -value - INDENT_SPACING;
+
+            restore_list_item_indentation ();
+            _indent_width = value;
+        }
+    }
 
     public void init_list_handling (string prefix, int initial_indent_width) {
-        print ("prefix: %s, width: %i", prefix, initial_indent_width);
+        debug ("prefix: %s, width: %i", prefix, initial_indent_width);
 
         // Setup the bespoke indent
         create_tag (LIST_TAG_NAME,
@@ -26,7 +46,7 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
             );
 
         list_item_prefix = prefix;
-        indent_width = initial_indent_width;
+        _indent_width = initial_indent_width;
 
         // Sweep for prefixes to also tag
         restore_list_item_indentation ();
@@ -57,15 +77,6 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
             line_end.forward_to_line_end ();
             apply_tag_by_name (LIST_TAG_NAME, line_start, line_end);
         }
-    }
-
-    public void refresh_list_item_indentation (int new_indent) {
-        var list_item_tag = tag_table.lookup (LIST_TAG_NAME);
-        list_item_tag.left_margin = INDENT_SPACING;
-        list_item_tag.indent = -new_indent - INDENT_SPACING;
-        indent_width = new_indent;
-
-        restore_list_item_indentation ();
     }
 
     /**
@@ -110,20 +121,12 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
         }
 
         var line_count = get_line_count ();
-        var did_change = false;
-
 
         for (int line_number = 0; line_number < line_count; line_number++) {
-            if (!has_specific_prefix (line_number, list_item_prefix)) {
+            if (!has_specific_prefix (line_number, _list_item_prefix)) {
                 continue;
             }
-
-            replace_prefix (line_number, list_item_prefix, new_prefix);
-            did_change = true;
-        }
-
-        if (did_change || new_prefix == "") {
-            restore_list_item_indentation ();
+            replace_prefix (line_number, _list_item_prefix, new_prefix);
         }
     }
 
@@ -149,9 +152,8 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
     public void set_list (int first_line, int last_line) {
         Gtk.TextIter line_start;
         for (int line_number = first_line; line_number <= last_line; line_number++) {
+            debug ("\nSetting line %i", line_number);
 
-            print ("\nSetting line %i", line_number);
-            debug ("doing line " + line_number.to_string ());
             if (!this.has_prefix (line_number)) {
                 get_iter_at_line_offset (out line_start, line_number, 0);
                 insert (ref line_start, list_item_prefix, -1);
@@ -192,6 +194,8 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
         line_end = line_start.copy ();
         line_end.forward_to_line_end ();
         remove_tag_by_name (LIST_TAG_NAME, line_start, line_end);
+
+        restore_list_item_indentation ();
     }
 
 }
