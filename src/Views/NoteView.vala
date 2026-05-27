@@ -115,7 +115,6 @@
         Application.gsettings.bind (KEY_LIST,
             textview, "listprefix",
             GLib.SettingsBindFlags.DEFAULT);
-
     }
 
     // Randomize the button emoji when clicked

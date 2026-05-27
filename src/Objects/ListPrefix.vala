@@ -12,7 +12,9 @@
 public enum Jorts.ListPrefix {
     DISABLED,
     BULLET,
-    DASH;
+    DASH,
+    WAVE,
+    DOT;
 
     /**
     * Safe way to convert from gsettings back to ListPrefix
@@ -22,6 +24,8 @@ public enum Jorts.ListPrefix {
         case 0: return DISABLED;
         case 1: return BULLET;
         case 2: return DASH;
+        case 3: return WAVE;
+        case 4: return DOT;
         default: return BULLET;
       }
     }
@@ -32,9 +36,11 @@ public enum Jorts.ListPrefix {
     public string to_string () {
         switch (this) {
             case 0: return "";
-            case 1: return "• ";
-            case 2: return "- ";
-            default: return "• ";
+            case 1: return " • ";
+            case 2: return " - ";
+            case 3: return " ~ ";
+            case 4: return " . ";
+            default: return " • ";
         }
     }
 
@@ -43,7 +49,9 @@ public enum Jorts.ListPrefix {
      */
     public const string[] ALL = {
         N_("(Disabled)"),
-        N_("• List item"),
-        N_("- List item")
+        N_(" • List item"),
+        N_(" - List item"),
+        N_(" ~ List item"),
+        N_(" . List item")
     };
 }

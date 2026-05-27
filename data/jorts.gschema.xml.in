@@ -4,6 +4,8 @@
     <value value='0' nick="disabled"/>
     <value value='1' nick="bullet"/>
     <value value='2' nick="dash"/>
+    <value value='3' nick="wave"/>
+    <value value='4' nick="dot"/>
   </enum>
 
   <schema path="@APP_PATH@/" id="@APP_ID@">

@@ -108,6 +108,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         list_buffer.init_list_handling (_listprefix.to_string (), indent_width);
 
         buffer = (Gtk.TextBuffer)list_buffer;
+
+        // This a workaround to ensure we always have correct sizing
+        realize.connect (refresh_indentation);
     }
 
     public void refresh_indentation () {

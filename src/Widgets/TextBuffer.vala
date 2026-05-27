@@ -60,7 +60,7 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
         get_bounds (out start, out end);
         remove_tag_by_name (LIST_TAG_NAME, start, end);
 
-        if ( list_item_prefix == "") {
+        if ( _list_item_prefix == "") {
             return;
         }
 
@@ -97,7 +97,7 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
     }
 
     public bool has_prefix (int line_number) {
-        return has_specific_prefix (line_number, list_item_prefix);
+        return has_specific_prefix (line_number, _list_item_prefix);
     }
 
     private void replace_prefix (int line_number, string old_prefix, string new_prefix) {
@@ -156,7 +156,7 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
 
             if (!this.has_prefix (line_number)) {
                 get_iter_at_line_offset (out line_start, line_number, 0);
-                insert (ref line_start, list_item_prefix, -1);
+                insert (ref line_start, _list_item_prefix, -1);
             }
 
             // Apply hanging indent tag to the line
