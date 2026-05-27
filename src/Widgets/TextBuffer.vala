@@ -11,6 +11,7 @@
 public class Jorts.TextBuffer : Gtk.TextBuffer {
 
     public const string LIST_TAG_NAME = "list_item";
+    private const int INDENT_SPACING = 8;
     private string list_item_prefix;
     private int indent_width;
 
@@ -20,8 +21,8 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
         // Setup the bespoke indent
         create_tag (LIST_TAG_NAME,
                 "accumulative-margin", true,
-                "left-margin", 4,
-                "indent", -initial_indent_width
+                "left-margin", INDENT_SPACING,
+                "indent", -initial_indent_width - INDENT_SPACING
             );
 
         list_item_prefix = prefix;
@@ -29,6 +30,9 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
 
         // Sweep for prefixes to also tag
         restore_list_item_indentation ();
+
+        undo.connect_after (restore_list_item_indentation);
+        redo.connect_after (restore_list_item_indentation);
     }
 
     private void restore_list_item_indentation () {
@@ -57,8 +61,8 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
 
     public void refresh_list_item_indentation (int new_indent) {
         var list_item_tag = tag_table.lookup (LIST_TAG_NAME);
-        list_item_tag.left_margin = 4;
-        list_item_tag.indent = -new_indent;
+        list_item_tag.left_margin = INDENT_SPACING;
+        list_item_tag.indent = -new_indent - INDENT_SPACING;
         indent_width = new_indent;
 
         restore_list_item_indentation ();
