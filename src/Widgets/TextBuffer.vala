@@ -26,36 +26,28 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
     public int indent_width {
         get {return _indent_width;}
         set {
+
             var list_item_tag = tag_table.lookup (LIST_TAG_NAME);
             list_item_tag.left_margin = INDENT_SPACING;
             list_item_tag.indent = -value - INDENT_SPACING;
-
-            restore_list_item_indentation ();
             _indent_width = value;
+            restore_list_item_indentation ();
         }
     }
 
-    public void init_list_handling (string prefix, int initial_indent_width) {
-        debug ("prefix: %s, width: %i", prefix, initial_indent_width);
-
+    construct {
         // Setup the bespoke indent
         create_tag (LIST_TAG_NAME,
                 "accumulative-margin", true,
                 "left-margin", INDENT_SPACING,
-                "indent", -initial_indent_width - INDENT_SPACING
+                "indent", - 0 - INDENT_SPACING
             );
-
-        list_item_prefix = prefix;
-        _indent_width = initial_indent_width;
-
-        // Sweep for prefixes to also tag
-        restore_list_item_indentation ();
 
         undo.connect_after (restore_list_item_indentation);
         redo.connect_after (restore_list_item_indentation);
     }
 
-    private void restore_list_item_indentation () {
+    public void restore_list_item_indentation () {
         Gtk.TextIter start, end;
         get_bounds (out start, out end);
         remove_tag_by_name (LIST_TAG_NAME, start, end);

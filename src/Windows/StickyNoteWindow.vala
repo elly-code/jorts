@@ -80,6 +80,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.popover.keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
         view.popover.keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
 
+        //zoom_controller.notify["zoom"].connect_after (textview.refresh_indentation);
+
         set_child (view);
         set_focus (view);
         load_data (data);
@@ -112,7 +114,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.notify["is-active"].connect (color_controller.on_focus_changed);
 
         // Respect animation settings for showing ui elements
-        if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
+        if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean (KEY_HIDEBAR))) {
             show.connect_after (delayed_show);
 
         } else {

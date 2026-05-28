@@ -105,7 +105,8 @@ public class Jorts.ZoomController : Object {
         window.remove_css_class (Jorts.Zoom.from_int ( _old_zoom).to_css_class ());
         _old_zoom = new_zoom;
         window.add_css_class (Jorts.Zoom.from_int ( new_zoom).to_css_class ());
-        window.textview.refresh_indentation ();
+        window.textview.queue_refresh_indentation ();
+
 
         // Adapt headerbar size to avoid weird flickering
         window.view.headerbar.height_request = Jorts.Zoom.from_int (new_zoom).to_ui_size ();

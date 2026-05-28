@@ -6,18 +6,25 @@
  */
 
 /**
-* A textview for our sticky notes.
-* Inherits Hypertextview to detect links and emails
-* Adds a list feature which is a hot mess
-*/
+ * A textview for our sticky notes.
+ * Inherits Hypertextview to detect links and emails
+ * Adds a list feature which is a hot mess
+ */
 public class Jorts.TextView : Granite.HyperTextView {
 
     // We subclass the buffer to manage the list feature at a lower level
     // We need to keep a reference to its "Extended version"
     public Jorts.TextBuffer list_buffer;
 
-    // We listen to the keyboard to intervene in some situations
+   /**
+    * We listen to the keyboard to intervene in some situations:
+    * - When someone backspaces on a prefix, to delete it
+    * - When someone hits Enter from a list item, to expand it
+    */
     private Gtk.EventControllerKey keyboard;
+
+    // We need to keep this reference so we can disconnect a handler after using it
+    private Gdk.FrameClock? frame_clock;
 
     // Convenience
     public string text {
@@ -97,28 +104,49 @@ public class Jorts.TextView : Granite.HyperTextView {
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-
-        var layout = this.create_pango_layout (_listprefix.to_string ());
-
-        int indent_width, h;
-        layout.get_pixel_size (out indent_width, out h);
-
         //print ("\n\n%i", indent_width);
         list_buffer = new Jorts.TextBuffer ();
-        list_buffer.init_list_handling (_listprefix.to_string (), indent_width);
-
         buffer = (Gtk.TextBuffer)list_buffer;
 
         // This a workaround to ensure we always have correct sizing
         realize.connect (refresh_indentation);
     }
 
-    public void refresh_indentation () {
-        var layout = this.create_pango_layout (_listprefix.to_string ());
+
+    private void refresh_indentation () {
+        var layout = create_pango_layout (_listprefix.to_string ());
         int indent_width, h;
         layout.get_pixel_size (out indent_width, out h);
+
+        debug ("\nNEW SIZE: %i", indent_width);
         list_buffer.indent_width = indent_width;
     }
+
+    /**
+     * Refreshing after zoom changes requires to wait for layouting phase
+     * This is used so we wait for the appropriate moment to measure prefix size and update indentation
+     */
+    public void queue_refresh_indentation () {
+        frame_clock = get_frame_clock ();
+
+        // No frame_clock, no widget to see, no need to proceed
+        // Without this the thing still works, but spits a lot of errors at app start
+        if (frame_clock == null) {
+            return;
+        }
+
+        frame_clock.request_phase (LAYOUT);
+        frame_clock.layout.connect (clock);
+    }
+
+    /**
+     * Clock 
+     */
+    private void clock () {
+        refresh_indentation ();
+        frame_clock.layout.disconnect (clock);
+    }
+
 
     public void toggle_list () {
         Gtk.TextIter start, end;
