@@ -64,12 +64,7 @@ public class Jorts.TextView : Granite.HyperTextView {
     }
 
     construct {
-        /***************************************************/
-        /*              Actions and controllers            */
-        /***************************************************/
 
-
-        // Action stuff
         actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("textview", actions);
@@ -100,15 +95,16 @@ public class Jorts.TextView : Granite.HyperTextView {
         extra.append_section (null, section);
         extra_menu = extra;
 
+        // We pretty much only use list_buffer since it has the added features
+        list_buffer = new Jorts.TextBuffer ();
+        buffer = (Gtk.TextBuffer)list_buffer;
+
+
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        //print ("\n\n%i", indent_width);
-        list_buffer = new Jorts.TextBuffer ();
-        buffer = (Gtk.TextBuffer)list_buffer;
-
-        // This a workaround to ensure we always have correct sizing
+        // This a workaround to ensure we always have correct indent at windows start
         realize.connect (refresh_indentation);
     }
 
