@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 19:03+0200\n"
+"POT-Creation-Date: 2026-05-18 14:15+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -15,75 +15,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
-msgid "Click to edit the title"
-msgstr "Nhấp để chỉnh sửa tiêu đề"
+#: src/Application.vala:216
+msgid "Create a new note"
+msgstr "Tạo ghi chú mới"
 
-#. Alternate way to access preferences
-#: src/Widgets/TextView.vala:63
-msgid "Show Preferences"
-msgstr "Hiển thị tùy chọn"
-
-#: src/Widgets/TextView.vala:64
-msgid "Quit Jorts"
-msgstr "Thoát Jorts"
-
-#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
-#: src/Widgets/ActionBar.vala:35
-msgid "New sticky note"
-msgstr "Giấy ghi chú mới"
-
-#: src/Widgets/ActionBar.vala:48
-msgid "Delete sticky note"
-msgstr "Xóa giấy ghi chú"
-
-#: src/Widgets/ActionBar.vala:62
-msgid "Toggle list"
-msgstr "Bật/tắt danh sách"
-
-#: src/Widgets/ActionBar.vala:76
-msgid "Insert emoji"
-msgstr "Chèn biểu tượng cảm xúc"
-
-#: src/Widgets/ActionBar.vala:90
-msgid "Preferences for this sticky note"
-msgstr "Tùy chỉnh cho giấy ghi chú này"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
-msgid "Default"
-msgstr "Mặc định"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
-msgid "Use default text font"
-msgstr "Sử dụng phông chữ văn bản mặc định"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
-msgid "Monospace"
-msgstr "Không gian đơn"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
-msgid "Use monospaced font"
-msgstr "Sử dụng phông chữ đơn cách"
-
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
-msgid "Zoom out"
-msgstr "Thu nhỏ"
-
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
-msgid "Default zoom level"
-msgstr "Mức phóng mặc định"
-
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
-msgid "Zoom in"
-msgstr "Phóng to"
+#: src/Application.vala:217
+msgid "Show preferences"
+msgstr "Hiển thị tùy chỉnh"
 
 #. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
 #: src/Objects/NoteData.vala:49
@@ -139,6 +77,14 @@ msgstr "Latte"
 #: src/Objects/Themes.vala:75
 msgid "No preference, random each time"
 msgstr "Không ưu tiên, ngẫu nhiên mỗi lần"
+
+#: src/Utils/Libportal.vala:16
+msgid "Remove Jorts from system autostart"
+msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
+
+#: src/Utils/Libportal.vala:29
+msgid "Set Jorts to start with the computer"
+msgstr "Đặt Jorts để bắt đầu với máy tính"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -392,14 +338,6 @@ msgstr ""
 "Tôi hy vọng ứng dụng nhỏ của tôi mang lại cho bạn nhiều niềm vui\n"
 "Chúc một ngày tốt lành!🎇\n"
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
-
-#: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Đặt Jorts để bắt đầu với máy tính"
-
 #: src/Views/PreferencesView.vala:17
 msgid "Request to system sent"
 msgstr "Đã gửi yêu cầu tới hệ thống"
@@ -463,18 +401,75 @@ msgstr "Đóng"
 msgid "Close preferences"
 msgstr "Đóng tùy chỉnh"
 
-#. TRANSLATORS: "%s" is replaced by a specific sticky note title
-#. Ex: "To remember - Jorts"
-#. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:144 src/Windows/StickyNoteWindow.vala:184
-#, c-format
-msgid "%s - Jorts (Development)"
-msgstr ""
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: src/Widgets/ActionBar.vala:35
+msgid "New sticky note"
+msgstr "Giấy ghi chú mới"
 
-#: src/Windows/StickyNoteWindow.vala:146 src/Windows/StickyNoteWindow.vala:186
-#, fuzzy, c-format
-msgid "%s - Jorts"
-msgstr " - Jorts"
+#: src/Widgets/ActionBar.vala:48
+msgid "Delete sticky note"
+msgstr "Xóa giấy ghi chú"
+
+#: src/Widgets/ActionBar.vala:62
+msgid "Toggle list"
+msgstr "Bật/tắt danh sách"
+
+#: src/Widgets/ActionBar.vala:76
+msgid "Insert emoji"
+msgstr "Chèn biểu tượng cảm xúc"
+
+#: src/Widgets/ActionBar.vala:90
+msgid "Preferences for this sticky note"
+msgstr "Tùy chỉnh cho giấy ghi chú này"
+
+#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
+#: src/Widgets/EditableLabel.vala:39
+msgid "Click to edit the title"
+msgstr "Nhấp để chỉnh sửa tiêu đề"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
+msgid "Default"
+msgstr "Mặc định"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+msgid "Use default text font"
+msgstr "Sử dụng phông chữ văn bản mặc định"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
+msgid "Monospace"
+msgstr "Không gian đơn"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
+msgid "Use monospaced font"
+msgstr "Sử dụng phông chữ đơn cách"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
+msgid "Zoom out"
+msgstr "Thu nhỏ"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+msgid "Default zoom level"
+msgstr "Mức phóng mặc định"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
+msgid "Zoom in"
+msgstr "Phóng to"
+
+#. Alternate way to access preferences
+#: src/Widgets/TextView.vala:63
+msgid "Show Preferences"
+msgstr "Hiển thị tùy chọn"
+
+#: src/Widgets/TextView.vala:64
+msgid "Quit Jorts"
+msgstr "Thoát Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -489,13 +484,18 @@ msgstr "Tùy chỉnh cho Jorts của bạn"
 msgid "Preferences for your Jorts"
 msgstr "Tùy chỉnh cho Jorts của bạn"
 
-#: src/Application.vala:216
-msgid "Create a new note"
-msgstr "Tạo ghi chú mới"
+#. TRANSLATORS: "%s" is replaced by a specific sticky note title
+#. Ex: "To remember - Jorts"
+#. The text is shown in overviews of all open windows, accompanying the window
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
+#, c-format
+msgid "%s - Jorts (Development)"
+msgstr ""
 
-#: src/Application.vala:217
-msgid "Show preferences"
-msgstr "Hiển thị tùy chỉnh"
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#, fuzzy, c-format
+msgid "%s - Jorts"
+msgstr " - Jorts"
 
 #~ msgid "To not forget, ever"
 #~ msgstr "Để không bao giờ quên"

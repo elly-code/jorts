@@ -1,17 +1,19 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+src/Application.vala
+src/Objects/NoteData.vala
+src/Objects/Themes.vala
+src/Utils/Libportal.vala
+src/Utils/Random.vala
 src/Views/NoteView.vala
-src/Widgets/EditableLabel.vala
-src/Widgets/TextView.vala
+src/Views/PreferencesView.vala
 src/Widgets/ActionBar.vala
+src/Widgets/EditableLabel.vala
+src/Widgets/EditableLabel.vala
+src/Widgets/Popover.vala
 src/Widgets/PopoverWidgets/ColorBox.vala
 src/Widgets/PopoverWidgets/MonospaceBox.vala
 src/Widgets/PopoverWidgets/ZoomBox.vala
-src/Widgets/Popover.vala
-src/Objects/NoteData.vala
-src/Objects/Themes.vala
-src/Utils/Random.vala
-src/Utils/Libportal.vala
-src/Views/PreferencesView.vala
-src/Widgets/EditableLabel.vala
-src/Windows/StickyNoteWindow.vala
+src/Widgets/TextView.vala
 src/Windows/PreferenceWindow.vala
-src/Application.vala
+src/Windows/StickyNoteWindow.vala

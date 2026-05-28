@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 19:03+0200\n"
+"POT-Creation-Date: 2026-05-18 14:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,75 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
-msgid "Click to edit the title"
-msgstr "Klik for at redigere titlen"
+#: src/Application.vala:216
+msgid "Create a new note"
+msgstr "Opret en ny note"
 
-#. Alternate way to access preferences
-#: src/Widgets/TextView.vala:63
-msgid "Show Preferences"
+#: src/Application.vala:217
+msgid "Show preferences"
 msgstr "Vis præferencer"
-
-#: src/Widgets/TextView.vala:64
-msgid "Quit Jorts"
-msgstr "Afslut Jorts"
-
-#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
-#: src/Widgets/ActionBar.vala:35
-msgid "New sticky note"
-msgstr "Ny huskeseddel"
-
-#: src/Widgets/ActionBar.vala:48
-msgid "Delete sticky note"
-msgstr "Slet huskeseddel"
-
-#: src/Widgets/ActionBar.vala:62
-msgid "Toggle list"
-msgstr "Skift til liste format"
-
-#: src/Widgets/ActionBar.vala:76
-msgid "Insert emoji"
-msgstr "Indsæt emoji"
-
-#: src/Widgets/ActionBar.vala:90
-msgid "Preferences for this sticky note"
-msgstr "Indstillinger for denne huskeseddel"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
-msgid "Default"
-msgstr "Standard"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
-msgid "Use default text font"
-msgstr "Brug standardskrifttype"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
-msgid "Monospace"
-msgstr "Monospace"
-
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
-msgid "Use monospaced font"
-msgstr "Brug monospaced font"
-
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
-msgid "Zoom out"
-msgstr "Zoom ud"
-
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
-msgid "Default zoom level"
-msgstr "Standard zoomniveau"
-
-#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
-msgid "Zoom in"
-msgstr "Zoom ind"
 
 #. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
 #: src/Objects/NoteData.vala:49
@@ -135,6 +73,14 @@ msgstr "Latte"
 #: src/Objects/Themes.vala:75
 msgid "No preference, random each time"
 msgstr "Intet foretrukket, tilfældigt hver gang"
+
+#: src/Utils/Libportal.vala:16
+msgid "Remove Jorts from system autostart"
+msgstr "Fjern Jorts fra systemets autostart"
+
+#: src/Utils/Libportal.vala:29
+msgid "Set Jorts to start with the computer"
+msgstr "Indstil Jorts til at starte med computeren"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -379,14 +325,6 @@ msgstr ""
 "Jeg håber, at min lille app bringer dig en masse glæde\n"
 "Hav en god dag!🎇\n"
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Fjern Jorts fra systemets autostart"
-
-#: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Indstil Jorts til at starte med computeren"
-
 #: src/Views/PreferencesView.vala:17
 msgid "Request to system sent"
 msgstr "Anmodning til systemet sendt"
@@ -450,18 +388,75 @@ msgstr "Luk"
 msgid "Close preferences"
 msgstr "Luk indstillinger"
 
-#. TRANSLATORS: "%s" is replaced by a specific sticky note title
-#. Ex: "To remember - Jorts"
-#. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:144 src/Windows/StickyNoteWindow.vala:184
-#, c-format
-msgid "%s - Jorts (Development)"
-msgstr "%s - Jorts (Udvikling)"
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: src/Widgets/ActionBar.vala:35
+msgid "New sticky note"
+msgstr "Ny huskeseddel"
 
-#: src/Windows/StickyNoteWindow.vala:146 src/Windows/StickyNoteWindow.vala:186
+#: src/Widgets/ActionBar.vala:48
+msgid "Delete sticky note"
+msgstr "Slet huskeseddel"
+
+#: src/Widgets/ActionBar.vala:62
+msgid "Toggle list"
+msgstr "Skift til liste format"
+
+#: src/Widgets/ActionBar.vala:76
+msgid "Insert emoji"
+msgstr "Indsæt emoji"
+
+#: src/Widgets/ActionBar.vala:90
+msgid "Preferences for this sticky note"
+msgstr "Indstillinger for denne huskeseddel"
+
+#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
+#: src/Widgets/EditableLabel.vala:39
+msgid "Click to edit the title"
+msgstr "Klik for at redigere titlen"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
+msgid "Default"
+msgstr "Standard"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+msgid "Use default text font"
+msgstr "Brug standardskrifttype"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
+msgid "Monospace"
+msgstr "Monospace"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
+msgid "Use monospaced font"
+msgstr "Brug monospaced font"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
 #, c-format
-msgid "%s - Jorts"
-msgstr "%s - Jorts"
+msgid "%d%%"
+msgstr "%d%%"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
+msgid "Zoom out"
+msgstr "Zoom ud"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+msgid "Default zoom level"
+msgstr "Standard zoomniveau"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
+msgid "Zoom in"
+msgstr "Zoom ind"
+
+#. Alternate way to access preferences
+#: src/Widgets/TextView.vala:63
+msgid "Show Preferences"
+msgstr "Vis præferencer"
+
+#: src/Widgets/TextView.vala:64
+msgid "Quit Jorts"
+msgstr "Afslut Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -475,10 +470,15 @@ msgstr "Præferencer - Jorts"
 msgid "Preferences for your Jorts"
 msgstr "Præferencer for dine Jorts"
 
-#: src/Application.vala:216
-msgid "Create a new note"
-msgstr "Opret en ny note"
+#. TRANSLATORS: "%s" is replaced by a specific sticky note title
+#. Ex: "To remember - Jorts"
+#. The text is shown in overviews of all open windows, accompanying the window
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
+#, c-format
+msgid "%s - Jorts (Development)"
+msgstr "%s - Jorts (Udvikling)"
 
-#: src/Application.vala:217
-msgid "Show preferences"
-msgstr "Vis præferencer"
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#, c-format
+msgid "%s - Jorts"
+msgstr "%s - Jorts"
