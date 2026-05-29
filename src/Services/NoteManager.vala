@@ -11,23 +11,26 @@
 */
 public class Jorts.NoteManager : Object {
 
+    private static uint debounce_timer_id;
+    private static bool saving_lock = true;
+    private static NoteData? last_deleted = null;
+
     private Jorts.Application application;
     public Gee.ArrayList<StickyNoteWindow> open_notes;
     public Jorts.Storage storage;
-    private bool saving_lock = true;
-
-    private static uint debounce_timer_id;
 
     public SimpleActionGroup actions { get; construct; }
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_NEW = "action_new";
     public const string ACTION_SAVE = "action_save";
+    public const string ACTION_RESTORE_LAST = "action_restore_last";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
     public const GLib.ActionEntry[] ACTION_ENTRIES = {
         {ACTION_NEW, action_new},
         {ACTION_SAVE, save_all},
+        {ACTION_RESTORE_LAST, action_restore_last}
     };
 
     public NoteManager (Jorts.Application app) {
@@ -45,6 +48,11 @@ public class Jorts.NoteManager : Object {
         unowned var app = ((Gtk.Application) GLib.Application.get_default ());
         app.set_accels_for_action (ACTION_PREFIX + ACTION_NEW, {"<Control>N"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_SAVE, {"<Control>S"});
+        app.set_accels_for_action (ACTION_PREFIX + ACTION_RESTORE_LAST, {"<Control>R"});
+
+        var action = (SimpleAction)actions.lookup_action (ACTION_PREFIX + ACTION_RESTORE_LAST);
+        action.set_enabled (false);
+
     }
 
     /*************************************************/
@@ -90,8 +98,8 @@ public class Jorts.NoteManager : Object {
 
         if (data != null) {
             note = new StickyNoteWindow (application, data);
-        }
-        else {
+
+        } else {
             var random_data = new NoteData ();
             
             // One chance at the golden sticky
@@ -113,13 +121,16 @@ public class Jorts.NoteManager : Object {
     public void delete_note (StickyNoteWindow note) {
         debug ("Removing a note…");
 
+        last_deleted = note.packaged ();
+        var action = (SimpleAction)actions.lookup_action (ACTION_PREFIX + ACTION_RESTORE_LAST);
+        action.set_enabled (true);
+
         open_notes.remove (note);
         application.remove_window ((Gtk.Window)note);
 
         note.close ();
         note.destroy ();
 
-        print ("\nHas: " + note.ref_count.to_string () + " references");
         immediately_save ();
 	}
 
@@ -181,5 +192,19 @@ public class Jorts.NoteManager : Object {
     public void action_new () {
         debug ("New Note");
         create_note ();
+    }
+
+    public void action_restore_last () {
+        debug ("Restoring last deleted");
+
+        if (last_deleted == null) {
+            return;
+        }
+        
+        create_note (last_deleted);
+        var action = (SimpleAction)actions.lookup_action (ACTION_PREFIX + ACTION_RESTORE_LAST);
+        action.set_enabled (false);
+        last_deleted = null;
+
     }
 }
