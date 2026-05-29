@@ -47,13 +47,16 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
         title = _("Preferences - Jorts");
 
+        var title_label = new Gtk.Label (_("<b>Preferences for your Jorts</b>")) {
+            use_markup = true
+        };
+
         var headerbar = new Gtk.HeaderBar () {
             // TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-            title_widget = new Gtk.Label (_("Preferences for your Jorts")),
+            title_widget = title_label,
             show_title_buttons = false
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
-        headerbar.add_css_class (STYLE_PREFTITLE);
 
         set_titlebar (headerbar);
         set_size_request (DEFAULT_PREF_WIDTH, DEFAULT_PREF_HEIGHT);

@@ -64,7 +64,6 @@
     --accent_color: mix(@ORANGE_300, @ORANGE_500, 0.25);
 }
 
-
 .STRAWBERRY:root {
     --accent_color_100: @STRAWBERRY_100;
     --accent_color_300: @STRAWBERRY_300;
