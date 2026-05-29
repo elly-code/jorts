@@ -106,6 +106,7 @@ public class Jorts.TextView : Granite.HyperTextView {
 
         // This a workaround to ensure we always have correct indent at windows start
         realize.connect (refresh_indentation);
+        notify ["monospace"].connect (queue_refresh_indentation);
     }
 
 
