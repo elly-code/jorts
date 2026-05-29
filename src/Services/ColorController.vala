@@ -22,6 +22,7 @@ public class Jorts.ColorController : Object {
 
     public ColorController (Jorts.StickyNoteWindow window) {
         this.window = window;
+        window.add_css_class (STYLE_THEMED);
     }
 
     /**

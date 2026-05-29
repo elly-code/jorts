@@ -27,8 +27,9 @@ namespace Jorts {
     const int DEBOUNCE                   = 900;
 
     // CSS
-    const string STYLE_THEMEDBUTTON      = "themedbutton";
     const string STYLE_DEVEL             = "devel";
+    const string STYLE_THEMED            = "themed";
+    const string STYLE_THEMEDBUTTON      = "themedbutton";
 
     // We need to say stop at some point
     const int ZOOM_MAX                   = 300;
