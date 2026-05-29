@@ -1,1132 +1,203 @@
+/*
+* Copyright (c) 2017-2024 Lains
+* Copyright (c) 2025 Stella (teamcons on GitHub) and the Ellie_Commons community
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+* Boston, MA 02110-1301 USA
+*/
 
-
-@define-color ACCENT_BLUEBERRY mix(@BLUEBERRY_500, @BLUEBERRY_700, 0.3);
-
-window.BLUEBERRY {
-    background-color: @BLUEBERRY_100;
+.BLUEBERRY:root {
+    --accent_color_100: @BLUEBERRY_100;
+    --accent_color_300: @BLUEBERRY_300;
+    --accent_color_500: @BLUEBERRY_500;
+    --accent_color_700: @BLUEBERRY_700;
+    --accent_color_900: @BLUEBERRY_900;
+    --accent_color: mix(@BLUEBERRY_300, @BLUEBERRY_500, 0.25);
 }
 
-window.BLUEBERRY undershoot.top {
+.MINT:root {
+    --accent_color_100: @MINT_100;
+    --accent_color_300: @MINT_300;
+    --accent_color_500: @MINT_500;
+    --accent_color_700: @MINT_700;
+    --accent_color_900: @MINT_900;
+    --accent_color: mix(@MINT_300, @MINT_500, 0.25);
+}
+
+
+.LIME:root {
+    --accent_color_100: @LIME_100;
+    --accent_color_300: @LIME_300;
+    --accent_color_500: @LIME_500;
+    --accent_color_700: @LIME_700;
+    --accent_color_900: @LIME_900;
+    --accent_color: mix(@LIME_300, @LIME_500, 0.25);
+}
+
+.BANANA:root {
+    --accent_color_100: @BANANA_100;
+    --accent_color_300: @BANANA_300;
+    --accent_color_500: @BANANA_500;
+    --accent_color_700: @BANANA_700;
+    --accent_color_900: @BANANA_900;
+    --accent_color: mix(@BANANA_300, @BANANA_500, 0.25);
+}
+
+.ORANGE:root {
+    --accent_color_100: @ORANGE_100;
+    --accent_color_300: @ORANGE_300;
+    --accent_color_500: @ORANGE_500;
+    --accent_color_700: @ORANGE_700;
+    --accent_color_900: @ORANGE_900;
+    --accent_color: mix(@ORANGE_300, @ORANGE_500, 0.25);
+}
+
+
+.STRAWBERRY:root {
+    --accent_color_100: @STRAWBERRY_100;
+    --accent_color_300: @STRAWBERRY_300;
+    --accent_color_500: @STRAWBERRY_500;
+    --accent_color_700: @STRAWBERRY_700;
+    --accent_color_900: @STRAWBERRY_900;
+    --accent_color: mix(@STRAWBERRY_300, @STRAWBERRY_500, 0.25);
+}
+
+.BUBBLEGUM:root {
+    --accent_color_100: @BUBBLEGUM_100;
+    --accent_color_300: @BUBBLEGUM_300;
+    --accent_color_500: @BUBBLEGUM_500;
+    --accent_color_700: @BUBBLEGUM_700;
+    --accent_color_900: @BUBBLEGUM_900;
+    --accent_color: mix(@BUBBLEGUM_300, @BUBBLEGUM_500, 0.25);
+}
+
+.GRAPE:root {
+    --accent_color_100: @GRAPE_100;
+    --accent_color_300: @GRAPE_300;
+    --accent_color_500: @GRAPE_500;
+    --accent_color_700: @GRAPE_700;
+    --accent_color_900: @GRAPE_900;
+    --accent_color: mix(@GRAPE_300, @GRAPE_500, 0.25);
+}
+
+.COCOA:root {
+    --accent_color_100: @COCOA_100;
+    --accent_color_300: @COCOA_300;
+    --accent_color_500: @COCOA_500;
+    --accent_color_700: @COCOA_700;
+    --accent_color_900: @COCOA_900;
+    --accent_color: mix(@COCOA_300, @COCOA_500, 0.25);
+}
+
+.SLATE:root {
+    --accent_color_100: @SLATE_100;
+    --accent_color_300: @SLATE_300;
+    --accent_color_500: @SLATE_500;
+    --accent_color_700: @SLATE_700;
+    --accent_color_900: @SLATE_900;
+    --accent_color: mix(@SLATE_300, @SLATE_500, 0.25);
+}
+
+.LATTE:root {
+    --accent_color_100: @LATTE_100;
+    --accent_color_300: @LATTE_300;
+    --accent_color_500: @LATTE_500;
+    --accent_color_700: @LATTE_700;
+    --accent_color_900: @LATTE_900;
+    --accent_color: mix(@LATTE_300, @LATTE_500, 0.25);
+}
+
+window {
+    background-color: var(--accent_color_100);
+}
+
+window undershoot.top {
     background:
         linear-gradient(
-            @BLUEBERRY_100 0%,
-            alpha(@BLUEBERRY_100, 0) 50%
+            var(--accent_color_100) 0%,
+            alpha(var(--accent_color_100), 0) 50%
         );
 }
 
-window.BLUEBERRY undershoot.bottom {
+window undershoot.bottom {
     background:
         linear-gradient(
-            alpha(@BLUEBERRY_100, 0) 50%,
-            @BLUEBERRY_100 100%
+            alpha(var(--accent_color_100), 0) 50%,
+            var(--accent_color_100) 100%
         );
 }
-
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.BLUEBERRY overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
+window overshoot.top {
+background: linear-gradient(to top, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%); }
 
-window.BLUEBERRY overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
+window overshoot.right {
+background: linear-gradient(to right, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%); }
 
-window.BLUEBERRY overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
+window overshoot.bottom {
+background: linear-gradient(to bottom, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%); }
 
-window.BLUEBERRY overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_BLUEBERRY, 0) 80%, alpha(@ACCENT_BLUEBERRY, 0.25) 100%); }
+window overshoot.left {
+background: linear-gradient(to left, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%); }
 
-window.BLUEBERRY text selection {
-    color: shade(@BLUEBERRY_100, 1.88);
-    background-color: @BLUEBERRY_900;
+window text selection {
+    color: shade(var(--accent_color_100), 1.88);
+    background-color: var(--accent_color_900);
 }
 
-window.BLUEBERRY titlebar,
-window.BLUEBERRY titlebar image,
-window.BLUEBERRY .themedbutton > button > box > image,
-window.BLUEBERRY .themedbutton > image,
-window.BLUEBERRY {
-    color: @BLUEBERRY_900;
+window titlebar,
+window titlebar image,
+window .themedbutton > button > box > image,
+window .themedbutton > image,
+window {
+    color: var(--accent_color_900);
 }
 
-window.BLUEBERRY titlebar,
-window.BLUEBERRY textview,
-window.BLUEBERRY editablelabel.editing {
+window titlebar,
+window textview,
+window editablelabel.editing {
     background-color: transparent;
-    border-bottom-color: @BLUEBERRY_100;
-    color: shade(@BLUEBERRY_900, 0.77);
+    border-bottom-color: var(--accent_color_100);
+    color: shade(var(--accent_color_900), 0.77);
 }
 
 /* Fix the emoticon entry having note color background */
-window.BLUEBERRY entry {
+window entry {
     background-color: white;
     color: black;
 }
 
-window.BLUEBERRY editablelabel {
-    color: @BLUEBERRY_900;
+window editablelabel {
+    color: var(--accent_color_900);
 }
 
-window.BLUEBERRY editablelabel:hover,
-window.BLUEBERRY editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_BLUEBERRY,0.88);
+window editablelabel:hover,
+window editablelabel:focus {
+    border: 1px solid alpha(var(--accent_color),0.88);
 }
 
-window.BLUEBERRY editablelabel.editing {
-    border: 1px solid @BLUEBERRY_700;
+window editablelabel.editing {
+    border: 1px solid var(--accent_color_700);
 }
 
-window.BLUEBERRY:backdrop editablelabel {
-    color: alpha(@BLUEBERRY_900, 0.75);
+window:backdrop editablelabel {
+    color: alpha(var(--accent_color_900), 0.75);
 }
 
-window.BLUEBERRY:backdrop editablelabel,
-window.BLUEBERRY:backdrop actionbar,
-window.BLUEBERRY:backdrop actionbar image {
-    color: alpha(@BLUEBERRY_900, 0.65);
+window:backdrop editablelabel,
+window:backdrop actionbar,
+window:backdrop actionbar image {
+    color: alpha(var(--accent_color_900), 0.65);
 }
-
-
-@define-color ACCENT_MINT mix(@MINT_500, @MINT_700, 0.3);
-
-window.MINT {
-    background-color: @MINT_100;
-}
-
-window.MINT undershoot.top {
-    background:
-        linear-gradient(
-            @MINT_100 0%,
-            alpha(@MINT_100, 0) 50%
-        );
-}
-
-window.MINT undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@MINT_100, 0) 50%,
-            @MINT_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.MINT overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
-
-window.MINT overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
-
-window.MINT overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
-
-window.MINT overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_MINT, 0) 80%, alpha(@ACCENT_MINT, 0.25) 100%); }
-
-window.MINT text selection {
-    color: shade(@MINT_100, 1.88);
-    background-color: @MINT_900;
-}
-
-window.MINT titlebar,
-window.MINT titlebar image,
-window.MINT .themedbutton > button > box > image,
-window.MINT .themedbutton > image,
-window.MINT {
-    color: @MINT_900;
-}
-
-window.MINT titlebar,
-window.MINT textview,
-window.MINT editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @MINT_100;
-    color: shade(@MINT_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.MINT entry {
-    background-color: white;
-    color: black;
-}
-
-window.MINT editablelabel {
-    color: @MINT_900;
-}
-
-window.MINT editablelabel:hover,
-window.MINT editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_MINT,0.88);
-}
-
-window.MINT editablelabel.editing {
-    border: 1px solid @MINT_700;
-}
-
-window.MINT:backdrop editablelabel {
-    color: alpha(@MINT_900, 0.75);
-}
-
-window.MINT:backdrop editablelabel,
-window.MINT:backdrop actionbar,
-window.MINT:backdrop actionbar image {
-    color: alpha(@MINT_900, 0.65);
-}
-
-
-@define-color ACCENT_LIME mix(@LIME_500, @LIME_700, 0.3);
-
-window.LIME {
-    background-color: @LIME_100;
-}
-
-window.LIME undershoot.top {
-    background:
-        linear-gradient(
-            @LIME_100 0%,
-            alpha(@LIME_100, 0) 50%
-        );
-}
-
-window.LIME undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@LIME_100, 0) 50%,
-            @LIME_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.LIME overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
-
-window.LIME overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
-
-window.LIME overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
-
-window.LIME overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_LIME, 0) 80%, alpha(@ACCENT_LIME, 0.25) 100%); }
-
-window.LIME text selection {
-    color: shade(@LIME_100, 1.88);
-    background-color: @LIME_900;
-}
-
-window.LIME titlebar,
-window.LIME titlebar image,
-window.LIME .themedbutton > button > box > image,
-window.LIME .themedbutton > image,
-window.LIME {
-    color: @LIME_900;
-}
-
-window.LIME titlebar,
-window.LIME textview,
-window.LIME editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @LIME_100;
-    color: shade(@LIME_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.LIME entry {
-    background-color: white;
-    color: black;
-}
-
-window.LIME editablelabel {
-    color: @LIME_900;
-}
-
-window.LIME editablelabel:hover,
-window.LIME editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_LIME,0.88);
-}
-
-window.LIME editablelabel.editing {
-    border: 1px solid @LIME_700;
-}
-
-window.LIME:backdrop editablelabel {
-    color: alpha(@LIME_900, 0.75);
-}
-
-window.LIME:backdrop editablelabel,
-window.LIME:backdrop actionbar,
-window.LIME:backdrop actionbar image {
-    color: alpha(@LIME_900, 0.65);
-}
-
-
-@define-color ACCENT_BANANA mix(@BANANA_500, @BANANA_700, 0.3);
-
-window.BANANA {
-    background-color: @BANANA_100;
-}
-
-window.BANANA undershoot.top {
-    background:
-        linear-gradient(
-            @BANANA_100 0%,
-            alpha(@BANANA_100, 0) 50%
-        );
-}
-
-window.BANANA undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@BANANA_100, 0) 50%,
-            @BANANA_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.BANANA overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
-
-window.BANANA overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
-
-window.BANANA overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
-
-window.BANANA overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_BANANA, 0) 80%, alpha(@ACCENT_BANANA, 0.25) 100%); }
-
-window.BANANA text selection {
-    color: shade(@BANANA_100, 1.88);
-    background-color: @BANANA_900;
-}
-
-window.BANANA titlebar,
-window.BANANA titlebar image,
-window.BANANA .themedbutton > button > box > image,
-window.BANANA .themedbutton > image,
-window.BANANA {
-    color: @BANANA_900;
-}
-
-window.BANANA titlebar,
-window.BANANA textview,
-window.BANANA editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @BANANA_100;
-    color: shade(@BANANA_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.BANANA entry {
-    background-color: white;
-    color: black;
-}
-
-window.BANANA editablelabel {
-    color: @BANANA_900;
-}
-
-window.BANANA editablelabel:hover,
-window.BANANA editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_BANANA,0.88);
-}
-
-window.BANANA editablelabel.editing {
-    border: 1px solid @BANANA_700;
-}
-
-window.BANANA:backdrop editablelabel {
-    color: alpha(@BANANA_900, 0.75);
-}
-
-window.BANANA:backdrop editablelabel,
-window.BANANA:backdrop actionbar,
-window.BANANA:backdrop actionbar image {
-    color: alpha(@BANANA_900, 0.65);
-}
-
-
-@define-color ACCENT_ORANGE mix(@ORANGE_500, @ORANGE_700, 0.3);
-
-window.ORANGE {
-    background-color: @ORANGE_100;
-}
-
-window.ORANGE undershoot.top {
-    background:
-        linear-gradient(
-            @ORANGE_100 0%,
-            alpha(@ORANGE_100, 0) 50%
-        );
-}
-
-window.ORANGE undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@ORANGE_100, 0) 50%,
-            @ORANGE_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.ORANGE overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
-
-window.ORANGE overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
-
-window.ORANGE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
-
-window.ORANGE overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_ORANGE, 0) 80%, alpha(@ACCENT_ORANGE, 0.25) 100%); }
-
-window.ORANGE text selection {
-    color: shade(@ORANGE_100, 1.88);
-    background-color: @ORANGE_900;
-}
-
-window.ORANGE titlebar,
-window.ORANGE titlebar image,
-window.ORANGE .themedbutton > button > box > image,
-window.ORANGE .themedbutton > image,
-window.ORANGE {
-    color: @ORANGE_900;
-}
-
-window.ORANGE titlebar,
-window.ORANGE textview,
-window.ORANGE editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @ORANGE_100;
-    color: shade(@ORANGE_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.ORANGE entry {
-    background-color: white;
-    color: black;
-}
-
-window.ORANGE editablelabel {
-    color: @ORANGE_900;
-}
-
-window.ORANGE editablelabel:hover,
-window.ORANGE editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_ORANGE,0.88);
-}
-
-window.ORANGE editablelabel.editing {
-    border: 1px solid @ORANGE_700;
-}
-
-window.ORANGE:backdrop editablelabel {
-    color: alpha(@ORANGE_900, 0.75);
-}
-
-window.ORANGE:backdrop editablelabel,
-window.ORANGE:backdrop actionbar,
-window.ORANGE:backdrop actionbar image {
-    color: alpha(@ORANGE_900, 0.65);
-}
-
-
-@define-color ACCENT_STRAWBERRY mix(@STRAWBERRY_500, @STRAWBERRY_700, 0.3);
-
-window.STRAWBERRY {
-    background-color: @STRAWBERRY_100;
-}
-
-window.STRAWBERRY undershoot.top {
-    background:
-        linear-gradient(
-            @STRAWBERRY_100 0%,
-            alpha(@STRAWBERRY_100, 0) 50%
-        );
-}
-
-window.STRAWBERRY undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@STRAWBERRY_100, 0) 50%,
-            @STRAWBERRY_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.STRAWBERRY overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
-
-window.STRAWBERRY overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
-
-window.STRAWBERRY overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
-
-window.STRAWBERRY overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_STRAWBERRY, 0) 80%, alpha(@ACCENT_STRAWBERRY, 0.25) 100%); }
-
-window.STRAWBERRY text selection {
-    color: shade(@STRAWBERRY_100, 1.88);
-    background-color: @STRAWBERRY_900;
-}
-
-window.STRAWBERRY titlebar,
-window.STRAWBERRY titlebar image,
-window.STRAWBERRY .themedbutton > button > box > image,
-window.STRAWBERRY .themedbutton > image,
-window.STRAWBERRY {
-    color: @STRAWBERRY_900;
-}
-
-window.STRAWBERRY titlebar,
-window.STRAWBERRY textview,
-window.STRAWBERRY editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @STRAWBERRY_100;
-    color: shade(@STRAWBERRY_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.STRAWBERRY entry {
-    background-color: white;
-    color: black;
-}
-
-window.STRAWBERRY editablelabel {
-    color: @STRAWBERRY_900;
-}
-
-window.STRAWBERRY editablelabel:hover,
-window.STRAWBERRY editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_STRAWBERRY,0.88);
-}
-
-window.STRAWBERRY editablelabel.editing {
-    border: 1px solid @STRAWBERRY_700;
-}
-
-window.STRAWBERRY:backdrop editablelabel {
-    color: alpha(@STRAWBERRY_900, 0.75);
-}
-
-window.STRAWBERRY:backdrop editablelabel,
-window.STRAWBERRY:backdrop actionbar,
-window.STRAWBERRY:backdrop actionbar image {
-    color: alpha(@STRAWBERRY_900, 0.65);
-}
-
-
-@define-color ACCENT_BUBBLEGUM mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3);
-
-window.BUBBLEGUM {
-    background-color: @BUBBLEGUM_100;
-}
-
-window.BUBBLEGUM undershoot.top {
-    background:
-        linear-gradient(
-            @BUBBLEGUM_100 0%,
-            alpha(@BUBBLEGUM_100, 0) 50%
-        );
-}
-
-window.BUBBLEGUM undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@BUBBLEGUM_100, 0) 50%,
-            @BUBBLEGUM_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.BUBBLEGUM overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
-
-window.BUBBLEGUM overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
-
-window.BUBBLEGUM overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
-
-window.BUBBLEGUM overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_BUBBLEGUM, 0) 80%, alpha(@ACCENT_BUBBLEGUM, 0.25) 100%); }
-
-window.BUBBLEGUM text selection {
-    color: shade(@BUBBLEGUM_100, 1.88);
-    background-color: @BUBBLEGUM_900;
-}
-
-window.BUBBLEGUM titlebar,
-window.BUBBLEGUM titlebar image,
-window.BUBBLEGUM .themedbutton > button > box > image,
-window.BUBBLEGUM .themedbutton > image,
-window.BUBBLEGUM {
-    color: @BUBBLEGUM_900;
-}
-
-window.BUBBLEGUM titlebar,
-window.BUBBLEGUM textview,
-window.BUBBLEGUM editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @BUBBLEGUM_100;
-    color: shade(@BUBBLEGUM_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.BUBBLEGUM entry {
-    background-color: white;
-    color: black;
-}
-
-window.BUBBLEGUM editablelabel {
-    color: @BUBBLEGUM_900;
-}
-
-window.BUBBLEGUM editablelabel:hover,
-window.BUBBLEGUM editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_BUBBLEGUM,0.88);
-}
-
-window.BUBBLEGUM editablelabel.editing {
-    border: 1px solid @BUBBLEGUM_700;
-}
-
-window.BUBBLEGUM:backdrop editablelabel {
-    color: alpha(@BUBBLEGUM_900, 0.75);
-}
-
-window.BUBBLEGUM:backdrop editablelabel,
-window.BUBBLEGUM:backdrop actionbar,
-window.BUBBLEGUM:backdrop actionbar image {
-    color: alpha(@BUBBLEGUM_900, 0.65);
-}
-
-
-@define-color ACCENT_GRAPE mix(@GRAPE_500, @GRAPE_700, 0.3);
-
-window.GRAPE {
-    background-color: @GRAPE_100;
-}
-
-window.GRAPE undershoot.top {
-    background:
-        linear-gradient(
-            @GRAPE_100 0%,
-            alpha(@GRAPE_100, 0) 50%
-        );
-}
-
-window.GRAPE undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@GRAPE_100, 0) 50%,
-            @GRAPE_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.GRAPE overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
-
-window.GRAPE overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
-
-window.GRAPE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
-
-window.GRAPE overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_GRAPE, 0) 80%, alpha(@ACCENT_GRAPE, 0.25) 100%); }
-
-window.GRAPE text selection {
-    color: shade(@GRAPE_100, 1.88);
-    background-color: @GRAPE_900;
-}
-
-window.GRAPE titlebar,
-window.GRAPE titlebar image,
-window.GRAPE .themedbutton > button > box > image,
-window.GRAPE .themedbutton > image,
-window.GRAPE {
-    color: @GRAPE_900;
-}
-
-window.GRAPE titlebar,
-window.GRAPE textview,
-window.GRAPE editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @GRAPE_100;
-    color: shade(@GRAPE_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.GRAPE entry {
-    background-color: white;
-    color: black;
-}
-
-window.GRAPE editablelabel {
-    color: @GRAPE_900;
-}
-
-window.GRAPE editablelabel:hover,
-window.GRAPE editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_GRAPE,0.88);
-}
-
-window.GRAPE editablelabel.editing {
-    border: 1px solid @GRAPE_700;
-}
-
-window.GRAPE:backdrop editablelabel {
-    color: alpha(@GRAPE_900, 0.75);
-}
-
-window.GRAPE:backdrop editablelabel,
-window.GRAPE:backdrop actionbar,
-window.GRAPE:backdrop actionbar image {
-    color: alpha(@GRAPE_900, 0.65);
-}
-
-
-@define-color ACCENT_COCOA mix(@COCOA_500, @COCOA_700, 0.3);
-
-window.COCOA {
-    background-color: @COCOA_100;
-}
-
-window.COCOA undershoot.top {
-    background:
-        linear-gradient(
-            @COCOA_100 0%,
-            alpha(@COCOA_100, 0) 50%
-        );
-}
-
-window.COCOA undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@COCOA_100, 0) 50%,
-            @COCOA_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.COCOA overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
-
-window.COCOA overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
-
-window.COCOA overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
-
-window.COCOA overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_COCOA, 0) 80%, alpha(@ACCENT_COCOA, 0.25) 100%); }
-
-window.COCOA text selection {
-    color: shade(@COCOA_100, 1.88);
-    background-color: @COCOA_900;
-}
-
-window.COCOA titlebar,
-window.COCOA titlebar image,
-window.COCOA .themedbutton > button > box > image,
-window.COCOA .themedbutton > image,
-window.COCOA {
-    color: @COCOA_900;
-}
-
-window.COCOA titlebar,
-window.COCOA textview,
-window.COCOA editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @COCOA_100;
-    color: shade(@COCOA_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.COCOA entry {
-    background-color: white;
-    color: black;
-}
-
-window.COCOA editablelabel {
-    color: @COCOA_900;
-}
-
-window.COCOA editablelabel:hover,
-window.COCOA editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_COCOA,0.88);
-}
-
-window.COCOA editablelabel.editing {
-    border: 1px solid @COCOA_700;
-}
-
-window.COCOA:backdrop editablelabel {
-    color: alpha(@COCOA_900, 0.75);
-}
-
-window.COCOA:backdrop editablelabel,
-window.COCOA:backdrop actionbar,
-window.COCOA:backdrop actionbar image {
-    color: alpha(@COCOA_900, 0.65);
-}
-
-
-@define-color ACCENT_SLATE mix(@SLATE_500, @SLATE_700, 0.3);
-
-window.SLATE {
-    background-color: @SLATE_100;
-}
-
-window.SLATE undershoot.top {
-    background:
-        linear-gradient(
-            @SLATE_100 0%,
-            alpha(@SLATE_100, 0) 50%
-        );
-}
-
-window.SLATE undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@SLATE_100, 0) 50%,
-            @SLATE_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.SLATE overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
-
-window.SLATE overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
-
-window.SLATE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
-
-window.SLATE overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_SLATE, 0) 80%, alpha(@ACCENT_SLATE, 0.25) 100%); }
-
-window.SLATE text selection {
-    color: shade(@SLATE_100, 1.88);
-    background-color: @SLATE_900;
-}
-
-window.SLATE titlebar,
-window.SLATE titlebar image,
-window.SLATE .themedbutton > button > box > image,
-window.SLATE .themedbutton > image,
-window.SLATE {
-    color: @SLATE_900;
-}
-
-window.SLATE titlebar,
-window.SLATE textview,
-window.SLATE editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @SLATE_100;
-    color: shade(@SLATE_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.SLATE entry {
-    background-color: white;
-    color: black;
-}
-
-window.SLATE editablelabel {
-    color: @SLATE_900;
-}
-
-window.SLATE editablelabel:hover,
-window.SLATE editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_SLATE,0.88);
-}
-
-window.SLATE editablelabel.editing {
-    border: 1px solid @SLATE_700;
-}
-
-window.SLATE:backdrop editablelabel {
-    color: alpha(@SLATE_900, 0.75);
-}
-
-window.SLATE:backdrop editablelabel,
-window.SLATE:backdrop actionbar,
-window.SLATE:backdrop actionbar image {
-    color: alpha(@SLATE_900, 0.65);
-}
-
-
-@define-color ACCENT_LATTE mix(@LATTE_500, @LATTE_700, 0.3);
-
-window.LATTE {
-    background-color: @LATTE_100;
-}
-
-window.LATTE undershoot.top {
-    background:
-        linear-gradient(
-            @LATTE_100 0%,
-            alpha(@LATTE_100, 0) 50%
-        );
-}
-
-window.LATTE undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@LATTE_100, 0) 50%,
-            @LATTE_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.LATTE overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
-
-window.LATTE overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
-
-window.LATTE overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
-
-window.LATTE overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_LATTE, 0) 80%, alpha(@ACCENT_LATTE, 0.25) 100%); }
-
-window.LATTE text selection {
-    color: shade(@LATTE_100, 1.88);
-    background-color: @LATTE_900;
-}
-
-window.LATTE titlebar,
-window.LATTE titlebar image,
-window.LATTE .themedbutton > button > box > image,
-window.LATTE .themedbutton > image,
-window.LATTE {
-    color: @LATTE_900;
-}
-
-window.LATTE titlebar,
-window.LATTE textview,
-window.LATTE editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @LATTE_100;
-    color: shade(@LATTE_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.LATTE entry {
-    background-color: white;
-    color: black;
-}
-
-window.LATTE editablelabel {
-    color: @LATTE_900;
-}
-
-window.LATTE editablelabel:hover,
-window.LATTE editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_LATTE,0.88);
-}
-
-window.LATTE editablelabel.editing {
-    border: 1px solid @LATTE_700;
-}
-
-window.LATTE:backdrop editablelabel {
-    color: alpha(@LATTE_900, 0.75);
-}
-
-window.LATTE:backdrop editablelabel,
-window.LATTE:backdrop actionbar,
-window.LATTE:backdrop actionbar image {
-    color: alpha(@LATTE_900, 0.65);
-}
-
-
-@define-color ACCENT_SILVER mix(@SILVER_500, @SILVER_700, 0.3);
-
-window.SILVER {
-    background-color: @SILVER_100;
-}
-
-window.SILVER undershoot.top {
-    background:
-        linear-gradient(
-            @SILVER_100 0%,
-            alpha(@SILVER_100, 0) 50%
-        );
-}
-
-window.SILVER undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@SILVER_100, 0) 50%,
-            @SILVER_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.SILVER overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
-
-window.SILVER overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
-
-window.SILVER overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
-
-window.SILVER overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_SILVER, 0) 80%, alpha(@ACCENT_SILVER, 0.25) 100%); }
-
-window.SILVER text selection {
-    color: shade(@SILVER_100, 1.88);
-    background-color: @SILVER_900;
-}
-
-window.SILVER titlebar,
-window.SILVER titlebar image,
-window.SILVER .themedbutton > button > box > image,
-window.SILVER .themedbutton > image,
-window.SILVER {
-    color: @SILVER_900;
-}
-
-window.SILVER titlebar,
-window.SILVER textview,
-window.SILVER editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @SILVER_100;
-    color: shade(@SILVER_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.SILVER entry {
-    background-color: white;
-    color: black;
-}
-
-window.SILVER editablelabel {
-    color: @SILVER_900;
-}
-
-window.SILVER editablelabel:hover,
-window.SILVER editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_SILVER,0.88);
-}
-
-window.SILVER editablelabel.editing {
-    border: 1px solid @SILVER_700;
-}
-
-window.SILVER:backdrop editablelabel {
-    color: alpha(@SILVER_900, 0.75);
-}
-
-window.SILVER:backdrop editablelabel,
-window.SILVER:backdrop actionbar,
-window.SILVER:backdrop actionbar image {
-    color: alpha(@SILVER_900, 0.65);
-}
-
-
-@define-color ACCENT_BLACK mix(@BLACK_500, @BLACK_700, 0.3);
-
-window.BLACK {
-    background-color: @BLACK_100;
-}
-
-window.BLACK undershoot.top {
-    background:
-        linear-gradient(
-            @BLACK_100 0%,
-            alpha(@BLACK_100, 0) 50%
-        );
-}
-
-window.BLACK undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@BLACK_100, 0) 50%,
-            @BLACK_100 100%
-        );
-}
-
-
-/* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
-window.BLACK overshoot.top {
-background: linear-gradient(to top, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
-
-window.BLACK overshoot.right {
-background: linear-gradient(to right, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
-
-window.BLACK overshoot.bottom {
-background: linear-gradient(to bottom, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
-
-window.BLACK overshoot.left {
-background: linear-gradient(to left, alpha(@ACCENT_BLACK, 0) 80%, alpha(@ACCENT_BLACK, 0.25) 100%); }
-
-window.BLACK text selection {
-    color: shade(@BLACK_100, 1.88);
-    background-color: @BLACK_900;
-}
-
-window.BLACK titlebar,
-window.BLACK titlebar image,
-window.BLACK .themedbutton > button > box > image,
-window.BLACK .themedbutton > image,
-window.BLACK {
-    color: @BLACK_900;
-}
-
-window.BLACK titlebar,
-window.BLACK textview,
-window.BLACK editablelabel.editing {
-    background-color: transparent;
-    border-bottom-color: @BLACK_100;
-    color: shade(@BLACK_900, 0.77);
-}
-
-/* Fix the emoticon entry having note color background */
-window.BLACK entry {
-    background-color: white;
-    color: black;
-}
-
-window.BLACK editablelabel {
-    color: @BLACK_900;
-}
-
-window.BLACK editablelabel:hover,
-window.BLACK editablelabel:focus {
-    border: 1px solid alpha(@ACCENT_BLACK,0.88);
-}
-
-window.BLACK editablelabel.editing {
-    border: 1px solid @BLACK_700;
-}
-
-window.BLACK:backdrop editablelabel {
-    color: alpha(@BLACK_900, 0.75);
-}
-
-window.BLACK:backdrop editablelabel,
-window.BLACK:backdrop actionbar,
-window.BLACK:backdrop actionbar image {
-    color: alpha(@BLACK_900, 0.65);
-}
-

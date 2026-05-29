@@ -70,11 +70,13 @@ actionbar .themedbutton:focus {
     border-radius: 6px;
 }
 
+
 /* Obfuscate note */
 window.scribbled:backdrop textview.view,
 window.scribbled:backdrop editablelabel {
     font-family: "Redacted Script";
 }
+
 
 /* Font zooms */
 .s20 textview.view {font-size: 40%;}
