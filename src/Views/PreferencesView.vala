@@ -51,16 +51,10 @@
                 Application.gsettings.set_enum (KEY_LIST, (int)list_dropdown.selected);
             });
 
-
-            var list_label = new Granite.HeaderLabel (_("List item prefix")) {
-                mnemonic_widget = list_dropdown,
-                secondary_text = _("If disabled, the toggle list button will be hidden"),
-                hexpand = true
-            };
-
-            var lists_box = new Gtk.Box (HORIZONTAL, SPACING_STANDARD);
-            lists_box.append (list_label);
-            lists_box.append (list_dropdown);
+            var lists_box = new SettingsBox (
+                _("List item prefix"),
+                _("If disabled, the toggle list button will be hidden"),
+                list_dropdown);
 
             settingsbox.append (lists_box);
 
