@@ -97,7 +97,8 @@
                 <p>The Unyielding Jorts</p>
                 <ul>
                     <li>Lovely Pride variant thanks to @wpkelso!</li>
-                    <li>Added tabulated lists thanks to @MysterieCatDev!</li>
+                    <li>Added indent for lists with help from @MysterieCatDev!</li>
+                    <li>Added feature to restore last deleted note</li>
                     <li>Added Danish translation thanks to @pracedru!</li>
                     <li>Added Croatian translation thanks to @milotype!</li>
                     <li>Updated Spanish translation thanks to Eli!</li>
