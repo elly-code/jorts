@@ -24,10 +24,10 @@ public class Jorts.PreferenceWindow : Gtk.Window {
     // Autostart contributes to width too to accommodate buttons
 #if WINDOWS
     const int DEFAULT_PREF_WIDTH = 480;
-    const int DEFAULT_PREF_HEIGHT = 260;
+    const int DEFAULT_PREF_HEIGHT = 250;
 #else
     const int DEFAULT_PREF_WIDTH = 490;
-    const int DEFAULT_PREF_HEIGHT = 280;
+    const int DEFAULT_PREF_HEIGHT = 270;
 #endif
 
 

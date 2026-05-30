@@ -29,12 +29,15 @@
         child = overlay;
 
         // the box with all the settings
-        var settingsbox = new Gtk.Box (VERTICAL, 0) {
+        var settingsbox = new Gtk.Box (VERTICAL, SPACING_DOUBLE) {
             hexpand = true,
             vexpand = true,
-            valign = Gtk.Align.START,
-            margin_bottom = SPACING_DOUBLE,
+            valign = Gtk.Align.START
         };
+
+#if FLATHUB
+        settingsbox.spacing = 0;
+#endif
 
             /***************************************/
             /*               lists                 */
@@ -160,7 +163,7 @@
         // Bar at the bottom
         var actionbar = new Gtk.CenterBox () {
             valign = Gtk.Align.END,
-            margin_top = SPACING_DOUBLE,
+            margin_top = SPACING_TRIPLE,
             hexpand = true,
             vexpand = false
         };

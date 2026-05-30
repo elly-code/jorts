@@ -25,6 +25,7 @@ modules:
     config-opts:
       - -Dprofile=development
       - -Dicon-variant=pride
+      - -Dflathub=true
     sources:
       - type: dir
         path: .
