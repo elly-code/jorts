@@ -26,26 +26,6 @@ public class Jorts.NoteManager : Object {
     construct {
         open_notes = new Gee.ArrayList<StickyNoteWindow> ();
         storage = new Jorts.Storage ();
-
-        //action_group = new SimpleActionGroup ();
-        //action_group.add_action_entries (ACTION_ENTRIES, this);
-
-
-/*          var action_new_note = new SimpleAction (ACTION_NEW, null);
-        action_new_note.activate.connect (new_note);
-        action_group.add_action (action_new_note);
-
-        var action_save = new SimpleAction (ACTION_SAVE, null);
-        action_save.activate.connect (save_all);
-        action_group.add_action (action_save);
-
-        action_restore = new SimpleAction (ACTION_RESTORE_LAST, null);
-        action_restore.set_enabled (false);
-        action_group.add_action (action_restore);  */
-
-        // Translation view
-        unowned var app = ((Gtk.Application) GLib.Application.get_default ());
-
     }
 
     /*************************************************/
