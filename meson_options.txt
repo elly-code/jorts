@@ -11,4 +11,3 @@ option('icon-variant',
     description : 'The name of the seasonal icon and style to use'
 )
 option('windows_build', type: 'boolean', value: false, description: 'If this is a windows build. Switched on automatically on windows machines')
-option('flathub', type: 'boolean', value: false, description: 'Somehow flathub builds space boxes differently')

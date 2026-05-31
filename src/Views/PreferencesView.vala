@@ -35,10 +35,6 @@
             valign = Gtk.Align.START
         };
 
-#if FLATHUB
-        settingsbox.spacing = 0;
-#endif
-
             /***************************************/
             /*               lists                 */
             /***************************************/

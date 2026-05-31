@@ -30,7 +30,6 @@ modules:
     config-opts:
       - -Dprofile=legacy-rdnn
       - -Dicon-variant=pride
-      - -Dflathub=true
     sources:
       - type: dir
         path: .

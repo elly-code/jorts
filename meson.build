@@ -52,12 +52,6 @@ endif
 gnome = import('gnome')
 i18n = import('i18n')
 
-# WEIRD: Some spacing gets funky on flathub builds
-flathub = get_option('flathub')
-if flathub
-    vala_flags += ['--define', 'FLATHUB']
-endif
-
 # Windows needs icons, special arguments, and skip libportal
 windows_build = get_option('windows_build')
 if build_machine.system() == 'windows'
