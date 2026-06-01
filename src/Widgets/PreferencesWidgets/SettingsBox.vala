@@ -11,10 +11,10 @@
 public class Jorts.SettingsBox : Gtk.Box {
 
     public string text {get; construct;}
-    public string description {get; construct;}
+    public string? description {get; construct;}
     public Gtk.Widget widget {get; construct;}
 
-    public SettingsBox (string text, string description, Gtk.Widget widget) {
+    public SettingsBox (string text, string? description, Gtk.Widget widget) {
         Object (
             orientation: Gtk.Orientation.HORIZONTAL,
             spacing: SPACING_STANDARD,
@@ -31,8 +31,12 @@ public class Jorts.SettingsBox : Gtk.Box {
 
         var label = new Granite.HeaderLabel (text) {
             mnemonic_widget = widget,
-            secondary_text = description,
+            valign = Gtk.Align.CENTER,  //We need this else labels without descriptions keep a space for it
             hexpand = true,
+        };
+
+        if (description != null) {
+            label.secondary_text = description;
         };
 
         append (label);

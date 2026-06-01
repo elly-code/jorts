@@ -57,7 +57,7 @@
 
             var lists_box = new SettingsBox (
                 _("List item prefix"),
-                _("If disabled, the toggle list button will be hidden"),
+                null, //_("If disabled, the toggle list button will be hidden"),
                 list_dropdown);
 
             settingsbox.append (lists_box);
@@ -73,9 +73,9 @@
                 scribbly_toggle, "active",
                 GLib.SettingsBindFlags.DEFAULT);
 
-            var scribbly_box = new Jorts.SettingsBox (_
-                ("Scribble mode"),
-                _("Scribble text of unfocused notes (Ctrl+H)"),
+            var scribbly_box = new Jorts.SettingsBox (
+                _("Scribble content of unfocused notes"),
+                _("You can also use the Ctrl+H shortcut"),
                 scribbly_toggle);
 
             settingsbox.append (scribbly_box);
@@ -93,7 +93,7 @@
             var hidebar_box = new Jorts.SettingsBox (
                 //TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
                 _("Hide bottom bar"),
-                _("Keyboard shortcuts will still function (Ctrl+T)"),
+                _("You can also use the Ctrl+T shortcut"),
                 hidebar_toggle);
 
             settingsbox.append (hidebar_box);
@@ -106,16 +106,21 @@
 
             //TRANSLATORS: Button to restore sticky notes the application
             var restore_button = new Gtk.Button () {
-                label = _("Restore"),
-                action_name = Application.ACTION_PREFIX + Application.ACTION_RESTORE_LAST
+                label = _("Restore note"),
+                tooltip_markup = Granite.markup_accel_tooltip (
+                    {"<Ctrl>R"},
+                    _("Restore the last deleted sticky note")
+                ),
+                action_name = Application.ACTION_PREFIX + Application.ACTION_RESTORE_LAST,
+                width_request = 96,
             };
 
-            var restore_box = new SettingsBox (
+           /*   var restore_box = new SettingsBox (
                 _("Restore last deleted note"),
                 _("Restore the last deleted sticky note (Ctrl+R)"),
-                restore_button);
+                restore_button);  */
 
-            settingsbox.append (restore_box);
+            //settingsbox.append (restore_box);
 
 
             /****************************************************/
@@ -132,10 +137,11 @@
 
             autostart = new Jorts.Autostart ();
             autostart_toggle.notify["state"].connect (handle_toggle_autostart);
+            //autostart.fail.connect (toast.)
 
             var autostart_box = new Jorts.SettingsBox (
-                _("Automatically start Jorts"),
-                _("Show your sticky notes when you log in"),
+                _("Show notes on log in"),
+                _("Note: This can be out of sync with system settings"),
                 autostart_toggle);
 
             settingsbox.append (autostart_box);
@@ -156,7 +162,10 @@
             _("Support us!")
         );
 
-        actionbar.end_widget = new Gtk.Button () {
+        var right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, Jorts.SPACING_DOUBLE);
+        actionbar.end_widget = right_box;
+
+        var close = new Gtk.Button () {
             action_name = "window.close",
             width_request = 96,
             label = _("Close"),
@@ -165,6 +174,8 @@
                 _("Close preferences")
             )
         };
+        right_box.append (restore_button);
+        right_box.append (close);
 
         prefview.append (settingsbox);
         prefview.append (actionbar);
