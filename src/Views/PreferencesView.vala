@@ -50,9 +50,9 @@
                 valign = Gtk.Align.CENTER
             };
 
-            list_dropdown.selected = Application.gsettings.get_enum (KEY_LIST);
+            list_dropdown.selected = Application.settings.get_enum (KEY_LIST);
             list_dropdown.notify["selected"].connect (() => {
-                Application.gsettings.set_enum (KEY_LIST, (int)list_dropdown.selected);
+                Application.settings.set_enum (KEY_LIST, (int)list_dropdown.selected);
             });
 
             var lists_box = new SettingsBox (
@@ -69,7 +69,7 @@
 
             var scribbly_toggle = new Gtk.Switch ();
 
-            Application.gsettings.bind (KEY_SCRIBBLY,
+            Application.settings.bind (KEY_SCRIBBLY,
                 scribbly_toggle, "active",
                 GLib.SettingsBindFlags.DEFAULT);
 
@@ -86,7 +86,7 @@
             /*************************************************/
             var hidebar_toggle = new Gtk.Switch ();
 
-            Application.gsettings.bind (KEY_HIDEBAR,
+            Application.settings.bind (KEY_HIDEBAR,
                 hidebar_toggle, "active",
                 GLib.SettingsBindFlags.DEFAULT);
 
@@ -131,7 +131,7 @@
 #if !WINDOWS
             autostart_toggle = new Gtk.Switch ();
 
-            Application.gsettings.bind (KEY_AUTOSTART,
+            Application.settings.bind (KEY_AUTOSTART,
                 autostart_toggle, "active",
                 GLib.SettingsBindFlags.DEFAULT);
 

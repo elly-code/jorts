@@ -111,7 +111,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         popover.theme_changed.connect (color_controller.on_color_changed);
 
         // Respect animation settings for showing ui elements
-        if (Application.gtk_settings.gtk_enable_animations && (!Application.gsettings.get_boolean (KEY_HIDEBAR))) {
+        if (Application.gtk_settings.gtk_enable_animations && (!Application.settings.get_boolean (KEY_HIDEBAR))) {
             show.connect_after (delayed_show);
 
         } else {
@@ -133,7 +133,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     private void bind_hidebar () {
-        Application.gsettings.bind (
+        Application.settings.bind (
             KEY_HIDEBAR,
             view.actionbar.actionbar,
             "revealed",
