@@ -44,7 +44,7 @@ public class Jorts.Application : Gtk.Application {
     public static GLib.Settings gsettings;
     public static Gtk.Settings gtk_settings;
 
-    public Jorts.NoteManager note_manager;
+    public static Jorts.NoteManager note_manager;
     public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling

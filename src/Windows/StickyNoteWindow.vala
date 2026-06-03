@@ -74,7 +74,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         insert_action_group ("textview", textview.actions);
         insert_action_group ("zoom_controller", zoom_controller.actions);
 
-        // Have shortcuts keep working with the popover open.
+        // Have shortcuts keep working  this.destroy ()with the popover open.
         popover = view.popover;
         view.popover.scroll_controller.scroll.connect (zoom_controller.on_scroll);
         view.popover.keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
@@ -203,5 +203,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public void has_changed () {
         application.activate_action (Application.ACTION_SAVE, null);
     }
-    private void action_delete () {((Jorts.Application)this.application).note_manager.delete_note (this); this.destroy ();}
+    private void action_delete () {
+        Application.note_manager.delete_note (this);
+    }
 }
