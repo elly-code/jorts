@@ -27,7 +27,7 @@ public class Jorts.Autostart {
                 Xdp.BackgroundFlags.AUTOSTART,
                 null);
 
-            print ("Autostart set: %b",result);
+            print ("Autostart set: %b", result);
 
         } catch (Error e) {
             warning (e.message);
@@ -44,7 +44,7 @@ public class Jorts.Autostart {
                 Xdp.BackgroundFlags.NONE,
                 null);
 
-            print ("Autostart remove: %b",result);
+            print ("Autostart remove: %b", result);
 
         } catch (Error e) {
             warning (e.message);

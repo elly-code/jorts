@@ -34,7 +34,7 @@ public class Jorts.NoteManager : Object {
     * Keep an active list of Windows.
     * We do not do this at construct time so we stay flexible whenever we want to init
     * NoteManager is also created too early by the app for new windows
-    */    
+    */
     public void init () {
         debug ("Opening all sticky notes now!");
         Json.Array loaded_data = storage.load ();
@@ -45,7 +45,7 @@ public class Jorts.NoteManager : Object {
             create_note (note_data);
 
         } else {
-            foreach (var json_data in loaded_data.get_elements()) {
+            foreach (var json_data in loaded_data.get_elements ()) {
                 var json_obj = json_data.dup_object ();
                 var note_data = new NoteData.from_json (json_obj);
 
@@ -74,18 +74,18 @@ public class Jorts.NoteManager : Object {
 
         } else {
             var random_data = new NoteData ();
-            
+
             // One chance at the golden sticky
             random_data = Jorts.Utils.golden_sticky (random_data);
             note = new StickyNoteWindow (application, random_data);
         }
-        
+
         /* LETSGO */
         open_notes.add (note);
 
         note.show ();
         note.present ();
-	}
+    }
 
     /*************************************************/
     /**
@@ -107,7 +107,7 @@ public class Jorts.NoteManager : Object {
         note.destroy ();
 
         immediately_save ();
-	}
+    }
 
     /*************************************************/
     /**
@@ -116,7 +116,7 @@ public class Jorts.NoteManager : Object {
     public void save_all () {
         debug ("Save the stickies!");
         if (saving_lock) {return;}
-        
+
         if (debounce_timer_id != 0) {
             GLib.Source.remove (debounce_timer_id);
         }
@@ -139,7 +139,7 @@ public class Jorts.NoteManager : Object {
             array.add_object_element (object);
         };
 
-        storage.save (array);  
+        storage.save (array);
     }
 
     /*************************************************/

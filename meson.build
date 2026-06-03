@@ -15,9 +15,11 @@ legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 vala_flags = []
-profile = get_option('profile')
+development = get_option('development')
+legacy_rdnn = get_option('legacy-rdnn')
+windows = get_option('windows')
 
-if profile == 'legacy-rdnn'
+if legacy_rdnn
     app_id = legacy_app_id
     alternate_app_id = correct_app_id
     app_path = legacy_app_path
@@ -30,7 +32,7 @@ else
     app_path = correct_app_path
 endif
 
-if profile == 'development'
+if development
   app_id +=  '.devel'
   vala_flags += ['--define', 'DEVEL']
   vala_flags += ['--define', 'LATTE']
@@ -40,9 +42,7 @@ endif
 # Cool icon variants
 icon_variant = get_option('icon-variant')
 
-if icon_variant == 'pride'
-    vala_flags += ['--define', 'PRIDE']
-elif icon_variant == 'halloween'
+if icon_variant == 'halloween'
     vala_flags += ['--define', 'HALLOWEEN']
 else
     vala_flags += ['--define', 'DEFAULT']
@@ -53,12 +53,12 @@ gnome = import('gnome')
 i18n = import('i18n')
 
 # Windows needs icons, special arguments, and skip libportal
-windows_build = get_option('windows_build')
+windows = get_option('windows')
 if build_machine.system() == 'windows'
-    windows_build = true
+    windows = true
 endif
 
-if windows_build
+if windows
     vala_flags += ['--define', 'WINDOWS']
 endif
 
@@ -84,7 +84,7 @@ subdir('po')
 subdir('data')
 subdir('src')
 
-if windows_build
+if windows
     subdir('windows')
 endif
 
@@ -94,11 +94,14 @@ gnome.post_install(
   update_desktop_database: true
   )
 
-if profile == 'development'
+if development
 message('''
-    
+
+----------------------------------------
 You now have a development version installed.
 Here be dragons.
+Tread carefully.
+----------------------------------------
 
 ''')
 endif

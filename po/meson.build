@@ -3,6 +3,6 @@ i18n.gettext(app_name,
     preset: 'glib'
 )
 
-if not windows_build
+if not windows
     subdir('extra')
 endif

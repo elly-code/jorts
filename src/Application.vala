@@ -78,7 +78,7 @@ public class Jorts.Application : Gtk.Application {
                 application_id: APP_ID);
     }
 
-    /*************************************************/        
+    /*************************************************/
     static construct {
         settings = new GLib.Settings (APP_ID);
     }
@@ -121,9 +121,9 @@ public class Jorts.Application : Gtk.Application {
 
         // Also follow dark if system is dark lIke mY sOul.
         gtk_settings.gtk_application_prefer_dark_theme = (
-	            granite_settings.prefers_color_scheme == DARK
+                granite_settings.prefers_color_scheme == DARK
             );
-	
+
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = (
                     granite_settings.prefers_color_scheme == DARK
@@ -137,7 +137,7 @@ Your Notes are all belong to us!
     (\o/)   (\o/)    <--- Tiny electric angels working in the background
      /_\     /_\
 
-Please wait while the app remembers all the things...
+Please wait while the app remembers all the things…
 """);
 
         /* Quit if all sticky notes are closed and preferences arent shown */
@@ -235,9 +235,9 @@ Please wait while the app remembers all the things...
     }
 
     public override int command_line (ApplicationCommandLine command_line) {
-        debug ("Parsing commandline arguments...");
+        debug ("Parsing commandline arguments");
 
-        OptionEntry[] CMD_OPTION_ENTRIES = {
+        OptionEntry[] cmd_option_entries = {
             {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, _("Create a new note"), null},
             {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, _("Show preferences"), null}
         };
@@ -253,7 +253,7 @@ Please wait while the app remembers all the things...
         try {
             var ctx = new OptionContext ();
             ctx.set_help_enabled (true);
-            ctx.add_main_entries (CMD_OPTION_ENTRIES, null);
+            ctx.add_main_entries (cmd_option_entries, null);
             unowned string[] tmp = _args;
             ctx.parse (ref tmp);
 

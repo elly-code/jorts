@@ -37,7 +37,7 @@ public class Jorts.Storage : Object {
         ensure_datadir ();
 
         // TODO: Remove the below cruft after a while
-        var old_storage_path = GLib.Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), FILENAME);        
+        var old_storage_path = GLib.Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), FILENAME);
         var old_storage_file = File.new_for_path (old_storage_path);
         var savefile = File.new_for_path (savefile_path);
 
@@ -64,13 +64,13 @@ public class Jorts.Storage : Object {
         }
 
         try {
-			datadir.make_directory_with_parents ();
-			debug ("yes we do now");
+            datadir.make_directory_with_parents ();
+            debug ("yes we do now");
 
         } catch (Error e) {
-			warning ("Failed to prepare target data directory %s", e.message);
-		}
-	}
+            warning ("Failed to prepare target data directory %s", e.message);
+        }
+    }
 
     /*************************************************/
     /**
@@ -78,7 +78,7 @@ public class Jorts.Storage : Object {
     */
     public void save (Json.Array json_data) {
         ensure_datadir ();
-        debug("Writing %u elements... (Should be same number as sticky notes)", json_data.get_length ());
+        debug ("Writing %u elements (Should be same number as sticky notes)", json_data.get_length ());
 
         try {
             var generator = new Json.Generator ();
@@ -86,7 +86,7 @@ public class Jorts.Storage : Object {
             node.set_array (json_data);
             generator.set_root (node);
             generator.to_file (savefile_path);
-            
+
         } catch (Error e) {
             warning ("Failed to save notes %s", e.message);
         }
@@ -112,7 +112,7 @@ public class Jorts.Storage : Object {
             warning ("Failed to load from storage %s", e.message);
 
         }
-        
+
         debug ("Retrieved %ui elements", array.get_length ());
         return array;
     }

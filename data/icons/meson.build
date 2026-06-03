@@ -3,7 +3,7 @@
 #
 
 # Override only default 
-if profile == 'development' and icon_variant == 'default'
+if development and icon_variant == 'default'
     icon_variant = 'devel'
 endif
 

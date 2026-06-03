@@ -48,7 +48,7 @@ public class Jorts.NoteData {
         // Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
         title       = node.get_string_member_with_default ("title", (_("Forgot title!")));
         theme       = (Jorts.Themes)node.get_int_member_with_default ("color", Jorts.Themes.random_theme ());
-        content     = node.get_string_member_with_default ("content","");
+        content     = node.get_string_member_with_default ("content", "");
         monospace   = node.get_boolean_member_with_default ("monospace", DEFAULT_MONO);
         zoom        = (int)node.get_int_member_with_default ("zoom", DEFAULT_ZOOM);
 
@@ -67,7 +67,7 @@ public class Jorts.NoteData {
     public Json.Object to_json () {
         var builder = new Json.Builder ();
 
-		// Lets fkin gooo
+        // Lets fkin gooo
         builder.begin_object ();
         builder.set_member_name ("title");
         builder.add_string_value (title);
@@ -77,7 +77,7 @@ public class Jorts.NoteData {
         builder.add_string_value (content);
         builder.set_member_name ("monospace");
         builder.add_boolean_value (monospace);
-		builder.set_member_name ("zoom");
+        builder.set_member_name ("zoom");
         builder.add_int_value (zoom);
         builder.set_member_name ("width");
         builder.add_int_value (width);

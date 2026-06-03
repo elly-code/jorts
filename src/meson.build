@@ -63,7 +63,7 @@ sources = files (
 # So AFAIK ico.rc just point to an ico file in the same folder it is, so this is like gresource
 # No libportal on windows
 
-if windows_build
+if windows
     dependencies += dependency('gio-windows-2.0')
     ico_src = import('windows').compile_resources('../windows/icons/ico.rc')
     sources += ico_src

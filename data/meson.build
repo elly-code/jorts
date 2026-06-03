@@ -38,7 +38,7 @@ endif
 
 #========================
 # metainfo confuses windows, and icons are handled differently there
-if not windows_build
+if not windows
 
 
 
