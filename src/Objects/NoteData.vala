@@ -10,7 +10,7 @@
 /**
 * An object used to package all data conveniently as needed.
 */
-public class Jorts.NoteData : Object {
+public class Jorts.NoteData {
 
     // Will determine properties (or lack thereof) for any new note
     public static Jorts.Themes latest_theme = DEFAULT_THEME;
