@@ -70,7 +70,7 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 
 # https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
 if meson.get_compiler ('c').get_id () == 'clang'
-  add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
+    add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
 endif
 
 
@@ -94,6 +94,10 @@ subdir('src')
 
 if windows
     subdir('windows')
+endif
+
+if get_option('tests')
+    subdir('tests')
 endif
 
 gnome.post_install(
