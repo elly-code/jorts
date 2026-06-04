@@ -350,15 +350,13 @@ msgid "List item prefix"
 msgstr "Listenpräfix"
 
 #: src/Views/PreferencesView.vala:77
-#, fuzzy
 msgid "Scribble unfocused notes (Ctrl+H)"
 msgstr "Text von hintergrundnotizen Kritzelen (Strg+H)"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:95
-#, fuzzy
 msgid "Hide bottom bar (Ctrl+T)"
-msgstr "Schaltflächenleiste ausblenden"
+msgstr "Untere leiste ausblenden (Strg+T)"
 
 #. *********************************************
 #. Restore_last
@@ -369,18 +367,16 @@ msgid "Restore note"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:112
-#, fuzzy
 msgid "Restore the last deleted sticky note"
-msgstr "Haftnotiz löschen"
+msgstr "Die zuletzt gelöschte Haftnotiz wiederherstellen"
 
 #: src/Views/PreferencesView.vala:143
-#, fuzzy
 msgid "Show notes on log in"
-msgstr "Haftnotizen Zeigen, wenn Sie sich anmelden"
+msgstr "Bei Anmeldung Haftnotizen Zeigen"
 
 #: src/Views/PreferencesView.vala:144
 msgid "May be out of sync with system settings in some cases"
-msgstr ""
+msgstr "Könnte nicht mit den Systemeinstellungen übereinstimmen"
 
 #: src/Views/PreferencesView.vala:162
 msgid "Support us!"
@@ -472,9 +468,8 @@ msgid "Preferences - Jorts"
 msgstr "Präferenzen - Jorts!"
 
 #: src/Windows/PreferenceWindow.vala:50
-#, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
-msgstr "Präferenzen für deine Jorts"
+msgstr "<b>Präferenzen für deine Jorts</b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
