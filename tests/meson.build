@@ -5,34 +5,38 @@
 #========================
 # Linter and Appstream stuff
 
-vala_linter = find_program('io.elementary.vala-lint', required: false)
+vala_linter = find_program('io.elementary.vala-lint', required: tests)
 if vala_linter.found()
-    test('Run Vala linter on project source code',
+    test('lint',
         vala_linter,
-        args: meson.project_source_root / 'src')
+        args: [meson.project_source_root() / 'src'],
+        is_parallel: true)
 endif
 
-compile_schemas = find_program('glib-compile-schemas', required: false)
+compile_schemas = find_program('glib-compile-schemas', required: tests)
 if compile_schemas.found()
-    test('Validate schema file',
+    test('schema',
         compile_schemas,
-        args: ['--config ..', '--dry-run', meson.project_source_root() / 'data'])
+        args: ['--config ..', '--dry-run', meson.project_source_root() / 'data'],
+        is_parallel: true)
 endif
 
 # Windows cares not for Appstream
 if not windows
-    desktop_utils = find_program('desktop-file-validate', required: false)
+    desktop_utils = find_program('desktop-file-validate', required: tests)
     if desktop_utils.found()
-        test('Validate desktop file',
+        test('desktop',
             desktop_utils,
-            args: [desktop_file])
+            args: [desktop_file],
+            is_parallel: true)
     endif
 
     appstreamcli = find_program('appstreamcli', required: false)
     if appstreamcli.found()
-        test('Validate appstream file',
+        test('metainfo',
             appstreamcli,
-            args: ['validate', '--pedantic', '--no-net', '--explain', appstream_file])
+            args: ['validate', '--pedantic', '--no-net', '--explain', appstream_file],
+            is_parallel: true)
     endif
 endif
 

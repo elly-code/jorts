@@ -15,6 +15,7 @@ legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 development = get_option('development')
+tests = get_option('tests')
 legacy_rdnn = get_option('legacy-rdnn')
 windows = get_option('windows')
 
@@ -95,9 +96,8 @@ if windows
     subdir('windows')
 endif
 
-if get_option('tests')
-    subdir('tests')
-endif
+subdir('tests')
+
 
 gnome.post_install(
   glib_compile_schemas: true,
