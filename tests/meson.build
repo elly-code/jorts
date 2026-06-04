@@ -17,7 +17,7 @@ compile_schemas = find_program('glib-compile-schemas', required: tests)
 if compile_schemas.found()
     test('schema',
         compile_schemas,
-        args: ['--config ..', '--dry-run', meson.project_source_root() / 'data'],
+        args: ['--strict', '--dry-run', meson.project_source_root() / 'data'],
         is_parallel: true)
 endif
 
