@@ -5,7 +5,7 @@
 #========================
 # Linter and Appstream stuff
 
-vala_linter = find_program('io.elementary.vala-lint', required: tests)
+vala_linter = find_program('io.elementary.vala-lint', required: false)
 if vala_linter.found()
     test('lint',
         vala_linter,
@@ -13,7 +13,7 @@ if vala_linter.found()
         is_parallel: true)
 endif
 
-compile_schemas = find_program('glib-compile-schemas', required: tests)
+compile_schemas = find_program('glib-compile-schemas', required: false)
 if compile_schemas.found()
     test('schema',
         compile_schemas,
@@ -23,7 +23,7 @@ endif
 
 # Windows cares not for Appstream
 if not windows
-    desktop_utils = find_program('desktop-file-validate', required: tests)
+    desktop_utils = find_program('desktop-file-validate', required: false)
     if desktop_utils.found()
         test('desktop',
             desktop_utils,

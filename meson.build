@@ -15,7 +15,6 @@ legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 development = get_option('development')
-tests = get_option('tests')
 legacy_rdnn = get_option('legacy-rdnn')
 windows = get_option('windows')
 
