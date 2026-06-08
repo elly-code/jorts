@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:53+0200\n"
+"POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:216
+#: src/Application.vala:241
 msgid "Create a new note"
 msgstr ""
 
-#: src/Application.vala:217
+#: src/Application.vala:242
 msgid "Show preferences"
 msgstr ""
 
@@ -100,12 +100,12 @@ msgstr ""
 msgid "No preference, random each time"
 msgstr ""
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
+#: src/Utils/Autostart.vala:25
+msgid "Set Jorts to start with the computer"
 msgstr ""
 
-#: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
 msgstr ""
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
@@ -344,62 +344,48 @@ msgid ""
 "Have a great day!🎇\n"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:17
-msgid "Request to system sent"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:56
-msgid "If disabled, the toggle list button will be hidden"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:74
-msgid "Scribble mode"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:75
-msgid "Scribble text of unfocused notes (Ctrl+H)"
+#: src/Views/PreferencesView.vala:77
+msgid "Scribble unfocused notes (Ctrl+H)"
 msgstr ""
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:87
-msgid "Hide bottom bar"
+#: src/Views/PreferencesView.vala:95
+msgid "Hide bottom bar (Ctrl+T)"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:88
-msgid "Keyboard shortcuts will still function (Ctrl+T)"
+#. *********************************************
+#. Restore_last
+#. *********************************************
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
 msgstr ""
 
-#. TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
-msgid "Enable"
+#: src/Views/PreferencesView.vala:112
+msgid "Restore the last deleted sticky note"
 msgstr ""
 
-#. TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
-msgid "Disable"
+#: src/Views/PreferencesView.vala:143
+msgid "Show notes on log in"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:134
-msgid "Show your sticky notes when you log in"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:152
+#: src/Views/PreferencesView.vala:162
 msgid "Support us!"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:158
+#: src/Views/PreferencesView.vala:171
 msgid "Close"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:161
+#: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr ""
 
@@ -425,7 +411,7 @@ msgid "Preferences for this sticky note"
 msgstr ""
 
 #. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
+#: src/Widgets/EditableLabel.vala:40
 msgid "Click to edit the title"
 msgstr ""
 
@@ -480,20 +466,19 @@ msgstr ""
 msgid "Preferences - Jorts"
 msgstr ""
 
-#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-#: src/Windows/PreferenceWindow.vala:52
-msgid "Preferences for your Jorts"
+#: src/Windows/PreferenceWindow.vala:50
+msgid "<b>Preferences for your Jorts</b>"
 msgstr ""
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:156 src/Windows/StickyNoteWindow.vala:196
+#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
 #, c-format
 msgid "%s - Jorts"
 msgstr ""

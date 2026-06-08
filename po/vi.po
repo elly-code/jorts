@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:53+0200\n"
+"POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: src/Application.vala:216
+#: src/Application.vala:241
 msgid "Create a new note"
 msgstr "Tạo ghi chú mới"
 
-#: src/Application.vala:217
+#: src/Application.vala:242
 msgid "Show preferences"
 msgstr "Hiển thị tùy chỉnh"
 
@@ -103,13 +103,13 @@ msgstr "Latte"
 msgid "No preference, random each time"
 msgstr "Không ưu tiên, ngẫu nhiên mỗi lần"
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
-
-#: src/Utils/Libportal.vala:29
+#: src/Utils/Autostart.vala:25
 msgid "Set Jorts to start with the computer"
 msgstr "Đặt Jorts để bắt đầu với máy tính"
+
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
+msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -363,63 +363,52 @@ msgstr ""
 "Tôi hy vọng ứng dụng nhỏ của tôi mang lại cho bạn nhiều niềm vui\n"
 "Chúc một ngày tốt lành!🎇\n"
 
-#: src/Views/PreferencesView.vala:17
-msgid "Request to system sent"
-msgstr "Đã gửi yêu cầu tới hệ thống"
-
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
 msgstr "Prefix mục danh sách"
 
-#: src/Views/PreferencesView.vala:56
+#: src/Views/PreferencesView.vala:77
 #, fuzzy
-msgid "If disabled, the toggle list button will be hidden"
-msgstr "Nếu để trống, nút danh sách sẽ ẩn"
-
-#: src/Views/PreferencesView.vala:74
-msgid "Scribble mode"
-msgstr "Chế độ viết nguệch ngoạc"
-
-#: src/Views/PreferencesView.vala:75
-msgid "Scribble text of unfocused notes (Ctrl+H)"
+msgid "Scribble unfocused notes (Ctrl+H)"
 msgstr "Viết nguệch ngoạc văn bản của các ghi chú không tập trung (Ctrl+H)"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:87
-msgid "Hide bottom bar"
+#: src/Views/PreferencesView.vala:95
+#, fuzzy
+msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Ẩn thanh dưới cùng"
 
-#: src/Views/PreferencesView.vala:88
-msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Phím tắt vẫn hoạt động (Ctrl+T)"
+#. *********************************************
+#. Restore_last
+#. *********************************************
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
+msgstr ""
 
-#. TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
-msgid "Enable"
-msgstr "Bật"
+#: src/Views/PreferencesView.vala:112
+#, fuzzy
+msgid "Restore the last deleted sticky note"
+msgstr "Xóa giấy ghi chú"
 
-#. TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
-msgid "Disable"
-msgstr "Tắt"
-
-#: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Tự động khởi động Jorts"
-
-#: src/Views/PreferencesView.vala:134
-msgid "Show your sticky notes when you log in"
+#: src/Views/PreferencesView.vala:143
+#, fuzzy
+msgid "Show notes on log in"
 msgstr "Hiển thị giấy ghi chú của bạn khi bạn đăng nhập"
 
-#: src/Views/PreferencesView.vala:152
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:162
 msgid "Support us!"
 msgstr "Hỗ trợ chúng tôi!"
 
-#: src/Views/PreferencesView.vala:158
+#: src/Views/PreferencesView.vala:171
 msgid "Close"
 msgstr "Đóng"
 
-#: src/Views/PreferencesView.vala:161
+#: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr "Đóng tùy chỉnh"
 
@@ -445,7 +434,7 @@ msgid "Preferences for this sticky note"
 msgstr "Tùy chỉnh cho giấy ghi chú này"
 
 #. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
+#: src/Widgets/EditableLabel.vala:40
 msgid "Click to edit the title"
 msgstr "Nhấp để chỉnh sửa tiêu đề"
 
@@ -501,23 +490,45 @@ msgstr "Thoát Jorts"
 msgid "Preferences - Jorts"
 msgstr "Tùy chỉnh cho Jorts của bạn"
 
-#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-#: src/Windows/PreferenceWindow.vala:52
-msgid "Preferences for your Jorts"
+#: src/Windows/PreferenceWindow.vala:50
+#, fuzzy
+msgid "<b>Preferences for your Jorts</b>"
 msgstr "Tùy chỉnh cho Jorts của bạn"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:156 src/Windows/StickyNoteWindow.vala:196
+#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Jorts"
+
+#~ msgid "Request to system sent"
+#~ msgstr "Đã gửi yêu cầu tới hệ thống"
+
+#, fuzzy
+#~ msgid "If disabled, the toggle list button will be hidden"
+#~ msgstr "Nếu để trống, nút danh sách sẽ ẩn"
+
+#~ msgid "Scribble mode"
+#~ msgstr "Chế độ viết nguệch ngoạc"
+
+#~ msgid "Keyboard shortcuts will still function (Ctrl+T)"
+#~ msgstr "Phím tắt vẫn hoạt động (Ctrl+T)"
+
+#~ msgid "Enable"
+#~ msgstr "Bật"
+
+#~ msgid "Disable"
+#~ msgstr "Tắt"
+
+#~ msgid "Automatically start Jorts"
+#~ msgstr "Tự động khởi động Jorts"
 
 #~ msgid "To not forget, ever"
 #~ msgstr "Để không bao giờ quên"

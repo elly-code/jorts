@@ -5,6 +5,7 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
+ // vala-lint=skip-file
 
 /*************************************************/
 /**

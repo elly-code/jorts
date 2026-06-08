@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:53+0200\n"
+"POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:216
+#: src/Application.vala:241
 msgid "Create a new note"
 msgstr "Opret en ny note"
 
-#: src/Application.vala:217
+#: src/Application.vala:242
 msgid "Show preferences"
 msgstr "Vis præferencer"
 
@@ -99,13 +99,13 @@ msgstr "Latte"
 msgid "No preference, random each time"
 msgstr "Intet foretrukket, tilfældigt hver gang"
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Fjern Jorts fra systemets autostart"
-
-#: src/Utils/Libportal.vala:29
+#: src/Utils/Autostart.vala:25
 msgid "Set Jorts to start with the computer"
 msgstr "Indstil Jorts til at starte med computeren"
+
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
+msgstr "Fjern Jorts fra systemets autostart"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -350,63 +350,52 @@ msgstr ""
 "Jeg håber, at min lille app bringer dig en masse glæde\n"
 "Hav en god dag!🎇\n"
 
-#: src/Views/PreferencesView.vala:17
-msgid "Request to system sent"
-msgstr "Anmodning til systemet sendt"
-
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
 msgstr "Præfix til listelement"
 
-#: src/Views/PreferencesView.vala:56
+#: src/Views/PreferencesView.vala:77
 #, fuzzy
-msgid "If disabled, the toggle list button will be hidden"
-msgstr "Hvis efterladt tom, vil liste kappen være skjult"
-
-#: src/Views/PreferencesView.vala:74
-msgid "Scribble mode"
-msgstr "Scrible-tilstand"
-
-#: src/Views/PreferencesView.vala:75
-msgid "Scribble text of unfocused notes (Ctrl+H)"
+msgid "Scribble unfocused notes (Ctrl+H)"
 msgstr "Skribler teksten på ufokuseret noter"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:87
-msgid "Hide bottom bar"
+#: src/Views/PreferencesView.vala:95
+#, fuzzy
+msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Skjul nederste bjælke"
 
-#: src/Views/PreferencesView.vala:88
-msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Tastaturgenveje vil stadig fungere (Ctrl+T)"
+#. *********************************************
+#. Restore_last
+#. *********************************************
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
+msgstr ""
 
-#. TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
-msgid "Enable"
-msgstr "Aktiver"
+#: src/Views/PreferencesView.vala:112
+#, fuzzy
+msgid "Restore the last deleted sticky note"
+msgstr "Slet huskeseddel"
 
-#. TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
-msgid "Disable"
-msgstr "Deaktiver"
-
-#: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Start Jorts automatisk"
-
-#: src/Views/PreferencesView.vala:134
-msgid "Show your sticky notes when you log in"
+#: src/Views/PreferencesView.vala:143
+#, fuzzy
+msgid "Show notes on log in"
 msgstr "Vis dine huskesedler når du logger ind"
 
-#: src/Views/PreferencesView.vala:152
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:162
 msgid "Support us!"
 msgstr "Støt os!"
 
-#: src/Views/PreferencesView.vala:158
+#: src/Views/PreferencesView.vala:171
 msgid "Close"
 msgstr "Luk"
 
-#: src/Views/PreferencesView.vala:161
+#: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr "Luk indstillinger"
 
@@ -432,7 +421,7 @@ msgid "Preferences for this sticky note"
 msgstr "Indstillinger for denne huskeseddel"
 
 #. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
+#: src/Widgets/EditableLabel.vala:40
 msgid "Click to edit the title"
 msgstr "Klik for at redigere titlen"
 
@@ -487,23 +476,45 @@ msgstr "Afslut Jorts"
 msgid "Preferences - Jorts"
 msgstr "Præferencer - Jorts"
 
-#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-#: src/Windows/PreferenceWindow.vala:52
-msgid "Preferences for your Jorts"
+#: src/Windows/PreferenceWindow.vala:50
+#, fuzzy
+msgid "<b>Preferences for your Jorts</b>"
 msgstr "Præferencer for dine Jorts"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr "%s - Jorts (Udvikling)"
 
-#: src/Windows/StickyNoteWindow.vala:156 src/Windows/StickyNoteWindow.vala:196
+#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
 #, c-format
 msgid "%s - Jorts"
 msgstr "%s - Jorts"
+
+#~ msgid "Request to system sent"
+#~ msgstr "Anmodning til systemet sendt"
+
+#, fuzzy
+#~ msgid "If disabled, the toggle list button will be hidden"
+#~ msgstr "Hvis efterladt tom, vil liste kappen være skjult"
+
+#~ msgid "Scribble mode"
+#~ msgstr "Scrible-tilstand"
+
+#~ msgid "Keyboard shortcuts will still function (Ctrl+T)"
+#~ msgstr "Tastaturgenveje vil stadig fungere (Ctrl+T)"
+
+#~ msgid "Enable"
+#~ msgstr "Aktiver"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktiver"
+
+#~ msgid "Automatically start Jorts"
+#~ msgstr "Start Jorts automatisk"
 
 #~ msgid "Reset to default"
 #~ msgstr "Nulstil til standard"

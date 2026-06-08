@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:53+0200\n"
+"POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: 2026-05-11 18:46+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
 
-#: src/Application.vala:216
+#: src/Application.vala:241
 msgid "Create a new note"
 msgstr "Stvori novu bilješku"
 
-#: src/Application.vala:217
+#: src/Application.vala:242
 msgid "Show preferences"
 msgstr "Prikaži postavke"
 
@@ -105,13 +105,13 @@ msgstr "Latte"
 msgid "No preference, random each time"
 msgstr "Bez preferencije, svaki put nasumično"
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Ukloni Jortsa iz sustavskog automatskog pokretanja"
-
-#: src/Utils/Libportal.vala:29
+#: src/Utils/Autostart.vala:25
 msgid "Set Jorts to start with the computer"
 msgstr "Postavi Jorts da se pokrene s računalom"
+
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
+msgstr "Ukloni Jortsa iz sustavskog automatskog pokretanja"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -356,63 +356,52 @@ msgstr ""
 "Nadam se da će ti moja mala aplikacija donijeti puno radosti\n"
 "Želim ti ugodan dan! 🎇\n"
 
-#: src/Views/PreferencesView.vala:17
-msgid "Request to system sent"
-msgstr "Zahtjev sustavu je poslan"
-
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
 msgstr "Prefiks stavke popisa"
 
-#: src/Views/PreferencesView.vala:56
+#: src/Views/PreferencesView.vala:77
 #, fuzzy
-msgid "If disabled, the toggle list button will be hidden"
-msgstr "Ako ostane prazan, gumb za popis će se sakriti"
-
-#: src/Views/PreferencesView.vala:74
-msgid "Scribble mode"
-msgstr "Modus zabilješki"
-
-#: src/Views/PreferencesView.vala:75
-msgid "Scribble text of unfocused notes (Ctrl+H)"
+msgid "Scribble unfocused notes (Ctrl+H)"
 msgstr "Tekst zabilješka nefokusiranih bilješki (Ctrl+H)"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:87
-msgid "Hide bottom bar"
+#: src/Views/PreferencesView.vala:95
+#, fuzzy
+msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Sakrij donju traku"
 
-#: src/Views/PreferencesView.vala:88
-msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Tipkovni prečaci će i dalje raditi (Ctrl+T)"
+#. *********************************************
+#. Restore_last
+#. *********************************************
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
+msgstr ""
 
-#. TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
-msgid "Enable"
-msgstr "Aktiviraj"
+#: src/Views/PreferencesView.vala:112
+#, fuzzy
+msgid "Restore the last deleted sticky note"
+msgstr "Izbriši ljepljivu bilješku"
 
-#. TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
-msgid "Disable"
-msgstr "Deaktiviraj"
-
-#: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Pokreni Jorts automatski"
-
-#: src/Views/PreferencesView.vala:134
-msgid "Show your sticky notes when you log in"
+#: src/Views/PreferencesView.vala:143
+#, fuzzy
+msgid "Show notes on log in"
 msgstr "Prikaži svoje ljepljive bilješke kada se prijaviš"
 
-#: src/Views/PreferencesView.vala:152
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:162
 msgid "Support us!"
 msgstr "Podrži nas!"
 
-#: src/Views/PreferencesView.vala:158
+#: src/Views/PreferencesView.vala:171
 msgid "Close"
 msgstr "Zatvori"
 
-#: src/Views/PreferencesView.vala:161
+#: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr "Zatvori postavke"
 
@@ -438,7 +427,7 @@ msgid "Preferences for this sticky note"
 msgstr "Postavke za ovu ljepljivu bilješku"
 
 #. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
+#: src/Widgets/EditableLabel.vala:40
 msgid "Click to edit the title"
 msgstr "Klikni za uređivanje naslova"
 
@@ -493,23 +482,45 @@ msgstr "Zatvori Jorts"
 msgid "Preferences - Jorts"
 msgstr "Postavke – Jorts"
 
-#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-#: src/Windows/PreferenceWindow.vala:52
-msgid "Preferences for your Jorts"
+#: src/Windows/PreferenceWindow.vala:50
+#, fuzzy
+msgid "<b>Preferences for your Jorts</b>"
 msgstr "Postavke za tvoju Jorts aplikaciju"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr "%s – Jorts (razvoj)"
 
-#: src/Windows/StickyNoteWindow.vala:156 src/Windows/StickyNoteWindow.vala:196
+#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
 #, c-format
 msgid "%s - Jorts"
 msgstr "%s – Jorts"
+
+#~ msgid "Request to system sent"
+#~ msgstr "Zahtjev sustavu je poslan"
+
+#, fuzzy
+#~ msgid "If disabled, the toggle list button will be hidden"
+#~ msgstr "Ako ostane prazan, gumb za popis će se sakriti"
+
+#~ msgid "Scribble mode"
+#~ msgstr "Modus zabilješki"
+
+#~ msgid "Keyboard shortcuts will still function (Ctrl+T)"
+#~ msgstr "Tipkovni prečaci će i dalje raditi (Ctrl+T)"
+
+#~ msgid "Enable"
+#~ msgstr "Aktiviraj"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktiviraj"
+
+#~ msgid "Automatically start Jorts"
+#~ msgstr "Pokreni Jorts automatski"
 
 #~ msgid "Reset to default"
 #~ msgstr "Resetiraj na standardne vrijednosti"

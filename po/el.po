@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:53+0200\n"
+"POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: 2025-06-02 19:29+0300\n"
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
 "noreply.github.com>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 46.0\n"
 
-#: src/Application.vala:216
+#: src/Application.vala:241
 msgid "Create a new note"
 msgstr "Δημιουργία νέας σημείωσης"
 
-#: src/Application.vala:217
+#: src/Application.vala:242
 msgid "Show preferences"
 msgstr "Εμφάνιση προτιμήσεων"
 
@@ -97,13 +97,13 @@ msgstr ""
 msgid "No preference, random each time"
 msgstr ""
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Κατάργηση του Jorts από την αυτόματη εκκίνηση του συστήματος"
-
-#: src/Utils/Libportal.vala:29
+#: src/Utils/Autostart.vala:25
 msgid "Set Jorts to start with the computer"
 msgstr "Ρυθμίστε το Jorts για να ξεκινήσει με τον υπολογιστή"
+
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
+msgstr "Κατάργηση του Jorts από την αυτόματη εκκίνηση του συστήματος"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -359,66 +359,51 @@ msgstr ""
 "Ελπίζω η εφαρμογή μου να σας κάνει όλους χαρούμενους.\n"
 "Καλημέρα! 🎇\n"
 
-#: src/Views/PreferencesView.vala:17
-msgid "Request to system sent"
-msgstr "Αποστολή αιτήματος στο σύστημα"
-
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:56
-msgid "If disabled, the toggle list button will be hidden"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:74
-msgid "Scribble mode"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:75
-msgid "Scribble text of unfocused notes (Ctrl+H)"
-msgstr ""
+#: src/Views/PreferencesView.vala:77
+#, fuzzy
+msgid "Scribble unfocused notes (Ctrl+H)"
+msgstr "Κάντε τις μη εστιασμένες σημειώσεις δυσανάγνωστες"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:87
+#: src/Views/PreferencesView.vala:95
 #, fuzzy
-msgid "Hide bottom bar"
+msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Απόκρυψη κουμπιών"
 
-#: src/Views/PreferencesView.vala:88
+#. *********************************************
+#. Restore_last
+#. *********************************************
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:112
 #, fuzzy
-msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr ""
-"Εάν είναι επιλεγμένο, αποκρύπτει την κάτω μπάρα στο παράθυρο σημειώσεων. \n"
-"Οι συντομεύσεις πληκτρολογίου εξακολουθούν να λειτουργούν κανονικά (Ctrl+T)"
+msgid "Restore the last deleted sticky note"
+msgstr "Διαγραφή σημείωσης"
 
-#. TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
-msgid "Enable"
+#: src/Views/PreferencesView.vala:143
+msgid "Show notes on log in"
 msgstr ""
 
-#. TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
-msgid "Disable"
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:134
-msgid "Show your sticky notes when you log in"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:152
+#: src/Views/PreferencesView.vala:162
 msgid "Support us!"
 msgstr "Υποστηρίξτε μας!"
 
-#: src/Views/PreferencesView.vala:158
+#: src/Views/PreferencesView.vala:171
 msgid "Close"
 msgstr "Κλείστε το"
 
-#: src/Views/PreferencesView.vala:161
+#: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr "Κλείστε τις προτιμήσεις"
 
@@ -444,7 +429,7 @@ msgid "Preferences for this sticky note"
 msgstr "Προτιμήσεις για αυτή τη σημείωση"
 
 #. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
+#: src/Widgets/EditableLabel.vala:40
 msgid "Click to edit the title"
 msgstr "Κάντε κλικ για να επεξεργαστείτε τον τίτλο"
 
@@ -506,23 +491,34 @@ msgstr " - Τζορτς"
 msgid "Preferences - Jorts"
 msgstr "Ρυθμίσεις του Jorts"
 
-#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-#: src/Windows/PreferenceWindow.vala:52
-msgid "Preferences for your Jorts"
+#: src/Windows/PreferenceWindow.vala:50
+#, fuzzy
+msgid "<b>Preferences for your Jorts</b>"
 msgstr "Ρυθμίσεις του Jorts"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:156 src/Windows/StickyNoteWindow.vala:196
+#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Τζορτς"
+
+#~ msgid "Request to system sent"
+#~ msgstr "Αποστολή αιτήματος στο σύστημα"
+
+#, fuzzy
+#~ msgid "Keyboard shortcuts will still function (Ctrl+T)"
+#~ msgstr ""
+#~ "Εάν είναι επιλεγμένο, αποκρύπτει την κάτω μπάρα στο παράθυρο "
+#~ "σημειώσεων. \n"
+#~ "Οι συντομεύσεις πληκτρολογίου εξακολουθούν να λειτουργούν κανονικά "
+#~ "(Ctrl+T)"
 
 #~ msgid "To not forget, ever"
 #~ msgstr "Για να μην ξεχαστούν"
@@ -535,9 +531,6 @@ msgstr " - Τζορτς"
 
 #~ msgid "Preferences"
 #~ msgstr "Προτιμήσεις"
-
-#~ msgid "Make unfocused notes unreadable"
-#~ msgstr "Κάντε τις μη εστιασμένες σημειώσεις δυσανάγνωστες"
 
 #~ msgid ""
 #~ "If enabled, unfocused sticky notes become unreadable to protect their "

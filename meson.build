@@ -65,6 +65,14 @@ endif
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 
 
+#================================
+# Play nice with clang
+
+# https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
+if meson.get_compiler ('c').get_id () == 'clang'
+  add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
+endif
+
 
 #================================
 # Add subfolders for Meson to look

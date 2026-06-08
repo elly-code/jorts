@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 21:53+0200\n"
+"POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,11 +11,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:216
+#: src/Application.vala:241
 msgid "Create a new note"
 msgstr "Neue Notiz erstellen"
 
-#: src/Application.vala:217
+#: src/Application.vala:242
 msgid "Show preferences"
 msgstr "Präferenzen anzeigen"
 
@@ -94,13 +94,13 @@ msgstr "Latte"
 msgid "No preference, random each time"
 msgstr "Keine Präferenz, jedes Mal zufällig"
 
-#: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Jorts aus dem System-Autostart entfernen"
-
-#: src/Utils/Libportal.vala:29
+#: src/Utils/Autostart.vala:25
 msgid "Set Jorts to start with the computer"
 msgstr "Jorts so einstellen, dass er mit dem Computer startet"
+
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
+msgstr "Jorts aus dem System-Autostart entfernen"
 
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
@@ -345,62 +345,48 @@ msgstr ""
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
 
-#: src/Views/PreferencesView.vala:17
-msgid "Request to system sent"
-msgstr "Anfrage an das System gesendet"
-
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
 msgstr "Listenpräfix"
 
-#: src/Views/PreferencesView.vala:56
-msgid "If disabled, the toggle list button will be hidden"
-msgstr "Wenn deaktiviert, wird die Listenschaltfläche ausgeblendet"
-
-#: src/Views/PreferencesView.vala:74
-msgid "Scribble mode"
-msgstr "Kritzelei-Modus"
-
-#: src/Views/PreferencesView.vala:75
-msgid "Scribble text of unfocused notes (Ctrl+H)"
+#: src/Views/PreferencesView.vala:77
+msgid "Scribble unfocused notes (Ctrl+H)"
 msgstr "Text von hintergrundnotizen Kritzelen (Strg+H)"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
-#: src/Views/PreferencesView.vala:87
-msgid "Hide bottom bar"
-msgstr "Schaltflächenleiste ausblenden"
+#: src/Views/PreferencesView.vala:95
+msgid "Hide bottom bar (Ctrl+T)"
+msgstr "Untere leiste ausblenden (Strg+T)"
 
-#: src/Views/PreferencesView.vala:88
-msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Tastaturkürzel funktionieren weiterhin (Strg+T)"
+#. *********************************************
+#. Restore_last
+#. *********************************************
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
+msgstr ""
 
-#. TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:106
-msgid "Enable"
-msgstr "Einschalten"
+#: src/Views/PreferencesView.vala:112
+msgid "Restore the last deleted sticky note"
+msgstr "Die zuletzt gelöschte Haftnotiz wiederherstellen"
 
-#. TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:117
-msgid "Disable"
-msgstr "Ausschalten"
+#: src/Views/PreferencesView.vala:143
+msgid "Show notes on log in"
+msgstr "Bei Anmeldung Haftnotizen Zeigen"
 
-#: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Jorts automatisch starten"
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
+msgstr "Könnte nicht mit den Systemeinstellungen übereinstimmen"
 
-#: src/Views/PreferencesView.vala:134
-msgid "Show your sticky notes when you log in"
-msgstr "Haftnotizen Zeigen, wenn Sie sich anmelden"
-
-#: src/Views/PreferencesView.vala:152
+#: src/Views/PreferencesView.vala:162
 msgid "Support us!"
 msgstr "Uns unterstützen!"
 
-#: src/Views/PreferencesView.vala:158
+#: src/Views/PreferencesView.vala:171
 msgid "Close"
 msgstr "Schließen"
 
-#: src/Views/PreferencesView.vala:161
+#: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr "Einstellungen schließen"
 
@@ -426,7 +412,7 @@ msgid "Preferences for this sticky note"
 msgstr "Einstellungen für diese Haftnotiz"
 
 #. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
-#: src/Widgets/EditableLabel.vala:39
+#: src/Widgets/EditableLabel.vala:40
 msgid "Click to edit the title"
 msgstr "Klicken, um den Titel zu bearbeiten"
 
@@ -481,23 +467,43 @@ msgstr "Jorts beenden"
 msgid "Preferences - Jorts"
 msgstr "Präferenzen - Jorts!"
 
-#. TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings for Jorts
-#: src/Windows/PreferenceWindow.vala:52
-msgid "Preferences for your Jorts"
-msgstr "Präferenzen für deine Jorts"
+#: src/Windows/PreferenceWindow.vala:50
+msgid "<b>Preferences for your Jorts</b>"
+msgstr "<b>Präferenzen für deine Jorts</b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr "%s - Jorts (Entwicklung)"
 
-#: src/Windows/StickyNoteWindow.vala:156 src/Windows/StickyNoteWindow.vala:196
+#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
 #, c-format
 msgid "%s - Jorts"
 msgstr "%s - Jorts"
+
+#~ msgid "Request to system sent"
+#~ msgstr "Anfrage an das System gesendet"
+
+#~ msgid "If disabled, the toggle list button will be hidden"
+#~ msgstr "Wenn deaktiviert, wird die Listenschaltfläche ausgeblendet"
+
+#~ msgid "Scribble mode"
+#~ msgstr "Kritzelei-Modus"
+
+#~ msgid "Keyboard shortcuts will still function (Ctrl+T)"
+#~ msgstr "Tastaturkürzel funktionieren weiterhin (Strg+T)"
+
+#~ msgid "Enable"
+#~ msgstr "Einschalten"
+
+#~ msgid "Disable"
+#~ msgstr "Ausschalten"
+
+#~ msgid "Automatically start Jorts"
+#~ msgstr "Jorts automatisch starten"
 
 #~ msgid "Reset to default"
 #~ msgstr "Auf Standardwerte zurücksetzen"
