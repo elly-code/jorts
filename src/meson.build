@@ -10,7 +10,7 @@ config_file = configure_file(
 
 #================================
 dependencies = [
-        dependency('gtk4', version: '>=4.16'),          # var(--prop) css notation for theming
+        dependency('gtk4', version: '>=4.14'),          # Because of working on oldbuntu.  Should be 4.16: var(--prop) css notation for theming
         dependency('granite-7', version: '>=7.6.0'),    # Version both in appcenter and flathub
         dependency('gee-0.8'),
         dependency('gobject-2.0'),

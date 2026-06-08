@@ -3,7 +3,7 @@ project(
     ['c', 'vala'],
     version: '4.2.1',
     license: 'GPL-3.0-or-later',
-    meson_version: '>= 0.57.0'      # gnome.post_install()
+    meson_version: '>= 0.59.0'      # update_desktop_database arg in gnome.post_install
 )
 
 app_name = meson.project_name()
