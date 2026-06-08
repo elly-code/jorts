@@ -1,8 +1,9 @@
 project(
     'jorts',
-    'vala', 'c',
-    version: '4.2.0',
-    license: 'GPL-3.0-or-later'
+    ['c', 'vala'],
+    version: '4.2.1',
+    license: 'GPL-3.0-or-later',
+    meson_version: '>= 0.57.0'      # gnome.post_install()
 )
 
 app_name = meson.project_name()
