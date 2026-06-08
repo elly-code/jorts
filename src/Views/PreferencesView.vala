@@ -151,7 +151,7 @@
         // Bar at the bottom
         var actionbar = new Gtk.CenterBox () {
             valign = Gtk.Align.END,
-            margin_top = SPACING_TRIPLE + SPACING_STANDARD,
+            margin_top = SPACING_TRIPLE + SPACING_DOUBLE,
             hexpand = true,
             vexpand = false
         };

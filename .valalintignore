@@ -1,0 +1,12 @@
+# Build and configurations
+.*
+builddir
+build
+repo
+
+# Companion files and folders
+po
+data
+docs
+windows
+subprojects

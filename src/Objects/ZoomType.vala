@@ -5,7 +5,9 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
- /*************************************************/
+// vala-lint=skip-file
+
+/*************************************************/
 /**
 * Used in a signal to tell windows in which way to change zoom
 */

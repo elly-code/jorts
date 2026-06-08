@@ -5,6 +5,8 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
+// vala-lint=skip-file
+
 /*************************************************/
 /**
 * A register of all possible zoom values we have

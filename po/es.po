@@ -20,29 +20,24 @@ msgid "Show preferences"
 msgstr "Mostrar preferencias"
 
 #: src/Objects/ListPrefix.vala:51
-#, fuzzy
 msgid "(Disabled)"
-msgstr "Desactivar"
+msgstr "(Desactivado)"
 
 #: src/Objects/ListPrefix.vala:52
-#, fuzzy
 msgid " • List item"
-msgstr "Prefijo de elemento de lista"
+msgstr " • Elemento de lista"
 
 #: src/Objects/ListPrefix.vala:53
-#, fuzzy
 msgid " - List item"
-msgstr "Prefijo de elemento de lista"
+msgstr " - Elemento de lista"
 
 #: src/Objects/ListPrefix.vala:54
-#, fuzzy
 msgid " ~ List item"
-msgstr "Prefijo de elemento de lista"
+msgstr " ~ Elemento de lista"
 
 #: src/Objects/ListPrefix.vala:55
-#, fuzzy
 msgid " . List item"
-msgstr "Prefijo de elemento de lista"
+msgstr " . Elemento de lista"
 
 #. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
 #: src/Objects/NoteData.vala:49
@@ -355,15 +350,13 @@ msgid "List item prefix"
 msgstr "Prefijo de elemento de lista"
 
 #: src/Views/PreferencesView.vala:77
-#, fuzzy
 msgid "Scribble unfocused notes (Ctrl+H)"
-msgstr "Borronear el texto de las notas sin enfocar (Ctrl+H)"
+msgstr "Borronear notas sin enfocar (Ctrl+H)"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:95
-#, fuzzy
 msgid "Hide bottom bar (Ctrl+T)"
-msgstr "Ocultar barra inferior"
+msgstr "Ocultar barra inferior (Ctrl+T)"
 
 #. *********************************************
 #. Restore_last
@@ -371,21 +364,19 @@ msgstr "Ocultar barra inferior"
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
-msgstr ""
+msgstr "Restablecer nota"
 
 #: src/Views/PreferencesView.vala:112
-#, fuzzy
 msgid "Restore the last deleted sticky note"
-msgstr "Eliminar nota adhesiva"
+msgstr "Restablecer la última nota adhesiva eliminada"
 
 #: src/Views/PreferencesView.vala:143
-#, fuzzy
 msgid "Show notes on log in"
-msgstr "Mostrar tus notas adhesivas al iniciar sesión"
+msgstr "Mostrar notas al iniciar sesión"
 
 #: src/Views/PreferencesView.vala:144
 msgid "May be out of sync with system settings in some cases"
-msgstr ""
+msgstr "En algunos casos, puede que no estén sincronizadas con la configuración del sistema"
 
 #: src/Views/PreferencesView.vala:162
 msgid "Support us!"
@@ -477,9 +468,8 @@ msgid "Preferences - Jorts"
 msgstr "Preferencias - Jorts"
 
 #: src/Windows/PreferenceWindow.vala:50
-#, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
-msgstr "Preferencias para tus Jorts"
+msgstr "<b>Preferencias para tus Jorts</b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
