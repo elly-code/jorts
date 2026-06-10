@@ -4,36 +4,4 @@
     <file compressed="true" alias="Application.css">Application.css</file>
     <file compressed="true" alias="Themes.css">Themes.css</file>
   </gresource>
-
-  <!--
-    Bundle the emote icons used by the "new emoji" button directly in the app.
-    GtkApplication automatically registers "<resource_base_path>/icons" as a
-    resource icon path, so icons placed under "icons/scalable/emotes" are found
-    by name regardless of the system/bundled icon theme. This keeps the emoji
-    button working on every platform (AppImage, Windows, Flatpak) even when the
-    elementary icon theme is missing.
-  -->
-  <gresource prefix="@APP_PATH@/icons/scalable/emotes/">
-    <file alias="face-angel-symbolic.svg">emotes/face-angel-symbolic.svg</file>
-    <file alias="face-angry-symbolic.svg">emotes/face-angry-symbolic.svg</file>
-    <file alias="face-cool-symbolic.svg">emotes/face-cool-symbolic.svg</file>
-    <file alias="face-crying-symbolic.svg">emotes/face-crying-symbolic.svg</file>
-    <file alias="face-devilish-symbolic.svg">emotes/face-devilish-symbolic.svg</file>
-    <file alias="face-embarrassed-symbolic.svg">emotes/face-embarrassed-symbolic.svg</file>
-    <file alias="face-kiss-symbolic.svg">emotes/face-kiss-symbolic.svg</file>
-    <file alias="face-laugh-symbolic.svg">emotes/face-laugh-symbolic.svg</file>
-    <file alias="face-monkey-symbolic.svg">emotes/face-monkey-symbolic.svg</file>
-    <file alias="face-plain-symbolic.svg">emotes/face-plain-symbolic.svg</file>
-    <file alias="face-raspberry-symbolic.svg">emotes/face-raspberry-symbolic.svg</file>
-    <file alias="face-sad-symbolic.svg">emotes/face-sad-symbolic.svg</file>
-    <file alias="face-sick-symbolic.svg">emotes/face-sick-symbolic.svg</file>
-    <file alias="face-smile-symbolic.svg">emotes/face-smile-symbolic.svg</file>
-    <file alias="face-smile-big-symbolic.svg">emotes/face-smile-big-symbolic.svg</file>
-    <file alias="face-smirk-symbolic.svg">emotes/face-smirk-symbolic.svg</file>
-    <file alias="face-surprise-symbolic.svg">emotes/face-surprise-symbolic.svg</file>
-    <file alias="face-tired-symbolic.svg">emotes/face-tired-symbolic.svg</file>
-    <file alias="face-uncertain-symbolic.svg">emotes/face-uncertain-symbolic.svg</file>
-    <file alias="face-wink-symbolic.svg">emotes/face-wink-symbolic.svg</file>
-    <file alias="face-worried-symbolic.svg">emotes/face-worried-symbolic.svg</file>
-  </gresource>
 </gresources>

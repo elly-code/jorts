@@ -11,37 +11,11 @@ gresource_file = configure_file(
     configuration: config_data,
 )
 
-glib_compile_resources = find_program('glib-compile-resources', native: true)
-
-gresource_c = custom_target(
-    'gresource_c',
-    input: gresource_file,
-    output: 'gresource.c',
-    command: [
-        glib_compile_resources,
-        '@INPUT@',
-        '--sourcedir', meson.current_source_dir(),
-        '--generate-source',
-        '--target', '@OUTPUT@',
-        '--dependency-file', '@DEPFILE@',
-    ],
-    depfile: 'gresource.c.d',
+gresource = gnome.compile_resources(
+    'gresource',
+    gresource_file,
+    source_dir: '.'
 )
-
-gresource_h = custom_target(
-    'gresource_h',
-    input: gresource_file,
-    output: 'gresource.h',
-    command: [
-        glib_compile_resources,
-        '@INPUT@',
-        '--sourcedir', meson.current_source_dir(),
-        '--generate-header',
-        '--target', '@OUTPUT@',
-    ],
-)
-
-gresource = [gresource_c, gresource_h]
 
 #========================
 # GSCHEMA
