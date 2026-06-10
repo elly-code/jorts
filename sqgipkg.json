@@ -58,7 +58,28 @@
               "data/icons/default/hicolor@2/48@2.png=usr/share/icons/hicolor/48x48@2/apps/io.github.elly_code.jorts.png",
               "data/icons/default/hicolor@2/64@2.png=usr/share/icons/hicolor/64x64@2/apps/io.github.elly_code.jorts.png",
               "data/icons/default/hicolor@2/128@2.png=usr/share/icons/hicolor/128x128@2/apps/io.github.elly_code.jorts.png",
-              "data/icons/default/scalable.svg=usr/share/icons/hicolor/scalable/apps/io.github.elly_code.jorts.svg"
+              "data/icons/default/scalable.svg=usr/share/icons/hicolor/scalable/apps/io.github.elly_code.jorts.svg",
+              "data/emotes/face-angel-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-angel-symbolic.svg",
+              "data/emotes/face-angry-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-angry-symbolic.svg",
+              "data/emotes/face-cool-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-cool-symbolic.svg",
+              "data/emotes/face-crying-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-crying-symbolic.svg",
+              "data/emotes/face-devilish-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-devilish-symbolic.svg",
+              "data/emotes/face-embarrassed-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-embarrassed-symbolic.svg",
+              "data/emotes/face-kiss-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-kiss-symbolic.svg",
+              "data/emotes/face-laugh-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-laugh-symbolic.svg",
+              "data/emotes/face-monkey-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-monkey-symbolic.svg",
+              "data/emotes/face-plain-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-plain-symbolic.svg",
+              "data/emotes/face-raspberry-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-raspberry-symbolic.svg",
+              "data/emotes/face-sad-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-sad-symbolic.svg",
+              "data/emotes/face-sick-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-sick-symbolic.svg",
+              "data/emotes/face-smile-big-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-smile-big-symbolic.svg",
+              "data/emotes/face-smile-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-smile-symbolic.svg",
+              "data/emotes/face-smirk-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-smirk-symbolic.svg",
+              "data/emotes/face-surprise-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-surprise-symbolic.svg",
+              "data/emotes/face-tired-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-tired-symbolic.svg",
+              "data/emotes/face-uncertain-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-uncertain-symbolic.svg",
+              "data/emotes/face-wink-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-wink-symbolic.svg",
+              "data/emotes/face-worried-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-worried-symbolic.svg"
             ]
           }
         ]
@@ -113,7 +134,28 @@
               "data/icons/default/hicolor@2/48@2.png=usr/share/icons/hicolor/48x48@2/apps/io.github.elly_code.jorts.png",
               "data/icons/default/hicolor@2/64@2.png=usr/share/icons/hicolor/64x64@2/apps/io.github.elly_code.jorts.png",
               "data/icons/default/hicolor@2/128@2.png=usr/share/icons/hicolor/128x128@2/apps/io.github.elly_code.jorts.png",
-              "data/icons/default/scalable.svg=usr/share/icons/hicolor/scalable/apps/io.github.elly_code.jorts.svg"
+              "data/icons/default/scalable.svg=usr/share/icons/hicolor/scalable/apps/io.github.elly_code.jorts.svg",
+              "data/emotes/face-angel-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-angel-symbolic.svg",
+              "data/emotes/face-angry-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-angry-symbolic.svg",
+              "data/emotes/face-cool-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-cool-symbolic.svg",
+              "data/emotes/face-crying-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-crying-symbolic.svg",
+              "data/emotes/face-devilish-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-devilish-symbolic.svg",
+              "data/emotes/face-embarrassed-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-embarrassed-symbolic.svg",
+              "data/emotes/face-kiss-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-kiss-symbolic.svg",
+              "data/emotes/face-laugh-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-laugh-symbolic.svg",
+              "data/emotes/face-monkey-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-monkey-symbolic.svg",
+              "data/emotes/face-plain-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-plain-symbolic.svg",
+              "data/emotes/face-raspberry-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-raspberry-symbolic.svg",
+              "data/emotes/face-sad-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-sad-symbolic.svg",
+              "data/emotes/face-sick-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-sick-symbolic.svg",
+              "data/emotes/face-smile-big-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-smile-big-symbolic.svg",
+              "data/emotes/face-smile-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-smile-symbolic.svg",
+              "data/emotes/face-smirk-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-smirk-symbolic.svg",
+              "data/emotes/face-surprise-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-surprise-symbolic.svg",
+              "data/emotes/face-tired-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-tired-symbolic.svg",
+              "data/emotes/face-uncertain-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-uncertain-symbolic.svg",
+              "data/emotes/face-wink-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-wink-symbolic.svg",
+              "data/emotes/face-worried-symbolic.svg=usr/share/icons/elementary/emotes/symbolic/face-worried-symbolic.svg"
             ]
           }
         ]
