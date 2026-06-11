@@ -53,7 +53,9 @@ check `sqgipkg.json` first:
 - Linux package lists should include `elementary-icon-theme`.
 - Windows package lists should include `mingw-w64-x86_64-elementary-icon-theme`.
 - Both bundles also need SVG icon loading support (`librsvg`/gdk-pixbuf loader
-  data), because many symbolic icons are SVG files.
+  data), because many symbolic icons are SVG files. On Windows, keep
+  `mingw-w64-x86_64-gdk-pixbuf2` explicit so the bundle includes
+  `gdk-pixbuf-query-loaders.exe` for the runtime loader cache.
 
 ### Local build commands
 

@@ -193,6 +193,7 @@
       "mingw-w64-x86_64-granite7",
       "mingw-w64-x86_64-libgee",
       "mingw-w64-x86_64-json-glib",
+      "mingw-w64-x86_64-gdk-pixbuf2",
       "mingw-w64-x86_64-librsvg",
       "mingw-w64-x86_64-gsettings-desktop-schemas",
       "mingw-w64-x86_64-hicolor-icon-theme",
