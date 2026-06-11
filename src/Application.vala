@@ -83,11 +83,25 @@ public class Jorts.Application : Gtk.Application {
         gsettings = new GLib.Settings (APP_ID);
     }
 
+    private static string get_locale_dir () {
+        var sqgi_appdir = GLib.Environment.get_variable ("SQGI_APPDIR");
+
+        if (sqgi_appdir != null && sqgi_appdir != "") {
+#if WINDOWS
+            return GLib.Path.build_filename (sqgi_appdir, "share", "locale");
+#else
+            return GLib.Path.build_filename (sqgi_appdir, "usr", "share", "locale");
+#endif
+        }
+
+        return LOCALEDIR;
+    }
+
     /*************************************************/
     construct {
         // The localization thingamabob
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bindtextdomain (GETTEXT_PACKAGE, get_locale_dir ());
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
