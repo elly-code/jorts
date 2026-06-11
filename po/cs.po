@@ -1,4 +1,3 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
@@ -490,9 +489,8 @@ msgid "Preferences - Jorts"
 msgstr "Předvolby pro všechny samolepicí poznámky"
 
 #: src/Windows/PreferenceWindow.vala:50
-#, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
-msgstr "Předvolby pro všechny samolepicí poznámky"
+msgstr "<b>Předvolby pro všechny samolepicí poznámky</b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
@@ -503,9 +501,9 @@ msgid "%s - Jorts (Development)"
 msgstr ""
 
 #: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
-#, fuzzy, c-format
+#, c-format
 msgid "%s - Jorts"
-msgstr " - Šortky"
+msgstr "%s - Šortky"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Odeslání požadavku do systému"
