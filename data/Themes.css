@@ -24,7 +24,7 @@
     --accent_color_500: @BLUEBERRY_500;
     --accent_color_700: @BLUEBERRY_700;
     --accent_color_900: @BLUEBERRY_900;
-    --accent_color: mix(@BLUEBERRY_300, @BLUEBERRY_500, 0.25);
+    --accent_color: color-mix(in srgb, @BLUEBERRY_300, @BLUEBERRY_500 25%);
 }
 
 .MINT:root {
@@ -33,7 +33,7 @@
     --accent_color_500: @MINT_500;
     --accent_color_700: @MINT_700;
     --accent_color_900: @MINT_900;
-    --accent_color: mix(@MINT_300, @MINT_500, 0.25);
+    --accent_color: color-mix(in srgb, @MINT_300, @MINT_500 25%);
 }
 
 
@@ -43,7 +43,7 @@
     --accent_color_500: @LIME_500;
     --accent_color_700: @LIME_700;
     --accent_color_900: @LIME_900;
-    --accent_color: mix(@LIME_300, @LIME_500, 0.25);
+    --accent_color: color-mix(in srgb, @LIME_300, @LIME_500 25%);
 }
 
 .BANANA:root {
@@ -52,7 +52,7 @@
     --accent_color_500: @BANANA_500;
     --accent_color_700: @BANANA_700;
     --accent_color_900: @BANANA_900;
-    --accent_color: mix(@BANANA_300, @BANANA_500, 0.25);
+    --accent_color: color-mix(in srgb, @BANANA_300, @BANANA_500 25%);
 }
 
 .ORANGE:root {
@@ -61,7 +61,7 @@
     --accent_color_500: @ORANGE_500;
     --accent_color_700: @ORANGE_700;
     --accent_color_900: @ORANGE_900;
-    --accent_color: mix(@ORANGE_300, @ORANGE_500, 0.25);
+    --accent_color: color-mix(in srgb, @ORANGE_300, @ORANGE_500 25%);
 }
 
 .STRAWBERRY:root {
@@ -70,7 +70,7 @@
     --accent_color_500: @STRAWBERRY_500;
     --accent_color_700: @STRAWBERRY_700;
     --accent_color_900: @STRAWBERRY_900;
-    --accent_color: mix(@STRAWBERRY_300, @STRAWBERRY_500, 0.25);
+    --accent_color: color-mix(in srgb, @STRAWBERRY_300, @STRAWBERRY_500 25%);
 }
 
 .BUBBLEGUM:root {
@@ -79,7 +79,7 @@
     --accent_color_500: @BUBBLEGUM_500;
     --accent_color_700: @BUBBLEGUM_700;
     --accent_color_900: @BUBBLEGUM_900;
-    --accent_color: mix(@BUBBLEGUM_300, @BUBBLEGUM_500, 0.25);
+    --accent_color: color-mix(in srgb, @BUBBLEGUM_300, @BUBBLEGUM_500 25%);
 }
 
 .GRAPE:root {
@@ -88,7 +88,7 @@
     --accent_color_500: @GRAPE_500;
     --accent_color_700: @GRAPE_700;
     --accent_color_900: @GRAPE_900;
-    --accent_color: mix(@GRAPE_300, @GRAPE_500, 0.25);
+    --accent_color: color-mix(in srgb, @GRAPE_300, @GRAPE_500 25%);
 }
 
 .COCOA:root {
@@ -97,7 +97,7 @@
     --accent_color_500: @COCOA_500;
     --accent_color_700: @COCOA_700;
     --accent_color_900: @COCOA_900;
-    --accent_color: mix(@COCOA_300, @COCOA_500, 0.25);
+    --accent_color: color-mix(in srgb, @COCOA_300, @COCOA_500 25%);
 }
 
 .SLATE:root {
@@ -106,7 +106,7 @@
     --accent_color_500: @SLATE_500;
     --accent_color_700: @SLATE_700;
     --accent_color_900: @SLATE_900;
-    --accent_color: mix(@SLATE_300, @SLATE_500, 0.25);
+    --accent_color: color-mix(in srgb, @SLATE_300, @SLATE_500 25%);
 }
 
 .LATTE:root {
@@ -115,7 +115,7 @@
     --accent_color_500: @LATTE_500;
     --accent_color_700: @LATTE_700;
     --accent_color_900: @LATTE_900;
-    --accent_color: mix(@LATTE_300, @LATTE_500, 0.25);
+    --accent-color: color-mix(in srgb, @LATTE_300, @LATTE_500 25%);;
 }
 
 window.themed {
@@ -126,37 +126,37 @@ window.themed undershoot.top {
     background:
         linear-gradient(
             var(--accent_color_100) 0%,
-            alpha(var(--accent_color_100), 0) 50%
+            rgb(from var(--accent_color_100) r g b / calc(alpha * 0)) 50%
         );
 }
 
 window.themed undershoot.bottom {
     background:
         linear-gradient(
-            alpha(var(--accent_color_100), 0) 50%,
+            rgb(from var(--accent_color_100) r g b / calc(alpha * 0)) 50%,
             var(--accent_color_100) 100%
         );
 }
 
 /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
 window.themed overshoot.top {
-    background: linear-gradient(to top, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%);
+    background: linear-gradient(to top, rgb(from var(--accent_color) r g b / calc(alpha * 0)) 80%, rgb(from var(--accent_color) r g b / calc(alpha * 0.25)) 100%);
 }
 
 window.themed overshoot.right {
-    background: linear-gradient(to right, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%);
+    background: linear-gradient(to right, rgb(from var(--accent_color) r g b / calc(alpha * 0)) 80%, rgb(from var(--accent_color) r g b / calc(alpha * 0.25)) 100%);
 }
 
 window.themed overshoot.bottom {
-    background: linear-gradient(to bottom, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%); 
+    background: linear-gradient(to bottom, rgb(from var(--accent_color) r g b / calc(alpha * 0)) 80%, rgb(from var(--accent_color) r g b / calc(alpha * 0.25)) 100%); 
 }
 
 window.themed overshoot.left {
-    background: linear-gradient(to left, alpha(var(--accent_color), 0) 80%, alpha(var(--accent_color), 0.25) 100%);
+    background: linear-gradient(to left, rgb(from var(--accent_color) r g b / calc(alpha * 0)) 80%, rgb(from var(--accent_color) r g b / calc(alpha * 0.25)) 100%);
 }
 
 window.themed text selection {
-    color: shade(var(--accent_color_100), 1.88);
+    color: hsl(from var(--accent_color_100) h calc(s * 1.88) calc(l * 1.88));
     background-color: var(--accent_color_900);
 }
 
@@ -173,7 +173,7 @@ window.themed textview,
 window.themed editablelabel.editing {
     background-color: transparent;
     border-bottom-color: var(--accent_color_100);
-    color: shade(var(--accent_color_900), 0.77);
+    color: hsl(from var(--accent_color_900) h calc(s * 0.77) calc(l * 0.77));
 }
 
 /* Fix the emoticon entry having note color background */
@@ -189,7 +189,7 @@ window.themed editablelabel {
 
 window.themed editablelabel:hover,
 window.themed editablelabel:focus {
-    border-color: alpha(var(--accent_color),0.88);
+    border-color: rgb(from var(--accent_color) r g b / calc(alpha * 0.88));
 }
 
 window.themed editablelabel.editing {
@@ -197,11 +197,11 @@ window.themed editablelabel.editing {
 }
 
 window.themed:backdrop editablelabel {
-    color: alpha(var(--accent_color_900), 0.75);
+    color: rgb(from var(--accent_color_900) r g b / calc(alpha * 0.75));
 }
 
 window.themed:backdrop editablelabel,
 window.themed:backdrop actionbar,
 window.themed:backdrop actionbar image {
-    color: alpha(var(--accent_color_900), 0.65);
+    color: rgb(from var(--accent_color_900) r g b / calc(alpha * 0.65));
 }
