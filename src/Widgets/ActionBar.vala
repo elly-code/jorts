@@ -116,7 +116,7 @@
 
         // Hide the list button if user has specified no list item symbol
         on_prefix_changed ();
-        Application.gsettings.changed[KEY_LIST].connect (on_prefix_changed);
+        Application.settings.changed[KEY_LIST].connect (on_prefix_changed);
     }
 
     /**
@@ -124,7 +124,7 @@
     * StickyNoteWindow will decide itself whether to show immediately or not
     */
     public void reveal_bind () {
-        Application.gsettings.bind (KEY_HIDEBAR,
+        Application.settings.bind (KEY_HIDEBAR,
             actionbar, "revealed",
             SettingsBindFlags.INVERT_BOOLEAN);
     }
@@ -144,7 +144,7 @@
     * If user leaves list prefix blank, then they dont need the button.
     */
     private void on_prefix_changed () {
-        var is_disabled = Application.gsettings.get_enum (KEY_LIST) == ListPrefix.DISABLED;
+        var is_disabled = Application.settings.get_enum (KEY_LIST) == ListPrefix.DISABLED;
         list_button.visible = !is_disabled;
     }
 }
