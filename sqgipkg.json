@@ -280,7 +280,7 @@
       "installer_name": "Jorts-Setup.exe",
       "install_dir": "$LOCALAPPDATA\\Programs\\io.github.elly_code.jorts",
       "request_execution_level": "user",
-      "icon": "windows/icons/install.ico",
+      "icon": "windows/icons/icon-mini.ico",
       "desktop_shortcut": true,
       "start_menu_shortcut": true,
       "start_menu_folder": "Jorts",
