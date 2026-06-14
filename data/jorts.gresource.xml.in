@@ -3,5 +3,33 @@
   <gresource prefix="@APP_PATH@/">
     <file compressed="true" alias="Application.css">Application.css</file>
     <file compressed="true" alias="Themes.css">Themes.css</file>
+
+    <file preprocess="xml-stripblanks">icons/scalable/actions/edit-delete-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-sad-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-angel-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-sick-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-angry-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-smile-big-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-cool-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-smile-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-crying-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-smirk-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-devilish-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-surprise-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-embarrassed-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-tired-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-heart-broken-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-uncertain-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-heart-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-wink-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-kiss-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-worried-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-laugh-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/list-add-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-monkey-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/open-menu-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-plain-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/view-list-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/face-raspberry-symbolic.svg</file>
   </gresource>
 </gresources>
