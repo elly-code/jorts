@@ -119,11 +119,11 @@ msgstr "Pantheon"
 
 #: data/jorts.metainfo.xml.in.in:58
 msgid "elementary OS"
-msgstr "OS elementare"
+msgstr "elementary OS"
 
 #: data/jorts.metainfo.xml.in.in:73
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "Una nota adesiva con il tema \"Blueberry \""
+msgstr "Una nota adesiva con il tema \"Mirtillo \""
 
 #: data/jorts.metainfo.xml.in.in:77
 msgid ""
@@ -163,7 +163,7 @@ msgstr "Aggiunta feature per ripristino note cancellate"
 
 #: data/jorts.metainfo.xml.in.in:102
 msgid "Refreshed preference dialog appearance"
-msgstr "La finestra di dialogo delle preferenze in modalità scura"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:103
 msgid ""
