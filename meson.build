@@ -1,7 +1,7 @@
 project(
     'jorts',
     ['c', 'vala'],
-    version: '4.2.1',
+    version: '4.3.0',
     license: 'GPL-3.0-or-later',
     meson_version: '>= 0.59.0'      # update_desktop_database arg in gnome.post_install
 )
