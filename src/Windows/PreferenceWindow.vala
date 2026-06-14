@@ -22,7 +22,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
     // New preference window
     // We dont show autostart on windows, avoid awkward blank space
     // Autostart contributes to width too to accommodate buttons
-#if WINDOWS
+#if WINDOWS || ANDROID
     const int DEFAULT_PREF_WIDTH = 440;
     const int DEFAULT_PREF_HEIGHT = 210;
 #else

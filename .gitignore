@@ -9,3 +9,15 @@ builddir
 build
 repo
 deploy
+subprojects/**/
+subprojects/*.wrap
+!subprojects/
+!subprojects/packagefiles/
+!subprojects/packagefiles/*.patch
+!subprojects/granite.wrap
+!subprojects/json-glib.wrap
+!subprojects/libgee.wrap
+!subprojects/granite-stylesheet.wrap
+.pixiewood
+_build
+apks/

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app xmlns="https://sp1rit.arpa/pixiewood/" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <metainfo vercalc="sem121010">
+    <!-- <xi:include href="build://x86_64/data/io.github.elly_code.jorts.metainfo.xml" parse="xml" /> -->
+    <xi:include href="build://aarch64/data/io.github.elly_code.jorts.metainfo.xml" parse="xml" />
+  </metainfo>
+  <style>
+    <!-- Currently available themes are "gtk" & "adw" -->
+		<theme name="gtk"/> <!-- TODO: granite theme -->
+		<icon type="generate">
+			<drawable target="foreground" scale=".5" type="svg" path="src://data/icons/pride/scalable.svg"/>
+      <!-- You can also use drawable instead of color for target="background" -->
+			<color target="background">#FFFFFF</color>
+      <!-- The target="monochrome" is optional -->
+			<!-- <drawable target="monochrome" scale=".5" type="svg" path="src://data/icons/symbolic.svg"/> -->
+		</icon>
+	</style>
+  <dependencies>
+    <glib>
+      <patch>hack</patch>
+      <patch>pthread-restrictions</patch>
+    </glib>
+    <harfbuzz />
+    <fontconfig />
+    <gtk />
+  </dependencies>
+  <build target="io.github.elly_code.jorts">
+    <architectures>
+      <!-- <arch>x86_64</arch> -->
+      <arch>aarch64</arch>
+    </architectures>
+    <configure-options>
+      <option>-Dgtk:media-gstreamer=disabled</option>
+      <option>-Dgtk:buildtype=debugoptimized</option>
+      <!-- <option>-Dgtk:introspection=enabled</option> -->
+      <option>-Dgtk:print-cups=disabled</option>
+      <option>-Dgtk:build-demos=false</option>
+      <option>-Dgtk:build-testsuite=false</option>
+      <option>-Dgtk:build-examples=false</option>
+      <option>-Dgtk:build-tests=false</option>
+
+      <option>-Dgobject-introspection:tests=false</option>
+
+      <option>-Djson-glib:documentation=disabled</option>
+      <option>-Djson-glib:gtk_doc=disabled</option>
+      <option>-Djson-glib:tests=false</option>
+      <option>-Djson-glib:conformance=false</option>
+      <option>-Djson-glib:installed_tests=false</option>
+
+      <option>-Dgranite:demo=false</option>
+
+      <option>-Dgtk:introspection=disabled</option>
+      <option>-Djson-glib:introspection=disabled</option>
+      <option>-Dgranite:introspection=false</option>
+    </configure-options>
+  </build>
+</app>

@@ -1,0 +1,9 @@
+[wrap-git]
+directory=granite
+url=https://github.com/elementary/granite.git
+revision=7.8.1
+depth=1
+diff_files=granite_disable_icon_cache.patch,granite_pass_pkg_args_to_valac.patch
+
+[provide]
+granite-7 = libgranite_dep
