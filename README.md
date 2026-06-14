@@ -50,7 +50,7 @@ Roadmap:
  - Fix an annoying memory leak where deleted notes linger in memory
  - Use Gtk 4.24 save-state new thing if it ever lands
  - More icon variants
- - Better list/bullets
+ - Unit testing
  - Co-maintainers would be nice
  - More translations would be nice
 

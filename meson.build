@@ -1,7 +1,7 @@
 project(
     'jorts',
     ['c', 'vala'],
-    version: '4.2.1',
+    version: '4.3.0',
     license: 'GPL-3.0-or-later',
     meson_version: '>= 0.59.0'      # update_desktop_database arg in gnome.post_install
 )
@@ -116,11 +116,13 @@ if windows
     subdir('windows')
 endif
 
-gnome.post_install(
-  glib_compile_schemas: true,
-  gtk_update_icon_cache: not android,
-  update_desktop_database: true
-  )
+if not windows
+    gnome.post_install(
+      glib_compile_schemas: true,
+      gtk_update_icon_cache: not android,
+      update_desktop_database: true
+    )
+endif
 
 if development
 message('''

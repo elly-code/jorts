@@ -11,10 +11,28 @@ gresource_file = configure_file(
     configuration: config_data,
 )
 
-gresource = gnome.compile_resources(
-    'gresource',
-    gresource_file,
-    source_dir: '.'
+glib_compile_resources = find_program('glib-compile-resources', native: true)
+
+# gnome.compile_resources() asks gio-2.0.pc for this tool first. During
+# MinGW cross builds sqgipkg exposes the Windows .pc files to pkg-config, and
+# MSYS2 advertises this helper without the .exe suffix, so use the build
+# machine tool directly.
+gresource = custom_target(
+    'gresource_c',
+    input: gresource_file,
+    output: 'gresource.c',
+    command: [
+        glib_compile_resources,
+        '@INPUT@',
+        '--sourcedir', meson.current_source_dir(),
+        '--internal',
+        '--generate',
+        '--target', '@OUTPUT@'
+    ],
+    depend_files: files(
+        'Application.css',
+        'Themes.css',
+    ),
 )
 
 #========================
@@ -32,7 +50,7 @@ install_data(
     install_tag: 'runtime'
 )
 
-compile_schemas = find_program('glib-compile-schemas', required: false)
+compile_schemas = find_program('glib-compile-schemas', native: true, required: false)
 if compile_schemas.found()
     test('Validate schema file', compile_schemas, args: ['--strict', '--dry-run', meson.current_source_dir()])
 endif
