@@ -155,7 +155,7 @@ public class Jorts.ZoomController : Object {
 
         // Delta is at 1 at rest
         // We need to invert the direction because pinch isnt like scroll
-        zoom_changed (0 - ZoomType.from_delta (dy - 1));
+        zoom_changed (ZoomType.from_delta (- dy - 1));
         debug ("Go! Zoooommmmm");
 
         //return Gdk.EVENT_STOP;
