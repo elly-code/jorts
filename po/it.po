@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-03 19:18+0200\n"
 "PO-Revision-Date: 2025-12-27 12:46+0100\n"
-"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Last-Translator: Seth <Discord>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -20,34 +20,29 @@ msgid "Show preferences"
 msgstr "Mostra preferenze"
 
 #: src/Objects/ListPrefix.vala:51
-#, fuzzy
 msgid "(Disabled)"
-msgstr "Disabilitare"
+msgstr "(Disabilitato)"
 
 #: src/Objects/ListPrefix.vala:52
-#, fuzzy
 msgid " • List item"
-msgstr "Prefisso elemento dell'elenco"
+msgstr " • Elemento dell'elenco"
 
 #: src/Objects/ListPrefix.vala:53
-#, fuzzy
 msgid " - List item"
-msgstr "Prefisso elemento dell'elenco"
+msgstr " - Elemento dell'elenco"
 
 #: src/Objects/ListPrefix.vala:54
-#, fuzzy
 msgid " ~ List item"
-msgstr "Prefisso elemento dell'elenco"
+msgstr " ~ Elemento dell'elenco"
 
 #: src/Objects/ListPrefix.vala:55
-#, fuzzy
 msgid " . List item"
-msgstr "Prefisso elemento dell'elenco"
+msgstr " . Elemento dell'elenco"
 
 #. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
 #: src/Objects/NoteData.vala:49
 msgid "Forgot title!"
-msgstr ""
+msgstr "Titolo dimenticato!"
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
@@ -93,7 +88,7 @@ msgstr "Ardesia"
 
 #: src/Objects/Themes.vala:74
 msgid "Latte"
-msgstr ""
+msgstr "Latte"
 
 #: src/Objects/Themes.vala:75
 msgid "No preference, random each time"
@@ -101,7 +96,7 @@ msgstr "Nessuna preferenza, casuale ogni volta"
 
 #: src/Utils/Autostart.vala:25
 msgid "Set Jorts to start with the computer"
-msgstr "Impostare Jorts per l'avvio con il computer"
+msgstr "Impostare Jorts all'avvio del computer"
 
 #: src/Utils/Autostart.vala:42
 msgid "Remove Jorts from system autostart"
@@ -110,14 +105,12 @@ msgstr "Rimuovere Jorts dall'avvio automatico del sistema"
 #. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
 #. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
 #: src/Utils/Random.vala:27
-#, fuzzy
 msgid "All my best friends"
 msgstr "Tutti i miei migliori amici"
 
 #: src/Utils/Random.vala:28
-#, fuzzy
 msgid "My secret recipe"
-msgstr "La mia ricetta segreta super buona"
+msgstr "La mia ricetta segreta"
 
 #: src/Utils/Random.vala:29
 msgid "My todo list"
@@ -125,7 +118,7 @@ msgstr "Il mio elenco di cose da fare"
 
 #: src/Utils/Random.vala:30
 msgid "Super secret to not tell anyone"
-msgstr "Un super segreto da non dire a nessuno"
+msgstr "Super segreto da non dire a nessuno"
 
 #: src/Utils/Random.vala:31
 msgid "My grocery list"
@@ -133,9 +126,8 @@ msgstr "La mia lista della spesa"
 
 #. TRANSLATORS: What is meant are reflective thoughts, random thoughts
 #: src/Utils/Random.vala:33
-#, fuzzy
 msgid "Shower thoughts"
-msgstr "Pensieri casuali sulla doccia"
+msgstr "Pensieri da doccia"
 
 #: src/Utils/Random.vala:34
 msgid "My fav fanfics"
@@ -159,16 +151,15 @@ msgstr "Ciao mondo!"
 
 #: src/Utils/Random.vala:39
 msgid "New sticky, new me"
-msgstr "Nuovo appiccicoso, nuovo me"
+msgstr "Nuova nota, nuovo me"
 
 #: src/Utils/Random.vala:40
-#, fuzzy
 msgid "Pirate treasure location"
-msgstr "Il tesoro nascosto dei pirati"
+msgstr "Posizione tesoro nascosto"
 
 #: src/Utils/Random.vala:41
 msgid "To remember"
-msgstr ""
+msgstr "Da ricordare"
 
 #: src/Utils/Random.vala:42
 msgid "Dear Diary,"
@@ -187,13 +178,12 @@ msgid "Household chores"
 msgstr "Faccende domestiche"
 
 #: src/Utils/Random.vala:46
-#, fuzzy
 msgid "My cats favourite mischiefs"
-msgstr "I miei piatti preferiti"
+msgstr "Malandrinate preferite del mio gatto"
 
 #: src/Utils/Random.vala:47
 msgid "My dogs favourite toys"
-msgstr "I giocattoli preferiti dai miei cani"
+msgstr "Giocattoli preferiti del mio cane"
 
 #: src/Utils/Random.vala:48
 msgid "How cool my birds are"
@@ -208,9 +198,8 @@ msgid "Words my parrots know"
 msgstr "Le parole che i miei pappagalli conoscono"
 
 #: src/Utils/Random.vala:51
-#, fuzzy
 msgid "Original compliments to give out"
-msgstr "Complimenti simpatici e divertenti da distribuire"
+msgstr "Complimenti simpatici e divertenti da fare"
 
 #: src/Utils/Random.vala:52
 msgid "My dream Pokemon team"
@@ -237,13 +226,12 @@ msgid "My amazing mixtape"
 msgstr "Il mio fantastico mixtape"
 
 #: src/Utils/Random.vala:58
-#, fuzzy
 msgid "Margin scribbles"
-msgstr "Tovaglioli scribblys"
+msgstr "Scarabocchi nell'angolo'"
 
 #: src/Utils/Random.vala:59
 msgid "My fav songs to sing along"
-msgstr "Le mie canzoni preferite da cantare insieme"
+msgstr "Le mie canzoni preferite da cantare"
 
 #: src/Utils/Random.vala:60
 msgid "When to water which plant"
@@ -295,11 +283,11 @@ msgstr "I pasti di questa settimana"
 
 #: src/Utils/Random.vala:72
 msgid "Everyone's pizza order"
-msgstr "L'ordine di pizza di tutti"
+msgstr "La scelta di pizza di tutti"
 
 #: src/Utils/Random.vala:73
 msgid "Today selfcare to do"
-msgstr "Oggi la cura di sé da fare"
+msgstr "Cura di sé odierna da fare"
 
 #: src/Utils/Random.vala:74
 msgid "Important affirmations to remember"
@@ -318,22 +306,20 @@ msgid "My funniest jokes"
 msgstr "Le mie battute più divertenti"
 
 #: src/Utils/Random.vala:78
-#, fuzzy
 msgid "The perfect breakfast"
-msgstr "La colazione perfetta è..."
+msgstr "La colazione perfetta"
 
 #: src/Utils/Random.vala:79
-#, fuzzy
 msgid "What makes me smile"
-msgstr "Cosa mi ha fatto sorridere oggi"
+msgstr "Quel che mi fa sorridere"
 
 #: src/Utils/Random.vala:80
 msgid "Most interesting characters"
-msgstr ""
+msgstr "I personaggi più affascinanti"
 
 #: src/Utils/Random.vala:81
 msgid "Activities to do with friends"
-msgstr ""
+msgstr "Attività da fare con amici"
 
 #. TRANSLATORS: This is for an easter egg, most users may not see this, so this is optional
 #. You can skip if too much, but i would prefer addressing people in their native language
@@ -353,26 +339,25 @@ msgid ""
 msgstr ""
 "Avete trovato la nota adesiva d'oro!\n"
 "\n"
-"CRAZY BUT TRU: Questo messaggio appare una volta su mille!\n"
+"FOLLE MA VERO: Questo messaggio appare una volta su mille!\n"
 "Nessuno ti crederà hehehe ;)\n"
 "\n"
-"Spero che la mia piccola applicazione vi porti molta gioia.\n"
-"Buona giornata! 🎇\n"
+"Spero che la mia piccola applicazione ti porti molta gioia.\n"
+"Ti auguro una buona giornata! 🎇\n"
 
 #: src/Views/PreferencesView.vala:59
 msgid "List item prefix"
-msgstr "Prefisso elemento dell'elenco"
+msgstr "Elemento dell'elenco"
 
 #: src/Views/PreferencesView.vala:77
 #, fuzzy
 msgid "Scribble unfocused notes (Ctrl+H)"
-msgstr "Scarabocchiare il testo delle note non messe a fuoco (Ctrl+H)"
+msgstr "Scarabocchiare il testo delle note non a fuoco (Ctrl+H)"
 
 #. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:95
-#, fuzzy
 msgid "Hide bottom bar (Ctrl+T)"
-msgstr "Nascondi la barra inferiore"
+msgstr "Nascondi la barra inferiore (Ctrl+T)"
 
 #. *********************************************
 #. Restore_last
@@ -380,21 +365,19 @@ msgstr "Nascondi la barra inferiore"
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
-msgstr ""
+msgstr "Ristora nota"
 
 #: src/Views/PreferencesView.vala:112
-#, fuzzy
 msgid "Restore the last deleted sticky note"
-msgstr "Cancella nota adesiva"
+msgstr "Ristora l'ultima nota adesiva cancellata"
 
 #: src/Views/PreferencesView.vala:143
-#, fuzzy
 msgid "Show notes on log in"
-msgstr "Mostra i tuoi post-it quando accedi"
+msgstr "Mostra i tuoi post-it all'accesso"
 
 #: src/Views/PreferencesView.vala:144
 msgid "May be out of sync with system settings in some cases"
-msgstr ""
+msgstr "Potrebbe essere fuori di sync con le impostazioni di sistema in alcuni casi"
 
 #: src/Views/PreferencesView.vala:162
 msgid "Support us!"
@@ -471,27 +454,23 @@ msgstr "Ingrandisci"
 
 #. Alternate way to access preferences
 #: src/Widgets/TextView.vala:81
-#, fuzzy
 msgid "Show Preferences"
 msgstr "Mostra preferenze"
 
 #: src/Widgets/TextView.vala:86
-#, fuzzy
 msgid "Quit Jorts"
-msgstr " - Pantaloncini"
+msgstr "Chiudi Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #: src/Windows/PreferenceWindow.vala:48
-#, fuzzy
 msgid "Preferences - Jorts"
-msgstr "Preferenze per i tuoi Jorts"
+msgstr "Preferenze - Jorts"
 
 #: src/Windows/PreferenceWindow.vala:50
-#, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
-msgstr "Preferenze per i tuoi Jorts"
+msgstr "<b>Preferenze per i tuoi Jorts<b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
@@ -499,12 +478,12 @@ msgstr "Preferenze per i tuoi Jorts"
 #: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
 #, c-format
 msgid "%s - Jorts (Development)"
-msgstr ""
+msgstr "%s - Jorts (Sviluppo)"
 
 #: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
-#, fuzzy, c-format
+#, c-format
 msgid "%s - Jorts"
-msgstr " - Pantaloncini"
+msgstr "%s - Jorts"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Richiesta inviata al sistema"
@@ -535,7 +514,7 @@ msgstr " - Pantaloncini"
 #~ msgstr "Ode al mio gatto"
 
 #~ msgid "Ok, listen here,"
-#~ msgstr "Ok, ascoltate qui,"
+#~ msgstr "Ok, ascolta,"
 
 #~ msgid "Preferences"
 #~ msgstr "Preferenze"
@@ -543,11 +522,9 @@ msgstr " - Pantaloncini"
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Rendere illeggibili gli appunti non focalizzati"
 
-#~ msgid ""
-#~ "If enabled, unfocused sticky notes become unreadable to protect their "
+#~ msgid "If enabled, unfocused sticky notes become unreadable to protect their "
 #~ "content from peeking eyes (Ctrl+H)"
-#~ msgstr ""
-#~ "Se abilitato, le note adesive non messe a fuoco diventano illeggibili per "
+#~ msgstr "Se abilitato, le note adesive non a fuoco diventano illeggibili per "
 #~ "proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
 #~ msgid "Set autostart"
@@ -560,6 +537,5 @@ msgstr " - Pantaloncini"
 #~ msgstr "Consentire l'avvio all'accesso"
 
 #~ msgid "You can request the system to start this application automatically"
-#~ msgstr ""
-#~ "È possibile richiedere al sistema di avviare automaticamente questa "
-#~ "applicazione."
+#~ msgstr "È possibile richiedere al sistema di avviare automaticamente questa" 
+#~ " applicazione."
