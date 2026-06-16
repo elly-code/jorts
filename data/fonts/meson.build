@@ -11,7 +11,9 @@ install_data(
 )
 
 # Regen font cache, only in cases it is relevant
-fontconfig = find_program('fc-cache', required: true)
+# Windows doesnt need because it is bundled in some file
+# Also fonts subdir is currently skipped on win builds anyway lol
+fontconfig = find_program('fc-cache', required: not windows)
 
 meson.add_install_script(
     fontconfig,
