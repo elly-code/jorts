@@ -16,9 +16,10 @@ legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 vala_flags = []
+linux = get_option('target_os') == 'linux'
+windows = get_option('target_os') == 'windows'
 development = get_option('development')
-legacy_rdnn = get_option('legacy-rdnn')
-windows = get_option('windows')
+legacy_rdnn = get_option('legacy_rdnn')
 
 if legacy_rdnn
     app_id = legacy_app_id
@@ -41,7 +42,7 @@ endif
 
 #================================
 # Cool icon variants
-icon_variant = get_option('icon-variant')
+icon_variant = get_option('icon_variant')
 
 if icon_variant == 'halloween'
     vala_flags += ['--define', 'HALLOWEEN']
@@ -54,13 +55,14 @@ gnome = import('gnome')
 i18n = import('i18n')
 android = false
 
-# Windows needs icons, special arguments, and skip libportal
-windows = get_option('windows')
+
 if build_machine.system() == 'windows'
     windows = true
 endif
 
-if windows
+if linux
+    vala_flags += ['--define', 'LINUX']
+elif windows
     vala_flags += ['--define', 'WINDOWS']
 elif host_machine.system() == 'android'
     android = true

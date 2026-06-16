@@ -68,7 +68,7 @@
             "name": "jorts",
             "dir": ".",
             "build": [
-              "meson setup \"$SQGI_LINUX_BUILD_DIR\" --wipe --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy-rdnn=false -Dicon-variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"} || meson setup \"$SQGI_LINUX_BUILD_DIR\" --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy-rdnn=false -Dicon-variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"}",
+              "meson setup \"$SQGI_LINUX_BUILD_DIR\" --wipe --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy_rdnn=false -Dicon_variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"} || meson setup \"$SQGI_LINUX_BUILD_DIR\" --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy_rdnn=false -Dicon_variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"}",
               "meson compile -C \"$SQGI_LINUX_BUILD_DIR\""
             ],
             "files": [
@@ -167,7 +167,7 @@
             "name": "jorts",
             "dir": ".",
             "build": [
-              "meson setup \"$SQGI_LINUX_BUILD_DIR\" --wipe --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy-rdnn=false -Dicon-variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"} || meson setup \"$SQGI_LINUX_BUILD_DIR\" --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy-rdnn=false -Dicon-variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"}",
+              "meson setup \"$SQGI_LINUX_BUILD_DIR\" --wipe --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy_rdnn=false -Dicon_variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"} || meson setup \"$SQGI_LINUX_BUILD_DIR\" --prefix /usr --buildtype=release -Ddevelopment=false -Dlegacy_rdnn=false -Dicon_variant=default ${SQGI_LINUX_MESON_CROSS_FILE:+--cross-file \"$SQGI_LINUX_MESON_CROSS_FILE\"}",
               "meson compile -C \"$SQGI_LINUX_BUILD_DIR\""
             ],
             "files": [
@@ -239,7 +239,7 @@
         "name": "jorts",
         "dir": ".",
         "build": [
-          "meson setup \"$SQGI_WINDOWS_BUILD_DIR\" --wipe --prefix \"$SQGI_WINDOWS_PREFIX\" --buildtype=release -Dwindows=true -Ddevelopment=false -Dlegacy-rdnn=false -Dicon-variant=default --cross-file \"$SQGI_MESON_CROSS_FILE\" || meson setup \"$SQGI_WINDOWS_BUILD_DIR\" --prefix \"$SQGI_WINDOWS_PREFIX\" --buildtype=release -Dwindows=true -Ddevelopment=false -Dlegacy-rdnn=false -Dicon-variant=default --cross-file \"$SQGI_MESON_CROSS_FILE\"",
+          "meson setup \"$SQGI_WINDOWS_BUILD_DIR\" --wipe --prefix \"$SQGI_WINDOWS_PREFIX\" --buildtype=release -Dtarget_os=windows -Ddevelopment=false -Dlegacy_rdnn=false -Dicon_variant=default --cross-file \"$SQGI_MESON_CROSS_FILE\" || meson setup \"$SQGI_WINDOWS_BUILD_DIR\" --prefix \"$SQGI_WINDOWS_PREFIX\" --buildtype=release -Dtarget_os=windows -Ddevelopment=false -Dlegacy_rdnn=false -Dicon_variant=default --cross-file \"$SQGI_MESON_CROSS_FILE\"",
           "meson compile -C \"$SQGI_WINDOWS_BUILD_DIR\""
         ],
         "files": [
