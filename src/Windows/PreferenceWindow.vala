@@ -24,6 +24,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 #else
     const int DEFAULT_PREF_HEIGHT = 230;
 #endif
+
     const int DEFAULT_PREF_WIDTH = 460;
 
     public PreferenceWindow (Jorts.Application app) {
