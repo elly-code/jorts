@@ -4,6 +4,11 @@ option('icon-variant',
     value : 'default',
     description : 'The name of the seasonal icon and style to use'
 )
+option('target_os',
+    type : 'combo',
+    choices : ['linux', 'windows'],
+    value : 'linux',
+    description : 'What we build for. Switched on automatically on windows machines, usually'
+)
 option('development', type: 'boolean', value: false, description: 'If this is a dev build')
-option('windows', type: 'boolean', value: false, description: 'If this is a windows build. Switched on automatically on windows machines')
 option('legacy-rdnn', type: 'boolean', value: false, description: 'If this uses old rdnn')

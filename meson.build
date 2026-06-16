@@ -16,9 +16,10 @@ legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
 vala_flags = []
+linux = get_option('target_os') == 'linux'
+windows = get_option('target_os') == 'windows'
 development = get_option('development')
 legacy_rdnn = get_option('legacy-rdnn')
-windows = get_option('windows')
 
 if legacy_rdnn
     app_id = legacy_app_id
@@ -53,13 +54,14 @@ endif
 gnome = import('gnome')
 i18n = import('i18n')
 
-# Windows needs icons, special arguments, and skip libportal
-windows = get_option('windows')
+
 if build_machine.system() == 'windows'
     windows = true
 endif
 
-if windows
+if linux
+    vala_flags += ['--define', 'LINUX']
+elif windows
     vala_flags += ['--define', 'WINDOWS']
 endif
 
