@@ -107,7 +107,6 @@ Section "Install"
   SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
   File /r "..\data\fonts\RedactedScript-Regular.ttf"
   WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
-  WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Inter (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\InterVariable.ttf"
   SetOutPath "$INSTDIR"
 
   ; Start menu
@@ -153,8 +152,6 @@ Section "Uninstall"
   ; Remove font
   Delete "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
   DeleteRegKey HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts\Redacted Script Regular (TrueType)"
-  Delete "$LOCALAPPDATA\Microsoft\Windows\Fonts\InterVariable.ttf"
-  DeleteRegKey HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts\Inter Variable (TrueType)"
 
   ; Remove registry keys
   DeleteRegKey HKCU "Software\@APP_ID@"
