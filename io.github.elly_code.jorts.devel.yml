@@ -24,7 +24,7 @@ modules:
     buildsystem: meson
     config-opts:
       - -Ddevelopment=true
-      - -Dicon-variant=pride
+      - -Dicon_variant=pride
     sources:
       - type: dir
         path: .

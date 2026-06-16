@@ -19,7 +19,7 @@ vala_flags = []
 linux = get_option('target_os') == 'linux'
 windows = get_option('target_os') == 'windows'
 development = get_option('development')
-legacy_rdnn = get_option('legacy-rdnn')
+legacy_rdnn = get_option('legacy_rdnn')
 
 if legacy_rdnn
     app_id = legacy_app_id
@@ -42,7 +42,7 @@ endif
 
 #================================
 # Cool icon variants
-icon_variant = get_option('icon-variant')
+icon_variant = get_option('icon_variant')
 
 if icon_variant == 'halloween'
     vala_flags += ['--define', 'HALLOWEEN']
