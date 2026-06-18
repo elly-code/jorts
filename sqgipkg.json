@@ -284,6 +284,7 @@
       "desktop_shortcut": true,
       "start_menu_shortcut": true,
       "start_menu_folder": "Jorts",
+      "autostart": true,
       "uninstall_registry": true
     }
   }
