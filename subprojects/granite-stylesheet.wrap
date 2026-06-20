@@ -1,0 +1,6 @@
+[wrap-git]
+directory=granite-stylesheet
+url=https://github.com/elementary/stylesheet.git
+revision=main
+depth=1
+diff_files=granite-stylesheet_install_tag.patch

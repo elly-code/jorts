@@ -53,6 +53,7 @@ endif
 #================================
 gnome = import('gnome')
 i18n = import('i18n')
+android = false
 
 
 if build_machine.system() == 'windows'
@@ -63,9 +64,27 @@ if linux
     vala_flags += ['--define', 'LINUX']
 elif windows
     vala_flags += ['--define', 'WINDOWS']
+elif host_machine.system() == 'android'
+    android = true
+    vala_flags += ['--define', 'ANDROID']
+
+    #add_project_arguments(['--vapidir=' + meson.project_source_root() / 'vapi'], language: 'vala')
+    add_project_arguments([
+	  '--pkg=gtk4',
+	  ## '--pkg=granite-9',
+	  '--pkg=json-glib-1.0',
+	  ## '--pkg=gee-0.8', # libgee has vapi
+	  '--pkg=glib-2.0'
+	], language: 'vala')
 endif
 
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
+# TODO: upstream -w outside this PR
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), '-w', language:'c')
+
+# has to be done after global args
+if android
+    subproject('granite-stylesheet')
+endif
 
 
 #================================
@@ -102,7 +121,7 @@ endif
 if not windows
     gnome.post_install(
       glib_compile_schemas: true,
-      gtk_update_icon_cache: true,
+      gtk_update_icon_cache: not android,
       update_desktop_database: true
     )
 endif

@@ -70,8 +70,10 @@ if windows
 
 else
     dependencies += dependency('gio-unix-2.0')
-    dependencies += dependency('libportal')
-    sources += files('Utils' / 'Autostart.vala')
+    if not android
+        dependencies += dependency('libportal')
+        sources += files('Utils' / 'Autostart.vala')
+    endif
 
 endif
 
@@ -86,5 +88,6 @@ executable(
     dependencies: dependencies,
     vala_args: vala_flags,
     win_subsystem: 'windows',
+    android_exe_type: 'application',
     install : true
 )

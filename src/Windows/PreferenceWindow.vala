@@ -19,7 +19,7 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 public class Jorts.PreferenceWindow : Gtk.Window {
 
     // We dont show autostart on windows, avoid awkward blank space
-#if WINDOWS
+#if WINDOWS || ANDROID
     const int DEFAULT_PREF_HEIGHT = 210;
 #else
     const int DEFAULT_PREF_HEIGHT = 230;
