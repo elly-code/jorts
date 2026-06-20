@@ -1,7 +1,7 @@
 project(
     'jorts',
     ['c', 'vala'],
-    version: '4.3.0',
+    version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
     license: 'GPL-3.0-or-later',
     meson_version: '>= 0.59.0'      # update_desktop_database arg in gnome.post_install
 )
@@ -40,6 +40,10 @@ if development
 
 endif
 
+gnome = import('gnome')
+i18n = import('i18n')
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
+
 #================================
 # Cool icon variants
 icon_variant = get_option('icon_variant')
@@ -53,23 +57,27 @@ else
 endif
 
 #================================
-gnome = import('gnome')
-i18n = import('i18n')
+# OS and Ports related
 
+# Here is to autodetect and adjust
+# Remember however that people may do cross compiling, so do not assume by default it is for linux
+# So avoid else conditions adding linux stuff
 build_machine_system = build_machine.system()
 if build_machine_system == 'windows'
     windows = true
+
 endif
+
+# Here is to adjust the project accordingly to stuff
+# Porting efforts: add your OS here
 
 if windows
     add_project_arguments('--define=WINDOWS', language: 'vala')
 
-else
+elif linux
     add_project_arguments('--define=LINUX', language: 'vala')
 
 endif
-
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 
 
 #================================
