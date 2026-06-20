@@ -15,11 +15,7 @@ correct_app_path = '/io/github/elly_code/' + app_name
 legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
-linux = get_option('target_os') == 'linux'
-windows = get_option('target_os') == 'windows'
-development = get_option('development')
 legacy_rdnn = get_option('legacy_rdnn')
-
 if legacy_rdnn
     app_id = legacy_app_id
     alternate_app_id = correct_app_id
@@ -34,6 +30,7 @@ else
     app_path = correct_app_path
 endif
 
+development = get_option('development')
 if development
   app_id +=  '.devel'
   add_project_arguments('--define=DEVEL', '--define=LATTE', language: 'vala')
@@ -58,6 +55,9 @@ endif
 
 #================================
 # OS and Ports related
+
+linux = get_option('target_os') == 'linux'
+windows = get_option('target_os') == 'windows'
 
 # Here is to autodetect and adjust
 # Remember however that people may do cross compiling, so do not assume by default it is for linux
