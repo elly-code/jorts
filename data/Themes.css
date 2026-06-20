@@ -115,7 +115,7 @@
     --accent_color_500: @LATTE_500;
     --accent_color_700: @LATTE_700;
     --accent_color_900: @LATTE_900;
-    --accent-color: color-mix(in srgb, @LATTE_300, @LATTE_500 25%);;
+    --accent-color: color-mix(in srgb, @LATTE_300, @LATTE_500 25%);
 }
 
 window.themed {

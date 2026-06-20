@@ -15,7 +15,6 @@ correct_app_path = '/io/github/elly_code/' + app_name
 legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
-vala_flags = []
 linux = get_option('target_os') == 'linux'
 windows = get_option('target_os') == 'windows'
 development = get_option('development')
@@ -26,8 +25,9 @@ if legacy_rdnn
     alternate_app_id = correct_app_id
     app_path = legacy_app_path
 
-    #TODO: Remove once appcenter has latte
-    vala_flags += ['--define', 'LATTE']
+    #TODO: Remove once appcenter has latte (platform 8.3 lands)
+    add_project_arguments('--define=LATTE', language: 'vala')
+
 else
     app_id = correct_app_id
     alternate_app_id = legacy_app_id
@@ -36,8 +36,8 @@ endif
 
 if development
   app_id +=  '.devel'
-  vala_flags += ['--define', 'DEVEL']
-  vala_flags += ['--define', 'LATTE']
+  add_project_arguments('--define=DEVEL', '--define=LATTE', language: 'vala')
+
 endif
 
 #================================
@@ -45,24 +45,28 @@ endif
 icon_variant = get_option('icon_variant')
 
 if icon_variant == 'halloween'
-    vala_flags += ['--define', 'HALLOWEEN']
+    add_project_arguments('--define=HALLOWEEN', language: 'vala')
+
 else
-    vala_flags += ['--define', 'DEFAULT']
+    add_project_arguments('--define=DEFAULT', language: 'vala')
+
 endif
 
 #================================
 gnome = import('gnome')
 i18n = import('i18n')
 
-
-if build_machine.system() == 'windows'
+build_machine_system = build_machine.system()
+if build_machine_system == 'windows'
     windows = true
 endif
 
-if linux
-    vala_flags += ['--define', 'LINUX']
-elif windows
-    vala_flags += ['--define', 'WINDOWS']
+if windows
+    add_project_arguments('--define=WINDOWS', language: 'vala')
+
+else
+    add_project_arguments('--define=LINUX', language: 'vala')
+
 endif
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')

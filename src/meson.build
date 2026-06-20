@@ -84,7 +84,6 @@ executable(
     config_file,
     sources,
     dependencies: dependencies,
-    vala_args: vala_flags,
     win_subsystem: 'windows',
     install : true
 )
