@@ -4,7 +4,7 @@ option('icon_variant',
     value : 'default',
     description : 'The name of the seasonal icon and style to use'
 )
-option('target_os',
+option('profile',
     type : 'combo',
     choices : ['linux', 'windows'],
     value : 'linux',

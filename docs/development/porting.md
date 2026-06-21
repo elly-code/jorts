@@ -6,7 +6,7 @@
 
 #### meson_options
 
-The project has a combo option (target_os) with a list of valid choices
+The project has a combo option (profile) with a list of valid choices
 The idea is to allow people to set a profile to build for
 
 You can add your OS to the list

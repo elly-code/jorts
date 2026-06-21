@@ -56,8 +56,10 @@ endif
 #================================
 # OS and Ports related
 
-linux = get_option('target_os') == 'linux'
-windows = get_option('target_os') == 'windows'
+linux = get_option('profile') == 'linux'
+windows = get_option('profile') == 'windows'
+
+libportal = true
 
 # Here is to autodetect and adjust
 # Remember however that people may do cross compiling, so do not assume by default it is for linux
@@ -73,6 +75,7 @@ endif
 
 if windows
     add_project_arguments('--define=WINDOWS', language: 'vala')
+    libportal = false
 
 elif linux
     add_project_arguments('--define=LINUX', language: 'vala')
@@ -85,7 +88,7 @@ endif
 
 # https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
 if meson.get_compiler ('c').get_id () == 'clang'
-  add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
+    add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
 endif
 
 
