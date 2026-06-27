@@ -95,6 +95,14 @@ endif
 #================================
 # Add subfolders for Meson to look
 
+
+if get_option('do_windows_installer')
+    localedir = get_option('bindir') / '..' / get_option('localedir')
+else
+    localedir = get_option('prefix') / get_option('localedir')
+endif
+
+
 config_data = configuration_data(
     {
         'APP_NAME': app_name,
@@ -120,6 +128,10 @@ if not windows
       gtk_update_icon_cache: true,
       update_desktop_database: true
     )
+endif
+
+if get_option('do_windows_installer')
+    
 endif
 
 if development

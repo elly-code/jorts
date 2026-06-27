@@ -12,3 +12,4 @@ option('profile',
 )
 option('development', type: 'boolean', value: false, description: 'If this is a dev build')
 option('legacy_rdnn', type: 'boolean', value: false, description: 'If this uses old rdnn')
+option('do_windows_installer', type: 'boolean', value: false, description: 'do an NSIS windows installer')
