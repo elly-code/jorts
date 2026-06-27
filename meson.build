@@ -8,6 +8,7 @@ project(
 
 app_name = meson.project_name()
 app_version = meson.project_version()
+publisher = 'elly-code'
 
 correct_app_id = 'io.github.elly_code.' + app_name
 correct_app_path = '/io/github/elly_code/' + app_name
@@ -110,7 +111,8 @@ config_data = configuration_data(
         'APP_PATH': app_path,
         'APP_VERSION': app_version,
         'ALTERNATE_APP_ID': alternate_app_id,
-        'LOCALEDIR': get_option('prefix') / get_option('localedir')
+        'LOCALEDIR': localedir,
+        'PUBLISHER': publisher
     }
 )
 
@@ -128,10 +130,6 @@ if not windows
       gtk_update_icon_cache: true,
       update_desktop_database: true
     )
-endif
-
-if get_option('do_windows_installer')
-    
 endif
 
 if development

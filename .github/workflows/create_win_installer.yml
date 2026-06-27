@@ -12,9 +12,6 @@ on:
 permissions:
   contents: write
 
-env:
-  APPIMAGE_EXTRACT_AND_RUN: '1'
-
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -23,13 +20,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: jorts
-
-      - name: Checkout sqgi (runtime + sqgipkg)
-        uses: actions/checkout@v4
-        with:
-          repository: supercamel/sqgi
-          ref: v0.1.2-alpha
-          path: sqgi
 
       - name: Install build dependencies
         run: |
@@ -43,31 +33,16 @@ jobs:
             gcc-aarch64-linux-gnu g++-aarch64-linux-gnu qemu-user-static binfmt-support \
             mingw-w64 nsis squashfs-tools
 
-      - name: Build and install sqgi
-        run: |
-          cmake -S sqgi -B sqgi/build -G Ninja -DCMAKE_BUILD_TYPE=Release -DSQ_ENABLE_JIT=ON
-          cmake --build sqgi/build
-          sudo cmake --install sqgi/build --prefix /usr/local
-          sudo ldconfig
-
-      - name: Build Linux x86_64 AppImage
-        working-directory: jorts
-        run: sqgipkg --target appimage --appimage-arch x86_64 --sqgi-source-dir "$GITHUB_WORKSPACE/sqgi"
-
-      - name: Build Linux aarch64 AppImage
-        working-directory: jorts
-        run: sqgipkg --target appimage --appimage-arch aarch64 --sqgi-source-dir "$GITHUB_WORKSPACE/sqgi"
-
       - name: Build Windows installer
         working-directory: jorts
-        run: sqgipkg --target win-nsis --sqgi-source-dir "$GITHUB_WORKSPACE/sqgi"
+        run: |
+          meson setup --cross-file windows/x86_64-w64-mingw32.txt builddir
+          meson compile -C builddir -Dprofile=windows -Ddo_windows_installer=true
 
       - name: Collect artifacts
         working-directory: jorts
         run: |
           mkdir -p artifacts
-          cp dist-linux-x86_64/Jorts.AppImage artifacts/Jorts-x86_64.AppImage
-          cp dist-linux-aarch64/Jorts.AppImage artifacts/Jorts-aarch64.AppImage
           cp dist-windows-x86_64/Jorts-Setup.exe artifacts/Jorts-Setup.exe
           ls -lh artifacts
 

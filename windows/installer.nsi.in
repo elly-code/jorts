@@ -7,8 +7,8 @@ Name Jorts
 VIAddVersionKey /LANG=0 "ProductName" "@APP_NAME@"
 VIAddVersionKey /LANG=0 "FileVersion" "@APP_VERSION@"
 VIAddVersionKey /LANG=0 "ProductVersion" "@APP_VERSION@"
-VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/elly-code/jorts"
-VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 elly-code"
+VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/@PUBLISHER@/@APP_NAME@"
+VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 @PUBLISHER@"
 VIProductVersion "@APP_VERSION@.0"
 
 Outfile "Jorts-Setup.exe"
@@ -29,7 +29,7 @@ BrandingText "@APP_NAME@ @APP_VERSION@, elly-code 2026"
 !define MUI_UNICON "icons\uninstall.ico"
 
 !define MUI_FINISHPAGE_LINK "Source code and wiki"
-!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/elly-code/jorts"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/@PUBLISHER@/@APP_NAME@"
 !define MUI_FINISHPAGE_RUN "$INSTDIR\bin\@APP_ID@.exe"
 
 !insertmacro MUI_PAGE_WELCOME
