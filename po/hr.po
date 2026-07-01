@@ -483,9 +483,8 @@ msgid "Preferences - Jorts"
 msgstr "Postavke – Jorts"
 
 #: src/Windows/PreferenceWindow.vala:50
-#, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
-msgstr "Postavke za tvoju Jorts aplikaciju"
+msgstr "<b>Postavke za tvoju Jorts aplikaciju</b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"

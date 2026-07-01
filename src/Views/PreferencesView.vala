@@ -10,7 +10,7 @@
     private Granite.Toast toast;
     public Gtk.Button close_button;
 
-#if !WINDOWS
+#if LIBPORTAL
     Gtk.Switch autostart_toggle;
     Jorts.Autostart autostart;
 #endif
@@ -127,8 +127,8 @@
             /*               Autostart Request                  */
             /****************************************************/
 
-// Windows do not have libportal, so we have to skip the autostart options
-#if !WINDOWS
+// Not all OSes have libportal
+#if LIBPORTAL
             autostart_toggle = new Gtk.Switch ();
 
             Application.settings.bind (KEY_AUTOSTART,
@@ -181,7 +181,7 @@
         prefview.append (actionbar);
     }
 
-#if !WINDOWS
+#if LIBPORTAL
     private void handle_toggle_autostart () {
         if (autostart_toggle.active) {
             autostart.request_set.begin ();

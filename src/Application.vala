@@ -83,13 +83,32 @@ public class Jorts.Application : Gtk.Application {
         settings = new GLib.Settings (APP_ID);
     }
 
+    private static string get_locale_dir () {
+        var sqgi_appdir = GLib.Environment.get_variable ("SQGI_APPDIR");
+
+        if (sqgi_appdir != null && sqgi_appdir != "") {
+#if WINDOWS
+            return GLib.Path.build_filename (sqgi_appdir, "share", "locale");
+#else
+            return GLib.Path.build_filename (sqgi_appdir, "usr", "share", "locale");
+#endif
+        }
+
+        return LOCALEDIR;
+    }
+
     /*************************************************/
     construct {
         // The localization thingamabob
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bindtextdomain (GETTEXT_PACKAGE, get_locale_dir ());
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
+
+#if DEVEL
+        GLib.Environment.set_variable ("LANGUAGE", "C", true);
+        GLib.Environment.set_variable ("GTK_DEBUG", "interactive", true);
+#endif
     }
 
     /*************************************************/
@@ -116,7 +135,11 @@ public class Jorts.Application : Gtk.Application {
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
         gtk_settings = Gtk.Settings.get_default ();
+#if WINDOWS
+        gtk_settings.gtk_icon_theme_name = "Adwaita";
+#else
         gtk_settings.gtk_icon_theme_name = "elementary";
+#endif
         gtk_settings.gtk_theme_name = DEFAULT_STYLESHEET;
 
         // Also follow dark if system is dark lIke mY sOul.

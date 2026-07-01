@@ -71,7 +71,7 @@ actionbar image {
 
 actionbar .themedbutton:hover,
 actionbar .themedbutton:focus {
-    background-color: alpha(@fg_color, 0.3);
+    background-color: rgb(from @fg_color r g b / calc(alpha * 0.3));
     border-radius: 6px;
 }
 
