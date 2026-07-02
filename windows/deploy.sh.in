@@ -34,8 +34,8 @@ mkdir -p "${deploy_dir}/share"
 mkdir -p "${deploy_dir}/lib"
 mkdir -p "${deploy_dir}/include"
 
-cp "${build_dir}/src/${@APP_ID@}.exe" "${deploy_dir}/bin"
-cp -r "windows/icons" "${deploy_dir}"
+cp -vnr "${build_dir}/src/${@APP_ID@}.exe" "${deploy_dir}/bin"
+cp -vnr "windows/icons" "${deploy_dir}"
 
 # Detect what DLL we need and slorp it into bin
 echo "Copying DLLs..."
@@ -47,24 +47,24 @@ done
 
 # These are not detected but needed to display icons properly
 # Dont ask me how many tears of blood it took to figure out these idiots
-cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
-cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
-cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
-cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
-cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
+cp -vnr /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
+cp -vnr /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
+cp -vnr /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
+cp -vnr /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
+cp -vnr /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
 
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
-cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/
-cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/
-cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
-cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
-cp -rnv /mingw64/share/locale ${deploy_dir}/share/
-cp -rnv /mingw64/share/themes/ ${deploy_dir}/share/
-cp -rnv /mingw64/share/gettext/ ${deploy_dir}/share/
-cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
-cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
-cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
+cp -vnr /mingw64/bin/gdbus.exe ${deploy_dir}/bin/
+cp -vnr /mingw64/etc/fonts ${deploy_dir}/etc/
+cp -vnr /mingw64/share/glib-2.0 ${deploy_dir}/share/
+cp -vnr /mingw64/share/gtk-4.0 ${deploy_dir}/share/
+cp -vnr /mingw64/share/locale ${deploy_dir}/share/
+cp -vnr /mingw64/share/themes/ ${deploy_dir}/share/
+cp -vnr /mingw64/share/gettext/ ${deploy_dir}/share/
+cp -vnr /mingw64/share/fontconfig/ ${deploy_dir}/share/
+cp -vnr /mingw64/share/GConf/ ${deploy_dir}/share/
+cp -vnr /mingw64/lib/gettext/ ${deploy_dir}/lib/
 
 
 #--------------------------------
@@ -74,10 +74,10 @@ cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 # TODO: Abstract this into a script. A better coded one.
 mkdir -pv ${deploy_dir}/share/icons/elementary
 
-cp -rnv /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
-cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
-cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
-cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
+cp -vnr /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
+cp -vnr /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
+cp -vnr /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
+cp -vnr /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
 gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
 
 #--------------------------------
@@ -99,4 +99,4 @@ EOF
 glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 
 
-
+ls -l ${deploy_dir}
