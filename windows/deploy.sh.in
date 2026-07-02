@@ -42,6 +42,7 @@ echo "Copying DLLs..."
 dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
 for dll in $dlls 
 do 
+    echo "[DLL] $dll"
     cp "$dll" "${deploy_dir}/bin"
 done
 
