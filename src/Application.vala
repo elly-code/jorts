@@ -41,10 +41,10 @@ Constants is because i am lazy
 public class Jorts.Application : Gtk.Application {
 
     // Needed by all windows
-    public static GLib.Settings gsettings;
+    public static GLib.Settings settings;
     public static Gtk.Settings gtk_settings;
 
-    public Jorts.NoteManager note_manager;
+    public static Jorts.NoteManager note_manager;
     public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
@@ -80,7 +80,7 @@ public class Jorts.Application : Gtk.Application {
 
     /*************************************************/
     static construct {
-        gsettings = new GLib.Settings (APP_ID);
+        settings = new GLib.Settings (APP_ID);
     }
 
     private static string get_locale_dir () {
@@ -225,14 +225,14 @@ Please wait while the app remembers all the things…
 
     private void action_toggle_scribbly () {
         debug ("Toggling scribbly");
-        var current = Application.gsettings.get_boolean (KEY_SCRIBBLY);
-        gsettings.set_boolean (KEY_SCRIBBLY, !current);
+        var current = Application.settings.get_boolean (KEY_SCRIBBLY);
+        settings.set_boolean (KEY_SCRIBBLY, !current);
     }
 
     private void action_toggle_actionbar () {
         debug ("Toggling actionbar");
-        var current = Application.gsettings.get_boolean (KEY_HIDEBAR);
-        gsettings.set_boolean (KEY_HIDEBAR, !current);
+        var current = Application.settings.get_boolean (KEY_HIDEBAR);
+        settings.set_boolean (KEY_HIDEBAR, !current);
     }
 
     private void nm_new_note () {
