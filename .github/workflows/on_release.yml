@@ -57,7 +57,7 @@ jobs:
           meson compile -C builddir
           
       - name: 'Setup for deployment'
-        run: windows_portable/windows/deploy.sh deploy
+        run: builddir/windows/deploy.sh deploy
 
       - name: 'Upload portable windows install'
         uses: actions/upload-artifact@v4
