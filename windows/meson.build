@@ -7,7 +7,7 @@
 
 config_installer_script = configure_file(
     input: 'installer.nsi.in',
-    output: app_name + '-installer.nsi',
+    output: 'installer.nsi',
     configuration: config_data
 )
 
