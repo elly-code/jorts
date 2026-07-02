@@ -12,7 +12,7 @@ VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 elly-code"
 VIProductVersion "@APP_VERSION@.0"
 
 Outfile "Jorts-Installer.exe"
-InstallDir "$LOCALAPPDATA\Programs\@APP_ID@"
+InstallDir "$LOCALAPPDATA\Programs\\@APP_ID@"
 
 # We do not need admin here
 RequestExecutionLevel user
@@ -30,7 +30,7 @@ BrandingText "@APP_NAME@ @APP_VERSION@, elly-code 2026"
 
 !define MUI_FINISHPAGE_LINK "Source code and wiki"
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/elly-code/jorts"
-!define MUI_FINISHPAGE_RUN "$INSTDIR\bin\@APP_ID@.exe"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\bin\\@APP_ID@.exe"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -101,7 +101,7 @@ ${Index_RemoveFilesAndSubDirs}-done:
 Section "Install"
   SetOutPath "$INSTDIR"
   File /r "deploy\*"
-  CreateDirectory $SMPROGRAMS\@APP_NAME@
+  CreateDirectory $SMPROGRAMS\\@APP_NAME@
 
   ; fonts. We install to local fonts to not trip up admin rights, and register for local user
   SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
@@ -110,34 +110,34 @@ Section "Install"
   SetOutPath "$INSTDIR"
 
   ; Start menu
-  CreateShortCut "$SMPROGRAMS\@APP_NAME@\@APP_NAME@.lnk" "$INSTDIR\bin\@APP_ID@.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+  CreateShortCut "$SMPROGRAMS\\@APP_NAME@\\@APP_NAME@.lnk" "$INSTDIR\bin\\@APP_ID@.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
   
   ; Autostart
-  CreateShortCut "$SMPROGRAMS\Startup\@APP_NAME@.lnk" "$INSTDIR\bin\@APP_ID@.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+  CreateShortCut "$SMPROGRAMS\Startup\\@APP_NAME@.lnk" "$INSTDIR\bin\\@APP_ID@.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
   
   ; Preferences
-  ;CreateShortCut "$SMPROGRAMS\@APP_NAME@\Preferences of @APP_NAME@.lnk" "$INSTDIR\bin\@APP_ID@.exe" "--preferences" "$INSTDIR\icons\settings-mini.ico" 0
+  ;CreateShortCut "$SMPROGRAMS\@APP_NAME@\Preferences of @APP_NAME@.lnk" "$INSTDIR\bin\\@APP_ID@.exe" "--preferences" "$INSTDIR\icons\settings-mini.ico" 0
   
-  WriteRegStr HKCU "Software\@APP_ID@" "" $INSTDIR
+  WriteRegStr HKCU "Software\\@APP_ID@" "" $INSTDIR
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   
   ; Add to Add/Remove programs list
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "DisplayName" "@APP_NAME@"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "DisplayIcon" "$INSTDIR\icons\icon.ico"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "InstallLocation" "$INSTDIR\"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "UninstallString" "$INSTDIR\Uninstall.exe"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "Publisher" "elly-code"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "URLInfoAbout" "https://github.com/elly-code/@APP_NAME@"
-  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "EstimatedSize" "0x00028294" ;164,5 MB
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "DisplayName" "@APP_NAME@"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "DisplayIcon" "$INSTDIR\icons\icon.ico"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "InstallLocation" "$INSTDIR\"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "UninstallString" "$INSTDIR\Uninstall.exe"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "Publisher" "elly-code"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "URLInfoAbout" "https://github.com/elly-code/@APP_NAME@"
+  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 
 ;------------------------------
 Section "Uninstall"
 
   ; Remove Start Menu shortcut
-  Delete "$SMPROGRAMS\@APP_NAME@\@APP_NAME@.lnk"
-  ;Delete "$SMPROGRAMS\@APP_NAME@\Preferences of @APP_NAME@.lnk"
-  Delete "$SMPROGRAMS\Startup\@APP_NAME@.lnk"
+  Delete "$SMPROGRAMS\\@APP_NAME@\\@APP_NAME@.lnk"
+  ;Delete "$SMPROGRAMS\\@APP_NAME@\Preferences of @APP_NAME@.lnk"
+  Delete "$SMPROGRAMS\Startup\\@APP_NAME@.lnk"
 
   ; Remove uninstaller
   Delete "$INSTDIR\Uninstall.exe"
@@ -146,7 +146,7 @@ Section "Uninstall"
   !insertmacro RemoveFilesAndSubDirs "$INSTDIR"
 
   ; Remove directories used
-  RMDir $SMPROGRAMS\@APP_NAME@
+  RMDir $SMPROGRAMS\\@APP_NAME@
   RMDir "$INSTDIR"
 
   ; Remove font
@@ -154,8 +154,8 @@ Section "Uninstall"
   DeleteRegKey HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts\Redacted Script Regular (TrueType)"
 
   ; Remove registry keys
-  DeleteRegKey HKCU "Software\@APP_ID@"
-  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@"
+  DeleteRegKey HKCU "Software\\@APP_ID@"
+  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\@APP_ID@"
 
 SectionEnd
 

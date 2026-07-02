@@ -110,9 +110,9 @@ subdir('po')
 subdir('data')
 subdir('src')
 
-if windows
+
     subdir('windows')
-endif
+
 
 subdir('tests')
 
