@@ -103,5 +103,5 @@ gtk-xft-hintstyle=hintful
 gtk-xft-rgba=rgb
 EOF
 
-cp ${build_dir}/data/${app_id}.gschema.xml ${deploy_dir}/share/glib-2.0/schemas
+cp -vn ${build_dir}/data/${app_id}.gschema.xml ${deploy_dir}/share/glib-2.0/schemas
 glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
