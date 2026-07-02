@@ -11,7 +11,7 @@ VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/elly-code/jorts"
 VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 elly-code"
 VIProductVersion "@APP_VERSION@.0"
 
-Outfile "Jorts-Setup.exe"
+Outfile "Jorts-Installer.exe"
 InstallDir "$LOCALAPPDATA\Programs\@APP_ID@"
 
 # We do not need admin here
