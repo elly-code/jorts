@@ -105,7 +105,7 @@ Section "Install"
 
   ; fonts. We install to local fonts to not trip up admin rights, and register for local user
   SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
-  File /r "..\data\fonts\RedactedScript-Regular.ttf"
+  File /r "data\fonts\RedactedScript-Regular.ttf"
   WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
   SetOutPath "$INSTDIR"
 
@@ -127,7 +127,7 @@ Section "Install"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "InstallLocation" "$INSTDIR\"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "UninstallString" "$INSTDIR\Uninstall.exe"
   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "Publisher" "elly-code"
-  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "URLInfoAbout" "https://github.com/elly-code/jorts"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "URLInfoAbout" "https://github.com/elly-code/@APP_NAME@"
   WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\@APP_ID@" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 
