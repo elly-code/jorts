@@ -42,12 +42,20 @@ cp -vnr "windows/icons" "${deploy_dir}"
 
 # Detect what DLL we need and slorp it into bin
 echo "Copying DLLs..."
-dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
+dlls=$(ldd "${deploy_dir}/bin/${app_id}.exe" | grep "/mingw64" | awk '{print $3}')
 for dll in $dlls 
 do 
     echo "[DLL] $dll"
     cp "$dll" "${deploy_dir}/bin"
 done
+
+
+# ldd $(PREFIX)/bin/dev.geopjr.Tuba.exe | grep '\/$(msys_sys).*\.dll' -o | xargs -I{} cp "{}" $(PREFIX)/bin; \
+# ldd /d/a/Tuba/Tuba/tuba_windows_portable/bin/dev.geopjr.Tuba.exe | grep '\/ucrt64.*\.dll' -o | xargs -I{} cp "{}" /d/a/Tuba/Tuba/tuba_windows_portable/bin; \
+
+
+
+
 
 # These are not detected but needed to display icons properly
 # Dont ask me how many tears of blood it took to figure out these idiots
