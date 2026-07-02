@@ -10,6 +10,7 @@ on:
     inputs:
       release:
         type: boolean
+
 permissions:
   contents: write
 
@@ -19,7 +20,7 @@ concurrency:
 
 jobs:
   msys2:
-    name: "Windows Builder"
+    name: "Prepare Windows Installer"
     strategy:
       matrix:
         variant:
@@ -33,6 +34,7 @@ jobs:
     defaults:
       run:
         shell: msys2 {0}
+
     steps:
       - name: 'Checkout latest sources'
         uses: actions/checkout@v3
@@ -49,13 +51,16 @@ jobs:
             mingw-w64-${{ matrix.variant.package }}-granite7 mingw-w64-${{ matrix.variant.package }}-gtk-elementary-theme mingw-w64-${{ matrix.variant.package }}-elementary-icon-theme mingw-w64-${{ matrix.variant.package }}-libgee mingw-w64-${{ matrix.variant.package }}-json-glib
             mingw-w64-${{ matrix.variant.package }}-nsis
 
-      - name: 'Prepare build'
+      - name: 'Setup build directory'
         run: |
           meson setup windows_portable -Dprofile='windows' --buildtype release
           meson compile -C windows_portable
-          windows_portable/windows/deploy.sh windows_portable/
+          
+      - name: 'Setup for deployment'
+        run: windows_portable/windows/deploy.sh windows_portable/
 
-      - uses: actions/upload-artifact@v4
+      - name: 'Upload portable windows install'
+        uses: actions/upload-artifact@v4
         with:
           name: windows_portable
           path: windows_portable/
@@ -63,7 +68,7 @@ jobs:
       # NSIS is not available on arm
       - name: 'Create windows installer'
         run: |
-          makensis windows_portable/jorts-installer.nsi
+          makensis windows_portable/windows/installer.nsi
 
       - name: 'Upload artifacts'
         uses: actions/upload-artifact@v4
