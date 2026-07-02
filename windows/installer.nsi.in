@@ -29,8 +29,8 @@ InstallDir "$LOCALAPPDATA\Programs\${APP_ID}"
 RequestExecutionLevel user
 
 # Set the title of the installer window
-Caption "Jorts Installer"
-BrandingText "${APP_NAME} ${APP_VERSION}, ${PUBLISHER} 2026"
+Caption "${NICENAME} Installer"
+BrandingText "${NICENAME} ${APP_VERSION}, ${PUBLISHER} 2026"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${APP_NAME} setup"
@@ -126,9 +126,6 @@ Section "Install"
   ; Autostart
   CreateShortCut "$SMPROGRAMS\Startup\${NICENAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
   
-  ; Preferences
-  ;CreateShortCut "$SMPROGRAMS\${APP_NAME}\Preferences of ${APP_NAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "--preferences" "$INSTDIR\icons\settings-mini.ico" 0
-  
   WriteRegStr HKCU "Software\${APP_ID}" "" $INSTDIR
   WriteUninstaller "$INSTDIR\Uninstall.exe"
   
@@ -147,7 +144,6 @@ Section "Uninstall"
 
   ; Remove Start Menu shortcut
   Delete "$SMPROGRAMS\${APP_NAME}\${NICENAME}.lnk"
-  ;Delete "$SMPROGRAMS\${APP_NAME}\Preferences of ${APP_NAME}.lnk"
   Delete "$SMPROGRAMS\Startup\${NICENAME}.lnk"
 
   ; Remove uninstaller
