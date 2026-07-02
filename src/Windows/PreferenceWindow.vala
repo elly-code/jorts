@@ -18,18 +18,8 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 */
 public class Jorts.PreferenceWindow : Gtk.Window {
 
-
-    // New preference window
-    // We dont show autostart on windows, avoid awkward blank space
-    // Autostart contributes to width too to accommodate buttons
-#if WINDOWS
-    const int DEFAULT_PREF_WIDTH = 440;
-    const int DEFAULT_PREF_HEIGHT = 210;
-#else
-    const int DEFAULT_PREF_WIDTH = 460;
     const int DEFAULT_PREF_HEIGHT = 230;
-#endif
-
+    const int DEFAULT_PREF_WIDTH = 460;
 
     public PreferenceWindow (Jorts.Application app) {
         debug ("Creating preference window");
@@ -73,13 +63,5 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         this.child = handle;
 
         set_focus (prefview.close_button);
-
-        // Since each sticky note adopts a different accent color
-        // we have to revert to default when this one is focused
-        this.notify["is-active"].connect (() => {
-            if (this.is_active) {
-                Application.gtk_settings.gtk_theme_name = DEFAULT_STYLESHEET;
-            }
-        });
     }
 }

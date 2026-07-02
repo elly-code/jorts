@@ -30,7 +30,7 @@ public class Jorts.ScribblyController : Object {
         window.set_state_flags (Gtk.StateFlags.BACKDROP, false);
 
 
-        Application.gsettings.bind (
+        Application.settings.bind (
             KEY_SCRIBBLY,
             this, "scribble",
             SettingsBindFlags.DEFAULT);

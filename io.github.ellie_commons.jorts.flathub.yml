@@ -28,8 +28,8 @@ modules:
   - name: jorts
     buildsystem: meson
     config-opts:
-      - -Dlegacy-rdnn=true
-      - -Dicon-variant=pride
+      - -Dlegacy_rdnn=true
+      - -Dicon_variant=pride
     sources:
       - type: dir
         path: .

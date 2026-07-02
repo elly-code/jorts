@@ -92,12 +92,15 @@
     </screenshots>
 
     <releases>
-        <release version="4.2.1" date="2026-06-31">
+        <release version="4.3.0" date="2026-06-31">
             <description>
-                <p>Marginal fixups</p>
+                <p>A lot of tiny goodies</p>
                 <ul>
+                    <li>Added automatic appimage and windows installers on new releases thanks to @supercamel!</li>
+                    <li>Small style fixes by @Geopjr!</li>
                     <li>Updated Spanish translation thanks to Eli!</li>
-                    <li>Updated French and German</li>
+                    <li>Updated Italian translation thanks to Seth!</li>
+                    <li>Updated French and German translations</li>
                 </ul>
             </description>
         </release>

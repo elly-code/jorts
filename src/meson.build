@@ -10,8 +10,8 @@ config_file = configure_file(
 
 #================================
 dependencies = [
-        dependency('gtk4'),
-        dependency('granite-7', version: '>=7.6.0'),
+        dependency('gtk4', version: '>=4.14'),          # Because of working on oldbuntu.  Should be 4.16: var(--prop) css notation for theming
+        dependency('granite-7', version: '>=7.6.0'),    # Version both in appcenter and flathub
         dependency('gee-0.8'),
         dependency('gobject-2.0'),
         dependency('json-glib-1.0'),
@@ -57,11 +57,22 @@ sources = files (
 
 
 #================================
+# Windows should have libportal set to false, as it doesnt have it
+# Other OSes might have it set to true
+
+if libportal
+    add_project_arguments('--define=LIBPORTAL', language: 'vala')
+    dependencies += dependency('libportal')
+    sources += files('Utils' / 'Autostart.vala')
+
+endif
+
+
+#================================
 # Windows specific stuff
 # theres a gio-windows and a gio-unix. We need to add depending on case 
 # We need to compile an icon and add to the sources to avoid "missing icon" icon at every turn
 # So AFAIK ico.rc just point to an ico file in the same folder it is, so this is like gresource
-# No libportal on windows
 
 if windows
     dependencies += dependency('gio-windows-2.0')
@@ -70,8 +81,6 @@ if windows
 
 else
     dependencies += dependency('gio-unix-2.0')
-    dependencies += dependency('libportal')
-    sources += files('Utils' / 'Autostart.vala')
 
 endif
 
