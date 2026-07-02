@@ -52,8 +52,6 @@ done
 # ldd /d/a/Tuba/Tuba/tuba_windows_portable/bin/dev.geopjr.Tuba.exe | grep '\/ucrt64.*\.dll' -o | xargs -I{} cp "{}" /d/a/Tuba/Tuba/tuba_windows_portable/bin; \
 
 
-
-
 # These are not detected but needed to display icons properly
 # Dont ask me how many tears of blood it took to figure out these idiots
 cp -vnr /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
@@ -105,4 +103,5 @@ gtk-xft-hintstyle=hintful
 gtk-xft-rgba=rgb
 EOF
 
+cp ${build_dir}/data/${app_id}.gschema.xml ${deploy_dir}/share/glib-2.0/schemas
 glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
