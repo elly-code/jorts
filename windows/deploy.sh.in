@@ -35,10 +35,9 @@ mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 mkdir -p "${deploy_dir}/lib"
 mkdir -p "${deploy_dir}/include"
+cp -vnr "windows/icons" "${deploy_dir}"
 
 cp -vnr "${build_dir}/src/${app_id}.exe" "${deploy_dir}/bin"
-
-cp -vnr "windows/icons" "${deploy_dir}"
 
 # Detect what DLL we need and slorp it into bin
 echo "Copying DLLs..."
@@ -49,10 +48,8 @@ do
     cp "$dll" "${deploy_dir}/bin"
 done
 
-
 # ldd $(PREFIX)/bin/dev.geopjr.Tuba.exe | grep '\/$(msys_sys).*\.dll' -o | xargs -I{} cp "{}" $(PREFIX)/bin; \
 # ldd /d/a/Tuba/Tuba/tuba_windows_portable/bin/dev.geopjr.Tuba.exe | grep '\/ucrt64.*\.dll' -o | xargs -I{} cp "{}" /d/a/Tuba/Tuba/tuba_windows_portable/bin; \
-
 
 
 
@@ -109,6 +106,3 @@ gtk-xft-rgba=rgb
 EOF
 
 glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
-
-
-ls -l ${deploy_dir}
