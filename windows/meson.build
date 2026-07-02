@@ -19,3 +19,15 @@ config_deploy_script = configure_file(
     output: 'deploy.sh',
     configuration: config_data
 )
+
+install_ico = configure_file (
+    input: 'icons' / 'install.ico',
+    output: 'install.ico',
+    copy: true
+)
+
+uninstall_ico = configure_file (
+    input: 'icons' / 'install.ico',
+    output: 'uninstall.ico',
+    copy: true
+)
