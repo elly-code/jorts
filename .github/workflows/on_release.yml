@@ -53,7 +53,7 @@ jobs:
 
       - name: 'Setup build directory'
         run: |
-          meson setup builddir -Dprofile='windows' --buildtype release --prefix='deploy'
+          meson setup builddir -Dprofile='windows' --buildtype release --prefix="$(PWD)/deploy"
           meson compile -C builddir
           
       - name: 'Setup for deployment'
