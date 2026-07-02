@@ -53,22 +53,22 @@ jobs:
 
       - name: 'Setup build directory'
         run: |
-          meson setup windows_portable -Dprofile='windows' --buildtype release
-          meson compile -C windows_portable
+          meson setup builddir -Dprofile='windows' --buildtype release --prefix='deploy'
+          meson compile -C builddir
           
       - name: 'Setup for deployment'
-        run: windows_portable/windows/deploy.sh windows_portable/
+        run: windows_portable/windows/deploy.sh deploy
 
       - name: 'Upload portable windows install'
         uses: actions/upload-artifact@v4
         with:
           name: windows_portable
-          path: windows_portable/
+          path: deploy/
 
       # NSIS is not available on arm
       - name: 'Create windows installer'
         run: |
-          makensis windows_portable/windows/installer.nsi
+          makensis builddir/windows/installer.nsi
 
       - name: 'Upload artifacts'
         uses: actions/upload-artifact@v4
