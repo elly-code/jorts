@@ -15,19 +15,14 @@
 # Variables.
 # Write path UNIX-style ("/"). Script will invert the slash where relevant.
 app_name="@APP_NAME@"
-build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
 icon_theme="elementary"
 version="@APP_VERSION@"
 publisher="elly-code"
 
-deploy_dir="windows/deploy"
-exe_name="@APP_ID@.exe"
+deploy_dir="$1"
 
-#--------------------------------
-# Rebuild and compile the exe as a release build
-meson setup --buildtype release ${build_dir} --reconfigure
-ninja -C ${build_dir}
+
 
 #--------------------------------
 # Prepare structure
@@ -54,6 +49,8 @@ done
 cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
+cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
+cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
 
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
@@ -68,15 +65,6 @@ cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
 cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 
-# We need this to properly display icons too. 
-cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
-cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
-#export GDK_PIXBUF_MODULEDIR=lib/gdk-pixbuf-2.0/2.10.0/loaders
-#gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
-
-# Make sure this one is actually copied, manually, in the deploy
-# That file caused so many issues trying to build
-cat windows/loaders.cache > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
 #--------------------------------
 # ICONS. Only what we need. Shits heavy af
@@ -109,12 +97,5 @@ EOF
 
 glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 
-#--------------------------------
-# Build the final exe installer.
-# Test out the deploy bin just in case though.
 
-echo "Running NSIS..."
-makensis windows/${app_name}-installer.nsi
-
-echo "Done"
 

@@ -1,0 +1,76 @@
+# On new app releases
+# Generate a windows installer, and a flatpak bundle
+name: On release
+
+on:
+  push:
+    #tags:
+    #  - '[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+    inputs:
+      release:
+        type: boolean
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event.inputs.release }}
+  cancel-in-progress: true
+
+jobs:
+  msys2:
+    name: "Windows Builder"
+    strategy:
+      matrix:
+        variant:
+          - arch: x86_64
+            runner: windows-latest
+            sys: mingw64
+            package: x86_64
+      fail-fast: true
+    runs-on: ${{ matrix.variant.runner }}
+    # if: ${{ false }}
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - name: 'Checkout latest sources'
+        uses: actions/checkout@v3
+        with:
+          lfs: 'true'
+
+      - name: 'Prepare MSYS2'
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: ${{ matrix.variant.sys }}
+          update: true
+          install: |
+            git make zip wget unzip mingw-w64-${{ matrix.variant.package }}-meson mingw-w64-${{ matrix.variant.package }}-gcc mingw-w64-${{ matrix.variant.package }}-vala mingw-w64-${{ matrix.variant.package }}-desktop-file-utils \
+            mingw-w64-${{ matrix.variant.package }}-granite7 mingw-w64-${{ matrix.variant.package }}-gtk-elementary-theme mingw-w64-${{ matrix.variant.package }}-elementary-icon-theme mingw-w64-${{ matrix.variant.package }}-libgee mingw-w64-${{ matrix.variant.package }}-json-glib \
+            mingw-w64-${{ matrix.variant.package }}-nsis mingw-w64-adwaita-icon-theme
+
+      - name: 'Prepare build'
+        run: |
+          meson setup windows_portable -Dprofile='windows' --buildtype release
+          meson compile -C windows_portable
+          windows_portable/windows/deploy.sh windows_portable/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows_portable
+          path: windows_portable/
+
+      # NSIS is not available on arm
+      - name: 'Create windows installer'
+        run: |
+          makensis windows_portable/jorts-installer.nsi
+
+      - name: 'Upload artifacts'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jorts-Installer.exe
+          path: windows_portable/jorts-installer.exe
+
+      - name: 'Test run windows installer'
+        run: sha256sum nsis/Jorts-Installer.exe
+        if: matrix.variant.arch == 'x86_64'
