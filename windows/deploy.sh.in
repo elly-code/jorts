@@ -70,7 +70,6 @@ cp -vnr /mingw64/share/locale ${deploy_dir}/share/
 cp -vnr /mingw64/share/themes/ ${deploy_dir}/share/
 cp -vnr /mingw64/share/gettext/ ${deploy_dir}/share/
 cp -vnr /mingw64/share/fontconfig/ ${deploy_dir}/share/
-cp -vnr /mingw64/share/GConf/ ${deploy_dir}/share/
 cp -vnr /mingw64/lib/gettext/ ${deploy_dir}/lib/
 
 

@@ -34,12 +34,12 @@ BrandingText "${NICENAME} ${APP_VERSION}, ${PUBLISHER}, remember to drink water"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${NICENAME} Installer"
-!define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of ${NICENAME}."
+!define MUI_WELCOMEPAGE_TEXT "This thing will guide you through the installation of ${NICENAME}."
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${NICENAME} is being installed."
 !define MUI_ICON "windows\icons\install.ico"
 !define MUI_UNICON "windows\icons\uninstall.ico"
 
-!define MUI_FINISHPAGE_LINK "This software is open source! Click here to check the code..."
+!define MUI_FINISHPAGE_LINK "This software is open source!"
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/${PUBLISHER}/${APP_NAME}"
 !define MUI_FINISHPAGE_RUN "$INSTDIR\bin\${APP_ID}.exe"
 
