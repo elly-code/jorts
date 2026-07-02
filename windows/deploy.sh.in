@@ -20,7 +20,7 @@ icon_theme="elementary"
 version="@APP_VERSION@"
 publisher="elly-code"
 
-deploy_dir="$1"
+deploy_dir="deploy"
 
 
 
