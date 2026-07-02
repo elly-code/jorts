@@ -78,13 +78,16 @@ cp -vnr /mingw64/lib/gettext/ ${deploy_dir}/lib/
 # Honestly you could get away with copying the whole icon theme. The script goes into the weeds only to shave off MBs
 # TODO: No matter what, the edit-find icon in the searchfield of emoji-popover shows as missing
 # TODO: Abstract this into a script. A better coded one.
-mkdir -pv ${deploy_dir}/share/icons/elementary
 
-cp -vnr /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
-cp -vnr /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
-cp -vnr /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
-cp -vnr /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
-gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
+#mkdir -pv ${deploy_dir}/share/icons/elementary
+#mkdir -pv ${deploy_dir}/share/icons/elementary
+cp -vnr /mingw64/share/icons/* ${deploy_dir}/share/icons/
+
+#cp -vnr /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
+#cp -vnr /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
+#p -vnr /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
+#cp -vnr /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
+#gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
 
 #--------------------------------
 # Write the theme to gtk settings
