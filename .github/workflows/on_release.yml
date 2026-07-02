@@ -74,8 +74,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Jorts-Installer.exe
-          path: windows_portable/jorts-installer.exe
-
-      - name: 'Test run windows installer'
-        run: sha256sum nsis/Jorts-Installer.exe
-        if: matrix.variant.arch == 'x86_64'
+          path: installer.exe
