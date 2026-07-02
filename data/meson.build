@@ -108,4 +108,3 @@ appstream_file = i18n.merge_file(
     install_dir: get_option('datadir') / 'metainfo',
 )
 
-endif

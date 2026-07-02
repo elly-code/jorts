@@ -9,7 +9,7 @@
     <name>Jorts</name>
     <summary>Write on colourful little squares</summary>
     <description>
-        <p>Neither jeans nor shorts, just like jorts!</p>
+        <p>Neither jeans nor shorts, just like jorts! A thoughtful little sticky notes application, to display any sort of short term information on your screen.</p>
         <p>Features include:</p>
         <ul>
             <li>Colourful: Eleven pretty pastel themes</li>
@@ -92,7 +92,7 @@
     </screenshots>
 
     <releases>
-        <release version="4.3.0" date="2026-06-31">
+        <release version="4.3.0" date="2026-07-10">
             <description>
                 <p>A lot of tiny goodies</p>
                 <ul>
@@ -140,7 +140,7 @@
                 <ul>
                     <li>From ellie-commons to elly-code</li>
                 </ul>
-                <p>😎 Guests stars:</p>
+                <p>Guests stars: 😎</p>
                 <ul>
                     <li>Updated sv-SE translation thanks to @yeager!</li>
                     <li>Added vietnamese translation thanks to @hthienloc!</li>
@@ -152,7 +152,7 @@
         </release>
         <release version="4.0.0" date="2025-11-22">
             <description>
-                <p>🚀 4.0.0 Jorts of Hyperspace!</p>
+                <p>4.0.0 Jorts of Hyperspace! 🚀</p>
                 <ul>
                     <li>Version 4 to align with Gtk version</li>
                     <li>Added button to toggle lists, and ability to customize them</li>
@@ -162,7 +162,7 @@
                     <li>A couple visual bugfixes as well!</li>
                     <li>Various under the hood performance improvements</li>
                 </ul>
-                <p>😎 Guests stars:</p>
+                <p>Guests stars: 😎</p>
                 <ul>
                     <li>Updated JA translation thanks to @ryonakano!</li>
                     <li>You, the user, for liking this lil app!</li>

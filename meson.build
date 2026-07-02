@@ -39,7 +39,7 @@ endif
 
 gnome = import('gnome')
 i18n = import('i18n')
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
+    add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
 
 #================================
 # Cool icon variants
