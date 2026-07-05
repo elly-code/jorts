@@ -29,7 +29,7 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dlegacy_rdnn=true
-      - -Dicon_variant=pride
+      - -Dicon_variant=default
     sources:
       - type: dir
         path: .

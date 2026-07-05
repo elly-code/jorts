@@ -8,6 +8,8 @@ project(
 
 app_name = meson.project_name()
 app_version = meson.project_version()
+nicename = 'Jorts'
+publisher = 'elly-code'
 
 correct_app_id = 'io.github.elly_code.' + app_name
 correct_app_path = '/io/github/elly_code/' + app_name
@@ -101,6 +103,8 @@ config_data = configuration_data(
         'APP_ID': app_id,
         'APP_PATH': app_path,
         'APP_VERSION': app_version,
+        'NICENAME': nicename,
+        'PUBLISHER': publisher,
         'ALTERNATE_APP_ID': alternate_app_id,
         'LOCALEDIR': get_option('prefix') / get_option('localedir')
     }

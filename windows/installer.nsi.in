@@ -9,8 +9,8 @@
 	!define APP_ID "@APP_ID@"
 	!define APP_VERSION "@APP_VERSION@"
 
-	!define NICENAME "Jorts"
-	!define PUBLISHER "elly-code"
+	!define NICENAME "@NICENAME@"
+	!define PUBLISHER "@PUBLISHER@"
 
 ;------------------------------
 Name Jorts
