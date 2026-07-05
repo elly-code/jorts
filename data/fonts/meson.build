@@ -5,7 +5,7 @@
 # Unpackaged: /usr/share/fonts
 # Flatpak: /app/share/fonts
 # Windows: fonts subdir is currently skipped on win builds
-target_font_dir = get_option('datadir') / 'fonts'
+target_font_dir = datadir / 'fonts'
 
 install_data(
     'RedactedScript-Regular.ttf',
