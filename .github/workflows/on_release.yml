@@ -1,0 +1,78 @@
+# On new app releases
+# Generate a windows installer, and a flatpak bundle
+name: On release
+
+on:
+  push:
+    #tags:
+    #  - '[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+    inputs:
+      release:
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event.inputs.release }}
+  cancel-in-progress: true
+
+jobs:
+  msys2:
+    name: "Prepare Windows Installer"
+    strategy:
+      matrix:
+        variant:
+          - arch: x86_64
+            runner: windows-latest
+            sys: mingw64
+            package: x86_64
+      fail-fast: true
+    runs-on: ${{ matrix.variant.runner }}
+    # if: ${{ false }}
+    defaults:
+      run:
+        shell: msys2 {0}
+
+    steps:
+      - name: 'Checkout latest sources'
+        uses: actions/checkout@v3
+        with:
+          lfs: 'true'
+
+      - name: 'Prepare MSYS2'
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: ${{ matrix.variant.sys }}
+          update: true
+          install: |
+            git make zip unzip
+            mingw-w64-${{ matrix.variant.package }}-meson mingw-w64-${{ matrix.variant.package }}-gcc mingw-w64-${{ matrix.variant.package }}-vala mingw-w64-${{ matrix.variant.package }}-desktop-file-utils
+            mingw-w64-${{ matrix.variant.package }}-gsettings-desktop-schemas mingw-w64-${{ matrix.variant.package }}-granite7 mingw-w64-${{ matrix.variant.package }}-gtk-elementary-theme mingw-w64-${{ matrix.variant.package }}-elementary-icon-theme mingw-w64-${{ matrix.variant.package }}-libgee mingw-w64-${{ matrix.variant.package }}-json-glib
+            mingw-w64-${{ matrix.variant.package }}-nsis mingw-w64-${{ matrix.variant.package }}-adwaita-icon-theme
+
+      - name: 'Setup build directory'
+        run: |
+          meson setup builddir -Dprofile='windows' --buildtype release
+          meson compile -C builddir
+          
+      - name: 'Setup for deployment'
+        run: builddir/windows/deploy.sh builddir
+
+      - name: 'Upload portable windows install'
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows_portable
+          path: deploy/
+
+      - name: 'Create windows installer'
+        run: |
+          cp builddir/windows/installer.nsi .
+          makensis installer.nsi
+
+      - name: 'Upload artifacts'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jorts-Installer.exe
+          path: Jorts-Installer.exe

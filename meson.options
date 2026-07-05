@@ -8,7 +8,7 @@ option('profile',
     type : 'combo',
     choices : ['linux', 'windows'],
     value : 'linux',
-    description : 'What we build for. Switched on automatically on windows machines, usually'
+    description : 'What we build for. Switched on automatically on windows machines'
 )
 option('development', type: 'boolean', value: false, description: 'If this is a dev build')
-option('legacy_rdnn', type: 'boolean', value: false, description: 'If this uses io.github.ellie-commons domain (Flathub)')
+option('legacy_rdnn', type: 'boolean', value: false, description: 'If this uses the io.github.ellie-commons domain (Flathub)')

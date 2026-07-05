@@ -62,22 +62,6 @@ pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-
 It is built so as to not need admin rights. You can distribute as is.
 
 
-## Automated release build
-
-The GitHub release workflow does not run `windows/deploy.sh` directly. It uses
-the sqgipkg release path documented in [packagings.md](packagings.md).
-
-That path still lets Meson build and configure the app, including the Windows
-resource file. sqgipkg then stages the MinGW/MSYS2 runtime files, GTK settings,
-icon themes, schemas, fonts, and app assets into `dist-windows-x86_64/Jorts`,
-before producing `dist-windows-x86_64/Jorts-Setup.exe`.
-
-If the Windows theme works but icons are missing, first check that the staged
-directory contains `share/icons/elementary` and that the bundled GTK settings
-still say `gtk-icon-theme-name=elementary`. The theme package and icon theme
-package are separate things.
-
-
 ## Known issues deploying
 
  - Sometimes schema files arent properly compiled. You have to glib-compile-schema them yourself
