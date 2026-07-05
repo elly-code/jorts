@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-05 21:56+0200\n"
 "PO-Revision-Date: 2025-11-02 11:55+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -11,87 +11,86 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:241
+#: src/Application.vala:251
 msgid "Create a new note"
 msgstr ""
 
-#: src/Application.vala:242
+#: src/Application.vala:252
 #, fuzzy
 msgid "Show preferences"
 msgstr "設定を閉じる"
 
-#: src/Objects/ListPrefix.vala:51
+#: src/Objects/ListPrefix.vala:53
 msgid "(Disabled)"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:52
+#: src/Objects/ListPrefix.vala:54
 msgid " • List item"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:53
+#: src/Objects/ListPrefix.vala:55
 msgid " - List item"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:54
+#: src/Objects/ListPrefix.vala:56
 msgid " ~ List item"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:55
+#: src/Objects/ListPrefix.vala:57
 msgid " . List item"
 msgstr ""
 
-#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
-#: src/Objects/NoteData.vala:49
+#: src/Objects/NoteData.vala:35
 msgid "Forgot title!"
 msgstr ""
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
-#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
 msgid "Blueberry"
 msgstr "ブルーベリー"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Mint"
 msgstr "ミント"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Lime"
 msgstr "ライム"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Banana"
 msgstr "バナナ"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Orange"
 msgstr "オレンジ"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Strawberry"
 msgstr "ストロベリー"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Bubblegum"
 msgstr "バブルガム"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
 msgid "Grape"
 msgstr "グレープ"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:74
 msgid "Cocoa"
 msgstr "ココア"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:75
 msgid "Slate"
 msgstr "スレート"
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:76
 msgid "Latte"
 msgstr ""
 
-#: src/Objects/Themes.vala:75
+#: src/Objects/Themes.vala:77
 msgid "No preference, random each time"
 msgstr ""
 
@@ -371,9 +370,6 @@ msgstr "フォーカスされていない付箋を読めなくする"
 msgid "Hide bottom bar (Ctrl+T)"
 msgstr "ボタンを隠す"
 
-#. *********************************************
-#. Restore_last
-#. *********************************************
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
@@ -465,7 +461,6 @@ msgstr "デフォルトのズームレベル"
 msgid "Zoom in"
 msgstr "拡大"
 
-#. Alternate way to access preferences
 #: src/Widgets/TextView.vala:81
 #, fuzzy
 msgid "Show Preferences"
@@ -476,15 +471,12 @@ msgstr "設定を閉じる"
 msgid "Quit Jorts"
 msgstr " - Jorts"
 
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#: src/Windows/PreferenceWindow.vala:48
+#: src/Windows/PreferenceWindow.vala:38
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Jorts の設定"
 
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:40
 #, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
 msgstr "Jorts の設定"
@@ -492,15 +484,43 @@ msgstr "Jorts の設定"
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Jorts"
+
+#, fuzzy
+#~ msgid "action_show_preferences"
+#~ msgstr "設定を閉じる"
+
+#, fuzzy
+#~ msgid "Showing preferences!"
+#~ msgstr "設定を閉じる"
+
+#, fuzzy
+#~ msgid "Toggling scribbly"
+#~ msgstr "紙ナプキンに落書き"
+
+#, fuzzy
+#~ msgid "preferences"
+#~ msgstr "設定"
+
+#, fuzzy
+#~ msgid "monospace"
+#~ msgstr "等幅"
+
+#, fuzzy, c-format
+#~ msgid "Updating monospace to %s"
+#~ msgstr "等幅フォントを使う"
+
+#, fuzzy
+#~ msgid "Creating preference window"
+#~ msgstr "設定を閉じる"
 
 #~ msgid "Request to system sent"
 #~ msgstr "システムへの要求を送信しました"
@@ -519,9 +539,6 @@ msgstr " - Jorts"
 
 #~ msgid "Ok, listen here,"
 #~ msgstr "皆の衆、よく聞きたまえ!"
-
-#~ msgid "Preferences"
-#~ msgstr "設定"
 
 #~ msgid ""
 #~ "If enabled, unfocused sticky notes become unreadable to protect their "

@@ -17,8 +17,11 @@ We're too tired to deal with sucklords. There wont be arguing, just blocks.
 
 # No LLM contributions
 
+We believe in community, stability, quality, and for people to still have nice forests when they are not in front of a computer.
+
  - No LLM code. Including but not limited to Claude, Cursor, whatever lobster, Grok, ChatGPT, Deepseek or whatever.
  - If we see heavy LLM usage on your public code, we are going to assume LLM. Please do not.
  - No LLM text. Speak like a normal person to people. Idc if your english sucks.
 
 This policy does not apply to pure accessibility tools
+

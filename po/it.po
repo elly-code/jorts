@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-05 21:56+0200\n"
 "PO-Revision-Date: 2025-12-27 12:46+0100\n"
 "Last-Translator: Seth <Discord>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -11,86 +11,85 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:241
+#: src/Application.vala:251
 msgid "Create a new note"
 msgstr "Crea una nuova nota"
 
-#: src/Application.vala:242
+#: src/Application.vala:252
 msgid "Show preferences"
 msgstr "Mostra preferenze"
 
-#: src/Objects/ListPrefix.vala:51
+#: src/Objects/ListPrefix.vala:53
 msgid "(Disabled)"
 msgstr "(Disabilitato)"
 
-#: src/Objects/ListPrefix.vala:52
+#: src/Objects/ListPrefix.vala:54
 msgid " • List item"
 msgstr " • Elemento dell'elenco"
 
-#: src/Objects/ListPrefix.vala:53
+#: src/Objects/ListPrefix.vala:55
 msgid " - List item"
 msgstr " - Elemento dell'elenco"
 
-#: src/Objects/ListPrefix.vala:54
+#: src/Objects/ListPrefix.vala:56
 msgid " ~ List item"
 msgstr " ~ Elemento dell'elenco"
 
-#: src/Objects/ListPrefix.vala:55
+#: src/Objects/ListPrefix.vala:57
 msgid " . List item"
 msgstr " . Elemento dell'elenco"
 
-#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
-#: src/Objects/NoteData.vala:49
+#: src/Objects/NoteData.vala:35
 msgid "Forgot title!"
 msgstr "Titolo dimenticato!"
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
-#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
 msgid "Blueberry"
 msgstr "Mirtillo"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Mint"
 msgstr "Menta"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Lime"
 msgstr "Lime"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Banana"
 msgstr "Banana"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Orange"
 msgstr "Arancia"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Strawberry"
 msgstr "Fragola"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Bubblegum"
 msgstr "Gomma da masticare"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
 msgid "Grape"
 msgstr "Uva"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:74
 msgid "Cocoa"
 msgstr "Cacao"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:75
 msgid "Slate"
 msgstr "Ardesia"
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:76
 msgid "Latte"
 msgstr "Latte"
 
-#: src/Objects/Themes.vala:75
+#: src/Objects/Themes.vala:77
 msgid "No preference, random each time"
 msgstr "Nessuna preferenza, casuale ogni volta"
 
@@ -359,9 +358,6 @@ msgstr "Scarabocchiare il testo delle note non a fuoco (Ctrl+H)"
 msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Nascondi la barra inferiore (Ctrl+T)"
 
-#. *********************************************
-#. Restore_last
-#. *********************************************
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
@@ -377,7 +373,8 @@ msgstr "Mostra i tuoi post-it all'accesso"
 
 #: src/Views/PreferencesView.vala:144
 msgid "May be out of sync with system settings in some cases"
-msgstr "Potrebbe essere fuori di sync con le impostazioni di sistema in alcuni casi"
+msgstr ""
+"Potrebbe essere fuori di sync con le impostazioni di sistema in alcuni casi"
 
 #: src/Views/PreferencesView.vala:162
 msgid "Support us!"
@@ -452,7 +449,6 @@ msgstr "Livello di zoom predefinito"
 msgid "Zoom in"
 msgstr "Ingrandisci"
 
-#. Alternate way to access preferences
 #: src/Widgets/TextView.vala:81
 msgid "Show Preferences"
 msgstr "Mostra preferenze"
@@ -461,29 +457,62 @@ msgstr "Mostra preferenze"
 msgid "Quit Jorts"
 msgstr "Chiudi Jorts"
 
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#: src/Windows/PreferenceWindow.vala:48
+#: src/Windows/PreferenceWindow.vala:38
 msgid "Preferences - Jorts"
 msgstr "Preferenze - Jorts"
 
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:40
 msgid "<b>Preferences for your Jorts</b>"
 msgstr "<b>Preferenze per i tuoi Jorts<b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr "%s - Jorts (Sviluppo)"
 
-#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
 #, c-format
 msgid "%s - Jorts"
 msgstr "%s - Jorts"
+
+#, fuzzy
+#~ msgid "action_show_preferences"
+#~ msgstr "Mostra preferenze"
+
+#, fuzzy
+#~ msgid "Showing preferences!"
+#~ msgstr "Mostra preferenze"
+
+#, fuzzy
+#~ msgid "Toggling scribbly"
+#~ msgstr "Scarabocchi nell'angolo'"
+
+#, fuzzy
+#~ msgid "preferences"
+#~ msgstr "Preferenze"
+
+#, fuzzy
+#~ msgid "monospace"
+#~ msgstr "Monospazio"
+
+#, fuzzy
+#~ msgid "listprefix"
+#~ msgstr "Elemento dell'elenco"
+
+#, fuzzy, c-format
+#~ msgid "Updating monospace to %s"
+#~ msgstr "Usa font monospaziato"
+
+#, fuzzy
+#~ msgid "action_toggle_list"
+#~ msgstr "Attiva elenco"
+
+#, fuzzy
+#~ msgid "Creating preference window"
+#~ msgstr "Chiudere le preferenze"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Richiesta inviata al sistema"
@@ -516,15 +545,14 @@ msgstr "%s - Jorts"
 #~ msgid "Ok, listen here,"
 #~ msgstr "Ok, ascolta,"
 
-#~ msgid "Preferences"
-#~ msgstr "Preferenze"
-
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Rendere illeggibili gli appunti non focalizzati"
 
-#~ msgid "If enabled, unfocused sticky notes become unreadable to protect their "
+#~ msgid ""
+#~ "If enabled, unfocused sticky notes become unreadable to protect their "
 #~ "content from peeking eyes (Ctrl+H)"
-#~ msgstr "Se abilitato, le note adesive non a fuoco diventano illeggibili per "
+#~ msgstr ""
+#~ "Se abilitato, le note adesive non a fuoco diventano illeggibili per "
 #~ "proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
 #~ msgid "Set autostart"
@@ -537,5 +565,6 @@ msgstr "%s - Jorts"
 #~ msgstr "Consentire l'avvio all'accesso"
 
 #~ msgid "You can request the system to start this application automatically"
-#~ msgstr "È possibile richiedere al sistema di avviare automaticamente questa" 
-#~ " applicazione."
+#~ msgstr ""
+#~ "È possibile richiedere al sistema di avviare automaticamente questa "
+#~ "applicazione."

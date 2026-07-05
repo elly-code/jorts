@@ -37,7 +37,7 @@ public enum Jorts.ListPrefix {
      */
     public string to_string () {
         switch (this) {
-            case 0: return "";
+            case 0: return "N";
             case 1: return " • ";
             case 2: return " - ";
             case 3: return " ~ ";

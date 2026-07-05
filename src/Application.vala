@@ -92,7 +92,7 @@ public class Jorts.Application : Gtk.Application {
         Intl.textdomain (GETTEXT_PACKAGE);
 
 #if DEVEL
-        GLib.Environment.set_variable ("LANGUAGE", "C", true);
+        //GLib.Environment.set_variable ("LANGUAGE", "C", true);
         GLib.Environment.set_variable ("GTK_DEBUG", "interactive", true);
         print (LOCALEDIR);
 #endif

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-05 21:56+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -15,91 +15,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: src/Application.vala:241
+#: src/Application.vala:251
 msgid "Create a new note"
 msgstr "Tạo ghi chú mới"
 
-#: src/Application.vala:242
+#: src/Application.vala:252
 msgid "Show preferences"
 msgstr "Hiển thị tùy chỉnh"
 
-#: src/Objects/ListPrefix.vala:51
+#: src/Objects/ListPrefix.vala:53
 #, fuzzy
 msgid "(Disabled)"
 msgstr "Tắt"
 
-#: src/Objects/ListPrefix.vala:52
+#: src/Objects/ListPrefix.vala:54
 #, fuzzy
 msgid " • List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/ListPrefix.vala:53
+#: src/Objects/ListPrefix.vala:55
 #, fuzzy
 msgid " - List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/ListPrefix.vala:54
+#: src/Objects/ListPrefix.vala:56
 #, fuzzy
 msgid " ~ List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/ListPrefix.vala:55
+#: src/Objects/ListPrefix.vala:57
 #, fuzzy
 msgid " . List item"
 msgstr "Prefix mục danh sách"
 
-#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
-#: src/Objects/NoteData.vala:49
+#: src/Objects/NoteData.vala:35
 msgid "Forgot title!"
 msgstr ""
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
-#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
 msgid "Blueberry"
 msgstr "Việt quất"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Mint"
 msgstr "Bạc hà"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Lime"
 msgstr "Chanh xanh"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Banana"
 msgstr "Chuối"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Orange"
 msgstr "Quả cam"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Strawberry"
 msgstr "Quả dâu"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Bubblegum"
 msgstr "Kẹo cao su"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
 msgid "Grape"
 msgstr "Quả nho"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:74
 msgid "Cocoa"
 msgstr "Ca cao"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:75
 msgid "Slate"
 msgstr "Đá phiến"
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:76
 msgid "Latte"
 msgstr "Latte"
 
-#: src/Objects/Themes.vala:75
+#: src/Objects/Themes.vala:77
 msgid "No preference, random each time"
 msgstr "Không ưu tiên, ngẫu nhiên mỗi lần"
 
@@ -378,9 +377,6 @@ msgstr "Viết nguệch ngoạc văn bản của các ghi chú không tập trun
 msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Ẩn thanh dưới cùng"
 
-#. *********************************************
-#. Restore_last
-#. *********************************************
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
@@ -473,7 +469,6 @@ msgstr "Mức phóng mặc định"
 msgid "Zoom in"
 msgstr "Phóng to"
 
-#. Alternate way to access preferences
 #: src/Widgets/TextView.vala:81
 msgid "Show Preferences"
 msgstr "Hiển thị tùy chọn"
@@ -482,15 +477,12 @@ msgstr "Hiển thị tùy chọn"
 msgid "Quit Jorts"
 msgstr "Thoát Jorts"
 
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#: src/Windows/PreferenceWindow.vala:48
+#: src/Windows/PreferenceWindow.vala:38
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Tùy chỉnh cho Jorts của bạn"
 
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:40
 #, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
 msgstr "Tùy chỉnh cho Jorts của bạn"
@@ -498,15 +490,51 @@ msgstr "Tùy chỉnh cho Jorts của bạn"
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Jorts"
+
+#, fuzzy
+#~ msgid "action_show_preferences"
+#~ msgstr "Hiển thị tùy chỉnh"
+
+#, fuzzy
+#~ msgid "Showing preferences!"
+#~ msgstr "Hiển thị tùy chỉnh"
+
+#, fuzzy
+#~ msgid "Toggling scribbly"
+#~ msgstr "Những nét vẽ nguệch ngoạc trên khăn ăn"
+
+#, fuzzy
+#~ msgid "preferences"
+#~ msgstr "Tùy chỉnh"
+
+#, fuzzy
+#~ msgid "monospace"
+#~ msgstr "Không gian đơn"
+
+#, fuzzy
+#~ msgid "listprefix"
+#~ msgstr "Prefix mục danh sách"
+
+#, fuzzy, c-format
+#~ msgid "Updating monospace to %s"
+#~ msgstr "Sử dụng phông chữ đơn cách"
+
+#, fuzzy
+#~ msgid "action_toggle_list"
+#~ msgstr "Bật/tắt danh sách"
+
+#, fuzzy
+#~ msgid "Creating preference window"
+#~ msgstr "Đóng tùy chỉnh"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Đã gửi yêu cầu tới hệ thống"
@@ -538,6 +566,3 @@ msgstr " - Jorts"
 
 #~ msgid "Ok, listen here,"
 #~ msgstr "Ok, nghe đây,"
-
-#~ msgid "Preferences"
-#~ msgstr "Tùy chỉnh"

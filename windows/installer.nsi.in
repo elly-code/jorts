@@ -111,7 +111,7 @@ ${Index_RemoveFilesAndSubDirs}-done:
 Section "Install"
   SetOutPath "$INSTDIR"
   File /r "deploy\*"
-  CreateDirectory $SMPROGRAMS\${APP_NAME}
+  CreateDirectory $SMPROGRAMS\${NICENAME}
 
   ; fonts. We install to local fonts to not trip up admin rights, and register for local user
   SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"

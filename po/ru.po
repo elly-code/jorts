@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-05 21:56+0200\n"
 "PO-Revision-Date: 2025-04-06 17:02+0400\n"
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "Language-Team: none\n"
@@ -12,87 +12,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: src/Application.vala:241
+#: src/Application.vala:251
 msgid "Create a new note"
 msgstr "Создайте новую заметку"
 
-#: src/Application.vala:242
+#: src/Application.vala:252
 msgid "Show preferences"
 msgstr "Показать предпочтения"
 
-#: src/Objects/ListPrefix.vala:51
+#: src/Objects/ListPrefix.vala:53
 msgid "(Disabled)"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:52
+#: src/Objects/ListPrefix.vala:54
 msgid " • List item"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:53
+#: src/Objects/ListPrefix.vala:55
 msgid " - List item"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:54
+#: src/Objects/ListPrefix.vala:56
 msgid " ~ List item"
 msgstr ""
 
-#: src/Objects/ListPrefix.vala:55
+#: src/Objects/ListPrefix.vala:57
 msgid " . List item"
 msgstr ""
 
-#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
-#: src/Objects/NoteData.vala:49
+#: src/Objects/NoteData.vala:35
 #, fuzzy
 msgid "Forgot title!"
 msgstr "Изменить название"
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
-#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
 msgid "Blueberry"
 msgstr "Черничный"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Mint"
 msgstr "Мятный"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Lime"
 msgstr "Лаймовый"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Banana"
 msgstr "Банановый"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Orange"
 msgstr "Апельсиновый"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Strawberry"
 msgstr "Клубничный"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Bubblegum"
 msgstr "Бубльгум"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
 msgid "Grape"
 msgstr "Виноградный"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:74
 msgid "Cocoa"
 msgstr "Какао"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:75
 msgid "Slate"
 msgstr "Каменно-серый"
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:76
 msgid "Latte"
 msgstr ""
 
-#: src/Objects/Themes.vala:75
+#: src/Objects/Themes.vala:77
 msgid "No preference, random each time"
 msgstr ""
 
@@ -373,9 +372,6 @@ msgstr "Скрыть содержание сфокусированных лип�
 msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Скрыть панель кнопок"
 
-#. *********************************************
-#. Restore_last
-#. *********************************************
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
@@ -470,7 +466,6 @@ msgstr "Масштаб по умолчанию"
 msgid "Zoom in"
 msgstr "Увеличить"
 
-#. Alternate way to access preferences
 #: src/Widgets/TextView.vala:81
 #, fuzzy
 msgid "Show Preferences"
@@ -481,15 +476,12 @@ msgstr "Показать предпочтения"
 msgid "Quit Jorts"
 msgstr " - Шорты"
 
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#: src/Windows/PreferenceWindow.vala:48
+#: src/Windows/PreferenceWindow.vala:38
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Параметры для этого стикера"
 
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:40
 #, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
 msgstr "Параметры для этого стикера"
@@ -497,15 +489,47 @@ msgstr "Параметры для этого стикера"
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Шорты"
+
+#, fuzzy
+#~ msgid "action_show_preferences"
+#~ msgstr "Показать предпочтения"
+
+#, fuzzy
+#~ msgid "Showing preferences!"
+#~ msgstr "Показать предпочтения"
+
+#, fuzzy
+#~ msgid "Toggling scribbly"
+#~ msgstr "Каракули на салфетках"
+
+#, fuzzy
+#~ msgid "preferences"
+#~ msgstr "Предпочтения"
+
+#, fuzzy
+#~ msgid "monospace"
+#~ msgstr "Моноспейс"
+
+#, fuzzy
+#~ msgid "Autostart set: %b"
+#~ msgstr "Автозапуск приложений в flathub"
+
+#, fuzzy, c-format
+#~ msgid "Updating monospace to %s"
+#~ msgstr "Нажмите, чтобы использовать моношрифт"
+
+#, fuzzy
+#~ msgid "Creating preference window"
+#~ msgstr "Закрыть предпочтения"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Отправлен запрос в систему"
@@ -532,9 +556,6 @@ msgstr " - Шорты"
 
 #~ msgid "Ok, listen here,"
 #~ msgstr "Слушай сюда,"
-
-#~ msgid "Preferences"
-#~ msgstr "Предпочтения"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Сделайте несфокусированные заметки нечитаемыми"
@@ -574,10 +595,6 @@ msgstr " - Шорты"
 #~ msgstr ""
 #~ "Вы можете установить, чтобы липкие заметки появлялись при входе в "
 #~ "систему, добавив Jorts в автозапуск"
-
-#, fuzzy
-#~ msgid "Autostart apps"
-#~ msgstr "Автозапуск приложений в flathub"
 
 #~ msgid "Hi im a square"
 #~ msgstr "Привет, я квадратик"

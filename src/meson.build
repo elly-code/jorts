@@ -1,3 +1,6 @@
+#
+# Sources
+#
 
 #================================
 # Config.vala allows us to set variables in Meson, for the Vala app to use later
@@ -92,6 +95,7 @@ executable(
     gresource,
     config_file,
     sources,
+    c_args: '-w',
     dependencies: dependencies,
     win_subsystem: 'windows',
     install : true

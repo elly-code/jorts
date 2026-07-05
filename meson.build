@@ -1,6 +1,6 @@
 project(
     'jorts',
-    ['c', 'vala'],
+    ['c', 'vala'],        # The floor is vala
     license: 'GPL-3.0-or-later',
     version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
     meson_version: '>= 1.1'         # Use meson.option instead of meson_options.txt
@@ -11,6 +11,7 @@ app_version = meson.project_version()
 nicename = 'Jorts'
 publisher = 'elly-code'
 
+# Ugh i wish i could bin this
 correct_app_id = 'io.github.elly_code.' + app_name
 correct_app_path = '/io/github/elly_code/' + app_name
 
@@ -32,6 +33,12 @@ else
     app_path = correct_app_path
 endif
 
+#================================
+# Preparation
+
+prefix = get_option('prefix')
+datadir = get_option('datadir')
+
 development = get_option('development')
 if development
   app_id +=  '.devel'
@@ -41,7 +48,15 @@ endif
 
 gnome = import('gnome')
 i18n = import('i18n')
-    add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), language:'c')
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_id), language:'c')
+
+
+# Play nice with clang
+# https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
+if meson.get_compiler ('c').get_id () == 'clang'
+    add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
+endif
+
 
 #================================
 # Cool icon variants
@@ -55,13 +70,12 @@ else
 
 endif
 
+
 #================================
 # OS and Ports related
 
 linux = get_option('profile') == 'linux'
 windows = get_option('profile') == 'windows'
-
-libportal = true
 
 # Here is to autodetect and adjust
 # Remember however that people may do cross compiling, so do not assume by default it is for linux
@@ -77,20 +91,13 @@ endif
 
 if windows
     add_project_arguments('--define=WINDOWS', language: 'vala')
+    appstream = false
     libportal = false
 
-elif linux
-    add_project_arguments('--define=LINUX', language: 'vala')
+else
+    appstream = true
+    libportal = true
 
-endif
-
-
-#================================
-# Play nice with clang
-
-# https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
-if meson.get_compiler ('c').get_id () == 'clang'
-    add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
 endif
 
 
@@ -106,7 +113,7 @@ config_data = configuration_data(
         'NICENAME': nicename,
         'PUBLISHER': publisher,
         'ALTERNATE_APP_ID': alternate_app_id,
-        'LOCALEDIR': get_option('prefix') / get_option('localedir')
+        'LOCALEDIR': prefix / get_option('localedir')
     }
 )
 
@@ -119,6 +126,7 @@ if windows
 endif
 
 subdir('tests')
+
 
 gnome.post_install(
     glib_compile_schemas: true,

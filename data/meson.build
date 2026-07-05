@@ -11,8 +11,6 @@ gresource_file = configure_file(
     configuration: config_data,
 )
 
-glib_compile_resources = find_program('glib-compile-resources')
-
 gresource = gnome.compile_resources(
     'gresource',
     gresource_file,
@@ -31,7 +29,9 @@ gschema_file = configure_file(
 
 install_data(
     gschema_file,
-    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
+    install_dir: join_paths(
+        prefix, datadir, 'glib-2.0', 'schemas',
+    )
 )
 
 
@@ -56,6 +56,10 @@ subdir('fonts')
 # DESKTOP
 # Inject some variables into the desktop file before merging in the translations
 
+if not appstream
+    subdir_done()
+endif
+
 desktop_file_in = configure_file(
     input: app_name + '.desktop.in.in',
     output: app_id + '.desktop.in',
@@ -68,10 +72,8 @@ desktop_file = i18n.merge_file(
     po_dir: meson.project_source_root() / 'po' / 'extra',
     type: 'desktop',
     install: true,
-    install_dir: get_option('datadir') / 'applications',
+    install_dir: datadir / 'applications',
 )
-
-
 
 
 #========================
@@ -90,6 +92,6 @@ appstream_file = i18n.merge_file(
     po_dir: meson.project_source_root() / 'po' / 'extra',
     type: 'xml',
     install: true,
-    install_dir: get_option('datadir') / 'metainfo',
+    install_dir: datadir / 'metainfo',
 )
 

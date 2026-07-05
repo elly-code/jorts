@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-05 20:57+0200\n"
 "PO-Revision-Date: 2025-11-23 13:35+0100\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 msgid "Jorts"
 msgstr "Jorts"
 
-#: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:48
+#: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:49
 msgid "Sticky notes"
 msgstr "Klisterlappar"
 
@@ -47,8 +47,10 @@ msgid "Write on colourful little squares"
 msgstr "Skriv på färgglada små rutor"
 
 #: data/jorts.metainfo.xml.in.in:12
-msgid "Neither jeans nor shorts, just like jorts!"
-msgstr "Varken jeans eller shorts, bara jorts!"
+msgid ""
+"Neither jeans nor shorts, just like jorts! A thoughtful little sticky notes "
+"application, to display any sort of short term information on your screen."
+msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:13
 msgid "Features include:"
@@ -59,76 +61,80 @@ msgid "Colourful: Eleven pretty pastel themes"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:16
-#, fuzzy
-msgid ""
-"Adaptive: New notes get the zoom and font you last chose, and a random new "
-"color"
-msgstr "Anpassningsbar: Nya anteckningar får den zoomning du senast valde"
-
-#: data/jorts.metainfo.xml.in.in:17
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
 "Söt: Varje ny anteckning har en rolig eller söt slumpmässig (redigerbar) "
 "titel"
 
-#: data/jorts.metainfo.xml.in.in:18
-msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "Praktiskt: Du kan öppna länkar och e-postmeddelanden med Ctrl+klick"
+#: data/jorts.metainfo.xml.in.in:17
+msgid "Thoughtful: Jorts does its best to be comfortable to use, always!"
+msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:19
-msgid "Private: Try the scribble mode!"
+#: data/jorts.metainfo.xml.in.in:18
+#, fuzzy
+msgid "Private: Try the scribbles mode!"
 msgstr "Privat: Prova klotterläget!"
 
-#: data/jorts.metainfo.xml.in.in:32
+#: data/jorts.metainfo.xml.in.in:20
+msgid ""
+"Windows installers are also available, and require no admin rights. So you "
+"can even use this at work!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:21
+msgid "This app is made lovingly and without any LLM intervention."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:33
 #, fuzzy
 msgid "Lainsce + Stella and Charlie"
 msgstr "Lainsce + Stella"
 
-#: data/jorts.metainfo.xml.in.in:49
+#: data/jorts.metainfo.xml.in.in:50
 msgid "Sticky note"
 msgstr "Klisterlapp"
 
-#: data/jorts.metainfo.xml.in.in:50
+#: data/jorts.metainfo.xml.in.in:51
 msgid "Stickies"
 msgstr "Klisterlappar"
 
-#: data/jorts.metainfo.xml.in.in:51
+#: data/jorts.metainfo.xml.in.in:52
 msgid "Colourful"
 msgstr "Färgglad"
 
-#: data/jorts.metainfo.xml.in.in:52
+#: data/jorts.metainfo.xml.in.in:53
 msgid "Notes"
 msgstr "Anteckningar"
 
-#: data/jorts.metainfo.xml.in.in:53
+#: data/jorts.metainfo.xml.in.in:54
 msgid "Cute"
 msgstr "Söt"
 
-#: data/jorts.metainfo.xml.in.in:54
+#: data/jorts.metainfo.xml.in.in:55
 msgid "Desktop"
 msgstr "Skrivbord"
 
-#: data/jorts.metainfo.xml.in.in:55
+#: data/jorts.metainfo.xml.in.in:56
 msgid "Reminder"
 msgstr "Påminnelse"
 
-#: data/jorts.metainfo.xml.in.in:56
+#: data/jorts.metainfo.xml.in.in:57
 msgid "Utility"
 msgstr "Verktyg"
 
-#: data/jorts.metainfo.xml.in.in:57
+#: data/jorts.metainfo.xml.in.in:58
 msgid "Pantheon"
 msgstr "Pantheon"
 
-#: data/jorts.metainfo.xml.in.in:58
+#: data/jorts.metainfo.xml.in.in:59
 msgid "elementary OS"
 msgstr "elementary OS"
 
-#: data/jorts.metainfo.xml.in.in:73
+#: data/jorts.metainfo.xml.in.in:74
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "En klisterlapp med temat \"Blåbär\""
 
-#: data/jorts.metainfo.xml.in.in:77
+#: data/jorts.metainfo.xml.in.in:78
 #, fuzzy
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the Scribbly "
@@ -137,142 +143,181 @@ msgstr ""
 "Strömning? Oroar du dig för att någon ska kika över din axel? Prova "
 "kladdläget!"
 
-#: data/jorts.metainfo.xml.in.in:81
+#: data/jorts.metainfo.xml.in.in:82
 msgid "Look! Ascii art in a sticky note!"
 msgstr "Titta! Ascii-konst på en klisterlapp!"
 
-#: data/jorts.metainfo.xml.in.in:85
+#: data/jorts.metainfo.xml.in.in:86
 msgid "The preferences dialog in light mode"
 msgstr "Inställningsdialogen i ljust läge"
 
-#: data/jorts.metainfo.xml.in.in:89
+#: data/jorts.metainfo.xml.in.in:90
 msgid "The preferences dialog in dark mode"
 msgstr "Inställningsdialogen i mörkt läge"
 
-#: data/jorts.metainfo.xml.in.in:97
-msgid "The Unyielding Jorts"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in.in:99
-msgid "Lovely Pride variant thanks to @wpkelso!"
+#: data/jorts.metainfo.xml.in.in:98
+msgid "A lot of tiny goodies"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:100
-msgid "Added indent for lists with help from @MysterieCatDev!"
+msgid "Alas, back to default icon, but pride is forever"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:101
-msgid "Added feature to restore last deleted note"
+msgid "Added experimental automated windows installers"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:102
+msgid "Small style fixes by @Geopjr!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:103 data/jorts.metainfo.xml.in.in:120
+#, fuzzy
+msgid "Updated Spanish translation thanks to Eli!"
+msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
+
+#: data/jorts.metainfo.xml.in.in:104
+#, fuzzy
+msgid "Updated Italian translation thanks to Seth!"
+msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
+
+#: data/jorts.metainfo.xml.in.in:105
+msgid "Updated French and German translations"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:111
+msgid "The Unyielding Jorts"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:113
+msgid "Lovely Pride variant thanks to @wpkelso!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:114
+msgid "Added indent for lists with help from @MysterieCatDev!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:115
+msgid "Added feature to restore last deleted note"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:116
 #, fuzzy
 msgid "Refreshed preference dialog appearance"
 msgstr "Inställningsdialogen i mörkt läge"
 
-#: data/jorts.metainfo.xml.in.in:103
+#: data/jorts.metainfo.xml.in.in:117
 msgid ""
 "Issue with appcenter and flathub build differences fixed thanks to "
 "@ryonakano!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:104
+#: data/jorts.metainfo.xml.in.in:118
 #, fuzzy
 msgid "Added Danish translation thanks to @pracedru!"
 msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
 
-#: data/jorts.metainfo.xml.in.in:105
+#: data/jorts.metainfo.xml.in.in:119
 #, fuzzy
 msgid "Added Croatian translation thanks to @milotype!"
 msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
 
-#: data/jorts.metainfo.xml.in.in:106
-#, fuzzy
-msgid "Updated Spanish translation thanks to Eli!"
-msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
-
-#: data/jorts.metainfo.xml.in.in:112
+#: data/jorts.metainfo.xml.in.in:126
 msgid "Minor touchups"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:117
+#: data/jorts.metainfo.xml.in.in:131
 msgid "Jorts of Spring"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:119
+#: data/jorts.metainfo.xml.in.in:133
 msgid "New color: Latte!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:120
+#: data/jorts.metainfo.xml.in.in:134
 msgid "Added Preferences and Quit to the note right-click"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:121
+#: data/jorts.metainfo.xml.in.in:135
 msgid "A lot of under-the-hood spring cleaning"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:127
+#: data/jorts.metainfo.xml.in.in:141
 msgid "Organization change"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:129
+#: data/jorts.metainfo.xml.in.in:143
 msgid "From ellie-commons to elly-code"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in.in:131 data/jorts.metainfo.xml.in.in:153
-msgid "😎 Guests stars:"
+#: data/jorts.metainfo.xml.in.in:145 data/jorts.metainfo.xml.in.in:167
+#, fuzzy
+msgid "Guests stars: 😎"
 msgstr "😎 Gäststjärnor:"
 
-#: data/jorts.metainfo.xml.in.in:133
+#: data/jorts.metainfo.xml.in.in:147
 #, fuzzy
 msgid "Updated sv-SE translation thanks to @yeager!"
 msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
 
-#: data/jorts.metainfo.xml.in.in:134
+#: data/jorts.metainfo.xml.in.in:148
 #, fuzzy
 msgid "Added vietnamese translation thanks to @hthienloc!"
 msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
 
-#: data/jorts.metainfo.xml.in.in:143
-msgid "🚀 4.0.0 Jorts of Hyperspace!"
+#: data/jorts.metainfo.xml.in.in:157
+#, fuzzy
+msgid "4.0.0 Jorts of Hyperspace! 🚀"
 msgstr "🚀 4.0.0 Jorts of Hyperspace!"
 
-#: data/jorts.metainfo.xml.in.in:145
+#: data/jorts.metainfo.xml.in.in:159
 msgid "Version 4 to align with Gtk version"
 msgstr "Version 4 för att anpassa till Gtk-versionen"
 
-#: data/jorts.metainfo.xml.in.in:146
+#: data/jorts.metainfo.xml.in.in:160
 msgid "Added button to toggle lists, and ability to customize them"
 msgstr ""
 "Lagt till knapp för att växla mellan listor och möjlighet att anpassa dem"
 
-#: data/jorts.metainfo.xml.in.in:147
+#: data/jorts.metainfo.xml.in.in:161
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
 msgstr "Ctrl+rulla för att zooma in, zooma ut"
 
-#: data/jorts.metainfo.xml.in.in:148
+#: data/jorts.metainfo.xml.in.in:162
 msgid "More zoom options"
 msgstr "Flera zoomalternativ"
 
-#: data/jorts.metainfo.xml.in.in:149
+#: data/jorts.metainfo.xml.in.in:163
 msgid "Keyboard shortcuts work from popover now"
 msgstr "Tangentbordsgenvägar fungerar nu från popover"
 
-#: data/jorts.metainfo.xml.in.in:150
+#: data/jorts.metainfo.xml.in.in:164
 msgid "A couple visual bugfixes as well!"
 msgstr "Några visuella buggfixar också!"
 
-#: data/jorts.metainfo.xml.in.in:151
+#: data/jorts.metainfo.xml.in.in:165
 msgid "Various under the hood performance improvements"
 msgstr "Olika prestandaförbättringar under huven"
 
-#: data/jorts.metainfo.xml.in.in:155
+#: data/jorts.metainfo.xml.in.in:169
 msgid "Updated JA translation thanks to @ryonakano!"
 msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
 
-#: data/jorts.metainfo.xml.in.in:156
+#: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr "Du, användaren, för att du gillar den här lilla appen!"
+
+#, fuzzy
+#~ msgid ""
+#~ "Adaptive: New notes get the zoom and font you last chose, and a random "
+#~ "new color"
+#~ msgstr "Anpassningsbar: Nya anteckningar får den zoomning du senast valde"
+
+#~ msgid "Handy: You can open links and emails with Ctrl+Click"
+#~ msgstr "Praktiskt: Du kan öppna länkar och e-postmeddelanden med Ctrl+klick"
+
+#~ msgid "Neither jeans nor shorts, just like jorts!"
+#~ msgstr "Varken jeans eller shorts, bara jorts!"
 
 #~ msgid "Colourful: Ten pretty themes. Any new note gets a random one"
 #~ msgstr ""

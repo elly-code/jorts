@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-05 21:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Eli\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,86 +11,85 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:241
+#: src/Application.vala:251
 msgid "Create a new note"
 msgstr "Crear una nueva nota"
 
-#: src/Application.vala:242
+#: src/Application.vala:252
 msgid "Show preferences"
 msgstr "Mostrar preferencias"
 
-#: src/Objects/ListPrefix.vala:51
+#: src/Objects/ListPrefix.vala:53
 msgid "(Disabled)"
 msgstr "(Desactivado)"
 
-#: src/Objects/ListPrefix.vala:52
+#: src/Objects/ListPrefix.vala:54
 msgid " • List item"
 msgstr " • Elemento de lista"
 
-#: src/Objects/ListPrefix.vala:53
+#: src/Objects/ListPrefix.vala:55
 msgid " - List item"
 msgstr " - Elemento de lista"
 
-#: src/Objects/ListPrefix.vala:54
+#: src/Objects/ListPrefix.vala:56
 msgid " ~ List item"
 msgstr " ~ Elemento de lista"
 
-#: src/Objects/ListPrefix.vala:55
+#: src/Objects/ListPrefix.vala:57
 msgid " . List item"
 msgstr " . Elemento de lista"
 
-#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
-#: src/Objects/NoteData.vala:49
+#: src/Objects/NoteData.vala:35
 msgid "Forgot title!"
 msgstr "¡Falta el título!"
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
-#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
 msgid "Blueberry"
 msgstr "Arándano"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Mint"
 msgstr "Menta"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Lime"
 msgstr "Lima"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Banana"
 msgstr "Plátano"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Orange"
 msgstr "Naranja"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Strawberry"
 msgstr "Fresa"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Bubblegum"
 msgstr "Chicle"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
 msgid "Grape"
 msgstr "Uva"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:74
 msgid "Cocoa"
 msgstr "Cacao"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:75
 msgid "Slate"
 msgstr "Pizarra"
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:76
 msgid "Latte"
 msgstr "Café con leche"
 
-#: src/Objects/Themes.vala:75
+#: src/Objects/Themes.vala:77
 msgid "No preference, random each time"
 msgstr "Sin preferencia, aleatorio"
 
@@ -358,9 +357,6 @@ msgstr "Borronear notas sin enfocar (Ctrl+H)"
 msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Ocultar barra inferior (Ctrl+T)"
 
-#. *********************************************
-#. Restore_last
-#. *********************************************
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
@@ -376,7 +372,9 @@ msgstr "Mostrar notas al iniciar sesión"
 
 #: src/Views/PreferencesView.vala:144
 msgid "May be out of sync with system settings in some cases"
-msgstr "En algunos casos, puede que no estén sincronizadas con la configuración del sistema"
+msgstr ""
+"En algunos casos, puede que no estén sincronizadas con la configuración del "
+"sistema"
 
 #: src/Views/PreferencesView.vala:162
 msgid "Support us!"
@@ -451,7 +449,6 @@ msgstr "Nivel de zoom predeterminado"
 msgid "Zoom in"
 msgstr "Acercar"
 
-#. Alternate way to access preferences
 #: src/Widgets/TextView.vala:81
 msgid "Show Preferences"
 msgstr "Mostrar preferencias"
@@ -460,29 +457,62 @@ msgstr "Mostrar preferencias"
 msgid "Quit Jorts"
 msgstr "Salir de Jorts"
 
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#: src/Windows/PreferenceWindow.vala:48
+#: src/Windows/PreferenceWindow.vala:38
 msgid "Preferences - Jorts"
 msgstr "Preferencias - Jorts"
 
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:40
 msgid "<b>Preferences for your Jorts</b>"
 msgstr "<b>Preferencias para tus Jorts</b>"
 
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr "%s - Jorts (desarrollo)"
 
-#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
 #, c-format
 msgid "%s - Jorts"
 msgstr "%s - Jorts"
+
+#, fuzzy
+#~ msgid "action_show_preferences"
+#~ msgstr "Mostrar preferencias"
+
+#, fuzzy
+#~ msgid "Showing preferences!"
+#~ msgstr "Mostrar preferencias"
+
+#, fuzzy
+#~ msgid "Toggling scribbly"
+#~ msgstr "Anotaciones al margen"
+
+#, fuzzy
+#~ msgid "preferences"
+#~ msgstr "Mostrar preferencias"
+
+#, fuzzy
+#~ msgid "monospace"
+#~ msgstr "Monoespacio"
+
+#, fuzzy
+#~ msgid "listprefix"
+#~ msgstr "Prefijo de elemento de lista"
+
+#, fuzzy, c-format
+#~ msgid "Updating monospace to %s"
+#~ msgstr "Haz clic para utilizar la fuente monoespaciada"
+
+#, fuzzy
+#~ msgid "action_toggle_list"
+#~ msgstr "Mostrar/ocultar lista"
+
+#, fuzzy
+#~ msgid "Creating preference window"
+#~ msgstr "Cerrar preferencias"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Solicitud al sistema enviada"

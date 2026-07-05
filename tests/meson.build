@@ -22,7 +22,7 @@ if compile_schemas.found()
 endif
 
 # Windows cares not for Appstream
-if not windows
+if appstream
     desktop_utils = find_program('desktop-file-validate', required: false)
     if desktop_utils.found()
         test('desktop',
