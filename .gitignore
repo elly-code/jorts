@@ -3,15 +3,7 @@
 !.gitignore
 !.valalintignore
 !.editorconfig
-!.github/
-!.github/workflows/
-!.github/workflows/*.yml
 ~*
 *~
 builddir
-build
-build-*
-dist-*
-.sqgipkg/
 repo
-deploy
