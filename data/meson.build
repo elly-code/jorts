@@ -29,9 +29,7 @@ gschema_file = configure_file(
 
 install_data(
     gschema_file,
-    install_dir: join_paths(
-        prefix, datadir, 'glib-2.0', 'schemas',
-    )
+    install_dir: datadir / 'glib-2.0' / 'schemas'
 )
 
 

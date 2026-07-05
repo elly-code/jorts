@@ -81,6 +81,7 @@ windows = get_option('profile') == 'windows'
 # Remember however that people may do cross compiling, so do not assume by default it is for linux
 # So avoid else conditions adding linux stuff
 build_machine_system = build_machine.system()
+
 if build_machine_system == 'windows'
     windows = true
 
@@ -95,6 +96,7 @@ if windows
     libportal = false
 
 else
+    # Ideal case, Linux, with all the things
     appstream = true
     libportal = true
 
