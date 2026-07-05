@@ -8,7 +8,6 @@
 	!define APP_NAME "@APP_NAME@"
 	!define APP_ID "@APP_ID@"
 	!define APP_VERSION "@APP_VERSION@"
-
 	!define NICENAME "@NICENAME@"
 	!define PUBLISHER "@PUBLISHER@"
 
@@ -30,7 +29,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "${NICENAME} Installer"
-BrandingText "${NICENAME} ${APP_VERSION}, ${PUBLISHER}, remember to drink water"
+BrandingText "${NICENAME} version ${APP_VERSION}, ${PUBLISHER}"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${NICENAME} Installer"
@@ -121,7 +120,7 @@ Section "Install"
   SetOutPath "$INSTDIR"
 
   ; Start menu
-  CreateShortCut "$SMPROGRAMS\${APP_NAME}\${NICENAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
+  CreateShortCut "$SMPROGRAMS\${NICENAME}\${NICENAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
   
   ; Autostart
   CreateShortCut "$SMPROGRAMS\Startup\${NICENAME}.lnk" "$INSTDIR\bin\${APP_ID}.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
@@ -143,7 +142,7 @@ SectionEnd
 Section "Uninstall"
 
   ; Remove Start Menu shortcut
-  Delete "$SMPROGRAMS\${APP_NAME}\${NICENAME}.lnk"
+  Delete "$SMPROGRAMS\${NICENAME}\${NICENAME}.lnk"
   Delete "$SMPROGRAMS\Startup\${NICENAME}.lnk"
 
   ; Remove uninstaller
@@ -153,7 +152,7 @@ Section "Uninstall"
   !insertmacro RemoveFilesAndSubDirs "$INSTDIR"
 
   ; Remove directories used
-  RMDir $SMPROGRAMS\${APP_NAME}
+  RMDir $SMPROGRAMS\${NICENAME}
   RMDir "$INSTDIR"
 
   ; Remove font
