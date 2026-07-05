@@ -94,7 +94,7 @@ public class Jorts.Application : Gtk.Application {
 #if DEVEL
         //GLib.Environment.set_variable ("LANGUAGE", "C", true);
         GLib.Environment.set_variable ("GTK_DEBUG", "interactive", true);
-        print (LOCALEDIR);
+        //print (LOCALEDIR);
 #endif
     }
 
