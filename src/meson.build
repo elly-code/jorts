@@ -88,15 +88,15 @@ else
 endif
 
 #================================
-# win_subsystem doesnt seem to bother standard builds
+# There it is. The exe. The cause of all this mess.
 
 executable(
     app_id,
     gresource,
     config_file,
     sources,
-    c_args: '-w',
     dependencies: dependencies,
-    win_subsystem: 'windows',
+    c_args: '-w',                                               # Because of Vala we get ten thousand warnings we can do nothing about
+    win_subsystem: development ? 'console' : 'windows',         # Show a console in windows dev builds. Seem to not bother standard builds
     install : true
 )
