@@ -26,7 +26,7 @@ You can download and install Jorts from various sources:
 On Windows: Grab the Exe installer in Release
 Not all releases have an exe, because bundling for Windows and testing it works is a HASSLE.
 
-
+<br/>
 
 
 ## ❓ Questions, building, etc
@@ -39,7 +39,7 @@ Issues are all filed [here in the Issues tab](https://github.com/elly-code/jorts
 You can also [come over in matrix](https://matrix.to/#/#elly-code:matrix.org) to talk to me directly
 
 
-
+<br/>
 
 ## 🛣️ The Future
 
@@ -59,11 +59,11 @@ Roadmap:
 ## 💝 Donations
 
 On the right you can donate to various contributors:
- - teamcons, the main devs and maintainers behind jorts
- - wpkelso, the author of the modern icon and its Pride variant
- - lains, the initial creator of the app (It was Notejot, now something very different)
+ - Ko-Fi: teamcons, the main devs and maintainers behind jorts
+ - Github: wpkelso, the author of the modern icon and its Pride variant
+ - Patreon: lains, the initial creator of the app (It was Notejot, now something very different)
 
-
+<br/>
 
 
 ## 💾 Notes Storage
@@ -75,6 +75,7 @@ The app reads from it only during startup (rest of the time it writes in) so you
 The app writes to it everytime there is a sticky note change
 
 
+<br/>
 
 ### If installed from flathub (if you are not on elementary OS)
 
@@ -88,6 +89,7 @@ Or typing the below in a terminal, to move it to your Home folder:
 cp ~/.var/app/io.github.ellie_commons.jorts/data/io.github.ellie_commons.jorts/saved_data.json ~/
 ```
 
+<br/>
 
 ### If installed from elementary OS appcenter
 
