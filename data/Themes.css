@@ -156,7 +156,7 @@ window.themed overshoot.left {
 }
 
 window.themed text selection {
-    color: hsl(from var(--accent_color_100) h calc(s * 1.88) calc(l * 1.88));
+    color: white;
     background-color: var(--accent_color_900);
 }
 
