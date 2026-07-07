@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 21:56+0200\n"
+"POT-Creation-Date: 2026-07-07 15:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr " ~ Élement de liste"
 msgid " . List item"
 msgstr " . Élement de liste"
 
-#: src/Objects/NoteData.vala:35
+#: src/Objects/NoteData.vala:46
 msgid "Forgot title!"
 msgstr "Titre oublié!"
 
@@ -360,7 +360,7 @@ msgstr "Cacher la barre du bas (Ctrl+T)"
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
-msgstr ""
+msgstr "Restaurer note"
 
 #: src/Views/PreferencesView.vala:112
 msgid "Restore the last deleted sticky note"
@@ -475,72 +475,3 @@ msgstr "%s - Jorts (Développement)"
 #, c-format
 msgid "%s - Jorts"
 msgstr "%s - Jorts"
-
-#, fuzzy
-#~ msgid "action_show_preferences"
-#~ msgstr "Afficher préférences"
-
-#, fuzzy
-#~ msgid "Showing preferences!"
-#~ msgstr "Afficher préférences"
-
-#, fuzzy
-#~ msgid "Toggling scribbly"
-#~ msgstr "Gribouillis en marge"
-
-#, fuzzy
-#~ msgid "preferences"
-#~ msgstr "Préférences"
-
-#, fuzzy
-#~ msgid "monospace"
-#~ msgstr "Monospacial"
-
-#, fuzzy
-#~ msgid "listprefix"
-#~ msgstr "Préfixe d'élement de liste"
-
-#, fuzzy, c-format
-#~ msgid "Updating monospace to %s"
-#~ msgstr "Utiliser une police monospaciale"
-
-#, fuzzy
-#~ msgid "action_toggle_list"
-#~ msgstr "Basculer liste"
-
-#, fuzzy
-#~ msgid "Creating preference window"
-#~ msgstr "Fermer les préférences"
-
-#~ msgid "Request to system sent"
-#~ msgstr "Envoi d'une demande au système"
-
-#~ msgid "If disabled, the toggle list button will be hidden"
-#~ msgstr "Si désactivé, le bouton liste sera caché"
-
-#~ msgid "Scribble mode"
-#~ msgstr "Mode gribouillis"
-
-#~ msgid "Keyboard shortcuts will still function (Ctrl+T)"
-#~ msgstr "Les raccourcis clavier vont toujours fonctionner (Ctrl+T)"
-
-#~ msgid "Enable"
-#~ msgstr "Activer"
-
-#~ msgid "Disable"
-#~ msgstr "Désactiver"
-
-#~ msgid "Automatically start Jorts"
-#~ msgstr "Démarrer Jorts automatiquement"
-
-#~ msgid "Reset to default"
-#~ msgstr "Rétablir le paramètre par défaut"
-
-#~ msgid "To not forget, ever"
-#~ msgstr "Pour ne jamais oublier"
-
-#~ msgid "Ode to my cat"
-#~ msgstr "Ode à mon chat"
-
-#~ msgid "Ok, listen here,"
-#~ msgstr "Ok, écoutez ici,"

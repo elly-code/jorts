@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: 2025-11-23 13:35+0100\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: \n"
@@ -21,13 +21,9 @@ msgstr "Jorts"
 msgid "Sticky notes"
 msgstr "Klisterlappar"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Skriv ner anteckningar, påminnelser, slumpmässiga tankar och annan kortvarig "
-"information"
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Skriv på färgglada små rutor"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -41,10 +37,6 @@ msgstr "Ny klisterlapp"
 #: data/jorts.desktop.in.in:23
 msgid "Show Preferences"
 msgstr "Visa inställningar"
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "Skriv på färgglada små rutor"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
@@ -306,6 +298,13 @@ msgstr "Uppdaterad JA-översättning tack vare @ryonakano!"
 #: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr "Du, användaren, för att du gillar den här lilla appen!"
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Skriv ner anteckningar, påminnelser, slumpmässiga tankar och annan "
+#~ "kortvarig information"
 
 #, fuzzy
 #~ msgid ""

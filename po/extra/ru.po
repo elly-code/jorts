@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: 2025-04-06 17:08+0400\n"
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "Language-Team: none\n"
@@ -20,13 +20,9 @@ msgstr "Jorts"
 msgid "Sticky notes"
 msgstr "Стикеры для заметок"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Запишите заметки, напоминания, случайные мысли и другие краткосрочные "
-"информации"
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Пишите на маленьких разноцветных квадратиках"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -42,10 +38,6 @@ msgstr "Новый стикер"
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Предпочтения"
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "Пишите на маленьких разноцветных квадратиках"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
@@ -309,6 +301,13 @@ msgstr "Обновленные переводы"
 #: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr ""
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Запишите заметки, напоминания, случайные мысли и другие краткосрочные "
+#~ "информации"
 
 #, fuzzy
 #~ msgid ""

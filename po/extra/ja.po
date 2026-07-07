@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: 2025-11-02 11:56+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -20,11 +20,9 @@ msgstr "Jorts"
 msgid "Sticky notes"
 msgstr "付箋"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr "メモ、備忘録、思いつき、その他短期的な情報を書き留めます"
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "カラフルで小さな正方形に書く"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -39,10 +37,6 @@ msgstr "新しい付箋"
 #: data/jorts.desktop.in.in:23
 msgid "Show Preferences"
 msgstr "設定を表示"
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "カラフルで小さな正方形に書く"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
@@ -295,6 +289,11 @@ msgstr ""
 #: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr ""
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr "メモ、備忘録、思いつき、その他短期的な情報を書き留めます"
 
 #, fuzzy
 #~ msgid ""

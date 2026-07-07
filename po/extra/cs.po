@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,13 +20,9 @@ msgstr "Šortky"
 msgid "Sticky notes"
 msgstr "Samolepicí poznámky"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Zapisujte si poznámky, připomínky, náhodné myšlenky a další krátkodobé "
-"informace."
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Pište na barevné čtverečky"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -40,10 +36,6 @@ msgstr "Nová samolepicí poznámka"
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Předvolby"
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "Pište na barevné čtverečky"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
@@ -307,6 +299,13 @@ msgstr "Aktualizované překlady"
 #: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr ""
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Zapisujte si poznámky, připomínky, náhodné myšlenky a další krátkodobé "
+#~ "informace."
 
 #, fuzzy
 #~ msgid ""

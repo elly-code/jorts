@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,10 +25,8 @@ msgstr ""
 msgid "Sticky notes"
 msgstr ""
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
 msgstr ""
 
 #: data/jorts.desktop.in.in:13
@@ -41,10 +39,6 @@ msgstr ""
 
 #: data/jorts.desktop.in.in:23
 msgid "Show Preferences"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:12

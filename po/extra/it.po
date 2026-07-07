@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: 2025-12-28 10:16+0100\n"
 "Last-Translator: Seth <Discord>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -19,13 +19,9 @@ msgstr "Jorts"
 msgid "Sticky notes"
 msgstr "Note adesive"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Annota note, promemoria, pensieri casuali e altre informazioni a breve "
-"termine"
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Scrivi su quadratini colorati"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -38,10 +34,6 @@ msgstr "Nuovo post-it"
 #: data/jorts.desktop.in.in:23
 msgid "Show Preferences"
 msgstr "Mostra preferenze"
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "Scrivi su quadratini colorati"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
@@ -297,6 +289,13 @@ msgstr "Traduzione JA aggiornata grazie a @ryonakano!"
 #: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr "Grazie a te, utente, per aver apprezzato questa piccola app!"
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Annota note, promemoria, pensieri casuali e altre informazioni a breve "
+#~ "termine"
 
 #~ msgid ""
 #~ "Adaptive: New notes get the zoom and font you last chose, and a random "

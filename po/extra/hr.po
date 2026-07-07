@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: 2026-05-11 18:46+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
@@ -25,12 +25,9 @@ msgstr "Jorts"
 msgid "Sticky notes"
 msgstr "Ljepljive bilješke"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Zapiši bilješke, podsjetnike, nasumične misli i druge kratkoročne informacije"
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Piši na šarenim malim kvadratićima"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -43,10 +40,6 @@ msgstr "Nova ljepljiva bilješka"
 #: data/jorts.desktop.in.in:23
 msgid "Show Preferences"
 msgstr "Prikaži postavke"
-
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "Piši na šarenim malim kvadratićima"
 
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
@@ -316,6 +309,13 @@ msgstr "Ažurirani JA prijevod zahvaljujući @ryonakano!"
 #, fuzzy
 msgid "You, the user, for liking this lil app!"
 msgstr "Ti, korisnice, što ti se sviđa ova mala aplikacija!"
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Zapiši bilješke, podsjetnike, nasumične misli i druge kratkoročne "
+#~ "informacije"
 
 #~ msgid ""
 #~ "Adaptive: New notes get the zoom and font you last chose, and a random "

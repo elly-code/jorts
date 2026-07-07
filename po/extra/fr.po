@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 20:57+0200\n"
+"POT-Creation-Date: 2026-07-07 15:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,9 @@ msgstr "Jorts"
 msgid "Sticky notes"
 msgstr "Notes autocollantes"
 
-#: data/jorts.desktop.in.in:7
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Notez des notes, des rappels, des pensées aléatoires et d'autres "
-"informations à court terme."
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Écris sur des petits carrés colorés"
 
 #: data/jorts.desktop.in.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -39,15 +35,13 @@ msgstr "Nouveau post-it"
 msgid "Show Preferences"
 msgstr "Préférences"
 
-#: data/jorts.metainfo.xml.in.in:10
-msgid "Write on colourful little squares"
-msgstr "Écris sur des petits carrés colorés"
-
 #: data/jorts.metainfo.xml.in.in:12
 msgid ""
 "Neither jeans nor shorts, just like jorts! A thoughtful little sticky notes "
 "application, to display any sort of short term information on your screen."
 msgstr ""
+"Ni un jean, ni un short, tout comme les jorts ! Une petite appli de post-it "
+"bien pensée pour afficher n'importe quelle info à court terme sur ton écran"
 
 #: data/jorts.metainfo.xml.in.in:13
 msgid "Features include:"
@@ -66,21 +60,24 @@ msgstr ""
 #: data/jorts.metainfo.xml.in.in:17
 msgid "Thoughtful: Jorts does its best to be comfortable to use, always!"
 msgstr ""
+"Attentionnée : Jorts fait tout pour être confortable à utiliser, toujours !"
 
 #: data/jorts.metainfo.xml.in.in:18
-#, fuzzy
 msgid "Private: Try the scribbles mode!"
-msgstr "Privé : Essayez le mode gribouillage !"
+msgstr "Privé : Essaie le mode gribouillage !"
 
 #: data/jorts.metainfo.xml.in.in:20
 msgid ""
 "Windows installers are also available, and require no admin rights. So you "
 "can even use this at work!"
 msgstr ""
+" Un programme d'installation pour Windows est également disponible, et ne "
+"nécessite aucun droit d'administrateur. Du coup, tu peux même l'utiliser au "
+"travail !"
 
 #: data/jorts.metainfo.xml.in.in:21
 msgid "This app is made lovingly and without any LLM intervention."
-msgstr ""
+msgstr "Cette appli a été conçue avec amour et sans aucune intervention d'IA."
 
 #: data/jorts.metainfo.xml.in.in:33
 msgid "Lainsce + Stella and Charlie"
@@ -296,6 +293,13 @@ msgstr "Mise à jour des traductions JA grâce à @RyoNakano!"
 #: data/jorts.metainfo.xml.in.in:170
 msgid "You, the user, for liking this lil app!"
 msgstr ""
+
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Notez des notes, des rappels, des pensées aléatoires et d'autres "
+#~ "informations à court terme."
 
 #~ msgid ""
 #~ "Adaptive: New notes get the zoom and font you last chose, and a random "

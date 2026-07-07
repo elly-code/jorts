@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 21:56+0200\n"
+"POT-Creation-Date: 2026-07-07 15:44+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -48,7 +48,7 @@ msgstr "Prefix mục danh sách"
 msgid " . List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/NoteData.vala:35
+#: src/Objects/NoteData.vala:46
 msgid "Forgot title!"
 msgstr ""
 

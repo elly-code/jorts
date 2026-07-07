@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-05 21:56+0200\n"
+"POT-Creation-Date: 2026-07-07 15:44+0200\n"
 "PO-Revision-Date: 2025-11-23 13:27+0100\n"
 "Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgstr " ~ Listobjekt"
 msgid " . List item"
 msgstr " . Listobjekt"
 
-#: src/Objects/NoteData.vala:35
+#: src/Objects/NoteData.vala:46
 #, fuzzy
 msgid "Forgot title!"
 msgstr "Redigera titel"
