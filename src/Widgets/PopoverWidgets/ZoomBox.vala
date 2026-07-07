@@ -69,4 +69,8 @@ public class Jorts.ZoomBox : Gtk.Box {
         append (zoom_default_button);
         append (zoom_in_button);
     }
+
+    ~ZoomBox () {
+        debug ("Destroyed");
+    }
 }

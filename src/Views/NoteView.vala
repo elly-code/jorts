@@ -67,9 +67,6 @@
         app.set_accels_for_action (ACTION_PREFIX + ACTION_SHOW_MENU, {"<Control>G", "<Control>O"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_TOGGLE_MONO, {"<Control>m"});
 
-
-
-
         orientation = VERTICAL;
         spacing = 0;
 
@@ -142,6 +139,7 @@
     private void action_toggle_mono () {monospace = !monospace;}
 
     ~NoteView () {
+        actionbar.destroy ();
         debug ("Destroyed");
     }
 }

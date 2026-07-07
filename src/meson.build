@@ -37,6 +37,7 @@ sources = files (
     'Services' / 'ColorController.vala',
 
     'Widgets' / 'EditableLabel.vala',
+    'Widgets' / 'HyperTextView.vala',
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ActionBar.vala',
     'Widgets' / 'TextBuffer.vala',

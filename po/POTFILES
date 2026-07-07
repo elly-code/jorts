@@ -11,6 +11,7 @@ src/Views/PreferencesView.vala
 src/Widgets/ActionBar.vala
 src/Widgets/EditableLabel.vala
 src/Widgets/EditableLabel.vala
+src/Widgets/HyperTextView.vala
 src/Widgets/Popover.vala
 src/Widgets/PopoverWidgets/ColorBox.vala
 src/Widgets/PopoverWidgets/MonospaceBox.vala

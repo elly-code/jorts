@@ -102,10 +102,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         scroll_controller.scroll.connect (zoom_controller.on_scroll);
         gesturezoom_controller.scale_changed.connect (zoom_controller.on_pinch);
 
-
-
-        debug ("Built UI. Lets do connects and binds");
-
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
@@ -129,11 +125,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * This is more for the Aesthetic
     */
     private void delayed_show () {
+        debug ("delayed show");
         Timeout.add_once (250, bind_hidebar);
         show.disconnect (delayed_show);
     }
 
     private void bind_hidebar () {
+        debug ("Bind hidebar");
+
         Application.settings.bind (
             KEY_HIDEBAR,
             view.actionbar.actionbar,
@@ -221,8 +220,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.textview.buffer.changed.disconnect (has_changed);
         popover.theme_changed.disconnect (color_controller.on_color_changed);
 
-        color_controller.dispose ();
-        zoom_controller.dispose ();
-        scribbly_controller.dispose ();
+
+        view = null;
+        popover = null;
+        textview = null;
+
+        color_controller = null;
+        zoom_controller = null;
+        scribbly_controller = null;
+        application = null;
     }
 }

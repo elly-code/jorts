@@ -64,4 +64,8 @@ public class Jorts.MonospaceBox : Gtk.Box {
             GLib.BindingFlags.BIDIRECTIONAL | GLib.BindingFlags.INVERT_BOOLEAN
         );
     }
+
+    ~MonospaceBox () {
+        debug ("Destroyed");
+    }
 }
