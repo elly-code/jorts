@@ -227,4 +227,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         return false;
     }
 
+    ~TextView () {
+        list_buffer.dispose ();
+        buffer.dispose ();
+        debug ("Destroyed");
+    }
 }

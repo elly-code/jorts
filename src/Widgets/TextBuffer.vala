@@ -190,4 +190,7 @@ public class Jorts.TextBuffer : Gtk.TextBuffer {
         restore_list_item_indentation ();
     }
 
+    ~TextBuffer () {
+        debug ("Destroyed");
+    }
 }

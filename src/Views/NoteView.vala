@@ -140,4 +140,8 @@
     private void action_show_emoji () {emoji_button.activate ();}
     private void action_show_menu () {menu_button.activate ();}
     private void action_toggle_mono () {monospace = !monospace;}
+
+    ~NoteView () {
+        debug ("Destroyed");
+    }
 }

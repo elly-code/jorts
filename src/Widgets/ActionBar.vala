@@ -147,4 +147,8 @@
         var is_disabled = Application.settings.get_enum (KEY_LIST) == ListPrefix.DISABLED;
         list_button.visible = !is_disabled;
     }
+
+    ~ActionBar () {
+        debug ("Destroyed");
+    }
 }
