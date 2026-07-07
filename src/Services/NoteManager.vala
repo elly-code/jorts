@@ -42,6 +42,8 @@ public class Jorts.NoteManager : Object {
         if (loaded_data.get_length () == 0) {
             var note_data = new NoteData ();
             note_data.theme = DEFAULT_THEME;
+
+            print ("\nNo note in storage! Let's create a new one");
             create_note (note_data);
 
         } else {
@@ -94,7 +96,6 @@ public class Jorts.NoteManager : Object {
 
         last_deleted = note.packaged ();
 
-
         var action_restore = application.lookup_action (Application.ACTION_RESTORE_LAST);
         ((SimpleAction)action_restore).set_enabled (true);
 
@@ -102,7 +103,6 @@ public class Jorts.NoteManager : Object {
         application.remove_window ((Gtk.Window)note);
 
         note.close ();
-        note.destroy ();
 
         immediately_save ();
     }

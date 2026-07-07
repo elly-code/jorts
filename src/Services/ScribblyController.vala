@@ -24,7 +24,6 @@ public class Jorts.ScribblyController : Object {
     public ScribblyController (Jorts.StickyNoteWindow window) {
         this.window = window;
 
-
         // Gtk bug: Backdrop is not set when a window is first created and shown. Only after it gets focused at least once
         // Report: https://gitlab.gnome.org/GNOME/gtk/-/work_items/8211
         window.set_state_flags (Gtk.StateFlags.BACKDROP, false);
@@ -47,5 +46,10 @@ public class Jorts.ScribblyController : Object {
         }
 
         window.remove_css_class (STYLE_SCRIBBLED);
+    }
+
+    ~ScribblyController () {
+        debug ("Destroyed");
+        window = null;
     }
 }

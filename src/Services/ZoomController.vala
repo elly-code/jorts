@@ -160,4 +160,9 @@ public class Jorts.ZoomController : Object {
 
         //return Gdk.EVENT_STOP;
     }
+
+    ~ZoomController () {
+        debug ("Destroyed");
+        window = null;
+    }
 }

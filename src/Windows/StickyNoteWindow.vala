@@ -210,6 +210,19 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     ~StickyNoteWindow () {
-        print ("\nDestroying %s", view.title);
+        debug ("Destroying %s", view.title);
+
+        keypress_controller.key_pressed.disconnect (zoom_controller.on_key_press_event);
+        keypress_controller.key_released.disconnect (zoom_controller.on_key_release_event);
+        scroll_controller.scroll.disconnect (zoom_controller.on_scroll);
+        gesturezoom_controller.scale_changed.disconnect (zoom_controller.on_pinch);
+
+        view.editablelabel.changed.disconnect (on_editable_changed);
+        view.textview.buffer.changed.disconnect (has_changed);
+        popover.theme_changed.disconnect (color_controller.on_color_changed);
+
+        color_controller.dispose ();
+        zoom_controller.dispose ();
+        scribbly_controller.dispose ();
     }
 }
