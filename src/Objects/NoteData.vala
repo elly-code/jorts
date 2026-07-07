@@ -11,30 +11,30 @@
 /**
 * An object used to package all data conveniently as needed.
 */
-public class Jorts.NoteData : Object {
+public class Jorts.NoteData {
 
     // Will determine properties (or lack thereof) for any new note
     public static Jorts.Themes latest_theme = DEFAULT_THEME;
     public static int latest_zoom = DEFAULT_ZOOM;
     public static bool latest_mono = DEFAULT_MONO;
 
-    public string? title;
-    public Jorts.Themes? theme;
-    public string? content;
-    public bool? monospace;
-    public int? zoom;
-    public int? width;
-    public int? height;
+    public string title;
+    public Jorts.Themes theme;
+    public string content;
+    public bool monospace;
+    public int zoom;
+    public int width;
+    public int height;
 
-    construct {
-        // We assign defaults in case theres args missing
-        this.title = title ?? Jorts.Utils.random_title ();
-        this.theme = theme ?? Jorts.Themes.random_theme (latest_theme);
-        this.content = content ?? "";
-        this.monospace = monospace ?? latest_mono;
-        this.zoom = zoom ?? latest_zoom;
-        this.width = width ?? DEFAULT_WIDTH;
-        this.height = height ?? DEFAULT_HEIGHT;
+    // The standard constructor only does random
+    public NoteData () {
+        title = Jorts.Utils.random_title ();
+        theme = Jorts.Themes.random_theme (latest_theme);
+        content = "";
+        monospace = latest_mono;
+        zoom = latest_zoom;
+        width = DEFAULT_WIDTH;
+        height = DEFAULT_HEIGHT;
     }    
 
     /*************************************************/
