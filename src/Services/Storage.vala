@@ -33,6 +33,7 @@ public class Jorts.Storage : Object {
         var path_data = GLib.Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_user_data_dir (), APP_ID);
         datadir = File.new_for_path (path_data);
         savefile_path = GLib.Path.build_path (Path.DIR_SEPARATOR_S, path_data, FILENAME);
+        print ("\nAll your notes are safe at: %s\n", savefile_path);
 
         ensure_datadir ();
 
