@@ -20,7 +20,7 @@
 You can download and install Jorts from various sources:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.elly_code.jorts) 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
+[<img src="https://flathub.org/api/badge?svg&locale=en" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
 
 
 On Windows: Grab the Exe installer in Release
