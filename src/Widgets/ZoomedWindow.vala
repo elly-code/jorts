@@ -6,7 +6,7 @@
  */
 
 /**
-* A
+* Copying the ScrolledWindow. This wraps a child and holds a zoom property
 */
  public class Jorts.ZoomedWindow : Gtk.Widget {
 
