@@ -56,6 +56,7 @@ sources = files (
     'Windows' / 'StickyNoteWindow.vala',
 
     'Constants.vala',
+    'main.vala',
     'Application.vala',
 )
 
