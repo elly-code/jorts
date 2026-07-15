@@ -5,7 +5,7 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
- public class Jorts.NoteView : Gtk.Box {
+ public class Jorts.NoteView : Gtk.Box, Zoomable {
     public Gtk.HeaderBar headerbar;
     public Jorts.EditableLabel editablelabel;
     public Jorts.TextView textview;
@@ -137,6 +137,21 @@
     private void action_show_emoji () {emoji_button.activate ();}
     private void action_show_menu () {menu_button.activate ();}
     private void action_toggle_mono () {monospace = !monospace;}
+
+    public void on_zoom_changed (int new_zoom) {
+        textview.queue_refresh_indentation ();
+
+        // Adapt headerbar size to avoid weird flickering
+        headerbar.height_request = Jorts.Zoom.from_int (new_zoom).to_ui_size ();
+
+        // Reflect the number in the popover
+        popover.zoom = new_zoom;
+
+        // Keep it for next new notes
+        NoteData.latest_zoom = new_zoom;
+
+        //window.has_changed ();
+    }
 
     ~NoteView () {
         actionbar.destroy ();

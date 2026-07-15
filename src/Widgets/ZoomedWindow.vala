@@ -5,16 +5,17 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
-/*************************************************/
 /**
-* Responsible to apply zoom appropriately to a window.
-* Mainly, this abstracts zoom into an int and swap CSS classes
-* As a treat it includes also the plumbing for ctrl+scroll zooming
+* A
 */
-public class Jorts.ZoomController : Object {
+ public class Jorts.ZoomedWindow : Gtk.Widget {
 
+    // Scroll handers need that information to decide whether to act
     private static bool is_control_key_pressed = false;
-    private unowned Jorts.StickyNoteWindow window {get; set;}
+
+    private Gtk.EventControllerKey keypress_controller;
+    private Gtk.EventControllerScroll scroll_controller;
+    private Gtk.GestureZoom gesturezoom_controller;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private int _old_zoom;
@@ -24,7 +25,7 @@ public class Jorts.ZoomController : Object {
     }
 
     public SimpleActionGroup actions { get; construct; }
-    public const string ACTION_PREFIX = "zoom_controller.";
+    public const string ACTION_PREFIX = "zoomed_window.";
     public const string ACTION_ZOOM_OUT = "action_zoom_out";
     public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
     public const string ACTION_ZOOM_IN = "action_zoom_in";
@@ -37,9 +38,32 @@ public class Jorts.ZoomController : Object {
         { ACTION_ZOOM_IN, zoom_in}
     };
 
+    class construct {
+        set_layout_manager_type (typeof (Gtk.BinLayout));
+    }
 
-    public ZoomController (Jorts.StickyNoteWindow window) {
-        this.window = window;
+    private Zoomable? _child;
+    public Zoomable? child {
+        get {
+            return _child;
+        }
+
+        set {
+            if (value != null && value.get_parent () != null) {
+                critical ("Tried to set a widget as child that already has a parent.");
+                return;
+            }
+
+            if (_child != null) {
+                _child.unparent ();
+            }
+
+            _child = value;
+
+            if (_child != null) {
+                _child.set_parent (this);
+            }
+        }
     }
 
     construct {
@@ -50,6 +74,21 @@ public class Jorts.ZoomController : Object {
         app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_OUT, {"<Control>minus", "<Control>KP_Subtract"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_DEFAULT, {"<Control>equal", "<Control>0", "<Control>KP_0"});
         app.set_accels_for_action (ACTION_PREFIX + ACTION_ZOOM_IN, {"<Control>plus", "<Control>KP_Add"});
+
+        keypress_controller = new Gtk.EventControllerKey ();
+        scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
+            propagation_phase = Gtk.PropagationPhase.CAPTURE
+        };
+        gesturezoom_controller = new Gtk.GestureZoom ();
+
+        add_controller (keypress_controller);
+        add_controller (scroll_controller);
+        add_controller (gesturezoom_controller);
+
+        keypress_controller.key_pressed.connect (on_key_press_event);
+        keypress_controller.key_released.connect (on_key_release_event);
+        scroll_controller.scroll.connect (on_scroll);
+        gesturezoom_controller.scale_changed.connect (on_pinch);
     }
 
     /**
@@ -102,22 +141,11 @@ public class Jorts.ZoomController : Object {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size
-        window.remove_css_class (Jorts.Zoom.from_int ( _old_zoom).to_css_class ());
+        remove_css_class (Jorts.Zoom.from_int ( _old_zoom).to_css_class ());
         _old_zoom = new_zoom;
-        window.add_css_class (Jorts.Zoom.from_int ( new_zoom).to_css_class ());
-        window.textview.queue_refresh_indentation ();
+        add_css_class (Jorts.Zoom.from_int ( new_zoom).to_css_class ());
 
-
-        // Adapt headerbar size to avoid weird flickering
-        window.view.headerbar.height_request = Jorts.Zoom.from_int (new_zoom).to_ui_size ();
-
-        // Reflect the number in the popover
-        window.popover.zoom = new_zoom;
-
-        // Keep it for next new notes
-        NoteData.latest_zoom = zoom;
-
-        window.has_changed ();
+        _child.on_zoom_changed (new_zoom);
     }
 
     public bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {
@@ -161,8 +189,11 @@ public class Jorts.ZoomController : Object {
         //return Gdk.EVENT_STOP;
     }
 
-    ~ZoomController () {
+    ~ZoomedWindow () {
+        if (_child != null) {
+            _child.unparent ();
+        }
+
         debug ("Destroyed");
-        window = null;
     }
 }
