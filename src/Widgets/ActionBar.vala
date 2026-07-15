@@ -19,7 +19,8 @@
     public Gtk.WindowHandle handle;
     public Jorts.Popover popover;
 
-    const int ICON_SIZE = 32;
+    const int ICON_SIZE = 32;       // mobile needs bigger
+    const int REVEAL_DELAY = 250;   // in ms
 
     construct {
 
@@ -111,12 +112,46 @@
 
         child = handle;
 
+
+        /***************************************************/
+        /*              CONNECTS AND BINDS                 */
+        /***************************************************/
+
         // Randomize-skip emoji icon
         emojichooser_popover.show.connect (on_emoji_popover);
 
         // Hide the list button if user has specified no list item symbol
         on_prefix_changed ();
         Application.settings.changed[KEY_LIST].connect (on_prefix_changed);
+
+        // Respect animation settings for showing ui elements
+        if (Application.gtk_settings.gtk_enable_animations && !Application.settings.get_boolean (KEY_HIDEBAR)) {
+            actionbar.revealed = false;
+            realize.connect_after (delayed_show);
+
+        } else {
+            bind_hidebar ();
+        }
+    }
+
+    /**
+    * Show Actionbar shortly after the window is shown
+    * This is more for the Aesthetic
+    */
+    private void delayed_show () {
+        debug ("delayed show");
+        Timeout.add_once (REVEAL_DELAY, bind_hidebar);
+        realize.disconnect (delayed_show);
+    }
+
+    private void bind_hidebar () {
+        debug ("Bind hidebar");
+
+        Application.settings.bind (
+            KEY_HIDEBAR,
+            actionbar,
+            "revealed",
+            SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     /**
