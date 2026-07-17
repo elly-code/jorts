@@ -5,14 +5,21 @@
  *                          2025-2026 Stella & Charlie (teamcons.carrd.co)
  */
 
- // vala-lint=skip-file
-
 /*************************************************/
 /**
-* An object used to package all data conveniently as needed.
-*/
-public interface Jorts.Zoomable: Gtk.Widget {
+ * Implemented by childs of ZoomedWindow
+ */
+public interface Jorts.Zoomable : Gtk.Widget {
 
-    public abstract void on_zoom_changed (int new_zoom);
-
+    /**
+     * Called by ZoomedWindow after changing zoom value.
+     *
+     * The default implementation does nothing.
+     *
+     * If you need to do some changes, such as display the new value, or refresh some displayed elements, override this.
+     */
+    public virtual void on_zoom_changed (int new_zoom) {
+        debug ("Zoom changed: %i", new_zoom);
+        return;
+    }
 }
