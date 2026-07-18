@@ -15,7 +15,7 @@ public class Jorts.NoteManager : Object {
     private static bool saving_lock = true;
     private static NoteData? last_deleted = null;
 
-    private Jorts.Application application;
+    private unowned Jorts.Application application;
     public Gee.ArrayList<unowned StickyNoteWindow> open_notes;
     public Jorts.Storage storage;
 
@@ -135,7 +135,7 @@ public class Jorts.NoteManager : Object {
     public void immediately_save () {
         var array = new Json.Array ();
 
-        foreach (Jorts.StickyNoteWindow note in open_notes) {
+        foreach (unowned Jorts.StickyNoteWindow note in open_notes) {
             var data = note.packaged ();
             var object = data.to_json ();
             array.add_object_element (object);
