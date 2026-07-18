@@ -28,6 +28,7 @@ modules:
   - name: jorts
     buildsystem: meson
     config-opts:
+      - --buildtype=release
       - -Dlegacy_rdnn=true
       - -Dicon_variant=default
     sources:
