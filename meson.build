@@ -135,15 +135,3 @@ gnome.post_install(
     gtk_update_icon_cache: true,
     update_desktop_database: true
 )
-
-if development
-message('''
-
-----------------------------------------
-You now have a development version installed.
-Here be dragons.
-Tread carefully.
-----------------------------------------
-
-''')
-endif
