@@ -162,20 +162,19 @@ msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:102
 msgid "Small style fixes by @Geopjr!"
-msgstr ""
+msgstr "Petites corrections de styles par @Geopjr!"
 
 #: data/jorts.metainfo.xml.in.in:103 data/jorts.metainfo.xml.in.in:120
 msgid "Updated Spanish translation thanks to Eli!"
 msgstr "Mise à jour des traductions espagnoles grâce à Eli!"
 
 #: data/jorts.metainfo.xml.in.in:104
-#, fuzzy
 msgid "Updated Italian translation thanks to Seth!"
-msgstr "Mise à jour des traductions espagnoles grâce à Eli!"
+msgstr "Mise à jour des traductions italiennes grâce à Seth!"
 
 #: data/jorts.metainfo.xml.in.in:105
 msgid "Updated French and German translations"
-msgstr ""
+msgstr "Traductions francaises et allemandes mises à jour"
 
 #: data/jorts.metainfo.xml.in.in:111
 msgid "The Unyielding Jorts"
@@ -242,9 +241,8 @@ msgid "From ellie-commons to elly-code"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in.in:145 data/jorts.metainfo.xml.in.in:167
-#, fuzzy
 msgid "Guests stars: 😎"
-msgstr "😎 Guests stars :"
+msgstr "Invité-e-s d'honneur : 😎"
 
 #: data/jorts.metainfo.xml.in.in:147
 msgid "Updated sv-SE translation thanks to @yeager!"
@@ -255,9 +253,8 @@ msgid "Added vietnamese translation thanks to @hthienloc!"
 msgstr "Ajout de traductions en vietnamien grâce à @htienloc!"
 
 #: data/jorts.metainfo.xml.in.in:157
-#, fuzzy
 msgid "4.0.0 Jorts of Hyperspace! 🚀"
-msgstr "3.0.0 Les Jorts du Tonnerre"
+msgstr "4.0.0 Les Jorts de l'Hyperespace! 🚀"
 
 #: data/jorts.metainfo.xml.in.in:159
 msgid "Version 4 to align with Gtk version"

@@ -177,7 +177,7 @@ msgstr "Aktualisierte italienische Übersetzung dank Seth!"
 
 #: data/jorts.metainfo.xml.in.in:105
 msgid "Updated French and German translations"
-msgstr ""
+msgstr "Aktualisierte Übersetzungen ins Französische und Deutsche"
 
 #: data/jorts.metainfo.xml.in.in:111
 msgid "The Unyielding Jorts"
@@ -189,7 +189,7 @@ msgstr "Tolle Pride-Variante, danke an @wpkelso!"
 
 #: data/jorts.metainfo.xml.in.in:114
 msgid "Added indent for lists with help from @MysterieCatDev!"
-msgstr ""
+msgstr "Mit Unterstützung von @MysterieCatDev wurde die Einrückung bei Listen hinzugefügt!"
 
 #: data/jorts.metainfo.xml.in.in:115
 msgid "Added feature to restore last deleted note"
