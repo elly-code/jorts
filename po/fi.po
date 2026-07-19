@@ -57,7 +57,7 @@ msgstr "Söpö: Uusilla lapuilla on kiva satunnainen (muokattava) otsikko"
 
 #: data/jorts.metainfo.xml.in.in:17
 msgid "Thoughtful: Jorts does its best to be comfortable to use, always!"
-msgstr "Huomaavainen: Jorts yrittää parhaansa olla aina mukava käyttää!"
+msgstr "Huomaavainen: Jorts tekee parhaansa ollakseen aina mukava käyttää!"
 
 #: data/jorts.metainfo.xml.in.in:18
 msgid "Private: Try the scribbles mode!"
@@ -384,7 +384,7 @@ msgstr "Salainen resepti"
 
 #: src/Utils/Random.vala:29
 msgid "My todo list"
-msgstr "Todo lista"
+msgstr "Todo-lista"
 
 #: src/Utils/Random.vala:30
 msgid "Super secret to not tell anyone"
@@ -437,7 +437,7 @@ msgstr "Rakas päiväkirja,"
 
 #: src/Utils/Random.vala:43
 msgid "Have a nice day! :)"
-msgstr "Pidä kiva päivä! :)"
+msgstr "Mukavaa päivää! :)"
 
 #: src/Utils/Random.vala:44
 msgid "My meds schedule"
@@ -457,11 +457,11 @@ msgstr "Koirieni lempilelut"
 
 #: src/Utils/Random.vala:48
 msgid "How cool my birds are"
-msgstr "Kuinka mahtavia linnut ovat"
+msgstr "Kuinka mahtavia lintuni ovat"
 
 #: src/Utils/Random.vala:49
 msgid "Suspects in the Last Cookie affair"
-msgstr "Lista epäilyistä jotka söivät viimeisen keksin"
+msgstr "Lista epäillyistä, jotka söivät viimeisen keksin"
 
 #: src/Utils/Random.vala:50
 msgid "Words my parrots know"
@@ -485,7 +485,7 @@ msgstr "Yllätyslahjalista"
 
 #: src/Utils/Random.vala:55
 msgid "Brainstorming notes"
-msgstr "Aivoriihi muistio"
+msgstr "Aivoriihimuistio"
 
 #: src/Utils/Random.vala:56
 msgid "To bring to the party"
@@ -501,7 +501,7 @@ msgstr "Marginaaliraapustelut"
 
 #: src/Utils/Random.vala:59
 msgid "My fav songs to sing along"
-msgstr "Lempilauluni jota laulan"
+msgstr "Parhaat sing-along biisit"
 
 #: src/Utils/Random.vala:60
 msgid "When to water which plant"
@@ -513,7 +513,7 @@ msgstr "Top 10 anime petokset"
 
 #: src/Utils/Random.vala:62
 msgid "Amazing ascii art!"
-msgstr "Loistavaa ascii art!"
+msgstr "Loistavaa ASCII-taidetta!"
 
 #: src/Utils/Random.vala:63
 msgid "For the barbecue"
