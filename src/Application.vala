@@ -90,12 +90,6 @@ public class Jorts.Application : Gtk.Application {
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
-
-#if DEVEL
-        //GLib.Environment.set_variable ("LANGUAGE", "C", true);
-        GLib.Environment.set_variable ("GTK_DEBUG", "interactive", true);
-        //print (LOCALEDIR);
-#endif
     }
 
     /*************************************************/
@@ -192,10 +186,6 @@ Please wait while the app remembers all the things…
 
         if (new_note) {note_manager.create_note (); new_note = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
-    }
-
-    public static int main (string[] args) {
-        return new Application ().run (args);
     }
 
     private void action_show_preferences () {

@@ -22,6 +22,8 @@ dependencies = [
 
 #================================
 sources = files (
+    'Interfaces' / 'Zoomable.vala',
+
     'Objects' / 'ZoomType.vala',
     'Objects' / 'Zoom.vala',
     'Objects' / 'Themes.vala',
@@ -32,14 +34,15 @@ sources = files (
 
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
-    'Services' / 'ZoomController.vala',
     'Services' / 'ScribblyController.vala',
     'Services' / 'ColorController.vala',
 
     'Widgets' / 'EditableLabel.vala',
+    'Widgets' / 'HyperTextView.vala',
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ActionBar.vala',
     'Widgets' / 'TextBuffer.vala',
+    'Widgets' / 'ZoomedWindow.vala',
 
     'Widgets' / 'PopoverWidgets' / 'ColorPill.vala',
     'Widgets' / 'PopoverWidgets' / 'ColorBox.vala',
@@ -55,6 +58,7 @@ sources = files (
     'Windows' / 'StickyNoteWindow.vala',
 
     'Constants.vala',
+    'main.vala',
     'Application.vala',
 )
 

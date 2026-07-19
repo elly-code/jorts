@@ -10,7 +10,7 @@
  * Inherits Hypertextview to detect links and emails
  * Adds a list feature which is a hot mess
  */
-public class Jorts.TextView : Granite.HyperTextView {
+public class Jorts.TextView : Jorts.HyperTextView {
 
     // We subclass the buffer to manage the list feature at a lower level
     // We need to keep a reference to its "Extended version"
@@ -228,8 +228,6 @@ public class Jorts.TextView : Granite.HyperTextView {
     }
 
     ~TextView () {
-        list_buffer.dispose ();
-        buffer.dispose ();
         debug ("Destroyed");
     }
 }
