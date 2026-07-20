@@ -40,8 +40,8 @@ msgstr "Asetukset"
 msgid ""
 "Neither jeans nor shorts, just like jorts! A thoughtful little sticky notes "
 "application, to display any sort of short term information on your screen."
-msgstr "Pieni tarralappu applikaatio informaation näyttämiseen."
-# The "jorts" joke wont work in finnish
+msgstr "Ei farkut taikka shortsit, mutta Jortsit! "
+"Pieni tarralappu applikaatio informaation näyttämiseen."
 
 #: data/jorts.metainfo.xml.in.in:13
 msgid "Features include:"
