@@ -1,0 +1,739 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.elly_code.jorts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-19 19:00+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Akseli Lahtinen <akselmo@akselmo.dev>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/jorts.desktop.in.in:5 data/jorts.metainfo.xml.in.in:9
+msgid "Jorts"
+msgstr "Jorts"
+
+#: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:49
+msgid "Sticky notes"
+msgstr "Tarralaput"
+
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr "Kirjoita värikkäille pienille neliöille"
+
+#: data/jorts.desktop.in.in:13
+msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
+msgstr "teksti;raakateksti;muistio;muistiinpanot;tarralaput;laput;post-it"
+
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: data/jorts.desktop.in.in:18 src/Widgets/ActionBar.vala:35
+msgid "New sticky note"
+msgstr "Uusi tarralappu"
+
+#: data/jorts.desktop.in.in:23 src/Widgets/TextView.vala:81
+msgid "Show Preferences"
+msgstr "Asetukset"
+
+#: data/jorts.metainfo.xml.in.in:12
+msgid ""
+"Neither jeans nor shorts, just like jorts! A thoughtful little sticky notes "
+"application, to display any sort of short term information on your screen."
+msgstr "Ei farkut taikka shortsit, mutta Jortsit! "
+"Pieni tarralappu applikaatio informaation näyttämiseen."
+
+#: data/jorts.metainfo.xml.in.in:13
+msgid "Features include:"
+msgstr "Ominaisuudet:"
+
+#: data/jorts.metainfo.xml.in.in:15
+msgid "Colourful: Eleven pretty pastel themes"
+msgstr "Värikäs: Yksitoista nättiä pastelliteemaa"
+
+#: data/jorts.metainfo.xml.in.in:16
+msgid "Cute: Each new note has a funny or cute random (editable) title"
+msgstr "Söpö: Uusilla lapuilla on kiva satunnainen (muokattava) otsikko"
+
+#: data/jorts.metainfo.xml.in.in:17
+msgid "Thoughtful: Jorts does its best to be comfortable to use, always!"
+msgstr "Huomaavainen: Jorts tekee parhaansa ollakseen aina mukava käyttää!"
+
+#: data/jorts.metainfo.xml.in.in:18
+msgid "Private: Try the scribbles mode!"
+msgstr "Yksityinen: Kokeile suttumoodia!"
+
+#: data/jorts.metainfo.xml.in.in:20
+msgid ""
+"Windows installers are also available, and require no admin rights. So you "
+"can even use this at work!"
+msgstr "Voit asentaa applikaation myös Windowsille, sillä emme vaadi admin-oikeuksia."
+"Joten voit käyttää tätä vaikka töissä!"
+
+#: data/jorts.metainfo.xml.in.in:21
+msgid "This app is made lovingly and without any LLM intervention."
+msgstr "Tämä applikaatio on tehty rakkaudella ja ilman LLM työkaluja."
+
+#: data/jorts.metainfo.xml.in.in:33
+msgid "Lainsce + Stella and Charlie"
+msgstr "Lainsce + Stella ja Charlie"
+
+#: data/jorts.metainfo.xml.in.in:50
+msgid "Sticky note"
+msgstr "Tarralappu"
+
+#: data/jorts.metainfo.xml.in.in:51
+msgid "Stickies"
+msgstr "Tarrat"
+
+#: data/jorts.metainfo.xml.in.in:52
+msgid "Colourful"
+msgstr "Värikäs"
+
+#: data/jorts.metainfo.xml.in.in:53
+msgid "Notes"
+msgstr "Muistiinpanot"
+
+#: data/jorts.metainfo.xml.in.in:54
+msgid "Cute"
+msgstr "Söpö"
+
+#: data/jorts.metainfo.xml.in.in:55
+msgid "Desktop"
+msgstr "Työpöytä"
+
+#: data/jorts.metainfo.xml.in.in:56
+msgid "Reminder"
+msgstr "Muistutus"
+
+#: data/jorts.metainfo.xml.in.in:57
+msgid "Utility"
+msgstr "Apuohjelma"
+
+#: data/jorts.metainfo.xml.in.in:58
+msgid "Pantheon"
+msgstr "Pantheon"
+
+#: data/jorts.metainfo.xml.in.in:59
+msgid "elementary OS"
+msgstr "elementary OS"
+
+#: data/jorts.metainfo.xml.in.in:74
+msgid "A sticky note with the \"Blueberry\" theme"
+msgstr "Tarralappu jossa on \"Mustikka\" teema"
+
+#: data/jorts.metainfo.xml.in.in:78
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the Scribbly "
+"Mode!"
+msgstr "Striimaatko? Vai kurkkiiko joku olkasi yli? Kokeile Suttu Moodia!"
+
+#: data/jorts.metainfo.xml.in.in:82
+msgid "Look! Ascii art in a sticky note!"
+msgstr "ASCII taidetta tarralapussa!"
+
+#: data/jorts.metainfo.xml.in.in:86
+msgid "The preferences dialog in light mode"
+msgstr "Asetusdialogi päivätilassa"
+
+#: data/jorts.metainfo.xml.in.in:90
+msgid "The preferences dialog in dark mode"
+msgstr "Asetusdialogi yötilassa"
+
+#: data/jorts.metainfo.xml.in.in:98
+msgid "A lot of tiny goodies"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:100
+msgid "Alas, back to default icon, but pride is forever"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:101
+msgid "Added experimental automated windows installers"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:102
+msgid "Small style fixes by @Geopjr!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:103 data/jorts.metainfo.xml.in.in:120
+msgid "Updated Spanish translation thanks to Eli!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:104
+msgid "Updated Italian translation thanks to Seth!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:105
+msgid "Updated French and German translations"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:111
+msgid "The Unyielding Jorts"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:113
+msgid "Lovely Pride variant thanks to @wpkelso!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:114
+msgid "Added indent for lists with help from @MysterieCatDev!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:115
+msgid "Added feature to restore last deleted note"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:116
+msgid "Refreshed preference dialog appearance"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:117
+msgid ""
+"Issue with appcenter and flathub build differences fixed thanks to "
+"@ryonakano!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:118
+msgid "Added Danish translation thanks to @pracedru!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:119
+msgid "Added Croatian translation thanks to @milotype!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:126
+msgid "Minor touchups"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:131
+msgid "Jorts of Spring"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:133
+msgid "New color: Latte!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:134
+msgid "Added Preferences and Quit to the note right-click"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:135
+msgid "A lot of under-the-hood spring cleaning"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:141
+msgid "Organization change"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:143
+msgid "From ellie-commons to elly-code"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:145 data/jorts.metainfo.xml.in.in:167
+msgid "Guests stars: 😎"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:147
+msgid "Updated sv-SE translation thanks to @yeager!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:148
+msgid "Added vietnamese translation thanks to @hthienloc!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:157
+msgid "4.0.0 Jorts of Hyperspace! 🚀"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:159
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:160
+msgid "Added button to toggle lists, and ability to customize them"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:161
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:162
+msgid "More zoom options"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:163
+msgid "Keyboard shortcuts work from popover now"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:164
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:165
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:169
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:170
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: src/Application.vala:251
+msgid "Create a new note"
+msgstr "Luo uusi muistiinpano"
+
+#: src/Application.vala:252
+msgid "Show preferences"
+msgstr "Näytä asetukset"
+
+#: src/Objects/ListPrefix.vala:53
+msgid "(Disabled)"
+msgstr "(Pois käytöstä)"
+
+#: src/Objects/ListPrefix.vala:54
+msgid " • List item"
+msgstr " • Listakohta"
+
+#: src/Objects/ListPrefix.vala:55
+msgid " - List item"
+msgstr " - Listakohta"
+
+#: src/Objects/ListPrefix.vala:56
+msgid " ~ List item"
+msgstr " ~ Listakohta"
+
+#: src/Objects/ListPrefix.vala:57
+msgid " . List item"
+msgstr " . Listakohta"
+
+#: src/Objects/NoteData.vala:46
+msgid "Forgot title!"
+msgstr "Unohdin otsikon!"
+
+#. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
+#. They are shown in a tooltip when the user hovers over a little colored pillbutton
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
+msgid "Blueberry"
+msgstr "Mustikka"
+
+#: src/Objects/Themes.vala:67
+msgid "Mint"
+msgstr "Minttu"
+
+#: src/Objects/Themes.vala:68
+msgid "Lime"
+msgstr "Lime"
+
+#: src/Objects/Themes.vala:69
+msgid "Banana"
+msgstr "Banaani"
+
+#: src/Objects/Themes.vala:70
+msgid "Orange"
+msgstr "Appelsiini"
+
+#: src/Objects/Themes.vala:71
+msgid "Strawberry"
+msgstr "Mansikka"
+
+#: src/Objects/Themes.vala:72
+msgid "Bubblegum"
+msgstr "Purkka"
+
+#: src/Objects/Themes.vala:73
+msgid "Grape"
+msgstr "Viinirypäle"
+
+#: src/Objects/Themes.vala:74
+msgid "Cocoa"
+msgstr "Kaakao"
+
+#: src/Objects/Themes.vala:75
+msgid "Slate"
+msgstr "Kivi"
+
+#: src/Objects/Themes.vala:76
+msgid "Latte"
+msgstr "Latte"
+
+#: src/Objects/Themes.vala:77
+msgid "No preference, random each time"
+msgstr "Satunnainen joka kerralla"
+
+#: src/Utils/Autostart.vala:25
+msgid "Set Jorts to start with the computer"
+msgstr "Aloita Jorts tietokoneen käynnistyessä"
+
+#: src/Utils/Autostart.vala:42
+msgid "Remove Jorts from system autostart"
+msgstr "Poista Jorts automaattisesta käynnistyksestä"
+
+#. TRANSLATORS: The below strings are for random titles in new sticky notes. Please keep short!
+#. It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
+#: src/Utils/Random.vala:27
+msgid "All my best friends"
+msgstr "Kaikki parhaat kamut"
+
+#: src/Utils/Random.vala:28
+msgid "My secret recipe"
+msgstr "Salainen resepti"
+
+#: src/Utils/Random.vala:29
+msgid "My todo list"
+msgstr "Todo-lista"
+
+#: src/Utils/Random.vala:30
+msgid "Super secret to not tell anyone"
+msgstr "Salainen, älä kerro kenellekään"
+
+#: src/Utils/Random.vala:31
+msgid "My grocery list"
+msgstr "Ostoslista"
+
+#. TRANSLATORS: What is meant are reflective thoughts, random thoughts
+#: src/Utils/Random.vala:33
+msgid "Shower thoughts"
+msgstr "Suihkuajatuksia"
+
+#: src/Utils/Random.vala:34
+msgid "My fav fanfics"
+msgstr "Lemppari fanficit"
+
+#: src/Utils/Random.vala:35
+msgid "My fav dinosaurs"
+msgstr "Lemppari dinosaurukset"
+
+#: src/Utils/Random.vala:36
+msgid "My evil mastermind plan"
+msgstr "Ilkeä mestarisuunnitelmani"
+
+#: src/Utils/Random.vala:37
+msgid "What made me smile today"
+msgstr "Mikä sai minut hymyilemään"
+
+#: src/Utils/Random.vala:38
+msgid "Hello world!"
+msgstr "Terve maailma!"
+
+#: src/Utils/Random.vala:39
+msgid "New sticky, new me"
+msgstr "Uusi tarralappu, uusi minä"
+
+#: src/Utils/Random.vala:40
+msgid "Pirate treasure location"
+msgstr "Piraattiaarteen sijainti"
+
+#: src/Utils/Random.vala:41
+msgid "To remember"
+msgstr "Muista"
+
+#: src/Utils/Random.vala:42
+msgid "Dear Diary,"
+msgstr "Rakas päiväkirja,"
+
+#: src/Utils/Random.vala:43
+msgid "Have a nice day! :)"
+msgstr "Mukavaa päivää! :)"
+
+#: src/Utils/Random.vala:44
+msgid "My meds schedule"
+msgstr "Lääkitysaikatauluni"
+
+#: src/Utils/Random.vala:45
+msgid "Household chores"
+msgstr "Kotityöt"
+
+#: src/Utils/Random.vala:46
+msgid "My cats favourite mischiefs"
+msgstr "Kissojeni lempijekut"
+
+#: src/Utils/Random.vala:47
+msgid "My dogs favourite toys"
+msgstr "Koirieni lempilelut"
+
+#: src/Utils/Random.vala:48
+msgid "How cool my birds are"
+msgstr "Kuinka mahtavia lintuni ovat"
+
+#: src/Utils/Random.vala:49
+msgid "Suspects in the Last Cookie affair"
+msgstr "Lista epäillyistä, jotka söivät viimeisen keksin"
+
+#: src/Utils/Random.vala:50
+msgid "Words my parrots know"
+msgstr "Sanat minun papukaijani tietää"
+
+#: src/Utils/Random.vala:51
+msgid "Original compliments to give out"
+msgstr "Kehuja joita antaa"
+
+#: src/Utils/Random.vala:52
+msgid "My dream Pokemon team"
+msgstr "Lempi Pokemontiimi"
+
+#: src/Utils/Random.vala:53
+msgid "My little notes"
+msgstr "Pienet muistiinpanoni"
+
+#: src/Utils/Random.vala:54
+msgid "Surprise gift list"
+msgstr "Yllätyslahjalista"
+
+#: src/Utils/Random.vala:55
+msgid "Brainstorming notes"
+msgstr "Aivoriihimuistio"
+
+#: src/Utils/Random.vala:56
+msgid "To bring to the party"
+msgstr "Juhliin mukaan"
+
+#: src/Utils/Random.vala:57
+msgid "My amazing mixtape"
+msgstr "Eeppinen miksauslistani"
+
+#: src/Utils/Random.vala:58
+msgid "Margin scribbles"
+msgstr "Marginaaliraapustelut"
+
+#: src/Utils/Random.vala:59
+msgid "My fav songs to sing along"
+msgstr "Parhaat sing-along biisit"
+
+#: src/Utils/Random.vala:60
+msgid "When to water which plant"
+msgstr "Milloin kastella mikäkin kasvi"
+
+#: src/Utils/Random.vala:61
+msgid "Top 10 anime betrayals"
+msgstr "Top 10 anime petokset"
+
+#: src/Utils/Random.vala:62
+msgid "Amazing ascii art!"
+msgstr "Loistavaa ASCII-taidetta!"
+
+#: src/Utils/Random.vala:63
+msgid "For the barbecue"
+msgstr "Mukaan grillijuhliin"
+
+#: src/Utils/Random.vala:64
+msgid "My favourite bands"
+msgstr "Lempibändini"
+
+#: src/Utils/Random.vala:65
+msgid "Best ingredients for salad"
+msgstr "Parhaat salaattiainekset"
+
+#: src/Utils/Random.vala:66
+msgid "Books to read"
+msgstr "Kirjoja joita lukea"
+
+#: src/Utils/Random.vala:67
+msgid "Places to visit"
+msgstr "Paikkoja joissa käydä"
+
+#: src/Utils/Random.vala:68
+msgid "Hobbies to try out"
+msgstr "Harrastuksia joita kokeilla"
+
+#: src/Utils/Random.vala:69
+msgid "Who would win against Goku"
+msgstr "Kuka voittaisi Gokua vastaan"
+
+#: src/Utils/Random.vala:70
+msgid "To plant in the garden"
+msgstr "Puutarhaan istutettavaksi"
+
+#: src/Utils/Random.vala:71
+msgid "Meals this week"
+msgstr "Viikon lounaat"
+
+#: src/Utils/Random.vala:72
+msgid "Everyone's pizza order"
+msgstr "Kaikkien pizzatilaukset"
+
+#: src/Utils/Random.vala:73
+msgid "Today selfcare to do"
+msgstr "Päivän selfcare"
+
+#: src/Utils/Random.vala:74
+msgid "Important affirmations to remember"
+msgstr "Tärkeät itsevahvistukset"
+
+#: src/Utils/Random.vala:75
+msgid "The coolest linux apps"
+msgstr "Siisteimmät linux appikset"
+
+#: src/Utils/Random.vala:76
+msgid "My favourite dishes"
+msgstr "Lempiruokani"
+
+#: src/Utils/Random.vala:77
+msgid "My funniest jokes"
+msgstr "Hauskimmat vitsini"
+
+#: src/Utils/Random.vala:78
+msgid "The perfect breakfast"
+msgstr "Täydellinen aamupalani"
+
+#: src/Utils/Random.vala:79
+msgid "What makes me smile"
+msgstr "Mikä saa minut hymyilemään"
+
+#: src/Utils/Random.vala:80
+msgid "Most interesting characters"
+msgstr "Kiinnostavimmat hahmot"
+
+#: src/Utils/Random.vala:81
+msgid "Activities to do with friends"
+msgstr "Aktiviteetteja kavereiden kanssa"
+
+#. TRANSLATORS: This is for an easter egg, most users may not see this, so this is optional
+#. You can skip if too much, but i would prefer addressing people in their native language
+#: src/Utils/Random.vala:118
+msgid "🔥WOW Congratulations!🔥"
+msgstr "🔥VAUTSI Onnea!🔥"
+
+#: src/Utils/Random.vala:120
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+msgstr ""
+"Olet löytänyt kultaisen tarralapun!\n"
+"\n"
+"Uskomatonta mutta totta: Tämä viesti ilmestyy vain kerran tuhannesta!\n"
+"Kukaan ei usko sinua jos kerrot :D \n"
+"\n"
+"Toivottavasti tämä pieni appikseni on kiva\n"
+"Mukavaa päivää!🎇\n"
+
+#: src/Views/PreferencesView.vala:59
+msgid "List item prefix"
+msgstr "Listakohdan etuliite"
+
+#: src/Views/PreferencesView.vala:77
+msgid "Scribble unfocused notes (Ctrl+H)"
+msgstr "Suttaa muistiinpanot jotka eivät ole fokuksessa (Ctrl+H)"
+
+#. TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#: src/Views/PreferencesView.vala:95
+msgid "Hide bottom bar (Ctrl+T)"
+msgstr "Piilota alapalkki (Ctrl+T)"
+
+#. TRANSLATORS: Button to restore sticky notes the application
+#: src/Views/PreferencesView.vala:109
+msgid "Restore note"
+msgstr "Palauta muistiinpano"
+
+#: src/Views/PreferencesView.vala:112
+msgid "Restore the last deleted sticky note"
+msgstr "Palauta viimeksi poistettu tarralappu"
+
+#: src/Views/PreferencesView.vala:143
+msgid "Show notes on log in"
+msgstr "Näytä muistiinpanot kirjautuessa sisään"
+
+#: src/Views/PreferencesView.vala:144
+msgid "May be out of sync with system settings in some cases"
+msgstr "Tämä voi poiketa järjestelmäasetuksista joissain tapauksissa"
+
+#: src/Views/PreferencesView.vala:162
+msgid "Support us!"
+msgstr "Tue meitä!"
+
+#: src/Views/PreferencesView.vala:171
+msgid "Close"
+msgstr "Sulje"
+
+#: src/Views/PreferencesView.vala:174
+msgid "Close preferences"
+msgstr "Sulje asetukset"
+
+#: src/Widgets/ActionBar.vala:48
+msgid "Delete sticky note"
+msgstr "Poista tarralappu"
+
+#: src/Widgets/ActionBar.vala:62
+msgid "Toggle list"
+msgstr "Lista päälle/pois"
+
+#: src/Widgets/ActionBar.vala:76
+msgid "Insert emoji"
+msgstr "Lisää emoji"
+
+#: src/Widgets/ActionBar.vala:90
+msgid "Preferences for this sticky note"
+msgstr "Tämän tarralapun asetukset"
+
+#. TRANSLATORS: Tooltip when a user hovers the title of a sticky note. You are not constrained by space
+#: src/Widgets/EditableLabel.vala:40
+msgid "Click to edit the title"
+msgstr "Napsauta muokataksesi otsikkoa"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
+msgid "Default"
+msgstr "Oletus"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+msgid "Use default text font"
+msgstr "Käytä oletustekstifonttia"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:49
+msgid "Monospace"
+msgstr "Monospace"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:52
+msgid "Use monospaced font"
+msgstr "Käytä monospace fonttia"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:48
+msgid "Zoom out"
+msgstr "Zoomaa ulos"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+msgid "Default zoom level"
+msgstr "Oletuszoomaustaso"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:64
+msgid "Zoom in"
+msgstr "Zoomaa sisään"
+
+#: src/Widgets/TextView.vala:86
+msgid "Quit Jorts"
+msgstr "Lopeta Jorts"
+
+#: src/Windows/PreferenceWindow.vala:38
+msgid "Preferences - Jorts"
+msgstr "Asetukset - Jorts"
+
+#: src/Windows/PreferenceWindow.vala:40
+msgid "<b>Preferences for your Jorts</b>"
+msgstr "<b>Jortsisi asetukset</b>"
+
+#. TRANSLATORS: "%s" is replaced by a specific sticky note title
+#. Ex: "To remember - Jorts"
+#. The text is shown in overviews of all open windows, accompanying the window
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
+#, c-format
+msgid "%s - Jorts (Development)"
+msgstr "%s - Jorts (Kehitys)"
+
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
+#, c-format
+msgid "%s - Jorts"
+msgstr "%s - Jorts"
