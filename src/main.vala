@@ -27,5 +27,15 @@ int main (string[] args) {
 
 #endif
 
+        print ("""
+🎉✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
+Your Notes are all belong to us!
+      _       _
+    (\o/)   (\o/)    <--- Tiny electric angels working in the background
+     /_\     /_\
+
+Please wait while the app remembers all the things…
+""");
+
     return new Jorts.Application ().run (args);
 }

@@ -134,16 +134,6 @@ public class Jorts.Application : Gtk.Application {
                 );
         });
 
-        print ("""
-🎉✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
-Your Notes are all belong to us!
-      _       _
-    (\o/)   (\o/)    <--- Tiny electric angels working in the background
-     /_\     /_\
-
-Please wait while the app remembers all the things…
-""");
-
         /* Quit if all sticky notes are closed and preferences arent shown */
         window_removed.connect (check_if_quit);
 
