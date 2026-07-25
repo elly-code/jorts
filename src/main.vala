@@ -9,8 +9,12 @@ int main (string[] args) {
 
 #if DEVEL
 
+    // Do not overwrite environment, just show our apps debugs by default on devel builds
+    var new_messages_domain = "%s %s".printf (Environment.get_variable ("G_MESSAGES_DEBUG"), APP_ID);
+
     //GLib.Environment.set_variable ("LANGUAGE", "C", true);
     GLib.Environment.set_variable ("GTK_DEBUG", "interactive", true);
+    GLib.Environment.set_variable ("G_MESSAGES_DEBUG", new_messages_domain, true);
     //print (LOCALEDIR);
 
     warning ("""

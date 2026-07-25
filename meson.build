@@ -1,6 +1,6 @@
 project(
     'jorts',
-    ['c', 'vala'],        # The floor is vala
+    ['c', 'vala'],                  # The floor is vala
     license: 'GPL-3.0-or-later',
     version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
     meson_version: '>= 1.1'         # Use meson.option instead of meson_options.txt
@@ -48,7 +48,12 @@ endif
 
 gnome = import('gnome')
 i18n = import('i18n')
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_id), language:'c')
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format (app_id),              # 
+    '-DG_LOG_DOMAIN="@0@"'.format (app_id),                 # Dev builds add the app_id to G_MESSAGES_DEBUG
+    '-w',                                                   # Because of Vala we get ten thousand warnings we can do nothing about
+    language:'c'
+    )
 
 
 # Play nice with clang
@@ -84,7 +89,6 @@ build_machine_system = build_machine.system()
 
 if build_machine_system == 'windows'
     windows = true
-
 endif
 
 # Here is to adjust the project accordingly to stuff

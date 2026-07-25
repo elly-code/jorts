@@ -100,7 +100,6 @@ executable(
     config_file,
     sources,
     dependencies: dependencies,
-    c_args: '-w',                                               # Because of Vala we get ten thousand warnings we can do nothing about
     win_subsystem: development ? 'console' : 'windows',         # Show a console in windows dev builds. Seem to not bother standard builds
     install : true
 )
