@@ -9,13 +9,13 @@ gresource_file = configure_file(
     input: app_name + '.gresource.xml.in',
     output: app_id + '.gresource.xml',
     configuration: config_data,
-)
+    )
 
 gresource = gnome.compile_resources(
     'gresource',
     gresource_file,
     source_dir: '.'
-)
+    )
 
 
 #========================
@@ -30,7 +30,7 @@ gschema_file = configure_file(
 install_data(
     gschema_file,
     install_dir: datadir / 'glib-2.0' / 'schemas'
-)
+    )
 
 
 #========================
@@ -62,7 +62,7 @@ desktop_file_in = configure_file(
     input: app_name + '.desktop.in.in',
     output: app_id + '.desktop.in',
     configuration: config_data,
-)
+    )
 
 desktop_file = i18n.merge_file(
     input: desktop_file_in,
@@ -71,7 +71,7 @@ desktop_file = i18n.merge_file(
     type: 'desktop',
     install: true,
     install_dir: datadir / 'applications',
-)
+    )
 
 
 #========================
@@ -82,7 +82,7 @@ appstream_file_in = configure_file(
     input: app_name + '.metainfo.xml.in.in',
     output: app_id + '.metainfo.xml.in',
     configuration: config_data,
-)
+    )
 
 appstream_file = i18n.merge_file(
     input: appstream_file_in,
@@ -91,5 +91,4 @@ appstream_file = i18n.merge_file(
     type: 'xml',
     install: true,
     install_dir: datadir / 'metainfo',
-)
-
+    )

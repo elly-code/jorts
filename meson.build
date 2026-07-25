@@ -4,7 +4,7 @@ project(
     license: 'GPL-3.0-or-later',
     version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
     meson_version: '>= 1.1'         # Use meson.option instead of meson_options.txt
-)
+    )
 
 app_name = meson.project_name()
 app_version = meson.project_version()
@@ -49,9 +49,9 @@ endif
 gnome = import('gnome')
 i18n = import('i18n')
 add_project_arguments(
-    '-DGETTEXT_PACKAGE="@0@"'.format (app_id),              # 
-    '-DG_LOG_DOMAIN="@0@"'.format (app_id),                 # Dev builds add the app_id to G_MESSAGES_DEBUG
-    '-w',                                                   # Because of Vala we get ten thousand warnings we can do nothing about
+    '-DGETTEXT_PACKAGE="@0@"'.format (app_id),           # 
+    '-DG_LOG_DOMAIN="@0@"'.format (app_id),              # Dev builds add the app_id to G_MESSAGES_DEBUG
+    '-w',                                                       # Because of Vala we get ten thousand warnings we can do nothing about
     language:'c'
     )
 
@@ -120,8 +120,8 @@ config_data = configuration_data(
         'PUBLISHER': publisher,
         'ALTERNATE_APP_ID': alternate_app_id,
         'LOCALEDIR': prefix / get_option('localedir')
-    }
-)
+        }
+    )
 
 subdir('po')
 subdir('data')
@@ -138,4 +138,4 @@ gnome.post_install(
     glib_compile_schemas: true,
     gtk_update_icon_cache: true,
     update_desktop_database: true
-)
+    )
