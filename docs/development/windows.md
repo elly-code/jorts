@@ -45,7 +45,7 @@ is your user folder
 5. Install all we need (note: Some in the list may not be needed)
 
 ```bash
-pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-w64-ucrt-x86_64-{gtk4,granite7,vala,ninja,meson,nsis,gcc} mingw-w64-libgee mingw-w64-gsettings-desktop-schemas mingw-w64-x86_64-gtk-elementary-theme mingw-w64-x86_64-elementary-icon-theme mingw-w64-x86_64-vala mingw-w64-x86_64-librsvg
+pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-w64-ucrt-x86_64-{gtk4,granite7,vala,ninja,meson,nsis,gcc} mingw-w64-libgee mingw-w64-gsettings-desktop-schemas mingw-w64-x86_64-gtk-elementary-theme mingw-w64-x86_64-elementary-icon-theme mingw-w64-x86_64-vala
 ```
 
 
