@@ -19,12 +19,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Popover popover;
     public TextView textview;
 
+    private Jorts.ZoomedWindow zoomed_window;
     private Jorts.ColorController color_controller;
-    public Jorts.ZoomController zoom_controller;
     private Jorts.ScribblyController scribbly_controller;
-    private Gtk.EventControllerKey keypress_controller;
-    private Gtk.EventControllerScroll scroll_controller;
-    private Gtk.GestureZoom gesturezoom_controller;
+
 
     public NoteData data {
         owned get {return packaged ();}
@@ -50,40 +48,26 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         app.set_accels_for_action (ACTION_PREFIX + ACTION_DELETE, {"<Control>W"});
 
         color_controller = new Jorts.ColorController (this);
-        zoom_controller = new Jorts.ZoomController (this);
         scribbly_controller = new Jorts.ScribblyController (this);
-
-        keypress_controller = new Gtk.EventControllerKey ();
-        scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
-            propagation_phase = Gtk.PropagationPhase.CAPTURE
-        };
-
-        gesturezoom_controller = new Gtk.GestureZoom ();
-
-
-        ((Gtk.Widget)this).add_controller (keypress_controller);
-        ((Gtk.Widget)this).add_controller (scroll_controller);
-        ((Gtk.Widget)this).add_controller (gesturezoom_controller);
 
         // The view has its own titlebar
         titlebar = new Gtk.Grid () {visible = false};
 
         view = new NoteView ();
+
+        zoomed_window = new ZoomedWindow () {
+            child = view
+        };
+
         textview = view.textview;
+        popover = view.popover;
+
         insert_action_group ("noteview", view.actions);
         insert_action_group ("textview", textview.actions);
-        insert_action_group ("zoom_controller", zoom_controller.actions);
+        insert_action_group ("zoomed_window", zoomed_window.actions);
 
-        // Have shortcuts keep working  this.destroy ()with the popover open.
-        popover = view.popover;
-        view.popover.scroll_controller.scroll.connect (zoom_controller.on_scroll);
-        view.popover.keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
-        view.popover.keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
-
-        //zoom_controller.notify["zoom"].connect_after (textview.refresh_indentation);
-
-        set_child (view);
-        set_focus (view);
+        set_child (zoomed_window);
+        set_focus (zoomed_window);
         load_data (data);
 
 #if DEVEL
@@ -96,49 +80,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        // We need this for Ctr + Scroll. We delegate everything to zoomcontroller
-        keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
-        keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
-        scroll_controller.scroll.connect (zoom_controller.on_scroll);
-        gesturezoom_controller.scale_changed.connect (zoom_controller.on_pinch);
-
-
-
-        debug ("Built UI. Lets do connects and binds");
-
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
         popover.theme_changed.connect (color_controller.on_color_changed);
-
-        // Respect animation settings for showing ui elements
-        if (Application.gtk_settings.gtk_enable_animations && (!Application.settings.get_boolean (KEY_HIDEBAR))) {
-            show.connect_after (delayed_show);
-
-        } else {
-            bind_hidebar ();
-        }
-    }
-
-        /********************************************/
-        /*                  METHODS                 */
-        /********************************************/
-
-    /**
-    * Show Actionbar shortly after the window is shown
-    * This is more for the Aesthetic
-    */
-    private void delayed_show () {
-        Timeout.add_once (250, bind_hidebar);
-        show.disconnect (delayed_show);
-    }
-
-    private void bind_hidebar () {
-        Application.settings.bind (
-            KEY_HIDEBAR,
-            view.actionbar.actionbar,
-            "revealed",
-            SettingsBindFlags.INVERT_BOOLEAN);
+        zoomed_window.notify ["zoom"].connect (has_changed);
     }
 
     /**
@@ -171,7 +117,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             theme = popover.color,
             content = view.content,
             monospace = popover.monospace,
-            zoom = zoom_controller.zoom,
+            zoom = zoomed_window.zoom,
             width = this_width,
             height = this_height
         };
@@ -197,7 +143,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.content = data.content;
 
         color_controller.theme = data.theme;
-        zoom_controller.zoom = data.zoom;
+        zoomed_window.zoom = data.zoom;
         view.monospace = data.monospace;
     }
 
@@ -211,18 +157,17 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     ~StickyNoteWindow () {
         debug ("Destroying %s", view.title);
-
-        keypress_controller.key_pressed.disconnect (zoom_controller.on_key_press_event);
-        keypress_controller.key_released.disconnect (zoom_controller.on_key_release_event);
-        scroll_controller.scroll.disconnect (zoom_controller.on_scroll);
-        gesturezoom_controller.scale_changed.disconnect (zoom_controller.on_pinch);
-
         view.editablelabel.changed.disconnect (on_editable_changed);
         view.textview.buffer.changed.disconnect (has_changed);
         popover.theme_changed.disconnect (color_controller.on_color_changed);
 
-        color_controller.dispose ();
-        zoom_controller.dispose ();
-        scribbly_controller.dispose ();
+        zoomed_window = null;
+        view = null;
+        popover = null;
+        textview = null;
+
+        color_controller = null;
+        scribbly_controller = null;
+        application = null;
     }
 }

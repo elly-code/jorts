@@ -12,7 +12,7 @@
 */
 public class Jorts.ColorController : Object {
 
-    private weak Jorts.StickyNoteWindow window;
+    private unowned Jorts.StickyNoteWindow window;
 
     private Jorts.Themes _theme;
     public Jorts.Themes theme {

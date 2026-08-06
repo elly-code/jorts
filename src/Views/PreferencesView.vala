@@ -162,7 +162,7 @@
             _("Support us!")
         );
 
-        var right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, Jorts.SPACING_DOUBLE);
+        var right_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, Jorts.SPACING_STANDARD);
         actionbar.end_widget = right_box;
 
         var close = new Gtk.Button () {

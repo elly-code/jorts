@@ -79,4 +79,8 @@ public class Jorts.ColorBox : Gtk.Box {
             theme_changed ((Jorts.Themes)color);
         }
     }
+
+    ~ColorBox () {
+        debug ("Destroyed");
+    }
 }

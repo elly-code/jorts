@@ -57,4 +57,8 @@ public class Jorts.EditableLabel : Granite.Bin {
         }
         remove_css_class (STYLE_MONOSPACE);
     }
+
+    ~EditableLabel () {
+        debug ("Destroyed");
+    }
 }

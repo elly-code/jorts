@@ -15,8 +15,8 @@ public class Jorts.NoteManager : Object {
     private static bool saving_lock = true;
     private static NoteData? last_deleted = null;
 
-    private Jorts.Application application;
-    public Gee.ArrayList<StickyNoteWindow> open_notes;
+    private unowned Jorts.Application application;
+    public Gee.ArrayList<unowned StickyNoteWindow> open_notes;
     public Jorts.Storage storage;
 
     public NoteManager (Jorts.Application app) {
@@ -24,7 +24,7 @@ public class Jorts.NoteManager : Object {
     }
 
     construct {
-        open_notes = new Gee.ArrayList<StickyNoteWindow> ();
+        open_notes = new Gee.ArrayList<unowned StickyNoteWindow> ();
         storage = new Jorts.Storage ();
     }
 
@@ -40,6 +40,7 @@ public class Jorts.NoteManager : Object {
         Json.Array loaded_data = storage.load ();
 
         if (loaded_data.get_length () == 0) {
+
             var note_data = new NoteData ();
             note_data.theme = DEFAULT_THEME;
 
@@ -103,6 +104,9 @@ public class Jorts.NoteManager : Object {
         application.remove_window ((Gtk.Window)note);
 
         note.close ();
+        note.dispose ();
+        note.destroy ();
+        note = null;
 
         immediately_save ();
     }
@@ -131,7 +135,7 @@ public class Jorts.NoteManager : Object {
     public void immediately_save () {
         var array = new Json.Array ();
 
-        foreach (Jorts.StickyNoteWindow note in open_notes) {
+        foreach (unowned Jorts.StickyNoteWindow note in open_notes) {
             var data = note.packaged ();
             var object = data.to_json ();
             array.add_object_element (object);

@@ -17,13 +17,13 @@ foreach i : icon_sizes
         icon_variant / 'hicolor' / i + '.png',
         install_dir: datadir / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
         rename: app_id + '.png'
-    )
+        )
 
     install_data(
         icon_variant / 'hicolor@2' / i + '@2.png',
         install_dir: datadir / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
         rename: app_id + '.png'
-    )
+        )
 
 endforeach
 
@@ -31,7 +31,4 @@ install_data(
     icon_variant / 'scalable.svg',
     install_dir: datadir / 'icons' / 'scalable' / 'apps',
     rename: app_id + '.svg'
-)
-
-
-
+    )

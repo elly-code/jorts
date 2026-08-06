@@ -13,7 +13,7 @@
 public class Jorts.ScribblyController : Object {
 
     private const string STYLE_SCRIBBLED = "scribbled";
-    private weak Jorts.StickyNoteWindow window;
+    private unowned Jorts.StickyNoteWindow window;
 
     private bool _scribble;
     public bool scribble {

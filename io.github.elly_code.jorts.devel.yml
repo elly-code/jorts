@@ -24,8 +24,8 @@ modules:
     buildsystem: meson
     config-opts:
       - --buildtype=debug
-      - -Ddevelopment=true
       - -Dicon_variant=default
+      - -Ddevelopment=true
     sources:
       - type: dir
         path: .

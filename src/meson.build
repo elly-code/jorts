@@ -22,6 +22,8 @@ dependencies = [
 
 #================================
 sources = files (
+    'Interfaces' / 'Zoomable.vala',
+
     'Objects' / 'ZoomType.vala',
     'Objects' / 'Zoom.vala',
     'Objects' / 'Themes.vala',
@@ -32,14 +34,15 @@ sources = files (
 
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
-    'Services' / 'ZoomController.vala',
     'Services' / 'ScribblyController.vala',
     'Services' / 'ColorController.vala',
 
     'Widgets' / 'EditableLabel.vala',
+    'Widgets' / 'HyperTextView.vala',
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ActionBar.vala',
     'Widgets' / 'TextBuffer.vala',
+    'Widgets' / 'ZoomedWindow.vala',
 
     'Widgets' / 'PopoverWidgets' / 'ColorPill.vala',
     'Widgets' / 'PopoverWidgets' / 'ColorBox.vala',
@@ -55,6 +58,7 @@ sources = files (
     'Windows' / 'StickyNoteWindow.vala',
 
     'Constants.vala',
+    'main.vala',
     'Application.vala',
 )
 
@@ -96,7 +100,6 @@ executable(
     config_file,
     sources,
     dependencies: dependencies,
-    c_args: '-w',                                               # Because of Vala we get ten thousand warnings we can do nothing about
     win_subsystem: development ? 'console' : 'windows',         # Show a console in windows dev builds. Seem to not bother standard builds
     install : true
 )

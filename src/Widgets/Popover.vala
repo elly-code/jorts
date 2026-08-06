@@ -11,9 +11,6 @@
 */
 public class Jorts.Popover : Gtk.Popover {
 
-    public Gtk.EventControllerKey keypress_controller;
-    public Gtk.EventControllerScroll scroll_controller;
-
     private Jorts.ColorBox color_box;
     private Jorts.MonospaceBox monospace_box;
     private Jorts.ZoomBox font_size_box;
@@ -39,10 +36,10 @@ public class Jorts.Popover : Gtk.Popover {
     }
 
     static construct {
-        add_binding_action (Gdk.Key.plus, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_IN, null);
-        add_binding_action (Gdk.Key.equal, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_DEFAULT, null);
-        add_binding_action (48, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_DEFAULT, null);
-        add_binding_action (Gdk.Key.minus, Gdk.ModifierType.CONTROL_MASK, ZoomController.ACTION_PREFIX + ZoomController.ACTION_ZOOM_OUT, null);
+        add_binding_action (Gdk.Key.plus, Gdk.ModifierType.CONTROL_MASK, ZoomedWindow.ACTION_PREFIX + ZoomedWindow.ACTION_ZOOM_IN, null);
+        add_binding_action (Gdk.Key.equal, Gdk.ModifierType.CONTROL_MASK, ZoomedWindow.ACTION_PREFIX + ZoomedWindow.ACTION_ZOOM_DEFAULT, null);
+        add_binding_action (48, Gdk.ModifierType.CONTROL_MASK, ZoomedWindow.ACTION_PREFIX + ZoomedWindow.ACTION_ZOOM_DEFAULT, null);
+        add_binding_action (Gdk.Key.minus, Gdk.ModifierType.CONTROL_MASK, ZoomedWindow.ACTION_PREFIX + ZoomedWindow.ACTION_ZOOM_OUT, null);
 
         add_binding_action (Gdk.Key.n, Gdk.ModifierType.CONTROL_MASK, Application.ACTION_PREFIX + Application.ACTION_NEW, null);
         add_binding_action (Gdk.Key.w, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE, null);
@@ -70,17 +67,30 @@ public class Jorts.Popover : Gtk.Popover {
 
         child = view;
 
-        // Allow scrolling shenanigans from popover
-        keypress_controller = new Gtk.EventControllerKey ();
-        scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
+        // Propagate settings changes to the higher level
+        color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
+
+        // Allow zooming shenanigans from popover
+        ((Gtk.Widget)this).realize.connect (on_realize);
+    }
+
+    private void on_realize () {
+        var zoomed_window = (ZoomedWindow)(this.get_ancestor (typeof (ZoomedWindow)));
+
+        var keypress_controller = new Gtk.EventControllerKey ();
+        var scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
             propagation_phase = Gtk.PropagationPhase.CAPTURE
         };
+        var gesturezoom_controller = new Gtk.GestureZoom ();
 
         ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
+        ((Gtk.Widget)this).add_controller (gesturezoom_controller);
 
-        // Propagate settings changes to the higher level
-        color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
+        keypress_controller.key_pressed.connect (zoomed_window.on_key_press_event);
+        keypress_controller.key_released.connect (zoomed_window.on_key_release_event);
+        scroll_controller.scroll.connect (zoomed_window.on_scroll);
+        gesturezoom_controller.scale_changed.connect (zoomed_window.on_pinch);
     }
 
     /**
