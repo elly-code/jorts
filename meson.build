@@ -3,7 +3,7 @@ project(
     ['c', 'vala'],        # The floor is vala
     license: 'GPL-3.0-or-later',
     version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
-    meson_version: '>= 1.1'         # Use meson.option instead of meson_options.txt
+    meson_version: '>= 1.1'         # Use meson.options instead of meson_options.txt
 )
 
 app_name = meson.project_name()
@@ -76,14 +76,19 @@ endif
 
 linux = get_option('profile') == 'linux'
 windows = get_option('profile') == 'windows'
+android = get_option('profile') == 'android'
 
 # Here is to autodetect and adjust
 # Remember however that people may do cross compiling, so do not assume by default it is for linux
 # So avoid else conditions adding linux stuff
 build_machine_system = build_machine.system()
+host_machine_system = host_machine.system()
 
-if build_machine_system == 'windows'
+if host_machine_system == 'windows'
     windows = true
+
+elif host_machine_system == 'android'
+    android = true
 
 endif
 
@@ -95,6 +100,18 @@ if windows
     appstream = false
     libportal = false
 
+elif android
+    appstream = true
+    libportal = false
+
+    add_project_arguments([
+      '--define=ANDROID',
+      '--pkg=gtk4',
+      '--pkg=json-glib-1.0',
+      '--pkg=glib-2.0'
+    ], language: 'vala')
+
+    subproject('granite-stylesheet')
 else
     # Ideal case, Linux, with all the things
     appstream = true
@@ -132,6 +149,6 @@ subdir('tests')
 
 gnome.post_install(
     glib_compile_schemas: true,
-    gtk_update_icon_cache: true,
+    gtk_update_icon_cache: not android,
     update_desktop_database: true
 )
