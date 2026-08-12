@@ -41,10 +41,10 @@ Constants is because i am lazy
 public class Jorts.Application : Gtk.Application {
 
     // Needed by all windows
-    public static GLib.Settings gsettings;
+    public static GLib.Settings settings;
     public static Gtk.Settings gtk_settings;
 
-    public Jorts.NoteManager note_manager;
+    public static Jorts.NoteManager note_manager;
     public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
@@ -80,34 +80,21 @@ public class Jorts.Application : Gtk.Application {
 
     /*************************************************/
     static construct {
-        gsettings = new GLib.Settings (APP_ID);
-    }
-
-    private static string get_locale_dir () {
-        var sqgi_appdir = GLib.Environment.get_variable ("SQGI_APPDIR");
-
-        if (sqgi_appdir != null && sqgi_appdir != "") {
-#if WINDOWS
-            return GLib.Path.build_filename (sqgi_appdir, "share", "locale");
-#else
-            return GLib.Path.build_filename (sqgi_appdir, "usr", "share", "locale");
-#endif
-        }
-
-        return LOCALEDIR;
+        settings = new GLib.Settings (APP_ID);
     }
 
     /*************************************************/
     construct {
         // The localization thingamabob
         Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, get_locale_dir ());
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
 #if DEVEL
-        GLib.Environment.set_variable ("LANGUAGE", "C", true);
+        //GLib.Environment.set_variable ("LANGUAGE", "C", true);
         GLib.Environment.set_variable ("GTK_DEBUG", "interactive", true);
+        //print (LOCALEDIR);
 #endif
     }
 
@@ -225,14 +212,14 @@ Please wait while the app remembers all the things…
 
     private void action_toggle_scribbly () {
         debug ("Toggling scribbly");
-        var current = Application.gsettings.get_boolean (KEY_SCRIBBLY);
-        gsettings.set_boolean (KEY_SCRIBBLY, !current);
+        var current = Application.settings.get_boolean (KEY_SCRIBBLY);
+        settings.set_boolean (KEY_SCRIBBLY, !current);
     }
 
     private void action_toggle_actionbar () {
         debug ("Toggling actionbar");
-        var current = Application.gsettings.get_boolean (KEY_HIDEBAR);
-        gsettings.set_boolean (KEY_HIDEBAR, !current);
+        var current = Application.settings.get_boolean (KEY_HIDEBAR);
+        settings.set_boolean (KEY_HIDEBAR, !current);
     }
 
     private void nm_new_note () {

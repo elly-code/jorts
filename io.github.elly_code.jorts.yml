@@ -21,7 +21,8 @@ modules:
   - name: jorts
     buildsystem: meson
     config-opts:
-      - -Dicon-variant=pride
+      - --buildtype=release
+      - -Dicon_variant=default
     sources:
       - type: dir
         path: .

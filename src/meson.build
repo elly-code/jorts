@@ -1,3 +1,6 @@
+#
+# Sources
+#
 
 #================================
 # Config.vala allows us to set variables in Meson, for the Vala app to use later
@@ -57,11 +60,22 @@ sources = files (
 
 
 #================================
+# Windows should have libportal set to false, as it doesnt have it
+# Other OSes might have it set to true
+
+if libportal
+    add_project_arguments('--define=LIBPORTAL', language: 'vala')
+    dependencies += dependency('libportal')
+    sources += files('Utils' / 'Autostart.vala')
+
+endif
+
+
+#================================
 # Windows specific stuff
 # theres a gio-windows and a gio-unix. We need to add depending on case 
 # We need to compile an icon and add to the sources to avoid "missing icon" icon at every turn
 # So AFAIK ico.rc just point to an ico file in the same folder it is, so this is like gresource
-# No libportal on windows
 
 if windows
     dependencies += dependency('gio-windows-2.0')
@@ -70,15 +84,11 @@ if windows
 
 else
     dependencies += dependency('gio-unix-2.0')
-    if not android
-        dependencies += dependency('libportal')
-        sources += files('Utils' / 'Autostart.vala')
-    endif
 
 endif
 
 #================================
-# win_subsystem doesnt seem to bother standard builds
+# There it is. The exe. The cause of all this mess.
 
 executable(
     app_id,
@@ -86,8 +96,8 @@ executable(
     config_file,
     sources,
     dependencies: dependencies,
-    vala_args: vala_flags,
-    win_subsystem: 'windows',
+    c_args: '-w',                                               # Because of Vala we get ten thousand warnings we can do nothing about
+    win_subsystem: development ? 'console' : 'windows',         # Show a console in windows dev builds. Seem to not bother standard builds
     android_exe_type: 'application',
     install : true
 )

@@ -1,9 +1,0 @@
-option('icon-variant',
-    type : 'combo',
-    choices : ['default', 'classic', 'pride', 'halloween', 'devel'],
-    value : 'default',
-    description : 'The name of the seasonal icon and style to use'
-)
-option('development', type: 'boolean', value: false, description: 'If this is a dev build')
-option('windows', type: 'boolean', value: false, description: 'If this is a windows build. Switched on automatically on windows machines')
-option('legacy-rdnn', type: 'boolean', value: false, description: 'If this uses old rdnn')

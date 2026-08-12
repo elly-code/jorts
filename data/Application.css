@@ -37,7 +37,6 @@ editablelabel {
 
 textview.view,
 editablelabel.editing {
-    background-image: none;
     font-weight: 500;
     box-shadow: none;
     text-shadow: none;
@@ -161,6 +160,10 @@ window.animated actionbar .themedbutton:focus,
 window.animated editablelabel label,
 window.animated actionbar image {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window.animated text selection {
+    transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Devel builds get these. Libadwaita has that too, but we do not use it. */

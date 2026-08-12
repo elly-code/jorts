@@ -1,0 +1,14 @@
+option('icon_variant',
+    type : 'combo',
+    choices : ['default', 'classic', 'pride', 'halloween', 'devel'],
+    value : 'default',
+    description : 'The name of the seasonal icon and style to use'
+)
+option('profile',
+    type : 'combo',
+    choices : ['linux', 'windows', 'android'],
+    value : 'linux',
+    description : 'What we build for. Switched on automatically on windows machines'
+)
+option('development', type: 'boolean', value: false, description: 'If this is a dev build')
+option('legacy_rdnn', type: 'boolean', value: false, description: 'If this uses the io.github.ellie-commons domain (Flathub)')

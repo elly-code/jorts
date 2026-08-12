@@ -1,96 +1,121 @@
 project(
     'jorts',
-    ['c', 'vala'],
-    version: '4.3.0',
+    ['c', 'vala'],        # The floor is vala
     license: 'GPL-3.0-or-later',
-    meson_version: '>= 0.59.0'      # update_desktop_database arg in gnome.post_install
+    version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
+    meson_version: '>= 1.1'         # Use meson.option instead of meson_options.txt
 )
 
 app_name = meson.project_name()
 app_version = meson.project_version()
+nicename = 'Jorts'
+publisher = 'elly-code'
 
+# Ugh i wish i could bin this
 correct_app_id = 'io.github.elly_code.' + app_name
 correct_app_path = '/io/github/elly_code/' + app_name
 
 legacy_app_id = 'io.github.ellie_commons.' +  app_name
 legacy_app_path = '/io/github/ellie_commons/' + app_name
 
-vala_flags = []
-development = get_option('development')
-legacy_rdnn = get_option('legacy-rdnn')
-windows = get_option('windows')
-
+legacy_rdnn = get_option('legacy_rdnn')
 if legacy_rdnn
     app_id = legacy_app_id
     alternate_app_id = correct_app_id
     app_path = legacy_app_path
 
-    #TODO: Remove once appcenter has latte
-    vala_flags += ['--define', 'LATTE']
+    #TODO: Remove once appcenter has latte (platform 8.3 lands)
+    add_project_arguments('--define=LATTE', language: 'vala')
+
 else
     app_id = correct_app_id
     alternate_app_id = legacy_app_id
     app_path = correct_app_path
 endif
 
+#================================
+# Preparation
+
+prefix = get_option('prefix')
+datadir = get_option('datadir')
+
+development = get_option('development')
 if development
   app_id +=  '.devel'
-  vala_flags += ['--define', 'DEVEL']
-  vala_flags += ['--define', 'LATTE']
+  add_project_arguments('--define=DEVEL', '--define=LATTE', language: 'vala')
+
 endif
+
+gnome = import('gnome')
+i18n = import('i18n')
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_id), language:'c')
+
+
+# Play nice with clang
+# https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
+if meson.get_compiler ('c').get_id () == 'clang'
+    add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
+endif
+
 
 #================================
 # Cool icon variants
-icon_variant = get_option('icon-variant')
+icon_variant = get_option('icon_variant')
 
 if icon_variant == 'halloween'
-    vala_flags += ['--define', 'HALLOWEEN']
+    add_project_arguments('--define=HALLOWEEN', language: 'vala')
+
 else
-    vala_flags += ['--define', 'DEFAULT']
+    add_project_arguments('--define=DEFAULT', language: 'vala')
+
 endif
+
 
 #================================
-gnome = import('gnome')
-i18n = import('i18n')
-android = false
+# OS and Ports related
 
-# Windows needs icons, special arguments, and skip libportal
-windows = get_option('windows')
-if build_machine.system() == 'windows'
+linux = get_option('profile') == 'linux'
+windows = get_option('profile') == 'windows'
+android = get_option('profile') == 'android'
+
+# Here is to autodetect and adjust
+# Remember however that people may do cross compiling, so do not assume by default it is for linux
+# So avoid else conditions adding linux stuff
+build_machine_system = build_machine.system()
+host_machine_system = host_machine.system()
+
+if host_machine_system == 'windows'
     windows = true
+
+elif host_machine_system == 'android'
+    android = true
+
 endif
+
+# Here is to adjust the project accordingly to stuff
+# Porting efforts: add your OS here
 
 if windows
-    vala_flags += ['--define', 'WINDOWS']
-elif host_machine.system() == 'android'
-    android = true
-    vala_flags += ['--define', 'ANDROID']
+    add_project_arguments('--define=WINDOWS', language: 'vala')
+    appstream = false
+    libportal = false
 
-    #add_project_arguments(['--vapidir=' + meson.project_source_root() / 'vapi'], language: 'vala')
+elif android
+    appstream = true
+    libportal = false
+    add_project_arguments('--define=ANDROID', language: 'vala')
+
     add_project_arguments([
 	  '--pkg=gtk4',
-	  ## '--pkg=granite-9',
 	  '--pkg=json-glib-1.0',
-	  ## '--pkg=gee-0.8', # libgee has vapi
 	  '--pkg=glib-2.0'
 	], language: 'vala')
-endif
 
-# TODO: upstream -w outside this PR
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (app_name), '-w', language:'c')
+else
+    # Ideal case, Linux, with all the things
+    appstream = true
+    libportal = true
 
-# has to be done after global args
-if android
-    subproject('granite-stylesheet')
-endif
-
-
-#================================
-# Play nice with clang
-
-# https://gitlab.gnome.org/GNOME/vala/-/issues/1413#note_1707480
-if meson.get_compiler ('c').get_id () == 'clang'
-  add_project_arguments('-Wno-incompatible-function-pointer-types', language: 'c')
 endif
 
 
@@ -103,8 +128,10 @@ config_data = configuration_data(
         'APP_ID': app_id,
         'APP_PATH': app_path,
         'APP_VERSION': app_version,
+        'NICENAME': nicename,
+        'PUBLISHER': publisher,
         'ALTERNATE_APP_ID': alternate_app_id,
-        'LOCALEDIR': get_option('prefix') / get_option('localedir')
+        'LOCALEDIR': prefix / get_option('localedir')
     }
 )
 
@@ -116,22 +143,11 @@ if windows
     subdir('windows')
 endif
 
-if not windows
-    gnome.post_install(
-      glib_compile_schemas: true,
-      gtk_update_icon_cache: not android,
-      update_desktop_database: true
-    )
-endif
+subdir('tests')
 
-if development
-message('''
 
-----------------------------------------
-You now have a development version installed.
-Here be dragons.
-Tread carefully.
-----------------------------------------
-
-''')
-endif
+gnome.post_install(
+    glib_compile_schemas: true,
+    gtk_update_icon_cache: not android,
+    update_desktop_database: true
+)

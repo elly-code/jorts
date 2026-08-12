@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 19:18+0200\n"
+"POT-Creation-Date: 2026-07-18 22:22+0200\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -15,91 +15,363 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: src/Application.vala:241
+#: data/jorts.desktop.in.in:5 data/jorts.metainfo.xml.in.in:9
+#, fuzzy
+msgid "Jorts"
+msgstr "Thoát Jorts"
+
+#: data/jorts.desktop.in.in:6 data/jorts.metainfo.xml.in.in:49
+#, fuzzy
+msgid "Sticky notes"
+msgstr "Giấy ghi chú mới"
+
+#: data/jorts.desktop.in.in:7 data/jorts.metainfo.xml.in.in:10
+msgid "Write on colourful little squares"
+msgstr ""
+
+#: data/jorts.desktop.in.in:13
+msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
+msgstr ""
+
+#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
+#: data/jorts.desktop.in.in:18 src/Widgets/ActionBar.vala:35
+msgid "New sticky note"
+msgstr "Giấy ghi chú mới"
+
+#: data/jorts.desktop.in.in:23 src/Widgets/TextView.vala:81
+msgid "Show Preferences"
+msgstr "Hiển thị tùy chọn"
+
+#: data/jorts.metainfo.xml.in.in:12
+msgid ""
+"Neither jeans nor shorts, just like jorts! A thoughtful little sticky notes "
+"application, to display any sort of short term information on your screen."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:13
+msgid "Features include:"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:15
+msgid "Colourful: Eleven pretty pastel themes"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:16
+msgid "Cute: Each new note has a funny or cute random (editable) title"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:17
+msgid "Thoughtful: Jorts does its best to be comfortable to use, always!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:18
+msgid "Private: Try the scribbles mode!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:20
+msgid ""
+"Windows installers are also available, and require no admin rights. So you "
+"can even use this at work!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:21
+msgid "This app is made lovingly and without any LLM intervention."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:33
+msgid "Lainsce + Stella and Charlie"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:50
+#, fuzzy
+msgid "Sticky note"
+msgstr "Giấy ghi chú mới"
+
+#: data/jorts.metainfo.xml.in.in:51
+msgid "Stickies"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:52
+msgid "Colourful"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:53
+msgid "Notes"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:54
+msgid "Cute"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:55
+msgid "Desktop"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:56
+msgid "Reminder"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:57
+msgid "Utility"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:58
+msgid "Pantheon"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:59
+msgid "elementary OS"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:74
+msgid "A sticky note with the \"Blueberry\" theme"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:78
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the Scribbly "
+"Mode!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:82
+msgid "Look! Ascii art in a sticky note!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:86
+msgid "The preferences dialog in light mode"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:90
+msgid "The preferences dialog in dark mode"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:98
+msgid "A lot of tiny goodies"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:100
+msgid "Alas, back to default icon, but pride is forever"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:101
+msgid "Added experimental automated windows installers"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:102
+msgid "Small style fixes by @Geopjr!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:103 data/jorts.metainfo.xml.in.in:120
+msgid "Updated Spanish translation thanks to Eli!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:104
+msgid "Updated Italian translation thanks to Seth!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:105
+msgid "Updated French and German translations"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:111
+msgid "The Unyielding Jorts"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:113
+msgid "Lovely Pride variant thanks to @wpkelso!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:114
+msgid "Added indent for lists with help from @MysterieCatDev!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:115
+#, fuzzy
+msgid "Added feature to restore last deleted note"
+msgstr "Xóa giấy ghi chú"
+
+#: data/jorts.metainfo.xml.in.in:116
+msgid "Refreshed preference dialog appearance"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:117
+msgid ""
+"Issue with appcenter and flathub build differences fixed thanks to "
+"@ryonakano!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:118
+msgid "Added Danish translation thanks to @pracedru!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:119
+msgid "Added Croatian translation thanks to @milotype!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:126
+msgid "Minor touchups"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:131
+msgid "Jorts of Spring"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:133
+msgid "New color: Latte!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:134
+msgid "Added Preferences and Quit to the note right-click"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:135
+msgid "A lot of under-the-hood spring cleaning"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:141
+msgid "Organization change"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:143
+msgid "From ellie-commons to elly-code"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:145 data/jorts.metainfo.xml.in.in:167
+msgid "Guests stars: 😎"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:147
+msgid "Updated sv-SE translation thanks to @yeager!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:148
+msgid "Added vietnamese translation thanks to @hthienloc!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:157
+msgid "4.0.0 Jorts of Hyperspace! 🚀"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:159
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:160
+msgid "Added button to toggle lists, and ability to customize them"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:161
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:162
+msgid "More zoom options"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:163
+msgid "Keyboard shortcuts work from popover now"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:164
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:165
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:169
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in.in:170
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: src/Application.vala:251
 msgid "Create a new note"
 msgstr "Tạo ghi chú mới"
 
-#: src/Application.vala:242
+#: src/Application.vala:252
 msgid "Show preferences"
 msgstr "Hiển thị tùy chỉnh"
 
-#: src/Objects/ListPrefix.vala:51
+#: src/Objects/ListPrefix.vala:53
 #, fuzzy
 msgid "(Disabled)"
 msgstr "Tắt"
 
-#: src/Objects/ListPrefix.vala:52
+#: src/Objects/ListPrefix.vala:54
 #, fuzzy
 msgid " • List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/ListPrefix.vala:53
+#: src/Objects/ListPrefix.vala:55
 #, fuzzy
 msgid " - List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/ListPrefix.vala:54
+#: src/Objects/ListPrefix.vala:56
 #, fuzzy
 msgid " ~ List item"
 msgstr "Prefix mục danh sách"
 
-#: src/Objects/ListPrefix.vala:55
+#: src/Objects/ListPrefix.vala:57
 #, fuzzy
 msgid " . List item"
 msgstr "Prefix mục danh sách"
 
-#. Translators: "Forgot title!" is optional. It never happened for me when testing, and may appear only if users tampered with the savefile
-#: src/Objects/NoteData.vala:49
+#: src/Objects/NoteData.vala:46
 msgid "Forgot title!"
 msgstr ""
 
 #. TRANSLATORS: These are the names of the elementary OS colours: https://elementary.io/brand
 #. They are shown in a tooltip when the user hovers over a little colored pillbutton
-#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:76
+#: src/Objects/Themes.vala:66 src/Objects/Themes.vala:78
 msgid "Blueberry"
 msgstr "Việt quất"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Mint"
 msgstr "Bạc hà"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Lime"
 msgstr "Chanh xanh"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Banana"
 msgstr "Chuối"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Orange"
 msgstr "Quả cam"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Strawberry"
 msgstr "Quả dâu"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Bubblegum"
 msgstr "Kẹo cao su"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
 msgid "Grape"
 msgstr "Quả nho"
 
-#: src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:74
 msgid "Cocoa"
 msgstr "Ca cao"
 
-#: src/Objects/Themes.vala:73
+#: src/Objects/Themes.vala:75
 msgid "Slate"
 msgstr "Đá phiến"
 
-#: src/Objects/Themes.vala:74
+#: src/Objects/Themes.vala:76
 msgid "Latte"
 msgstr "Latte"
 
-#: src/Objects/Themes.vala:75
+#: src/Objects/Themes.vala:77
 msgid "No preference, random each time"
 msgstr "Không ưu tiên, ngẫu nhiên mỗi lần"
 
@@ -378,9 +650,6 @@ msgstr "Viết nguệch ngoạc văn bản của các ghi chú không tập trun
 msgid "Hide bottom bar (Ctrl+T)"
 msgstr "Ẩn thanh dưới cùng"
 
-#. *********************************************
-#. Restore_last
-#. *********************************************
 #. TRANSLATORS: Button to restore sticky notes the application
 #: src/Views/PreferencesView.vala:109
 msgid "Restore note"
@@ -411,11 +680,6 @@ msgstr "Đóng"
 #: src/Views/PreferencesView.vala:174
 msgid "Close preferences"
 msgstr "Đóng tùy chỉnh"
-
-#. TRANSLATORS: The 5 next ones are tooltips for buttons. You are not constrained by space
-#: src/Widgets/ActionBar.vala:35
-msgid "New sticky note"
-msgstr "Giấy ghi chú mới"
 
 #: src/Widgets/ActionBar.vala:48
 msgid "Delete sticky note"
@@ -473,24 +737,16 @@ msgstr "Mức phóng mặc định"
 msgid "Zoom in"
 msgstr "Phóng to"
 
-#. Alternate way to access preferences
-#: src/Widgets/TextView.vala:81
-msgid "Show Preferences"
-msgstr "Hiển thị tùy chọn"
-
 #: src/Widgets/TextView.vala:86
 msgid "Quit Jorts"
 msgstr "Thoát Jorts"
 
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#: src/Windows/PreferenceWindow.vala:48
+#: src/Windows/PreferenceWindow.vala:38
 #, fuzzy
 msgid "Preferences - Jorts"
 msgstr "Tùy chỉnh cho Jorts của bạn"
 
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:40
 #, fuzzy
 msgid "<b>Preferences for your Jorts</b>"
 msgstr "Tùy chỉnh cho Jorts của bạn"
@@ -498,15 +754,51 @@ msgstr "Tùy chỉnh cho Jorts của bạn"
 #. TRANSLATORS: "%s" is replaced by a specific sticky note title
 #. Ex: "To remember - Jorts"
 #. The text is shown in overviews of all open windows, accompanying the window
-#: src/Windows/StickyNoteWindow.vala:151 src/Windows/StickyNoteWindow.vala:191
+#: src/Windows/StickyNoteWindow.vala:152 src/Windows/StickyNoteWindow.vala:192
 #, c-format
 msgid "%s - Jorts (Development)"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:153 src/Windows/StickyNoteWindow.vala:193
+#: src/Windows/StickyNoteWindow.vala:154 src/Windows/StickyNoteWindow.vala:194
 #, fuzzy, c-format
 msgid "%s - Jorts"
 msgstr " - Jorts"
+
+#, fuzzy
+#~ msgid "action_show_preferences"
+#~ msgstr "Hiển thị tùy chỉnh"
+
+#, fuzzy
+#~ msgid "Showing preferences!"
+#~ msgstr "Hiển thị tùy chỉnh"
+
+#, fuzzy
+#~ msgid "Toggling scribbly"
+#~ msgstr "Những nét vẽ nguệch ngoạc trên khăn ăn"
+
+#, fuzzy
+#~ msgid "preferences"
+#~ msgstr "Tùy chỉnh"
+
+#, fuzzy
+#~ msgid "monospace"
+#~ msgstr "Không gian đơn"
+
+#, fuzzy
+#~ msgid "listprefix"
+#~ msgstr "Prefix mục danh sách"
+
+#, fuzzy, c-format
+#~ msgid "Updating monospace to %s"
+#~ msgstr "Sử dụng phông chữ đơn cách"
+
+#, fuzzy
+#~ msgid "action_toggle_list"
+#~ msgstr "Bật/tắt danh sách"
+
+#, fuzzy
+#~ msgid "Creating preference window"
+#~ msgstr "Đóng tùy chỉnh"
 
 #~ msgid "Request to system sent"
 #~ msgstr "Đã gửi yêu cầu tới hệ thống"
@@ -538,6 +830,3 @@ msgstr " - Jorts"
 
 #~ msgid "Ok, listen here,"
 #~ msgstr "Ok, nghe đây,"
-
-#~ msgid "Preferences"
-#~ msgstr "Tùy chỉnh"

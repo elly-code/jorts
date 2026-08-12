@@ -109,10 +109,10 @@
         emojichooser_popover.show.connect (randomize_emote_button);
         emojichooser_popover.emoji_picked.connect (on_emoji_picked);
 
-        //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
+        //Application.settings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
         //textview.bind_property ("on_list_item", actionbar.list_button, "active", GLib.BindingFlags.DEFAULT);
 
-        Application.gsettings.bind (KEY_LIST,
+        Application.settings.bind (KEY_LIST,
             textview, "listprefix",
             GLib.SettingsBindFlags.DEFAULT);
     }
@@ -140,4 +140,8 @@
     private void action_show_emoji () {emoji_button.activate ();}
     private void action_show_menu () {menu_button.activate ();}
     private void action_toggle_mono () {monospace = !monospace;}
+
+    ~NoteView () {
+        debug ("Destroyed");
+    }
 }

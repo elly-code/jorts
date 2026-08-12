@@ -91,4 +91,8 @@ public class Jorts.Popover : Gtk.Popover {
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
     }
+
+    ~Popover () {
+        debug ("Destroyed");
+    }
 }

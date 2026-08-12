@@ -115,7 +115,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         int indent_width, h;
         layout.get_pixel_size (out indent_width, out h);
 
-        debug ("\nNEW SIZE: %i", indent_width);
+        debug ("NEW SIZE: %i", indent_width);
         list_buffer.indent_width = indent_width;
     }
 
@@ -227,4 +227,9 @@ public class Jorts.TextView : Granite.HyperTextView {
         return false;
     }
 
+    ~TextView () {
+        list_buffer.dispose ();
+        buffer.dispose ();
+        debug ("Destroyed");
+    }
 }

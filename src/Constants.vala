@@ -28,6 +28,7 @@ namespace Jorts {
 
     // CSS
     const string STYLE_DEVEL             = "devel";
+    const string STYLE_ANIMATED          = "animated";
     const string STYLE_THEMED            = "themed";
     const string STYLE_THEMEDBUTTON      = "themedbutton";
 

@@ -45,7 +45,7 @@ is your user folder
 5. Install all we need (note: Some in the list may not be needed)
 
 ```bash
-pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-w64-ucrt-x86_64-{gtk4,granite7,vala,ninja,meson,nsis,gcc} mingw-w64-libgee mingw-w64-gsettings-desktop-schemas mingw-w64-x86_64-gtk-elementary-theme mingw-w64-x86_64-elementary-icon-theme mingw-w64-x86_64-vala mingw-w64-x86_64-librsvg
+pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-w64-ucrt-x86_64-{gtk4,granite7,vala,ninja,meson,nsis,gcc} mingw-w64-libgee mingw-w64-gsettings-desktop-schemas mingw-w64-x86_64-gtk-elementary-theme mingw-w64-x86_64-elementary-icon-theme mingw-w64-x86_64-vala
 ```
 
 
@@ -60,22 +60,6 @@ pacman -S --noconfirm meson gcc ninja mingw-w64-x86_64-desktop-file-utils mingw-
 7. If everything goes right, the resulting exe has everything bundled up in it, including uninstaller.
 
 It is built so as to not need admin rights. You can distribute as is.
-
-
-## Automated release build
-
-The GitHub release workflow does not run `windows/deploy.sh` directly. It uses
-the sqgipkg release path documented in [packagings.md](packagings.md).
-
-That path still lets Meson build and configure the app, including the Windows
-resource file. sqgipkg then stages the MinGW/MSYS2 runtime files, GTK settings,
-icon themes, schemas, fonts, and app assets into `dist-windows-x86_64/Jorts`,
-before producing `dist-windows-x86_64/Jorts-Setup.exe`.
-
-If the Windows theme works but icons are missing, first check that the staged
-directory contains `share/icons/elementary` and that the bundled GTK settings
-still say `gtk-icon-theme-name=elementary`. The theme package and icon theme
-package are separate things.
 
 
 ## Known issues deploying

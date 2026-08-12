@@ -38,7 +38,7 @@ body:
   - type: dropdown
     attributes:
       label: OS Architecture
-      description: The architecture of elementary OS you are using
+      description: The architecture you are using
       options:
         - amd64 (on most hardwares)
         - arm64 (on Raspberry Pi, Apple Silicon, etc.)
@@ -54,7 +54,9 @@ body:
       options:
         - I installed from Flathub (all Linuxes)
         - I installed from Appcenter (elementary OS)
-        - I built it from sources (with Meson+Ninja, or from AUR)
+        - I installed from an Exe installer (Windows)
+        - I installed from something else (Android? AUR?)
+        - I built it from sources (with Meson+Ninja)
     validations:
       required: true
 

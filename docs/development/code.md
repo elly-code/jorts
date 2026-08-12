@@ -1,7 +1,0 @@
-# Code structure
-
-## Application
-
-
-
-## MainWindow
