@@ -39,6 +39,8 @@
       <option>-Dgtk:build-examples=false</option>
       <option>-Dgtk:build-tests=false</option>
 
+      <option>-Dlibgee:tests=disabled</option>
+
       <option>-Dgobject-introspection:tests=false</option>
 
       <option>-Djson-glib:documentation=disabled</option>
@@ -52,6 +54,7 @@
       <option>-Dgtk:introspection=disabled</option>
       <option>-Djson-glib:introspection=disabled</option>
       <option>-Dgranite:introspection=false</option>
+      <option>-Dlibgee:disable-introspection=true</option>
     </configure-options>
   </build>
 </app>

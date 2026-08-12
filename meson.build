@@ -3,7 +3,7 @@ project(
     ['c', 'vala'],        # The floor is vala
     license: 'GPL-3.0-or-later',
     version: '4.3.0',               # Versioning: first should follow Gtk version, second and third depending how proud you are of the update
-    meson_version: '>= 1.1'         # Use meson.option instead of meson_options.txt
+    meson_version: '>= 1.1'         # Use meson.options instead of meson_options.txt
 )
 
 app_name = meson.project_name()
@@ -103,14 +103,15 @@ if windows
 elif android
     appstream = true
     libportal = false
-    add_project_arguments('--define=ANDROID', language: 'vala')
 
     add_project_arguments([
-	  '--pkg=gtk4',
-	  '--pkg=json-glib-1.0',
-	  '--pkg=glib-2.0'
-	], language: 'vala')
+      '--define=ANDROID',
+      '--pkg=gtk4',
+      '--pkg=json-glib-1.0',
+      '--pkg=glib-2.0'
+    ], language: 'vala')
 
+    subproject('granite-stylesheet')
 else
     # Ideal case, Linux, with all the things
     appstream = true
