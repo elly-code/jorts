@@ -200,8 +200,84 @@ window.themed:backdrop editablelabel {
     color: rgb(from var(--accent_color_900) r g b / calc(alpha * 0.75));
 }
 
-window.themed:backdrop editablelabel,
 window.themed:backdrop actionbar,
 window.themed:backdrop actionbar image {
     color: rgb(from var(--accent_color_900) r g b / calc(alpha * 0.65));
+}
+
+/* ======================================================== */
+/* Dark Mode Theme Overrides                                 */
+/* ======================================================== */
+
+window.themed.dark {
+    background-color: var(--accent_color_900);
+    color: var(--accent_color_100);
+}
+
+window.themed.dark titlebar,
+window.themed.dark titlebar image,
+window.themed.dark .themedbutton > button > box > image,
+window.themed.dark .themedbutton > image {
+    color: var(--accent_color_100);
+}
+
+window.themed.dark titlebar,
+window.themed.dark textview,
+window.themed.dark editablelabel.editing {
+    background-color: transparent;
+    color: hsl(from var(--accent_color_100) h calc(s * 0.77) calc(l * 0.77));
+}
+
+window.themed.dark titlebar,
+window.themed.dark textview {
+    border-bottom-color: var(--accent_color_900);
+}
+
+window.themed.dark undershoot.top {
+    background:
+        linear-gradient(
+            var(--accent_color_900) 0%,
+            rgb(from var(--accent_color_900) r g b / calc(alpha * 0)) 50%
+        );
+}
+
+window.themed.dark undershoot.bottom {
+    background:
+        linear-gradient(
+            rgb(from var(--accent_color_900) r g b / calc(alpha * 0)) 50%,
+            var(--accent_color_900) 100%
+        );
+}
+
+window.themed.dark text selection {
+    color: black;
+    background-color: var(--accent_color_100);
+}
+
+window.themed.dark entry {
+    background-color: #303030;
+    color: white;
+}
+
+window.themed.dark editablelabel {
+    color: var(--accent_color_100);
+    border: 1px solid transparent;
+}
+
+window.themed.dark editablelabel:hover,
+window.themed.dark editablelabel:focus {
+    border-color: rgb(from var(--accent_color) r g b / calc(alpha * 0.88));
+}
+
+window.themed.dark editablelabel.editing {
+    border-color: var(--accent_color_300);
+}
+
+window.themed.dark:backdrop editablelabel {
+    color: rgb(from var(--accent_color_100) r g b / calc(alpha * 0.75));
+}
+
+window.themed.dark:backdrop actionbar,
+window.themed.dark:backdrop actionbar image {
+    color: rgb(from var(--accent_color_100) r g b / calc(alpha * 0.65));
 }
