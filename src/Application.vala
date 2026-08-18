@@ -130,15 +130,21 @@ public class Jorts.Application : Gtk.Application {
         gtk_settings.gtk_theme_name = DEFAULT_STYLESHEET;
 
         // Also follow dark if system is dark lIke mY sOul.
-        gtk_settings.gtk_application_prefer_dark_theme = (
-                granite_settings.prefers_color_scheme == DARK
-            );
-
-        granite_settings.notify["prefers-color-scheme"].connect (() => {
+        if (GLib.Environment.get_variable ("FORCE_DARK") == "1") {
+            gtk_settings.gtk_application_prefer_dark_theme = true;
+        } else if (GLib.Environment.get_variable ("FORCE_LIGHT") == "1") {
+            gtk_settings.gtk_application_prefer_dark_theme = false;
+        } else {
             gtk_settings.gtk_application_prefer_dark_theme = (
                     granite_settings.prefers_color_scheme == DARK
                 );
-        });
+
+            granite_settings.notify["prefers-color-scheme"].connect (() => {
+                gtk_settings.gtk_application_prefer_dark_theme = (
+                        granite_settings.prefers_color_scheme == DARK
+                    );
+            });
+        }
 
         print ("""
 🎉✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
