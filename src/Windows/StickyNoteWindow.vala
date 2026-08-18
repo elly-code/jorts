@@ -118,11 +118,30 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         } else {
             bind_hidebar ();
         }
+
+        sync_dark_mode ();
+        Application.gtk_settings.notify["gtk-application-prefer-dark-theme"].connect (on_prefer_dark_theme_changed);
+        close_request.connect (() => {
+            Application.gtk_settings.notify["gtk-application-prefer-dark-theme"].disconnect (on_prefer_dark_theme_changed);
+            return false;
+        });
     }
 
         /********************************************/
         /*                  METHODS                 */
         /********************************************/
+
+    private void on_prefer_dark_theme_changed (GLib.Object sender, GLib.ParamSpec spec) {
+        sync_dark_mode ();
+    }
+
+    private void sync_dark_mode () {
+        if (Application.gtk_settings.gtk_application_prefer_dark_theme) {
+            add_css_class ("dark");
+        } else {
+            remove_css_class ("dark");
+        }
+    }
 
     /**
     * Show Actionbar shortly after the window is shown
